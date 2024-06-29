@@ -1,13 +1,9 @@
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import React from 'react';
-import logo from '../../public/logo.svg';
-import '../App.css';
 import Header from "./header";
 import Footer from "./footer";
 import SectionHero from "./section_hero"
-import SectionCategories from './section_categories'
-import SectionFeaturedCode from './components/section_featured_code'
+
 
 import '../css/bootstrap.min.css'
 import '../css/elegant-icons.css'
@@ -18,14 +14,12 @@ import '../css/style.css'
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Header/>
             <SectionHero/>
-            {/*<SectionCategories/>*/}
-            <SectionFeaturedCode/>
-            <Footer/>
+             <Footer/>
         </div>
-    );
+    )
 }
 
 export default App;
