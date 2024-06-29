@@ -1,3 +1,4 @@
+import './jquery-3.3.1.min';
 /*  ---------------------------------------------------
     Template Name: Ogani
     Description:  Ogani eCommerce  HTML Template

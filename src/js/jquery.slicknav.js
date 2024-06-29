@@ -1,6 +1,6 @@
 ;(function ($, document, window) {
     var
-        // default settings object.
+    // default settings object.
         defaults = {
             label: 'MENU',
             duplicate: true,
@@ -19,7 +19,7 @@
             removeIds: true,
             removeClasses: false,
             removeStyles: false,
-            brand: '',
+			brand: '',
             animations: 'jquery',
             init: function () {},
             beforeOpen: function () {},
@@ -52,7 +52,7 @@
 
         // Don't remove IDs by default if duplicate is false
         if (!this.settings.duplicate && !options.hasOwnProperty("removeIds")) {
-            this.settings.removeIds = false;
+          this.settings.removeIds = false;
         }
 
         this._defaults = defaults;
@@ -77,10 +77,10 @@
 
         // remove IDs if set
         if (settings.removeIds) {
-            $this.mobileNav.removeAttr('id');
-            $this.mobileNav.find('*').each(function (i, e) {
-                $(e).removeAttr('id');
-            });
+          $this.mobileNav.removeAttr('id');
+          $this.mobileNav.find('*').each(function (i, e) {
+              $(e).removeAttr('id');
+          });
         }
 
         // remove classes if set
@@ -113,19 +113,19 @@
         // create menu bar
         $this.mobileNav.attr('class', prefix + '_nav');
         menuBar = $('<div class="' + prefix + '_menu"></div>');
-        if (settings.brand !== '') {
-            var brand = $('<div class="' + prefix + '_brand">'+settings.brand+'</div>');
-            $(menuBar).append(brand);
-        }
+		if (settings.brand !== '') {
+			var brand = $('<div class="' + prefix + '_brand">'+settings.brand+'</div>');
+			$(menuBar).append(brand);
+		}
         $this.btn = $(
             ['<' + settings.parentTag + ' aria-haspopup="true" role="button" tabindex="0" class="' + prefix + '_btn ' + prefix + '_collapsed">',
                 '<span class="' + prefix + '_menutxt">' + settings.label + '</span>',
                 '<span class="' + iconClass + '">',
-                '<span class="' + prefix + '_icon-bar"></span>',
-                '<span class="' + prefix + '_icon-bar"></span>',
-                '<span class="' + prefix + '_icon-bar"></span>',
+                    '<span class="' + prefix + '_icon-bar"></span>',
+                    '<span class="' + prefix + '_icon-bar"></span>',
+                    '<span class="' + prefix + '_icon-bar"></span>',
                 '</span>',
-                '</' + settings.parentTag + '>'
+            '</' + settings.parentTag + '>'
             ].join('')
         );
         $(menuBar).append($this.btn);
@@ -196,16 +196,16 @@
 
 
             } else if ( item.children().length === 0) {
-                item.addClass(prefix+'_txtnode');
+                 item.addClass(prefix+'_txtnode');
             }
 
             // accessibility for links
             item.children('a').attr('role', 'menuitem').click(function(event){
                 //Ensure that it's not a parent
                 if (settings.closeOnClick && !$(event.target).parent().closest('li').hasClass(prefix+'_parent')) {
-                    //Emulate menu close if set
-                    $($this.btn).click();
-                }
+                        //Emulate menu close if set
+                        $($this.btn).click();
+                    }
             });
 
             //also close on click if parent links are set
@@ -217,7 +217,7 @@
 
                 item.find('.'+prefix+'_parent-link a:not(.'+prefix+'_item)').click(function(event){
                     //Emulate menu close
-                    $($this.btn).click();
+                        $($this.btn).click();
                 });
             }
         });
@@ -269,12 +269,12 @@
                     if (ev.keyCode !== Keyboard.DOWN || !$($this.btn).hasClass(prefix+'_open')){
                         $this._menuToggle();
                     }
-
+                    
                     $($this.btn).next().find('[role="menuitem"]').first().focus();
                     break;
             }
 
-
+            
         });
 
         $this.mobileNav.on('keydown', '.'+prefix+'_item', function(e) {
@@ -309,14 +309,14 @@
                     }
                     var next = allItems.eq( nextIdx );
                     next.focus();
-                    break;
+                break;
                 case Keyboard.UP:
                     e.preventDefault();
                     var allItems = $(e.target).parent().parent().children().children('[role="menuitem"]:visible');
                     var idx = allItems.index( e.target );
                     var next = allItems.eq( idx - 1 );
                     next.focus();
-                    break;
+                break;
                 case Keyboard.LEFT:
                     e.preventDefault();
                     if ($(e.target).parent().parent().parent().hasClass(prefix+'_open')) {
@@ -332,14 +332,14 @@
                     e.preventDefault();
                     $this._menuToggle();
                     $($this.btn).focus();
-                    break;
+                    break;    
             }
         });
 
         // allow links clickable within parent tags if set
         if (settings.allowParentLinks && settings.nestedParentLinks) {
             $('.'+prefix+'_item a').click(function(e){
-                e.stopImmediatePropagation();
+                    e.stopImmediatePropagation();
             });
         }
     };
@@ -402,7 +402,7 @@
         if (animate) {
             duration = settings.duration;
         }
-
+        
         function afterOpen(trigger, parent) {
             $(trigger).removeClass(prefix+'_animating');
             $(parent).removeClass(prefix+'_animating');
@@ -412,7 +412,7 @@
                 settings.afterOpen(trigger);
             }
         }
-
+        
         function afterClose(trigger, parent) {
             el.attr('aria-hidden','true');
             items.attr('tabindex', '-1');
@@ -432,7 +432,7 @@
 
         if (el.hasClass(prefix+'_hidden')) {
             el.removeClass(prefix+'_hidden');
-            //Fire beforeOpen callback
+             //Fire beforeOpen callback
             if (!init) {
                 settings.beforeOpen(trigger);
             }
@@ -465,7 +465,7 @@
                     afterClose(trigger, parent)
                 });
             } else if (settings.animations === 'velocity') {
-
+                
                 el.velocity("finish").velocity("slideUp", {
                     duration: duration,
                     easing: settings.easingClose,
@@ -560,7 +560,7 @@
                 }
             });
 
-            // If is a string and doesn't start with an underscore or 'init' function, treat this as a call to a public method.
+        // If is a string and doesn't start with an underscore or 'init' function, treat this as a call to a public method.
         } else if (typeof options === 'string' && options[0] !== '_' && options !== 'init') {
 
             // Cache the method call to make it possible to return a value
