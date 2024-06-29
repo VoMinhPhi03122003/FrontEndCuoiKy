@@ -7,6 +7,7 @@ import Header from "./header";
 import Footer from "./footer";
 import SectionHero from "./section_hero"
 import SectionCategories from './section_categories'
+import SectionFeaturedCode from './components/section_featured_code'
 
 import '../css/bootstrap.min.css'
 import '../css/elegant-icons.css'
@@ -20,7 +21,8 @@ function App() {
         <div className="App">
             <Header/>
             <SectionHero/>
-            <SectionCategories/>
+            {/*<SectionCategories/>*/}
+            <SectionFeaturedCode/>
             <Footer/>
         </div>
     );

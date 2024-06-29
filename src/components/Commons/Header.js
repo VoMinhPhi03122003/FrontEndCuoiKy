@@ -13,9 +13,13 @@ function Header() {
             <HeaderTop/>
             <div className="container">
                 <div className="row">
-                    <Logo/>
-                    <MenuBar/>
-                    <Cart/>
+                    <div className="col-lg-2">
+                        <Logo/>
+                    </div>
+                    <div className="col-lg-8">
+                        <MenuBar/>
+                    </div>
+                    <div className="col-lg-2"><Cart/></div>
                 </div>
             </div>
         </header>
