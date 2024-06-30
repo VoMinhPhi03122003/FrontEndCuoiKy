@@ -8,8 +8,12 @@ function Categories() {
             </div>
             <ul>
 
-                <li><a href="#">Sức khỏe - thư giản </a></li>
-                <li><a href="#">Túi chườm nóng - lạnh</a></li>
+                <li><a href="">Sức khỏe - thư giản </a></li>
+                <li><a href="">Túi chườm nóng - lạnh</a></li>
+                <li><a href="">Đồ gốm</a></li>
+                <li><a href="">Tranh</a></li>
+                <li><a href="">Xem tất cả</a></li>
+
             </ul>
         </div>
     )

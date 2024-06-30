@@ -1,6 +1,7 @@
+import breadcrumb_1 from '../../image/breadcrumb/breadcrumb_1.png'
 function SectionBreadcrumb() {
     return (
-        <section className="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
@@ -18,3 +19,4 @@ function SectionBreadcrumb() {
         </section>
     )
 }
+export default SectionBreadcrumb;
