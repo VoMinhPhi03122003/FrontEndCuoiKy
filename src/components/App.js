@@ -1,7 +1,8 @@
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./Commons/Header"
+import Footer from "./Commons/Footer";
+
 import SectionHero from "./section_hero"
 
 

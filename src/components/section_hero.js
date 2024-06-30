@@ -1,7 +1,7 @@
 
 import Categories from "./categories"
 import SearchBar from "./search_bar"
-import Phone from "./phone"
+import Phone from "./Commons/phone";
 import Banner from "./banner"
 function SectionHero() {
     return (

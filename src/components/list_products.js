@@ -1,5 +1,5 @@
-import Header from "./header";
-import Footer from "./footer"
+import Header from "./Commons/Header";
+import Footer from "./Commons/Footer";
 
 function Products() {
     return (
