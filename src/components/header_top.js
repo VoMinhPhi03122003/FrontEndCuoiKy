@@ -1,4 +1,4 @@
-import language from '../image/language.png'
+import language from '../image/language/tieng_viet.png'
 function HeaderTop(){
     return(
         <div className="header__top">
