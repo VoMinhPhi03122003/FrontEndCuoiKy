@@ -1,4 +1,4 @@
-import categori_img from '../img/categories/cat-1.jpg'
+import categori_img from '../image/categories/cat-1.jpg'
 
 function CategoryItem() {
     return (
