@@ -1,4 +1,4 @@
-import Header from "./Commons/Header";
+import Header , {SearchBar} from "./Header";
 import Footer from "./Commons/Footer";
 
 function Products() {
@@ -113,7 +113,7 @@ function Products() {
                                         <div className="latest-prdouct__slider__item">
                                             <a href="#" className="latest-product__item">
                                                 <div className="latest-product__item__pic">
-                                                    <img src="img/latest-product/lp-1.jpg" alt=""/>
+                                                    <img src={require("../image/products/lp-1.jpg")} alt=""/>
                                                 </div>
                                                 <div className="latest-product__item__text">
                                                     <h6>Crab Pool Security</h6>
@@ -122,7 +122,7 @@ function Products() {
                                             </a>
                                             <a href="#" className="latest-product__item">
                                                 <div className="latest-product__item__pic">
-                                                    <img src="img/latest-product/lp-2.jpg" alt=""/>
+                                                    <img src={require("../image/products/lp-2.jpg")} alt=""/>
                                                 </div>
                                                 <div className="latest-product__item__text">
                                                     <h6>Crab Pool Security</h6>
@@ -131,7 +131,7 @@ function Products() {
                                             </a>
                                             <a href="#" className="latest-product__item">
                                                 <div className="latest-product__item__pic">
-                                                    <img src="img/latest-product/lp-3.jpg" alt=""/>
+                                                    <img src={require("../image/products/lp-3.jpg")} alt=""/>
                                                 </div>
                                                 <div className="latest-product__item__text">
                                                     <h6>Crab Pool Security</h6>
@@ -142,7 +142,7 @@ function Products() {
                                         <div className="latest-prdouct__slider__item">
                                             <a href="#" className="latest-product__item">
                                                 <div className="latest-product__item__pic">
-                                                    <img src="img/latest-product/lp-1.jpg" alt=""/>
+                                                    <img src={require("../image/products/lp-1.jpg")} alt=""/>
                                                 </div>
                                                 <div className="latest-product__item__text">
                                                     <h6>Crab Pool Security</h6>
@@ -151,7 +151,7 @@ function Products() {
                                             </a>
                                             <a href="#" className="latest-product__item">
                                                 <div className="latest-product__item__pic">
-                                                    <img src="img/latest-product/lp-2.jpg" alt=""/>
+                                                    <img src={require("../image/products/lp-2.jpg")} alt=""/>
                                                 </div>
                                                 <div className="latest-product__item__text">
                                                     <h6>Crab Pool Security</h6>
@@ -160,7 +160,7 @@ function Products() {
                                             </a>
                                             <a href="#" className="latest-product__item">
                                                 <div className="latest-product__item__pic">
-                                                    <img src="img/latest-product/lp-3.jpg" alt=""/>
+                                                    <img src={require("../image/products/lp-3.jpg")} alt=""/>
                                                 </div>
                                                 <div className="latest-product__item__text">
                                                     <h6>Crab Pool Security</h6>
@@ -183,7 +183,7 @@ function Products() {
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
-                                                 data-setbg="img/product/discount/pd-1.jpg">
+                                                 data-setbg={require("../image/products/lp-1.jpg")}>
                                                 <div className="product__discount__percent">-20%</div>
                                                 <ul className="product__item__pic__hover">
                                                     <li><a href="#"><i className="fa fa-heart"></i></a></li>
@@ -201,7 +201,7 @@ function Products() {
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
-                                                 data-setbg="img/product/discount/pd-2.jpg">
+                                                 data-setbg="../image/products/pd-2.jpg">
                                                 <div className="product__discount__percent">-20%</div>
                                                 <ul className="product__item__pic__hover">
                                                     <li><a href="#"><i className="fa fa-heart"></i></a></li>
@@ -219,7 +219,7 @@ function Products() {
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
-                                                 data-setbg="img/product/discount/pd-3.jpg">
+                                                 data-setbg="../image/products/pd-3.jpg">
                                                 <div className="product__discount__percent">-20%</div>
                                                 <ul className="product__item__pic__hover">
                                                     <li><a href="#"><i className="fa fa-heart"></i></a></li>
@@ -237,7 +237,7 @@ function Products() {
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
-                                                 data-setbg="img/product/discount/pd-4.jpg">
+                                                 data-setbg="../image/products/pd-4.jpg">
                                                 <div className="product__discount__percent">-20%</div>
                                                 <ul className="product__item__pic__hover">
                                                     <li><a href="#"><i className="fa fa-heart"></i></a></li>
@@ -255,7 +255,7 @@ function Products() {
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
-                                                 data-setbg="img/product/discount/pd-5.jpg">
+                                                 data-setbg="../image/products/pd-5.jpg">
                                                 <div className="product__discount__percent">-20%</div>
                                                 <ul className="product__item__pic__hover">
                                                     <li><a href="#"><i className="fa fa-heart"></i></a></li>
@@ -273,7 +273,7 @@ function Products() {
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
-                                                 data-setbg="img/product/discount/pd-6.jpg">
+                                                 data-setbg="../image/products/pd-6.jpg">
                                                 <div className="product__discount__percent">-20%</div>
                                                 <ul className="product__item__pic__hover">
                                                     <li><a href="#"><i className="fa fa-heart"></i></a></li>
@@ -318,7 +318,7 @@ function Products() {
                         <div className="row">
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-1.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -333,7 +333,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-2.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -348,7 +348,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-3.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -363,7 +363,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-4.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -378,7 +378,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-5.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-5.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -393,7 +393,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-6.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-6.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -408,7 +408,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-7.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -423,7 +423,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-8.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -438,7 +438,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-9.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-9.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -453,7 +453,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-10.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-10.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -468,7 +468,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-11.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-11.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -483,7 +483,7 @@ function Products() {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="product__item">
-                                    <div className="product__item__pic set-bg" data-setbg="img/product/product-12.jpg">
+                                    <div className="product__item__pic set-bg" data-setbg={require("../image/products/product-12.jpg")}>
                                         <ul className="product__item__pic__hover">
                                             <li><a href="#"><i className="fa fa-heart"></i></a></li>
                                             <li><a href="#"><i className="fa fa-retweet"></i></a></li>
@@ -514,6 +514,7 @@ export function ListProducts() {
     return (
         <>
             <Header/>
+            <SearchBar/>
             <Products/>
             <Footer/>
         </>

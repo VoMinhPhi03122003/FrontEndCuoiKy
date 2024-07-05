@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './javascript/reportWebVitals';
 import {RouterProvider} from "react-router-dom";
-import {router} from "./router/router";
+import {router} from "./router";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-    throw new Error('Root element not found');
-}
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+import './css/bootstrap.min.css'
+import './css/font-awesome.min.css'
+import './css/style.css'
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <App/>
+        <RouterProvider router={router}/>
     </React.StrictMode>
 );
 
