@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function FeaturedTitle(){
+function TitleSection(){
 
     // Tạo state địa phương activeItem và hàm setActiveItem để cập nhật giá trị của state
     const [activeItem, setActiveItem] = useState(null);
@@ -48,4 +48,4 @@ function FeaturedTitle(){
     )
 }
 
-export default FeaturedTitle;
+export default TitleSection;

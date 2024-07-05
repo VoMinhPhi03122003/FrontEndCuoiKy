@@ -1,7 +1,7 @@
 
 import React, {useState} from "react";
-import FeaturedTitle from './featured_title'
-import FeaturedContent from './featured_content'
+import TitleSection from './title_section_featured_product'
+import ListProductsFeatured from './list_products_featured'
 function SectionFeaturedCode(){
 
 
@@ -9,11 +9,9 @@ function SectionFeaturedCode(){
         <section className="featured spad">
             <div className="container">
                 <div className="row">
-                    <FeaturedTitle/>
+                    <TitleSection/>
                 </div>
-                <div className="row featured__filter">
-                    <FeaturedContent/>
-                </div>
+                <ListProductsFeatured/>
             </div>
         </section>
     );
