@@ -1,5 +1,27 @@
 
+import Logo from './Logo'
+import NavBar from './NavBar'
+import Cart from './Cart'
 import english  from '../image/language/english.png'
+
+function Header() {
+    return (
+        <header className="header">
+            <HeaderTop/>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-2">
+                        <Logo/>
+                    </div>
+                    <div className="col-lg-8">
+                        <NavBar/>
+                    </div>
+                    <div className="col-lg-2"><Cart/></div>
+                </div>
+            </div>
+        </header>
+    )
+}
 function HeaderTop(){
     return(
         <div className="header__top">
@@ -15,12 +37,6 @@ function HeaderTop(){
                     </div>
                     <div className="col-lg-9 col-md-9">
                         <div className="header__top__right">
-                            {/*     <div className="header__top__right__social">
-                                <a href="#"><i className="fa fa-facebook"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-pinterest-p"></i></a>
-                            </div> */}
                             <div className="header__top__right__language">
                                 <img src={english} alt=""/>
                                 <div>English</div>
@@ -40,4 +56,7 @@ function HeaderTop(){
         </div>
     )
 }
-export default HeaderTop;
+
+export default Header;
+
+export {HeaderTop};

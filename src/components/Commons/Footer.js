@@ -1,7 +1,4 @@
 import '../../App.css'
-import '../../css/style.css'
-import '../../css/bootstrap.min.css';
-import '../../css/font-awesome.min.css';
 import logo from '../../image/logo/logo.png' ;
 
 function Footer() {

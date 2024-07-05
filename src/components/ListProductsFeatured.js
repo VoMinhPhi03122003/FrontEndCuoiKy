@@ -1,5 +1,4 @@
 import React from "react";
-import img_category_android_suckhoethugian_1 from '../image/featured/suckhoethugian_1.jpg'
 
 import products_featured from '../data/ProductData.js'
 

@@ -3,7 +3,7 @@ import 'mdbreact/dist/css/mdb.css';
 import Header from "./Commons/Header"
 import Footer from "./Commons/Footer";
 
-import SectionHero from "./section_hero"
+import SectionHero from "./SectionHero"
 
 
 import '../css/bootstrap.min.css'

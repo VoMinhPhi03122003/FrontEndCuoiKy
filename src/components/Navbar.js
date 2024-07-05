@@ -1,4 +1,4 @@
-function MenuBar(){
+function NavBar(){
     return(
             <nav className="header__menu">
                 <ul>
@@ -13,4 +13,4 @@ function MenuBar(){
     )
 }
 
-export default MenuBar;
+export default NavBar;

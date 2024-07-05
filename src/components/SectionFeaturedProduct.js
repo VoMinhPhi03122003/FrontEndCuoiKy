@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import ListProductFeatured from './ListProductsFeatured'
 
 function TitleSection(){
 
@@ -48,4 +49,20 @@ function TitleSection(){
     )
 }
 
-export default TitleSection;
+function SectionFeaturedCode() {
+
+    return (
+        <section className="featured spad">
+            <div className="container">
+                <div className="row">
+                    <TitleSection/>
+                </div>
+                <ListProductFeatured/>
+            </div>
+        </section>
+    );
+}
+
+export {TitleSection};
+
+export default SectionFeaturedCode;
