@@ -14,9 +14,9 @@ function TitleSection(){
     return(
         <div className="col-lg-12">
             <div className="section-title">
-                <h2>CODE NỔI BẬT</h2>
+                <h2>SẢN PHẨM NỔI BẬT</h2>
             </div>
-            <div className="featured__controls">
+            {/*  <div className="featured__controls">
                 <ul>
                     <li
                         className={activeItem === ".suckhoethugian" ? "active" : ""}
@@ -43,7 +43,7 @@ function TitleSection(){
                         Tranh
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     )
 }
