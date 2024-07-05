@@ -2,8 +2,8 @@
 import Logo from './Logo'
 import NavBar from './NavBar'
 import Cart from './Cart'
-import english  from '../image/language/english.png'
-import logo from '../image/logo/logo.png'
+import english  from '../img/language/english.png'
+import logo from '../img/logo/logo.png'
 import $ from 'jquery'
 
 function Header() {
