@@ -1,7 +1,7 @@
-import SectionHero from "./components/section_hero"
-import SectionCategories from './components/section_categories'
-import SectionFeaturedCode from './components/section_featured_product'
-import SectionBreadcrumb from './components/Commons/section_breadcrumb'
+import SectionHero from "./components/SectionHero"
+import SectionCategories from './components/Section_categories'
+import SectionFeaturedCode from './components/SectionFeaturedProduct'
+import SectionBreadcrumb from './components/Commons/SectionBreadcrumb'
 import Header from './components/Commons/Header'
 import Footer from "./components/Commons/Footer";
 
@@ -13,7 +13,6 @@ import './css/elegant-icons.css'
             <Header/>
             {/*<SectionBreadcrumb/>*/}
             <SectionHero/>
-            {/*<SectionCategories/>*/}
             <SectionFeaturedCode/>
             <Footer/>
         </div>
