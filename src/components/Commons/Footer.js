@@ -2,10 +2,7 @@ import '../../App.css'
 import '../../css/style.css'
 import '../../css/bootstrap.min.css';
 import '../../css/font-awesome.min.css';
-
-
-
-import logo from "../logo";
+import logo from '../../image/logo/logo.png' ;
 
 function Footer() {
     return (
@@ -15,7 +12,7 @@ function Footer() {
                     <div className="col-lg-3 col-md-6 col-sm-6">
                         <div className="footer__about">
                             <div className="footer__about__logo">
-                                <a href="./index.html"><img src={logo} alt=""/></a>
+                                <a href=""><img src={logo} alt=""/></a>
                             </div>
                             <ul>
                                 <li>Address:Khoa CNTT - ĐH Nông Lâm</li>

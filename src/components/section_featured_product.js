@@ -1,22 +1,20 @@
+
+import React, {useState} from "react";
+import TitleSection from './title_section_featured_product'
+import ListProductsFeatured from './list_products_featured'
 function SectionFeaturedCode(){
+
+
     return(
         <section className="featured spad">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-12">
-                        <div className="section-title">
-                            <h2> SẢN PHẨM NỔI BẬT</h2>
-                        </div>
-                        <div className="featured__controls">
-                            <ul>
-                                <li className="active" data-filter="*">Đồ gốm</li>
-                                <li data-filter=".oranges">Bánh-kẹo</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <TitleSection/>
                 </div>
+                <ListProductsFeatured/>
             </div>
         </section>
-    )
+    );
 }
+
 export default SectionFeaturedCode;
