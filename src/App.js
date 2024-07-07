@@ -1,9 +1,8 @@
 import SectionHero from "./components/SectionHero"
-
-import SectionCategories from './components/Section_categories'
+import SectionSubHero from "./components/SectionSubHero"
+import SectionBreadcrumb from './components/Commons/SectionBreadcrumb'
 import SectionFeaturedCode from './components/SectionFeaturedProduct'
-
-import Header from './components/Commons/Header'
+import Header from './components/Header'
 import Footer from "./components/Commons/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -20,7 +19,8 @@ import './css/style.css'
     return (
         <div>
             <Header/>
-            <SectionHero/>
+            <SectionSubHero/>
+            {/*<SectionHero/>*/}
             <SectionFeaturedCode/>
             <Footer/>
             <Login/>
