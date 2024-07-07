@@ -85,7 +85,7 @@ function ItemProductFeatured(data) {
                     </Toast.Body>
                 </Toast>
             </div>
-            
+
             <div className="featured__item">
                 <div className="featured__item__pic set-bg"
                      style={{backgroundImage: `url(${product.img})`}}>
