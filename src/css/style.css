@@ -477,7 +477,7 @@ ol {
 .header__cart ul li {
 	list-style: none;
 	display: inline-block;
-	margin-right: 15px;
+	margin-right: 25px;
 }
 
 .header__cart ul li:last-child {
@@ -489,7 +489,7 @@ ol {
 }
 
 .header__cart ul li a i {
-	font-size: 18px;
+	font-size: 22px;
 	color: #1c1c1c;
 }
 
