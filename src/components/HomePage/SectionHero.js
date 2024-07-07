@@ -1,7 +1,7 @@
 
-import AllCategories from "./AllCategories"
-import SearchBar from "./SearchBar"
-import Phone from "./Commons/Phone";
+import AllCategories from "../Commons/AllCategories"
+import SearchBar from "../Commons/SearchBar"
+import Phone from "../Commons/Phone";
 import Banner from "./Banner"
 
 function SectionHero() {

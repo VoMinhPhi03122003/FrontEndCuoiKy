@@ -44,22 +44,42 @@ const initState = {
     }
 
 }
-const listProductsReducer = (state = {data: products}, action) => {
+const listProductsReducer = (state = {data: products, page: 1, sort: 'most'}, action) => {
     switch (action.type) {
-        case 'listProducts/show': {
-            return {
-                ...state
-            }
-        }
+
         case 'listProducts/page': {
             const page = Number(action.payload)
-            const itemsPerPage = 10
+            const itemsPerPage = 9
             const lastIndex = page * itemsPerPage
             const firstIndex = lastIndex - itemsPerPage
             const items = products.slice(firstIndex, lastIndex)
             return {
                 ...state,
-                data: [...items]
+                data: [...items],
+                page: page
+            }
+        }
+        case 'listProducts/most': {
+            return {
+                ...state,
+                data: [...products],
+                sort: 'most'
+            }
+        }
+        case 'listProducts/mostViewed': {
+            const items = [...state.data].sort((a, b) => a.viewed > b.viewed ? -1 : 1)
+            return {
+                ...state,
+                data: [...items],
+                sort: 'mostViewed'
+            }
+        }
+        case 'listProducts/mostDownloaded': {
+            const item = [...state.data].sort((a, b) => a.downloaded > b.downloaded ? -1 : 1)
+            return {
+                ...state,
+                data: [...item],
+                sort: 'mostDownloaded'
             }
         }
         default:

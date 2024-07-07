@@ -1,13 +1,14 @@
-import SectionHero from "./components/SectionHero"
-import SectionSubHero from "./components/SectionSubHero"
+
+import SectionSubHero from "./components/HomePage/SectionSubHero"
 import SectionBreadcrumb from './components/Commons/SectionBreadcrumb'
-import SectionFeaturedCode from './components/SectionFeaturedProduct'
-import Header from './components/Header'
+import SectionFeaturedProduct from './components/HomePage/SectionFeaturedProduct'
+import Header from './components/Commons/Header'
 import Footer from "./components/Commons/Footer";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import ForgotPass from "./components/ForgotPass";
-import ChangePass from "./components/ChangePass";
+import Banner from './components/HomePage/Banner'
+import Login from "./components/AuthenticationPage/Login";
+import Register from "./components/AuthenticationPage/Register";
+import ForgotPass from "./components/AuthenticationPage/ForgotPass";
+import ChangePass from "./components/AuthenticationPage/ChangePass";
 import {store} from './redux/Store'
 import {Provider} from 'react-redux'
 
@@ -23,9 +24,10 @@ import './css/style.css'
         <Provider store={store}>
             <div>
                 <Header/>
-                <SectionHero/>
-                <SectionFeaturedCode/>
+                <Banner/>
+                <SectionFeaturedProduct/>
                 <Footer/>
+                <ProductDetails/>
             </div>
         </Provider>
     )

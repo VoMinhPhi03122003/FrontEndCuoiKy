@@ -22,11 +22,9 @@
 }
 
 .sidebar-item .list-group-item .popular-rank {
-    display: inline-block;
-    margin: 8px 8px 0 0;
     display: block;
     font-weight: bolder;
-    color: var(--color-main);
+    color:  #545454;
     float: left;
     font-size: 75%;
     padding: 0 8px;
@@ -48,11 +46,7 @@
     overflow: hidden;
     max-height: 3em;
     line-height: 1.5em;
-}
-
-.popular-price {
-    font-size: 14px;
-    color: #6d7980;
+    text-overflow: ellipsis;
 }
 
 .filters {
@@ -64,38 +58,40 @@
 }
 
 .filter-sort li,
-.filter-option span {
+.filter-layout span {
     display: inline-block;
     margin-left: 8px;
     border: 1px solid #b6b6b6;
     border-radius: 3px;
     cursor: pointer;
     transition: ease all .1s;
+    font-size: 15px;
+    user-select: none;
 }
 
 .filter-sort li:hover,
-.filter-option span:hover {
-    background-color: #7fad39;
+.filter-layout span:hover {
+    background-color: var(--color-main);
     color: white;
-    border-color: #7fad39;
+    border-color: var(--color-main);
 }
 
 .filter-sort li {
     padding: 3px 12px;
 }
 
-.filter-option span {
+.filter-layout span {
     padding: 7px;
 }
 
-.filter-option span:first-child {
+.filter-layout span:first-child {
     margin-left: 0;
 }
 
 .filter-active {
-    background-color: #7fad39;
+    background-color: var(--color-main);
     color: white;
-    border-color: #7fad39;
+    border-color: var(--color-main) !important;
 }
 
 /* [ Product Item ]
@@ -283,10 +279,10 @@
 .product-item-row-price {
     color: #27c24c;
     border-radius: 2px;
-    padding: 10px 16px;
+    padding: 8px 12px;
     border: 1px solid #27c24c;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
 }
@@ -299,4 +295,48 @@
     font-size: 15px;
     margin-bottom: 0;
     line-height: 1.4em;
+}
+
+.product-item-row-content .product-item-stats {
+    padding-left: 0;
+}
+
+.product-item-row-content .product-item-stats div {
+    width: 80px;
+    padding: 2px 6px;
+}
+
+.product-item-row-content .product-item-stats div i {
+    margin-right: 6px;
+}
+
+/* [ Pagination ]
+--------------------------------*/
+
+.product-pagination li {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d2d2d2;
+    border-radius: 1px;
+    font-size: 14px;
+    color: #b2b2b2;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 16px;
+    transition: all, 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.product-pagination li.active,
+.product-pagination li:hover {
+    background: #7fad39;
+    border-color: #7fad39;
+    color: #ffffff;
+}
+
+.product-pagination li:last-child {
+    margin-right: 0;
 }

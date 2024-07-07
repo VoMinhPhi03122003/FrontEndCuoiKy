@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux"
 import {Toast} from 'react-bootstrap';
-import {addCart} from '../redux/Action'
-import products_featured from '../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
-import {formatCurrency} from '../javascript/utils';
-import Pagination from '../components/Pagination/Pagination'
+import {addCart} from '../../redux/Action'
+import products_featured from '../../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
+import {formatCurrency} from '../../javascript/utils';
+import Pagination from '../Pagination/Pagination'
 
 function ListProductsFeatured(data) {
 

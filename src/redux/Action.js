@@ -11,3 +11,21 @@ export const switchPage = (page) => {
         payload: page
     }
 }
+export const most = () => {
+    return {
+        type: 'listProducts/most'
+    }
+}
+
+
+export const mostViewed = () => {
+    return {
+        type: 'listProducts/mostViewed'
+    }
+}
+
+export const mostDownloaded = () => {
+    return {
+        type: 'listProducts/mostDownloaded'
+    }
+}

@@ -49,7 +49,7 @@ function TitleSection(){
     )
 }
 
-function SectionFeaturedCode() {
+function SectionFeaturedProduct() {
 
     return (
         <section className="featured spad">
@@ -65,4 +65,4 @@ function SectionFeaturedCode() {
 
 export {TitleSection};
 
-export default SectionFeaturedCode;
+export default SectionFeaturedProduct;
