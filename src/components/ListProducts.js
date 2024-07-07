@@ -52,10 +52,14 @@ function ProductItem() {
             <div className="product-item-title text-center pt-2">
                 <a>BGAI - AI Powered Image Background Generator</a>
             </div>
+            <div className="product-item-stats d-flex justify-content-between">
+                <div><i className="fa fa-eye"></i> 38</div>
+                <div><i className="fa fa-download"></i> 19</div>
+            </div>
             <div className="product-item-actions d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-start">
-                    <a className="product-item-action mr-1"><i className="fa fa-folder-open"></i></a>
-                    <a className="product-item-action"><i className="fa fa-thumbs-up"></i></a>
+                    <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
+                    <a className="product-item-action"><i className="fa fa-download"></i></a>
                 </div>
                 <div className="product-item-stars">
                     <i className="fa fa-star"></i>
