@@ -10,7 +10,7 @@ export const rootReducer = (state = initState, action) => {
 
     switch (action.type) {
 
-        case 'product/load': {
+        case 'product/load-products-featured': {
             return {
                 ...state,
                 products: action.payload

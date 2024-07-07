@@ -1,6 +1,6 @@
-export const loadProduct = (data) => {
+export const loadProductsFeatured = (data) => {
     return {
-        type: 'product/load',
+        type: 'product/load-products-featured',
         payload: data
     }
 }

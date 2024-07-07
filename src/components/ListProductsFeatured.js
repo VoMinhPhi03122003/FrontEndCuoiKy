@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux"
 import {Toast} from 'react-bootstrap';
-import {loadProduct, addCart} from '../redux/Action'
-import products_featured from '../data/ProductData.js'; //=> danh sách code nổi bật
+import {loadProductsFeatured, addCart} from '../redux/Action'
+import products_featured from '../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
 import {formatCurrency} from '../javascript/utils';
 
 function ListProductsFeatured(data) {
@@ -24,7 +24,7 @@ function ListProductsFeatured(data) {
      */
 
     useEffect(() => {
-        dispatch(loadProduct(products_featured))
+        dispatch(loadProductsFeatured(products_featured))
 
         /**
          useEffect là một hook trong React được sử dụng để thực hiện các tác vụ liên quan đến hiệu ứng (effects) trong thành phần React.
@@ -80,7 +80,7 @@ function ItemProductFeatured(data) {
             {/*Thông báo Toast*/}
             <div>
                 <Toast show={showToast} onClose={() => setShowToast(false)} delay={3000} autohide>
-                    <Toast.Body className="bg-success text-white">
+                    <Toast.Body className="text-white" style={{backgroundColor: '#7fad39'}}>
                         Sản pẩm đã được thêm vào giỏ hàng
                     </Toast.Body>
                 </Toast>
