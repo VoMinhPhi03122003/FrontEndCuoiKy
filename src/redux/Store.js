@@ -1,6 +1,4 @@
-const firstState = {
+import {root} from './Reducer'
+import {configureStore} from '@reduxjs/toolkit'
 
-    products: [],
-    cart: []
-
-}
+export const store = configureStore({reducer: root})

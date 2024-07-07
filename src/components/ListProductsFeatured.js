@@ -1,9 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux"
 
 import products_featured from '../data/ProductData.js'
+import {loadProduct} from '../redux/Action'
 
 function ListProductsFeatured(data) {
-    const [products, setProducts] = useState(products_featured)
+    //const [products, setProducts] = useState(products_featured);
 
     /**
      useState là một hook dùng để lưu trữ và quản lý state(trạng thái) của một component
@@ -15,8 +17,30 @@ function ListProductsFeatured(data) {
      - Initial state với callback ?
      - setState là thay thế state bằng giá trị mới
      */
-    return (
 
+
+    const products = useSelector(state => state.products);
+
+    /**
+     useSelector là một hook của React Redux,
+     cho phép bạn lấy ra các giá trị từ Redux store.
+     Bằng cách truyền một hàm selector,
+     bạn có thể lựa chọn các phần của state mà bạn muốn truy xuất từ store.
+     */
+
+    const dispatch = useDispatch();
+    /**
+     useDispatch là một hook của thư viện React Redux,
+     cho phép bạn gửi các action đến Redux store từ thành phần React của bạn.
+     Nó trả về một hàm mà bạn có thể sử dụng để gửi action đi.
+     */
+
+    useEffect(() => {
+        dispatch(loadProduct(products_featured))
+        // console.log('Day la ham useEffect')
+    })
+
+    return (
         <div className="row featured__filter">
             {products.map(product => (
                     <ItemProductFeatured id={product.id} name={product.name} img={product.img}
