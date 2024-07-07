@@ -36,7 +36,7 @@
     ]
   },
   "scripts": {
-    "start:server": "json-server --watch db.json",
+    "start:server": "json-server --watch db.json --port 9810",
     "start:app": "react-scripts start"
   },
   "browserslist": {
