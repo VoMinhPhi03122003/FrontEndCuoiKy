@@ -62,11 +62,7 @@ function ProductItem() {
                     <a className="product-item-action"><i className="fa fa-download"></i></a>
                 </div>
                 <div className="product-item-stars">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
+                    {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
                 </div>
             </div>
             <div className="product-item-bottom d-flex justify-content-between align-items-center">
@@ -77,15 +73,48 @@ function ProductItem() {
     )
 }
 
+function ProductItemRow() {
+    return (
+        <div className="product-item-row mb-4">
+            <div className="row no-gutters">
+                <div className="product-item-img col-lg-4 pr-3">
+                    <img src={require("../img/products/product-1.jpg")} alt=""/>
+                </div>
+                <div className="product-item-row-content col-lg-6">
+                    <a className="product-item-row-title">BGAI - AI Powered Image Background Generator</a>
+                    <a className="product-item-brand"><i className="fa fa-android"></i> Android</a>
+                    <div className="product-item-stars">
+                        {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                    </div>
+                    <p className="product-item-row-description">Get Free Music Ringtones app to enjoy a nice mix of free top ringtones </p>
+                </div>
+                <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
+                    <div className="pr-3 pb-3">
+                        <div className="product-item-row-price text-center">
+                            <a className="d-inline text-center">$20</a>
+                        </div>
+                        <div className="d-flex justify-content-start">
+                            <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
+                            <a className="product-item-action"><i className="fa fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 function Products() {
     return (
         <div className="row">
             {
                 Array(12).fill(1).map((value, index) => (
-                    <div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
-                        <ProductItem/>
+                    <div className="product-item-container col-12" key={index}>
+                        <ProductItemRow/>
                     </div>
+                    // <div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
+                    //     <ProductItem/>
+                    // </div>
                 ))
             }
 
