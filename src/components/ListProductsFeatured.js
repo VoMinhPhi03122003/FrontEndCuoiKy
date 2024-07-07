@@ -1,32 +1,40 @@
 import React, {useEffect, useState} from "react";
-import {useDispatch, useSelector} from "react-redux"
+import {useDispatch} from "react-redux"
 import {Toast} from 'react-bootstrap';
-import {loadProductsFeatured, addCart} from '../redux/Action'
+import {addCart} from '../redux/Action'
 import products_featured from '../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
 import {formatCurrency} from '../javascript/utils';
+import Pagination from '../components/Pagination/Pagination'
 
 function ListProductsFeatured(data) {
 
     const [products, setProducts] = useState([]) // => trạng thái (state) ban đầu của component ListProductFeatured là []
-
+    const [pagination, setPagination] = useState({
+        _page: 1,
+        _limit: 6,
+        _totalRows: 100
+    })
     useEffect(() => {
+        // Hàm sử dụng async/await để gọi API và lấy danh sách sản phẩm nổi bật
         async function fetchListProductFeatured() {
             try {
                 const requestUrl = 'http://localhost:9810/products-featured'
+                // Gửi yêu cầu GET đến API và chờ nhận được phản hồi
                 const response = await fetch(requestUrl);
+                // Chuyển đổi phản hồi thành dữ liệu dạng JSON và chờ cho đến khi hoàn thành
                 const responseJson = await response.json();
 
                 console.log({responseJson});
-
+                // Lưu dữ liệu vào biến data
                 const data = responseJson;
-
+                // Cập nhật state của component với dữ liệu mới lấy được từ API
                 setProducts(data);
 
             } catch (error) {
-                console.log('Khong the load danh sach code noi bat ', error.message)
+                console.log('Khong the load danh sach san pham noi bat ', error.message)
             }
         }
-
+        // Gọi hàm fetchListProductFeatured để lấy danh sách sản phẩm  nổi bật
         fetchListProductFeatured();
 
 
@@ -50,15 +58,24 @@ function ListProductsFeatured(data) {
 
     }, [])
 
+    function handlePageChange(newPage) {
+        console.log('New page: ' + newPage)
+    }
     return (
-        <div className="row featured__filter">
-            {products.map(product => (
-                    <ItemProductFeatured id={product.id} name={product.name} img={product.img}
-                                         price={product.price}></ItemProductFeatured>
-                )
-            )}
-        </div>
+        <>
+            <div className="row featured__filter">
+                {products.map(product => (
+                        <ItemProductFeatured key={product.id} name={product.name} img={product.img}
+                                             price={product.price}></ItemProductFeatured>
+                    )
+                )}
+            </div>
+            <div className="d-flex justify-content-center">
+                <Pagination pagination={pagination} onPageChange={handlePageChange}/>
+            </div>
+        </>
     )
+
 
 }
 
