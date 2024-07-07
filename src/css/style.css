@@ -3438,3 +3438,92 @@ ol {
 		font-size: 24px;
 	}
 }
+.form-input form {
+	height: fit-content;
+	border-radius: .4rem;
+	box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.form-input form h5 {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.form-input form input {
+	border-radius: 3px;
+	padding: 8px 15px;
+	border: 1px solid rgb(210, 210, 210);
+	transition: 0.2s;
+}
+
+.form-input form input:focus {
+	box-shadow: rgba(0, 0, 0, 0.01) 0 1px 3px 0, rgba(27, 31, 35, 0.1) 0 0 0 1px;
+}
+
+.form-input form .next {
+	background-color: #7fad39;
+	color: white;
+	border: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 10px 0;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+
+.form-input form .next:hover {
+	box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+	background-color: #9ecb59;
+}
+
+.form-input form .or {
+	font-size: small;
+	color: rgb(128, 128, 128);
+}
+
+.form-input form .or::before {
+	content: "";
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	width: 123px;
+	background-color: rgb(190, 190, 190);
+	height: 1.5px;
+}
+
+.form-input form .or::after {
+	content: "";
+	position: absolute;
+	left: 50px;
+	top: 50%;
+	width: 123px;
+	background-color: rgb(190, 190, 190);
+	height: 1.5px;
+}
+
+.form-input form .google {
+	border: 1px solid rgb(219, 219, 219);
+	padding: 8px;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: all ease 0.3s;
+}
+
+.form-input form .google:hover {
+	background-color: rgb(246, 246, 246);
+}
+
+.form-input form .shotcut {
+	font-size: 15px;
+	color: #333;
+}
+
+.form-input form .shotcut a {
+	transition: color ease .3s;
+}
+.form-input form a{
+	color: #7fad39;
+}
+.form-input form a:hover {
+	color: #9ecb59;
+}
