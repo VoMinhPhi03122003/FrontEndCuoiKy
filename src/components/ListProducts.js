@@ -3,6 +3,7 @@ import Footer from "./Commons/Footer"
 import SectionSubHero from "./SectionSubHero";
 
 import '../css/products.css'
+import {useState} from "react";
 
 const categories = ['Sức khỏe - Thư giản', 'Uống chất', 'Ăn lành', 'Khẩu trang', 'Chăm sóc nhà cửa-Đồ dùng phòng bếp tắm', 'Làm đẹp & chăm sóc cá nhân', 'Mẹ & bé', 'Đồ gốm', 'Nón lá', 'Áo dài']
 
@@ -77,9 +78,9 @@ function ProductItemRow() {
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
-                <div className="product-item-img col-lg-4 pr-3">
+                <a className="product-item-img col-lg-4 pr-3">
                     <img src={require("../img/products/product-1.jpg")} alt=""/>
-                </div>
+                </a>
                 <div className="product-item-row-content col-lg-6">
                     <a className="product-item-row-title">BGAI - AI Powered Image Background Generator</a>
                     <a className="product-item-brand"><i className="fa fa-android"></i> Android</a>
@@ -104,25 +105,37 @@ function ProductItemRow() {
     )
 }
 
-function Products() {
+function Products(props) {
     return (
         <div className="row">
             {
-                Array(12).fill(1).map((value, index) => (
-                    <div className="product-item-container col-12" key={index}>
-                        <ProductItemRow/>
-                    </div>
-                    // <div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
-                    //     <ProductItem/>
-                    // </div>
-                ))
+                Array(12).fill(1).map((value, index) => {
+                    return props.isGrid ?
+                        (
+                            <div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
+                                <ProductItem/>
+                            </div>
+                        ) :
+                        (
+                            <div className="product-item-container col-12" key={index}>
+                                <ProductItemRow/>
+                            </div>
+                        )
+                })
+
             }
 
         </div>
     )
 }
 
-function Filter() {
+function Filter(props) {
+    const [layout, setLayout] = useState('grid')
+
+    function onLayoutClick(isGrid) {
+        props.onLayout(isGrid)
+        setLayout(isGrid === true ? 'grid' : 'row')
+    }
     return (
         <div className="filters mb-4">
             <div className="row">
@@ -141,8 +154,10 @@ function Filter() {
                         </ul>
                     </div>
                     <div className="filter-option d-flex align-items-center">
-                        <span className="icon_grid-2x2 filter-active"></span>
-                        <span className="icon_ul"></span>
+                        <span className={"icon_grid-2x2 " + (layout === 'grid' ? "filter-active" : "")}
+                              onClick={() => onLayoutClick(true)}></span>
+                        <span className={"icon_ul " + (layout === 'row' ? "filter-active" : "")}
+                              onClick={() => onLayoutClick(false)}></span>
                     </div>
                 </div>
             </div>
@@ -162,6 +177,8 @@ function Pagination() {
 }
 
 function ProductsContainer() {
+    const [grid, setGrid] = useState(true)
+
     return (
         <section className="product">
             <div className="container">
@@ -170,8 +187,8 @@ function ProductsContainer() {
                         <SideBar/>
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
-                        <Filter/>
-                        <Products/>
+                        <Filter onLayout={(idGrid) => setGrid(idGrid)}/>
+                        <Products isGrid={grid}/>
                         <Pagination/>
                     </div>
                 </div>
