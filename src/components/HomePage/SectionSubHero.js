@@ -1,5 +1,5 @@
-import AllCategories from "./AllCategories"
-import SearchBar from "./SearchBar"
+import AllCategories from "../Commons/AllCategories"
+import SearchBar from "../Commons/SearchBar"
 
 function SectionSubHero() {
     return (

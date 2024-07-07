@@ -1,0 +1,12 @@
+main-slide{
+    padding-top: 30px;
+}
+
+.carousel .thumb{
+    width: 25%;
+    height: 50px;
+}
+
+.carousel{
+    text-align: center;
+}

@@ -1,6 +1,6 @@
-import authenticationImage from '../img/authentication/authentication.png';
-import logoGoogle from '../img/authentication/logo-google.png';
-import logoFacebook from '../img/authentication/logo-fb.png';
+import authenticationImage from '../../img/authentication/authentication.png';
+import logoGoogle from '../../img/authentication/logo-google.png';
+import logoFacebook from '../../img/authentication/logo-fb.png';
 
 function Login() {
     return (

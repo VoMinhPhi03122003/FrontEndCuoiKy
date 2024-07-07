@@ -22,6 +22,7 @@
     "react-bootstrap": "^2.5.0-beta.1",
     "react-dom": "^18.3.1",
     "react-redux": "^8.0.5",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2",
     "react-slick": "^0.29.0",
     "redux": "^4.2.1",
@@ -37,7 +38,8 @@
   },
   "scripts": {
     "start:server": "json-server --watch db.json --port 9810",
-    "start:app": "react-scripts start"
+    "start:app": "react-scripts start",
+    "start": "react-scripts start"
   },
   "browserslist": {
     "production": [

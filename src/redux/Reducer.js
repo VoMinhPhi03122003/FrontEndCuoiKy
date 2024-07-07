@@ -1,9 +1,11 @@
+import {combineReducers} from "redux";
+import {products} from "../data/Products";
 const initState = {
     /* đây là trạng thái ban đầu của ứng dụng */
     cart: []
 }
 
-export const rootReducer = (state = initState, action) => {
+ const rootReducer = (state = initState, action) => {
     /* Đây là Reducer, một hàm xử lý các hành động (actions) để cập nhật trạng thái của ứng dụng */
 
     switch (action.type) {
@@ -42,3 +44,50 @@ export const rootReducer = (state = initState, action) => {
     }
 
 }
+const listProductsReducer = (state = {data: products, page: 1, sort: 'most'}, action) => {
+    switch (action.type) {
+
+        case 'listProducts/page': {
+            const page = Number(action.payload)
+            const itemsPerPage = 9
+            const lastIndex = page * itemsPerPage
+            const firstIndex = lastIndex - itemsPerPage
+            const items = products.slice(firstIndex, lastIndex)
+            return {
+                ...state,
+                data: [...items],
+                page: page
+            }
+        }
+        case 'listProducts/most': {
+            return {
+                ...state,
+                data: [...products],
+                sort: 'most'
+            }
+        }
+        case 'listProducts/mostViewed': {
+            const items = [...state.data].sort((a, b) => a.viewed > b.viewed ? -1 : 1)
+            return {
+                ...state,
+                data: [...items],
+                sort: 'mostViewed'
+            }
+        }
+        case 'listProducts/mostDownloaded': {
+            const item = [...state.data].sort((a, b) => a.downloaded > b.downloaded ? -1 : 1)
+            return {
+                ...state,
+                data: [...item],
+                sort: 'mostDownloaded'
+            }
+        }
+        default:
+            return state
+    }
+}
+
+export const reducers = combineReducers({
+    rootReducer: rootReducer,
+    listProductsReducer: listProductsReducer,
+})

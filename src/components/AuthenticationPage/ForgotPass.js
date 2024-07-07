@@ -1,4 +1,4 @@
-import authenticationImage from '../img/authentication/authentication.png';
+import authenticationImage from '../../img/authentication/authentication.png';
 function ForgotPass(){
     return(
         <section className="form-input py-5">

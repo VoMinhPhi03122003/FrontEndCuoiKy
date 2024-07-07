@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux"
-function Cart(){
-    const cart = useSelector(state => state.cart);
+
+function Cart() {
+    const cart = useSelector(state => state.rootReducer.cart);
 
     /**
      useSelector là một hook của React Redux,
@@ -10,11 +11,9 @@ function Cart(){
      */
 
     return (
-        <div className="header__cart">
-            <ul>
-                <li><a><i className="fa fa-heart"></i><span>0</span></a></li>
-                <li><a><i className="fa fa-shopping-bag"></i> <span>{cart.length}</span></a></li>
-            </ul>
+        <div className="header-cart">
+            <a href="" className="position-relative mr-5"><i className="bi bi-hand-thumbs-up"></i><span>0</span></a>
+            <a href="" className="position-relative"><i className="bi bi-cart"></i> <span>{cart.length}</span></a>
         </div>
 
 

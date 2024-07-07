@@ -1,4 +1,4 @@
-import authenticationImage from '../img/authentication/authentication.png';
+import authenticationImage from '../../img/authentication/authentication.png';
 function Register(){
     return(
         <section className="form-input py-5">
