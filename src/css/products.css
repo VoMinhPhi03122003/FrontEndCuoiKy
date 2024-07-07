@@ -1,0 +1,33 @@
+.sidebar-item {
+    border: 1px solid var(--color-border);
+    border-bottom: 0;
+}
+
+.sidebar-item .list-group-item {
+    border-width: 0 0 1px;
+    border-radius: 0;
+    color: var(--color-text);
+}
+
+.sidebar-item .list-group-item .badge {
+    background-color: #edf1f2;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 50px;
+}
+
+.sidebar-item .list-group-item .popular-rank {
+    display: inline-block;
+    margin: 8px 8px 0 0;
+    font-weight: bolder;
+    color: var(--color-main);
+    float: left;
+    font-size: 75%;
+    padding: 0 10px;
+    border-radius: 4px;
+    background-color: #dde6e9;
+}
+
+.sidebar-item .list-group-item img {
+    border-radius: 10px;
+}
