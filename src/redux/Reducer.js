@@ -6,7 +6,7 @@ const initState = {
 
 }
 
-export const root = (state = initState, action) => {
+export const rootReducer = (state = initState, action) => {
 
     switch (action.type) {
 
