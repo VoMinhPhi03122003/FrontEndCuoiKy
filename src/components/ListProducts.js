@@ -4,6 +4,7 @@ import SectionSubHero from "./SectionSubHero";
 
 import '../css/products.css'
 import {useState} from "react";
+import {useSelector} from "react-redux";
 
 const categories = ['Sức khỏe - Thư giản', 'Uống chất', 'Ăn lành', 'Khẩu trang', 'Chăm sóc nhà cửa-Đồ dùng phòng bếp tắm', 'Làm đẹp & chăm sóc cá nhân', 'Mẹ & bé', 'Đồ gốm', 'Nón lá', 'Áo dài']
 
@@ -44,18 +45,19 @@ function SideBar() {
 </div>
 )
 }
-function ProductItem() {
+function ProductItem(props) {
+    const p = props.data
     return (
         <div className="product-item">
             <a className="product-item-img">
-                <img src={require("../img/products/product-1.jpg")} alt=""/>
+                <img src={p.img} alt=""/>
             </a>
             <div className="product-item-title text-center pt-2">
-                <a>BGAI - AI Powered Image Background Generator</a>
+                <a>{p.name}</a>
             </div>
             <div className="product-item-stats d-flex justify-content-between">
-                <div><i className="fa fa-eye"></i> 38</div>
-                <div><i className="fa fa-download"></i> 19</div>
+                <div><i className="fa fa-eye"></i> {p.viewed}</div>
+                <div><i className="fa fa-download"></i>{p.downloaded}</div>
             </div>
             <div className="product-item-actions d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-start">
@@ -67,34 +69,35 @@ function ProductItem() {
                 </div>
             </div>
             <div className="product-item-bottom d-flex justify-content-between align-items-center">
-                <a className="product-item-brand"><i className="fa fa-android"></i> Sức khỏe - Thư giản</a>
-                <a className="product-item-price">$12</a>
+                <a className="product-item-brand"><i className="fa fa-android"></i>{p.type}</a>
+                <a className="product-item-price">{p.price}</a>
             </div>
         </div>
     )
 }
 
-function ProductItemRow() {
+function ProductItemRow(props) {
+    const p = props.data
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
                 <a className="product-item-img col-lg-4 pr-3">
-                    <img src={require("../img/products/product-1.jpg")} alt=""/>
+                    <img src={p.img} alt=""/>
                 </a>
                 <div className="product-item-row-content col-lg-6">
-                    <a className="product-item-row-title">BGAI - AI Powered Image Background Generator</a>
-                    <a className="product-item-brand"><i className="fa fa-android"></i> Android</a>
+                    <a className="product-item-row-title">{p.name}</a>
+                    <a className="product-item-brand"><i className="fa fa-android"></i> {p.type}</a>
                     <div className="product-item-stars">
                         {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
                     </div>
-                    <p className="product-item-row-description">Get Free Music Ringtones app to enjoy a nice mix of free top ringtones </p>
+                    <p className="product-item-row-description">{p.description}</p>
                 </div>
                 <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
                     <div className="pr-3 pb-3">
                         <div className="product-item-row-price text-center">
-                            <a className="d-inline text-center">$20</a>
+                            <a className="d-inline text-center">{p.price}</a>
                         </div>
-                        <div className="d-flex justify-content-start">
+                        <div className="d-flex justify-content-end">
                             <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
                             <a className="product-item-action"><i className="fa fa-download"></i></a>
                         </div>
@@ -106,19 +109,20 @@ function ProductItemRow() {
 }
 
 function Products(props) {
+    const products = useSelector(state => state.listProductsReducer.data)
     return (
         <div className="row">
             {
-                Array(12).fill(1).map((value, index) => {
+                products.map((value, index) => {
                     return props.isGrid ?
                         (
                             <div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
-                                <ProductItem/>
+                                <ProductItem data={value}/>
                             </div>
                         ) :
                         (
                             <div className="product-item-container col-12" key={index}>
-                                <ProductItemRow/>
+                                <ProductItemRow data={value}/>
                             </div>
                         )
                 })
@@ -154,9 +158,9 @@ function Filter(props) {
                         </ul>
                     </div>
                     <div className="filter-option d-flex align-items-center">
-                        <span className={"icon_grid-2x2 " + (layout === 'grid' ? "filter-active" : "")}
+                        <span className={`icon_grid-2x2 ${layout === 'grid' ? "filter-active" : ""}`}
                               onClick={() => onLayoutClick(true)}></span>
-                        <span className={"icon_ul " + (layout === 'row' ? "filter-active" : "")}
+                        <span className={`icon_ul ${layout === 'row' ? "filter-active" : ""}`}
                               onClick={() => onLayoutClick(false)}></span>
                     </div>
                 </div>
@@ -177,6 +181,11 @@ function Pagination() {
 }
 
 function ProductsContainer() {
+    const [currentPage, setCurrentPage] = useState(1)
+    const itemsPerPage = 12
+    const lastIndex = currentPage * itemsPerPage
+    const firstIndex = lastIndex - itemsPerPage
+
     const [grid, setGrid] = useState(true)
 
     return (

@@ -1,9 +1,11 @@
+import {combineReducers} from "redux";
+import {products} from "../data/Products";
 const initState = {
     /* đây là trạng thái ban đầu của ứng dụng */
     cart: []
 }
 
-export const rootReducer = (state = initState, action) => {
+ const rootReducer = (state = initState, action) => {
     /* Đây là Reducer, một hàm xử lý các hành động (actions) để cập nhật trạng thái của ứng dụng */
 
     switch (action.type) {
@@ -42,3 +44,19 @@ export const rootReducer = (state = initState, action) => {
     }
 
 }
+const listProductsReducer = (state = {data: products}, action) => {
+    switch (action.type) {
+        case 'listProducts/show': {
+            return {
+                ...state
+            }
+        }
+        default:
+            return state
+    }
+}
+
+export const reducers = combineReducers({
+    rootReducer: rootReducer,
+    listProductsReducer: listProductsReducer,
+})
