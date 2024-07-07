@@ -1,13 +1,6 @@
-export const loadProductsFeatured = (data) => {
-    return {
-        type: 'product/load-products-featured',
-        payload: data
-    }
-}
-
 export const addCart = (product) => {
     return {
-        type: 'cart/add',
+        type: 'cart/add-item',
         payload: product
     }
 }
