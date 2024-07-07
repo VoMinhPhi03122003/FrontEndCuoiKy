@@ -4,3 +4,10 @@ export const addCart = (product) => {
         payload: product
     }
 }
+
+export const switchPage = (page) => {
+    return {
+        type: 'listProducts/page',
+        payload: page
+    }
+}

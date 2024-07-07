@@ -147,6 +147,11 @@
     position: relative;
     top: 1px;
 }
+.product-item .product-item-title {
+    padding: 0 10px;
+    width: 100%;
+    height: 50px;
+}
 
 
 .product-item .product-item-title a {
@@ -154,6 +159,13 @@
     font-weight: 700;
     color: #263038;
     cursor: pointer;
+}
+.product-item .product-item-title .title-wrapper {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .product-item-actions {
@@ -205,6 +217,10 @@
 
 .product-item-brand {
     cursor: pointer;
+    max-width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .product-item-brand i {
@@ -214,8 +230,7 @@
 }
 
 .product-item .product-item-price {
-    width: 60px;
-    padding: 1px 0;
+    padding: 1px 6px;
     text-align: center;
     font-weight: 600;
     border: 1px solid #dee5e7;

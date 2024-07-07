@@ -51,6 +51,17 @@ const listProductsReducer = (state = {data: products}, action) => {
                 ...state
             }
         }
+        case 'listProducts/page': {
+            const page = Number(action.payload)
+            const itemsPerPage = 10
+            const lastIndex = page * itemsPerPage
+            const firstIndex = lastIndex - itemsPerPage
+            const items = products.slice(firstIndex, lastIndex)
+            return {
+                ...state,
+                data: [...items]
+            }
+        }
         default:
             return state
     }

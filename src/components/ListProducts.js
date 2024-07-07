@@ -3,8 +3,10 @@ import Footer from "./Commons/Footer"
 import SectionSubHero from "./SectionSubHero";
 
 import '../css/products.css'
-import {useState} from "react";
-import {useSelector} from "react-redux";
+import {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {products} from "../data/Products";
+import {switchPage} from "../redux/Action";
 
 const categories = ['Sức khỏe - Thư giản', 'Uống chất', 'Ăn lành', 'Khẩu trang', 'Chăm sóc nhà cửa-Đồ dùng phòng bếp tắm', 'Làm đẹp & chăm sóc cá nhân', 'Mẹ & bé', 'Đồ gốm', 'Nón lá', 'Áo dài']
 
@@ -52,8 +54,10 @@ function ProductItem(props) {
             <a className="product-item-img">
                 <img src={p.img} alt=""/>
             </a>
-            <div className="product-item-title text-center pt-2">
-                <a>{p.name}</a>
+            <div className="product-item-title d-flex justify-content-center align-items-center text-center pt-2">
+                <div className="title-wrapper">
+                    <a>{p.name}</a>
+                </div>
             </div>
             <div className="product-item-stats d-flex justify-content-between">
                 <div><i className="fa fa-eye"></i> {p.viewed}</div>
@@ -70,7 +74,7 @@ function ProductItem(props) {
             </div>
             <div className="product-item-bottom d-flex justify-content-between align-items-center">
                 <a className="product-item-brand"><i className="fa fa-android"></i>{p.type}</a>
-                <a className="product-item-price">{p.price}</a>
+                <a className="product-item-price">{p.price}VNĐ</a>
             </div>
         </div>
     )
@@ -110,6 +114,13 @@ function ProductItemRow(props) {
 
 function Products(props) {
     const products = useSelector(state => state.listProductsReducer.data)
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(switchPage(1))
+    }, [])
+
     return (
         <div className="row">
             {
@@ -169,22 +180,24 @@ function Filter(props) {
     )
 }
 
-function Pagination() {
+function Pagination(props) {
+    const dispatch = useDispatch()
+
     return (
         <div className="product__pagination">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#"><i className="fa fa-long-arrow-right"></i></a>
+            <a href="#"><i className="fa fa-chevron-left"></i></a>
+            {props.numbers.map((value, index) => (
+                <a href="#" key={index} onClick={() => dispatch(switchPage(value))}>{value}</a>
+            ))}
+            <a href="#"><i className="fa fa-chevron-right"></i></a>
         </div>
     )
 }
 
 function ProductsContainer() {
-    const [currentPage, setCurrentPage] = useState(1)
-    const itemsPerPage = 12
-    const lastIndex = currentPage * itemsPerPage
-    const firstIndex = lastIndex - itemsPerPage
+    const itemsPerPage = 10
+    const pages = Math.ceil(products.length / itemsPerPage)
+    const numbers = [...Array(pages + 1).keys()].slice(1)
 
     const [grid, setGrid] = useState(true)
 
@@ -198,7 +211,7 @@ function ProductsContainer() {
                     <div className="col-lg-9 col-md-7 pl-4">
                         <Filter onLayout={(idGrid) => setGrid(idGrid)}/>
                         <Products isGrid={grid}/>
-                        <Pagination/>
+                        <Pagination numbers={numbers}/>
                     </div>
                 </div>
             </div>
