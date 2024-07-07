@@ -834,6 +834,8 @@ ol {
 	position: relative;
 	overflow: hidden;
 	background-position: center center;
+	border: 2px solid #d8e1d7;
+	border-radius: 10px;
 }
 
 .featured__item__pic__hover {
@@ -898,20 +900,23 @@ ol {
 }
 
 .featured__item__text {
-	text-align: center;
+	text-align: left;
 	padding-top: 15px;
 }
 
 .featured__item__text h6 {
 	margin-bottom: 10px;
+	line-height: 1.5em;
+	height: 85px;
 }
 
 .featured__item__text h6 a {
-	color: #252525;
+	color: #7e592a;
+	font-weight: bold;
 }
 
 .featured__item__text h5 {
-	color: #252525;
+	color: #84c52c;
 	font-weight: 700;
 }
 
