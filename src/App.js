@@ -1,4 +1,5 @@
 import SectionHero from "./components/SectionHero"
+import SectionSubHero from "./components/SectionSubHero"
 import SectionCategories from './components/Section_categories'
 import SectionFeaturedCode from './components/SectionFeaturedProduct'
 import SectionBreadcrumb from './components/Commons/SectionBreadcrumb'
@@ -12,7 +13,8 @@ import './css/elegant-icons.css'
         <div>
             <Header/>
             {/*<SectionBreadcrumb/>*/}
-            <SectionHero/>
+            <SectionSubHero/>
+            {/*<SectionHero/>*/}
             <SectionFeaturedCode/>
             <Footer/>
         </div>
