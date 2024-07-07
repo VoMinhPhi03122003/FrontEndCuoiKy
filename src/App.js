@@ -1,8 +1,8 @@
 import SectionHero from "./components/SectionHero"
-import SectionSubHero from "./components/SectionSubHero"
+
 import SectionCategories from './components/Section_categories'
 import SectionFeaturedCode from './components/SectionFeaturedProduct'
-import SectionBreadcrumb from './components/Commons/SectionBreadcrumb'
+
 import Header from './components/Commons/Header'
 import Footer from "./components/Commons/Footer";
 import Login from "./components/Login";
@@ -20,8 +20,7 @@ import './css/style.css'
     return (
         <div>
             <Header/>
-            {/*<SectionBreadcrumb/>*/}
-            <SectionSubHero/>
+            <SectionHero/>
             <SectionFeaturedCode/>
             <Footer/>
             <Login/>

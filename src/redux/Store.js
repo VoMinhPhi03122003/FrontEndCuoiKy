@@ -1,0 +1,6 @@
+const firstState = {
+
+    products: [],
+    cart: []
+
+}
