@@ -8,6 +8,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ForgotPass from "./components/ForgotPass";
 import ChangePass from "./components/ChangePass";
+import {store} from './redux/Store'
+import {Provider} from 'react-redux'
+
 
 import './css/bootstrap.min.css'
 import './css/elegant-icons.css'
@@ -17,17 +20,14 @@ import './css/slicknav.min.css'
 import './css/style.css'
  function App() {
     return (
-        <div>
-            <Header/>
-            <SectionSubHero/>
-            {/*<SectionHero/>*/}
-            <SectionFeaturedCode/>
-            <Footer/>
-            <Login/>
-            <Register/>
-            <ForgotPass/>
-            <ChangePass/>
-        </div>
+        <Provider store={store}>
+            <div>
+                <Header/>
+                <SectionHero/>
+                <SectionFeaturedCode/>
+                <Footer/>
+            </div>
+        </Provider>
     )
 }
 export default App;
