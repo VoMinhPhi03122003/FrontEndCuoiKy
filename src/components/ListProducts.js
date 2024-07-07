@@ -10,90 +10,35 @@ function SideBar() {
     return (
         <div className="sidebar">
             <div className="sidebar-item">
-                <h5 className="list-group-item font-weight-bolder">Phân loại sản phâm</h5>
+                <h6 className="list-group-item font-weight-bolder">Phân loại sản phâm</h6>
                 <div className="list-group">
-                    {categories.map(c => (
-                        <a className="list-group-item d-flex justify-content-between align-items-center" href="#">
-                            <span>{c}</span>
+                    {categories.map((value,index) => (
+                        <a className="list-group-item d-flex justify-content-between align-items-center" key={index} href="#">
+                            <span>{value}</span>
                             <span className="badge badge-light font-weight-normal">12</span>
                         </a>
                     ))}
                 </div>
             </div>
-            <div className="sidebar-item mt-5">
-                <h5 className="list-group-item font-weight-bolder">Sản phẩm phổ biến</h5>
+            <div className="sidebar-item mt-4">
+                <h6 className="list-group-item font-weight-bolder">Sản phẩm phổ biến</h6>
                 <div className="list-group">
-                    <a className="list-group-item" href="#">
-                        <span className="popular-rank">1</span>
-                        <div className="float-left mr-3">
-                            <img width={50} src={require("../img/products/lp-1.jpg")} alt=""/>
-                        </div>
-                        <div className="">
-                            <h6>Crab Pool Security</h6>
-                            <span>$30.00</span>
-                        </div>
-                    </a>
+                    {
+                        Array(9).fill(1).map((value, index) => (
+                            <a className="list-group-item d-flex align-items-center" key={index} href="#">
+                                <div className="align-self-start mt-2 mr-2">
+                                    <span className="popular-rank">{++index}</span>
+                                </div>
+                                <img className="mr-2" src={require("../img/products/lp-1.jpg")} alt=""/>
+                                <span className="popular-title">Bundle 5 Android Studio games</span>
+                                <div className="align-self-start ml-2 mt-1">
+                                    <span className="popular-price">12$</span>
+                                </div>
+                            </a>
+                        ))
+                    }
             </div>
-                {/*<div className="latest-product__slider owl-carousel">*/}
-                {/*    <div className="latest-prdouct__slider__item">*/}
-                {/*        <a href="#" className="latest-product__item">*/}
-                {/*            <div className="latest-product__item__pic">*/}
-                {/*                <img src="img/latest-product/lp-1.jpg" alt=""/>*/}
-                {/*            </div>*/}
-                {/*            <div className="latest-product__item__text">*/}
-                {/*                <h6>Crab Pool Security</h6>*/}
-                {/*                <span>$30.00</span>*/}
-                {/*            </div>*/}
-                {/*        </a>*/}
-                {/*        <a href="#" className="latest-product__item">*/}
-                {/*            <div className="latest-product__item__pic">*/}
-                {/*                <img src="img/latest-product/lp-2.jpg" alt=""/>*/}
-                {/*            </div>*/}
-                {/*            <div className="latest-product__item__text">*/}
-                {/*                <h6>Crab Pool Security</h6>*/}
-                {/*                <span>$30.00</span>*/}
-                {/*            </div>*/}
-                {/*        </a>*/}
-                {/*        <a href="#" className="latest-product__item">*/}
-                {/*            <div className="latest-product__item__pic">*/}
-                {/*                <img src="img/latest-product/lp-3.jpg" alt=""/>*/}
-                {/*            </div>*/}
-                {/*            <div className="latest-product__item__text">*/}
-                {/*                <h6>Crab Pool Security</h6>*/}
-                {/*                <span>$30.00</span>*/}
-                {/*            </div>*/}
-                {/*        </a>*/}
-                {/*    </div>*/}
-                {/*    <div className="latest-prdouct__slider__item">*/}
-                {/*        <a href="#" className="latest-product__item">*/}
-                {/*            <div className="latest-product__item__pic">*/}
-                {/*                <img src="img/latest-product/lp-1.jpg" alt=""/>*/}
-                {/*            </div>*/}
-                {/*            <div className="latest-product__item__text">*/}
-                {/*                <h6>Crab Pool Security</h6>*/}
-                {/*                <span>$30.00</span>*/}
-                {/*            </div>*/}
-                {/*        </a>*/}
-                {/*        <a href="#" className="latest-product__item">*/}
-                {/*            <div className="latest-product__item__pic">*/}
-                {/*                <img src="img/latest-product/lp-2.jpg" alt=""/>*/}
-                {/*            </div>*/}
-                {/*            <div className="latest-product__item__text">*/}
-                {/*                <h6>Crab Pool Security</h6>*/}
-                {/*                <span>$30.00</span>*/}
-                {/*            </div>*/}
-                {/*        </a>*/}
-                {/*        <a href="#" className="latest-product__item">*/}
-                {/*            <div className="latest-product__item__pic">*/}
-                {/*                <img src="img/latest-product/lp-3.jpg" alt=""/>*/}
-                {/*            </div>*/}
-                {/*            <div className="latest-product__item__text">*/}
-                {/*                <h6>Crab Pool Security</h6>*/}
-                {/*                <span>$30.00</span>*/}
-                {/*            </div>*/}
-                {/*        </a>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+
         </div>
 </div>
 )
