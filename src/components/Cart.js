@@ -1,11 +1,14 @@
+import {useDispatch, useSelector} from "react-redux"
 function Cart(){
-    return(
-            <div className="header__cart">
-                <ul>
-                    <li><a href=""><i className="fa fa-heart"></i><span>1</span></a></li>
-                    <li><a href=""><i className="fa fa-shopping-bag"></i> <span>3</span></a></li>
-                </ul>
-            </div>
+    const cart = useSelector(state => state.cart);
+    return (
+        <div className="header__cart">
+            <ul>
+                <li><a><i className="fa fa-heart"></i><span>0</span></a></li>
+                <li><a><i className="fa fa-shopping-bag"></i> <span>{cart.length}</span></a></li>
+            </ul>
+        </div>
+
 
     )
 }
