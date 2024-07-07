@@ -3461,7 +3461,7 @@ ol {
 }
 
 .form-input form .next {
-	background-color: rgb(13, 58, 236);
+	background-color: #7fad39;
 	color: white;
 	border: none;
 	text-transform: uppercase;
@@ -3473,7 +3473,7 @@ ol {
 
 .form-input form .next:hover {
 	box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-	background-color: rgba(13, 58, 236, 0.9);
+	background-color: #9ecb59;
 }
 
 .form-input form .or {
@@ -3521,7 +3521,9 @@ ol {
 .form-input form .shotcut a {
 	transition: color ease .3s;
 }
-
-.form-input form .shotcut a:hover {
-	color: #0058CC;
+.form-input form a{
+	color: #7fad39;
+}
+.form-input form a:hover {
+	color: #9ecb59;
 }

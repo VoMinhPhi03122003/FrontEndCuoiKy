@@ -1,10 +1,10 @@
-import authenticationImage from '../img/authentication/authentication.jpg';
+import authenticationImage from '../img/authentication/authentication.png';
 function ChangePass(){
     return(
         <section className="form-input py-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-7 col-md-7 col-12 text-center">
+                    <div className="col-lg-7 col-md-7 col-12 d-flex align-items-center">
                         <img width="80%" src={authenticationImage} alt=""/>
                     </div>
                     <div className="col-lg-5 col-md-5 col-12">
