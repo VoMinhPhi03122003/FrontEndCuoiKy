@@ -6,7 +6,7 @@ import products_featured from '../../data/ProductData.js'; //=> danh sách sản
 import {formatCurrency} from '../../javascript/utils';
 import Pagination from '../Pagination/Pagination'
 
-function ListProductsFeatured(data) {
+function DataProductsFeatured() {
 
     const [products, setProducts] = useState([]) // => trạng thái (state) ban đầu của component ListProductFeatured là []
     const [pagination, setPagination] = useState({
@@ -140,4 +140,4 @@ function ItemProductFeatured(data) {
 
 }
 
-export default ListProductsFeatured;
+export default DataProductsFeatured;
