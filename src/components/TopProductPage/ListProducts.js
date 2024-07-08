@@ -11,6 +11,25 @@ import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 
 const categories = ['Sức khỏe - Thư giản', 'Uống chất', 'Ăn lành', 'Chăm sóc nhà cửa-Đồ dùng phòng bếp tắm', 'Làm đẹp & chăm sóc cá nhân', 'Mẹ & bé', 'Đồ gốm', 'Nón lá', 'Áo dài', 'Gạch','Đá','Cát']
 
+export function PopularProducts() {
+    return (
+        <div className="sidebar-item mt-4">
+            <h6 className="list-group-item font-weight-bolder">Sản phẩm phổ biến</h6>
+            <div className="list-group">
+                {Array(9).fill(1).map((value, index) => (
+                    <a className="list-group-item d-flex align-items-center" key={index} href="#">
+                        <div className="align-self-start mt-2 mr-2">
+                            <span className="popular-rank">{++index}</span>
+                        </div>
+                        <img className="mr-2" src={require("../../img/products/lp-1.jpg")} alt=""/>
+                        <span className="popular-title">Áo dài</span>
+                    </a>
+                ))}
+            </div>
+        </div>
+    )
+}
+
 function SideBar() {
     return (
         <div className="sidebar">
@@ -25,21 +44,7 @@ function SideBar() {
                     ))}
                 </div>
             </div>
-            <div className="sidebar-item mt-4">
-                <h6 className="list-group-item font-weight-bolder">Sản phẩm phổ biến</h6>
-                <div className="list-group">
-                    {Array(9).fill(1).map((value, index) => (
-                        <a className="list-group-item d-flex align-items-center" key={index} href="#">
-                            <div className="align-self-start mt-2 mr-2">
-                                <span className="popular-rank">{++index}</span>
-                            </div>
-                            <img className="mr-2" src={require("../../img/products/lp-1.jpg")} alt=""/>
-                            <span className="popular-title">Bundle 5 Android Studio games</span>
-                        </a>
-                    ))}
-            </div>
-
-        </div>
+            <PopularProducts/>
 </div>
 )
 }

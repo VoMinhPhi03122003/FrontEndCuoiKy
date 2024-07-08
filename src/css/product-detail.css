@@ -37,7 +37,7 @@
     padding: 10px;
     border: none;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 8;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
@@ -147,7 +147,7 @@
 .detail-right-offer {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    padding: 20px;
+    padding: 25px 20px;
 }
 
 .detail-right-offer h6 {
@@ -234,4 +234,80 @@
 
 .offer-favorite ~ span ~ div > span:first-child {
     margin-right: 8px;
+}
+
+/* [ Detail Description ]
+--------------------------------*/
+
+.detail-divider {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.detail-divider:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+
+.detail-divider span {
+    font-weight: bolder;
+    color: var(--color-main);
+    font-size: 20px;
+    border-bottom: 3px solid var(--color-main);
+    padding: 5px 0;
+}
+
+/* [ Detail Comment ]
+--------------------------------*/
+
+.detail-comment textarea {
+    width: 100%;
+    font-size: 15px;
+    height: 100px;
+    padding: 12px;
+    border-radius: 5px;
+    border-color: var(--color-border);
+}
+
+.detail-comment input {
+    border: 1px solid var(--color-border);
+    padding: 24px 12px 8px 12px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    width: 250px;
+}
+
+.detail-comment > div button {
+    float: right;
+    border: none;
+    background-color: #ff921d;
+    color: #fff;
+    padding: 16px 12px;
+    font-weight: bolder;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.detail-comment .input-box {
+    position: relative;
+    float: left;
+}
+
+.detail-comment label {
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    font-size: 12px;
+    color: #7c7c7c;
+}
+
+.detail-comment label span {
+    color: #c52020;
 }
