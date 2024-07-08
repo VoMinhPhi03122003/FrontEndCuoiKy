@@ -3531,6 +3531,171 @@ body {
         color: #9ecb59;
     }
 
+    .contact-us {
+        margin: 100px 0;
+    }
+
+
+    .contact-us .form-main {
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+        padding: 50px;
+        border-radius: 6px;
+    }
+
+    .contact-us .title h4 {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #7fad39;
+    }
+
+    .contact-us .title h3 {
+        font-size: 26px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .contact-us .form .form-group textarea {
+        height: 180px;
+        width: 100%;
+        border: 1px solid #7fad39;
+        padding: 15px 20px;
+        color: #333;
+        border-radius: 3px;
+        outline: unset;
+        resize: none;
+        font-weight: 400;
+    }
+
+    .contact-us .form .form-group input {
+        height: 48px;
+        outline: unset;
+        line-height: 48px;
+        width: 100%;
+        border: 1px solid #7fad39;
+        padding: 0 20px;
+        color: #333;
+        border-radius: 3px;
+        font-weight: 400;
+        transition: all ease 0.2s;
+    }
+
+    .contact-us .form .form-group input:focus,
+    .contact-us .form .form-group textarea:focus {
+        border: 1px solid #7fad39;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(0, 128, 255, 0.1) 0 0 0 1px;
+    }
+
+    .contact-us .form .form-group label {
+        color: #333;
+        position: relative;
+    }
+
+    .contact-us .form .form-group label span {
+        color: #ff2c18;
+        display: inline-block;
+        position: absolute;
+        right: -12px;
+        top: 4px;
+        font-size: 16px;
+    }
+
+    .contact-us .form .button .btn {
+        height: 50px;
+        border: none;
+        padding: 10px 100px;
+        background-color: #7fad39;
+        color: white;
+        font-size: 18px;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 3px;
+    }
+
+    .contact-us .form .button .btn:hover {
+        background-color: #9ecb59;
+        box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+    }
+
+    .contact-us .single-head {
+        padding: 50px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+        height: 100%;
+        border-radius: 6px;
+    }
+
+    .contact-us .single-info .title {
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #333;
+        font-size: 18px;
+    }
+
+    .contact-us .single-info i {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 15px;
+        height: 40px;
+        width: 40px;
+        display: block;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 40px;
+        background: #7fad39;
+    }
+
+    .contact-us .single-info ul li a:hover {
+        color: #9ecb59;
+    }
+
+
+    .profile .form-main .title {
+        border-bottom: 1px solid rgb(210, 210, 210);
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+    }
+
+    .profile .single-info li a {
+        transition: 0.2s;
+        color: #333333;
+    }
+
+    .profile .single-info i {
+        background-color: transparent;
+        color: #7fad39;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .profile .form-main .form-group.sex input {
+        display: inline-block;
+        width: 16px;
+        height: 20px;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .profile .form-main .form-group.button .btn {
+        padding-right: 50px;
+        padding-left: 50px;
+        font-size: 18px;
+        text-transform: capitalize;
+        letter-spacing: normal;
+    }
+
+    .profile .nice-select {
+        height: 48px;
+        width: 100%;
+        line-height: 2.9rem;
+    }
+
+    .profile .nice-select:focus {
+        border-color: #9ecb59;
+    }
+
     .hero__search__form form .hero__search__categories {
         display: none;
     }

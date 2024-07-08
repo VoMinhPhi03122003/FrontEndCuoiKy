@@ -97,7 +97,7 @@ function ProductItemRow(props) {
                 <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
                     <div className="pr-3 pb-3">
                         <div className="product-item-row-price text-center">
-                            <a className="d-inline text-center">{p.price}</a>
+                            <a className="d-inline text-center">{p.price}đ</a>
                         </div>
                         <div className="d-flex justify-content-end">
                             <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
@@ -176,7 +176,7 @@ function Filter(props) {
                                 onClick={() => onSortClick('mostViewed')}>Xem nhiều
                             </li>
                             <li className={sort === 'mostDownloaded' ? "filter-active" : ""}
-                                onClick={() => onSortClick('mostDownloaded')}>Tải nhiều
+                                onClick={() => onSortClick('mostDownloaded')}>Mua nhiều
                             </li>
                         </ul>
                     </div>
