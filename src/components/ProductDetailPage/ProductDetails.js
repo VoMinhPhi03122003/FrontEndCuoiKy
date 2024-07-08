@@ -77,7 +77,7 @@ function DetailRight() {
         <div className="detail-right">
             <div className="detail-right-offer">
                 <h6>PHÍ DOWNLOAD</h6>
-                <span className="offer-price">150.000 VNĐ</span>
+                <span className="offer-price">150.000<sup>đ</sup></span>
                 <button className="offer-download"><i className="fa fa-download"></i> TẢI NGAY</button>
                 <button className="offer-favorite"><i className="fa fa-thumbs-up"></i> Lưu vào yêu thích</button>
                 <span><span>CHIA SẺ NHANH</span> (CODE 9433)</span>
@@ -97,26 +97,7 @@ function DetailDivider({title}) {
     return (<div className="detail-divider mt-5"><span>{title}</span></div>)
 }
 
-function Comment() {
-    return (
-        <div className="detail-comment">
-            <textarea placeholder="Vui lòng để lại bạn bình luận..."/>
-            <div>
-                <div className="input-box">
-                    <label htmlFor="input-name">Họ và tên <span>*</span></label>
-                    <input name="input-name" type="text"/>
-                </div>
-                <div className="input-box">
-                    <label htmlFor="input-name">Email</label>
-                    <input name="input-name" type="text"/>
-                </div>
-                <button>GỬI</button>
-            </div>
-        </div>
-    )
-}
-
-function DetailContent() {
+function DetailDescription() {
     return (
         <>
             <DetailDivider title={'MÔ TẢ CHI TIẾT'}/>
@@ -146,22 +127,200 @@ function DetailContent() {
                 Chức năng quản lý voucher: tạo voucher, gửi voucher đến tất cả người dùng,...
                 Chức năng quản lý doanh thu: xem doanh số bán hàng
             </div>
+        </>
+    )
+}
+
+function Installation() {
+    return (
+        <>
             <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'}/>
             <div>
                 Yêu cầu phần mềm XAMPP hỗ trợ phiên bản PHP 7.4
-                Giải nén và copy thư mục Website vào thư mục htdocs của xampp. Thông thường thư mục htdocs sẽ có đường dẫn: C:xampp --> htdocs.
+                Giải nén và copy thư mục Website vào thư mục htdocs của xampp. Thông thường thư mục htdocs sẽ có đường dẫn: C:xampp -- htdocs.
                 Chạy XAMPP.
                 Truy cập đường dẫn: http://localhost/phpmyadmin/ và thêm cơ sở dư liệu với tên là: duan1
                 Nhập lên trình duyệt đường dẫn: localhost/Website/
                 Import cơ sở dữ liệu mẫu duan1.sql vào cơ sở dữ liệu duan1vừa tạo trên phpmyadmin. file cơ sở dữ liệu mới duan1.sql này nằm trong cùng
                 một thư mục với tài liệu hưỡng dẫn này.
                 Đã hoàn thành cài đặt website
-
                 Tài khoản Admin
                 - http://localhost/Website/site/tai_khoan/login.php:
                 - tk: chucchuquan mk: 123456
             </div>
+        </>
+    )
+}
+
+function RatingModal({closeModal}) {
+    const ratingCriteria = ['Rất tệ', 'Tệ', 'Bình thường', 'Tốt', 'Rất tốt']
+    return (
+        <div className="rating-modal">
+            <div className="rating-modal-content">
+                <div>
+                    <span>Đánh giá</span>
+                    <span onClick={closeModal}><i className="fa fa-x"></i></span>
+                </div>
+                <div>
+                    <div>
+                        SALE - full source code webiste bán hàng laptop - Sử dụng PHP Framework
+                        CodeIgniter
+                    </div>
+                    <div className="rating-modal-stars my-4">
+                        {ratingCriteria.map((value, index) => (
+                            <div key={index}>
+                                <i className="fa fa-star-o"></i>
+                                <div>{value}</div>
+                            </div>
+                        ))}
+                    </div>
+                    <div>
+                        <textarea placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..." />
+                    </div>
+                    <div className="d-flex justify-content-between mt-2">
+                        <input type="text" placeholder="Họ và tên (bắt buộc)"/>
+                        <input type="text" placeholder="Số điện thoại"/>
+                    </div>
+                    <div className="my-3 rating-guarantee"><i className="fa fa-check-square-o"></i> Chúng tôi cam kết bảo mật số điện thoại của bạn</div>
+                    <div className="text-center mt-3 mb-1">
+                        <button>Gửi đánh giá ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function Rating() {
+    const [showModal, setShowModal] = useState(false)
+    return (
+        <>
+            <DetailDivider title={'ĐÁNH GIÁ'}/>
+            <div className="detail-rating">
+                <div className="row mt-5 mb-3">
+                    <div className="col-lg-4 text-center">
+                        <div className="rating-average">4.6<span>/5</span></div>
+                        <div className="product-item-stars">
+                            {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                        </div>
+                        <div className="rating-count">1,233 đánh giá</div>
+                        <div className="rating-action mt-3 text-center">
+                            <button onClick={() => setShowModal(true)}><i className="fa fa-star mr-1"></i> Viết đánh giá
+                            </button>
+                        </div>
+                    </div>
+                    <div className="col-lg-8">
+                        <div className="rating-chart">
+                            {Array(5).fill(1).map((value, index) => (
+                                <div key={index}>
+                                    <div>{5 - index} <i className="fa fa-star"></i></div>
+                                    <div>
+                                        <div>
+
+                                        </div>
+                                    </div>
+                                    <div>1234</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div className="detail-rating-comment">
+                    <div>
+                        <div>Anh Hưng <span><i className="fa fa-check-circle"></i> Đã mua hàng</span> <span>3 tuần trước</span></div>
+                        <div className="product-item-stars">
+                            {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                        </div>
+                        <div>Sảm phẩm rất tốt tôi rất hài lòng</div>
+                    </div>
+                    <div>
+                        <div>Chị Hà <span><i className="fa fa-check-circle"></i> Đã mua hàng</span> <span>1 tuần trước</span></div>
+                        <div className="product-item-stars">
+                            {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                        </div>
+                        <div>Rất hài lòng</div>
+                    </div>
+                </div>
+            </div>
+            {showModal && <RatingModal closeModal={() => setShowModal(false)}/>}
+        </>
+    )
+}
+
+function Comment() {
+    return (
+        <>
             <DetailDivider title={'BÌNH LUẬN'}/>
+            <div className="detail-comment clearfix">
+                <textarea placeholder="Vui lòng để lại bình luận..."/>
+                <div className="d-flex justify-content-between">
+                    <div>
+                        <div className="input-box">
+                            <label htmlFor="input-name">Họ và tên <span>*</span></label>
+                            <input name="input-name" type="text"/>
+                        </div>
+                        <div className="input-box">
+                            <label htmlFor="input-name">Email</label>
+                            <input name="input-name" type="text"/>
+                        </div>
+                    </div>
+                    <button>GỬI</button>
+                </div>
+            </div>
+            <div className="mt-5">
+                <div className="comment-item">
+                    <div className="comment-avatar mr-3">
+                        <div>N</div>
+                    </div>
+                    <div className="comment-detail">
+                        <div>
+                            <div>Ngô Bá Khá</div>
+                            <div>12/06/2023</div>
+                        </div>
+                        <div>
+                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        </div>
+                    </div>
+                </div>
+                <div className="comment-item">
+                    <div className="comment-avatar mr-3">
+                        <div>N</div>
+                    </div>
+                    <div className="comment-detail">
+                        <div>
+                            <div>Ngô Bá Khá</div>
+                            <div>12/06/2023</div>
+                        </div>
+                        <div>
+                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        </div>
+                    </div>
+                </div>
+                <div className="comment-item">
+                    <div className="comment-avatar mr-3">
+                        <div>N</div>
+                    </div>
+                    <div className="comment-detail">
+                        <div>
+                            <div>Ngô Bá Khá</div>
+                            <div>12/06/2023</div>
+                        </div>
+                        <div>
+                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+function DetailContent() {
+    return (
+        <>
+            <DetailDescription/>
+            <Installation/>
+            <Rating/>
             <Comment/>
         </>
     )
