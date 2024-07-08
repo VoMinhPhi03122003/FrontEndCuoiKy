@@ -1,4 +1,4 @@
-import breadcrumb_1 from '../../image/breadcrumb/breadcrumb_1.png'
+import breadcrumb_1 from '../../img/breadcrumb/breadcrumb_1.png'
 function SectionBreadcrumb() {
     return (
         <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>

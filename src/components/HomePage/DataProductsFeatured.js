@@ -5,7 +5,7 @@ import {default as queryString} from 'query-string';
 import {addCart} from '../../redux/Action'
 import products_featured from '../../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
 import {formatCurrency} from '../../javascript/utils';
-import Pagination from '../Pagination/Pagination'
+import Pagination from '../HomePage/Pagination'
 
 
 function DataProductsFeatured() {
