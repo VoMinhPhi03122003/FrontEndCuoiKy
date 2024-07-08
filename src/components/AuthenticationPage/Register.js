@@ -1,5 +1,8 @@
 import authenticationImage from '../../img/authentication/authentication.png';
-function Register(){
+import Header from '../Commons/Header';
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import Footer from '../Commons/Footer';
+function SectionRegister(){
     return(
         <section className="form-input py-5">
             <div className="container">
@@ -30,4 +33,13 @@ function Register(){
         </section>
     )
 }
-export default Register;
+export default function RegisterPage(){
+    return(
+        <>
+            <Header/>
+            <SectionBreadcrumb/>
+            <SectionRegister/>
+            <Footer/>
+        </>
+    )
+};

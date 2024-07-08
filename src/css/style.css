@@ -3558,7 +3558,7 @@ body {
     .contact-us .form .form-group textarea {
         height: 180px;
         width: 100%;
-        border: 1px solid #7fad39;
+        border: 1px solid #333;
         padding: 15px 20px;
         color: #333;
         border-radius: 3px;
@@ -3572,7 +3572,7 @@ body {
         outline: unset;
         line-height: 48px;
         width: 100%;
-        border: 1px solid #7fad39;
+        border: 1px solid #333;
         padding: 0 20px;
         color: #333;
         border-radius: 3px;

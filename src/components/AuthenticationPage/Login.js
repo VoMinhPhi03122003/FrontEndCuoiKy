@@ -2,7 +2,11 @@ import authenticationImage from '../../img/authentication/authentication.png';
 import logoGoogle from '../../img/authentication/logo-google.png';
 import logoFacebook from '../../img/authentication/logo-fb.png';
 
-function Login() {
+import Header from '../Commons/Header';
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import Footer from '../Commons/Footer';
+
+function SectionLogin() {
     return (
         <section className="form-input py-5">
             <div className="container">
@@ -38,4 +42,13 @@ function Login() {
         </section>
 )
 }
-export default Login;
+export default function LoginPage(){
+    return(
+        <>
+            <Header/>
+            <SectionBreadcrumb/>
+            <SectionLogin/>
+            <Footer/>
+        </>
+    )
+}

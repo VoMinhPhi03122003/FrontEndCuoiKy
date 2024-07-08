@@ -1,4 +1,7 @@
-function Profile() {
+import Header from '../Commons/Header';
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import Footer from '../Commons/Footer';
+function SectionProfile() {
     return (
         <section className="contact-us profile">
             <div className="container">
@@ -98,4 +101,13 @@ function Profile() {
     )
 }
 
-export default Profile;
+export default function ProfilePage(){
+    return(
+        <>
+            <Header/>
+            <SectionBreadcrumb/>
+            <SectionProfile/>
+            <Footer/>
+        </>
+    )
+};
