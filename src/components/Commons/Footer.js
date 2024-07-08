@@ -1,7 +1,7 @@
 import '../../App.css'
 import '../../css/footer.css'
 
-function Footer() {
+export default function Footer() {
     return (
         <footer className="footer ">
             <div className="container">
@@ -9,7 +9,7 @@ function Footer() {
                     <div className="col-lg-3 col-md-6 col-sm-6">
                         <div className="footer-about">
                             <div className="mb-3">
-                                <a href=""><img src={require('../../img/logo/logo.png')} alt=""/></a>
+                                <a href="/"><img src={require('../../img/logo/logo.png')} alt=""/></a>
                             </div>
                             <div>
                                 <div className="footer-about-contact-item">
@@ -32,21 +32,21 @@ function Footer() {
                             <div className="footer-links col-lg-6">
                                 <h6>VỀ CHÚNG TÔI</h6>
                                 <ul>
-                                    <li><a href="#">Giới thiệu</a></li>
-                                    <li><a href="#">Quy định chung</a></li>
-                                    <li><a href="#">Chính sách bán sản phẩm</a></li>
-                                    <li><a href="#">Câu hỏi thường gặp</a></li>
-                                    <li><a href="#">Sự kiện</a></li>
+                                    <li><a href="/">Giới thiệu</a></li>
+                                    <li><a href="/">Quy định chung</a></li>
+                                    <li><a href="/">Chính sách bán sản phẩm</a></li>
+                                    <li><a href="/">Câu hỏi thường gặp</a></li>
+                                    <li><a href="/">Sự kiện</a></li>
                                 </ul>
                             </div>
                             <div className="footer-links col-lg-6">
                                 <h6>HƯỚNG DẪN</h6>
                                 <ul>
-                                    <li><a href="#">Sản phẩm miễn phí</a></li>
-                                    <li><a href="#">Sản phẩm có phí</a></li>
-                                    <li><a href="#">Hướng dẫn thanh toán</a></li>
-                                    <li><a href="#">Hướng dẫn cài đặt</a></li>
-                                    <li><a href="#">Hỗ trợ kĩ thuật</a></li>
+                                    <li><a href="/">Sản phẩm miễn phí</a></li>
+                                    <li><a href="/">Sản phẩm có phí</a></li>
+                                    <li><a href="/">Hướng dẫn thanh toán</a></li>
+                                    <li><a href="/">Hướng dẫn cài đặt</a></li>
+                                    <li><a href="/">Hỗ trợ kĩ thuật</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -54,15 +54,19 @@ function Footer() {
                     <div className="col-lg-4 col-md-12">
                         <div className="footer-widget">
                             <h6>GỬI HỖ TRỢ - GÓP Ý</h6>
-                            <form action="#">
+                            <form action="/">
                                 <input type="text" placeholder="Nội dung & liên hệ của bạn"/>
                                 <button type="submit" className="site-btn">SEND</button>
                             </form>
                             <div className="footer-widget-social">
-                                <a href="https://www.facebook.com"><i className="fa-brands fa-facebook"></i></a>
-                                <a href="https://www.instagram.com/"><i className="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.twitter.com/"><i className="fa-brands fa-twitter"></i></a>
-                                <a href="https://www.youtube.com"><i className="fa-brands fa-youtube-play"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://facebook.com"><i
+                                    className="fa fa-facebook"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://twitter.com"><i
+                                    className="fa fa-twitter"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://linkedin.com"><i
+                                    className="fa fa-linkedin"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://youtube.com"><i
+                                    className="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -85,4 +89,3 @@ function Footer() {
     )
 }
 
-export default Footer;

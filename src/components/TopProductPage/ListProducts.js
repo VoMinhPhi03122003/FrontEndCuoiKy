@@ -47,12 +47,12 @@ function ProductItem(props) {
     const p = props.data
     return (
         <div className="product-item">
-            <a className="product-item-img">
+            <a href={`/list-products/product/${p.id}`}  className="product-item-img">
                 <img src={p.img} alt=""/>
             </a>
             <div className="product-item-title d-flex justify-content-center align-items-center text-center pt-2">
                 <div className="title-wrapper">
-                    <a>{p.name}</a>
+                    <a  href="">{p.name}</a>
                 </div>
             </div>
             <div className="product-item-stats d-flex justify-content-between">
@@ -62,7 +62,7 @@ function ProductItem(props) {
             <div className="product-item-actions d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-start">
                     <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
-                    <a className="product-item-action"><i className="fa fa-download"></i></a>
+                    <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
                 </div>
                 <div className="product-item-stars">
                     {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
@@ -81,7 +81,7 @@ function ProductItemRow(props) {
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
-                <a className="product-item-img col-lg-4 pr-3">
+                <a href={`/list-products/product/${p.id}`} className="product-item-img col-lg-4 pr-3">
                     <img src={p.img} alt=""/>
                 </a>
                 <div className="product-item-row-content col-lg-6">
@@ -99,7 +99,7 @@ function ProductItemRow(props) {
                         </div>
                         <div className="d-flex justify-content-end">
                             <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
-                            <a className="product-item-action"><i className="fa fa-download"></i></a>
+                            <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@ function ProductsContainer() {
     )
 }
 
-export function ListProducts() {
+export  default  function ListProducts() {
     return (
         <>
             <Header/>

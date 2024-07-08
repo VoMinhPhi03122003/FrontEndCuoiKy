@@ -1,3 +1,8 @@
+import Header from "../Commons/Header";
+import Footer from "../Commons/Footer";
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import '../../css/product-detail.css'
+
 function ImagesProductDetails() {
     return (
         <div className="col-lg-6 col-md-6">
@@ -75,16 +80,41 @@ function InforProductDetails(){
         </div>
     )
 }
-function ProductDetails(){
-    return(
-        <section className="product-details spad">
+function ProductDetailContainer() {
+    return (
+        <section className="product-details">
             <div className="container">
                 <div className="row">
-                    <ImagesProductDetails/>
-                    <InforProductDetails/>
+                    <div className="col-lg-3">
+                        <div>
+                            <img src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div>
+                            <h6>Sản phẩm hương nến chỗ đây sẽ sửa lại sau</h6>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-3">
+                        <div>
+                            <img src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
-export default ProductDetails;
+export default function ProductDetails() {
+    return (
+        <>
+            <Header/>
+            <SectionBreadcrumb/>
+            <ImagesProductDetails/>
+            <InforProductDetails/>
+            {/*<ProductDetailContainer/>*/}
+            <Footer/>
+        </>
+    )
+}
