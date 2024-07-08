@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import DataProductsFeatured from './DataProductsFeatured'
 
 function SectionProductsFeatured() {
 
     return (
-        <section className="featured spad">
+        <section  id='sect-product-featured'  className="featured spad">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

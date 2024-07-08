@@ -1,35 +1,30 @@
-// rsfp + tab
 
 import React from 'react';
-import PropTypes from 'prop-types';
-
-// Định nghĩa PropTypes cho component Pagination
-Pagination.propTypes = {
-    // Yêu cầu props `pagination` là một object và bắt buộc phải được cung cấp
-    pagination: PropTypes.object.isRequired,
-
-    // Props `onPageChange` là một function (hàm), không bắt buộc phải được cung cấp
-    // Được sử dụng để xử lý sự kiện khi người dùng chuyển đổi giữa các trang
-    onPageChange: PropTypes.func
-
-};
-
-function Pagination(props) {
-
-    const {pagination, onPageChange} = props;
-    const {limit, page, total, totalPages} = pagination;
+import '../../css/pagination.css'
+function Pagination({pagination, onPageChange, currentPage}) {
+    // Trích xuất các giá trị từ object pagination và gán chúng vào các biến tương ứng
+    const {limit, total, totalPages} = pagination;
 
     console.log("Day la component Pagination :", pagination)
 
-
+    // Hàm xử lý thay đổi trang
     function handlePageChange(newPage) {
-        if (onPageChange) onPageChange(newPage)
+
+        // Kiểm tra nếu onPageChange đã được định nghĩa (nhận từ thành phần cha)
+        if (onPageChange) {
+            // Gọi hàm onPageChange với trang mới
+            onPageChange(newPage);
+        }
     }
 
     return (
         <div>
-            <button disabled={page <= 1} onClick={() => handlePageChange(page - 1)}>Prev</button>
-            <button disabled={page >= totalPages} onClick={() => handlePageChange(page + 1)}>Next</button>
+            <button className="bt-panigation" disabled={currentPage <= 1}
+                    onClick={() => handlePageChange(currentPage - 1)}>Trước
+            </button>
+            <button className="bt-panigation" disabled={currentPage >= totalPages}
+                    onClick={() => handlePageChange(currentPage + 1)}>Sau
+            </button>
         </div>
     );
 }

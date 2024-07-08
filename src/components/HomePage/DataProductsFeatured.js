@@ -10,11 +10,11 @@ import Pagination from '../Pagination/Pagination'
 
 function DataProductsFeatured() {
 
-    const [products, setProducts] = useState([]) // => trạng thái (state) ban đầu của component ListProductFeatured là []
-    const [pagination, setPagination] = useState({})
+    const [products, setProducts] = useState([]); // => trạng thái (state) ban đầu của component DataProductFeatured là []
+    const [pagination, setPagination] = useState({}); // => trạng thái ban đầu của component Panigation
 
     const [filters, setFilters] = useState({
-        _limit: 8,
+        _limit: 10,
         _page: 1
     })
     useEffect(() => {
@@ -36,7 +36,7 @@ function DataProductsFeatured() {
                 console.log("Pagination :", pagination);
                 // Cập nhật state của component với dữ liệu mới lấy được từ API
                 setProducts(data);
-                setPagination(pagination);
+                setPagination(pagination); // thay đổi trạng thái của component Panigation
 
             } catch (error) {
                 console.log('Khong the load danh sach san pham noi bat ', error.message)
@@ -63,6 +63,11 @@ function DataProductsFeatured() {
          Nó cho phép bạn thực hiện các tác vụ như gọi API, tương tác với DOM, đăng ký sự kiện, và thực hiện các tác vụ bất đồng bộ khác.
          Bạn có thể xem useEffect như một cách để "kích hoạt" các tác vụ sau khi React hoàn thành việc render giao diện người dùng.
          */
+            // Cuộn trang lên phần đầu của component SectionProductsFeatured
+        const element = document.getElementById("sect-product-featured");
+        if (element) {
+            element.scrollIntoView({behavior: "smooth"});
+        }
 
     }, [filters])
 
@@ -72,6 +77,10 @@ function DataProductsFeatured() {
             ...filters,
             _page: newPage
         })
+        /**
+         => được sử dụng để xử lý sự kiện khi người dùng thay đổi trang trên thanh phân trang.
+         Khi có sự kiện, nó sẽ cập nhật trạng thái filters với trang mới.
+         */
     }
     return (
         <>
@@ -83,7 +92,7 @@ function DataProductsFeatured() {
                 )}
             </div>
             <div className="d-flex justify-content-center">
-                <Pagination pagination={pagination} onPageChange={handlePageChange}/>
+                <Pagination pagination={pagination} onPageChange={handlePageChange} currentPage={filters._page}/>
             </div>
         </>
     )
