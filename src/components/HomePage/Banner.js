@@ -3,9 +3,9 @@ import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../../css/slide.css'
 
-import img_banner_1 from '../../image/banner/banner-1.jpg';
-import img_banner_2 from '../../image/banner/banner-2.jpg';
-import img_banner_3 from '../../image/banner/banner-3.jpg';
+import img_banner_1 from '../../img/banner/banner-1.jpg';
+import img_banner_2 from '../../img/banner/banner-2.jpg';
+import img_banner_3 from '../../img/banner/banner-3.jpg';
 
 function Banner() {
     // Định nghĩa thuộc tính của hình ảnh slide

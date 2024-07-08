@@ -1,6 +1,6 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer"
-import SectionSubHero from "../HomePage/SectionSubHero";
+
 
 import '../../css/products.css'
 import {useEffect, useState} from "react";
