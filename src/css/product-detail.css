@@ -242,9 +242,11 @@
 .detail-divider {
     position: relative;
     margin-bottom: 20px;
+    clear: both;
 }
 
 .detail-divider:after {
+    clear: both;
     content: '';
     position: absolute;
     left: 0;
@@ -256,6 +258,7 @@
 }
 
 .detail-divider span {
+    clear: both;
     font-weight: bolder;
     color: var(--color-main);
     font-size: 20px;
@@ -310,4 +313,124 @@
 
 .detail-comment label span {
     color: #c52020;
+}
+/* [ Detail Rating ]
+--------------------------------*/
+
+.detail-rating {
+    font-size: 15px;
+}
+
+.rating-average {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.rating-average span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.detail-rating > div:first-child .product-item-stars {
+    font-size: 28px;
+    width: fit-content;
+    background-color: #fafafa;
+    border-radius: 20px;
+    padding: 0 24px;
+    margin: auto auto 12px;
+}
+
+.detail-rating .rating-count {
+    font-size: 15px;
+}
+
+.rating-chart > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.rating-chart > div:last-child {
+    margin-bottom: 0;
+}
+
+.rating-chart > div > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+.rating-chart > div > div:nth-child(1) i {
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+.rating-chart > div > div:nth-child(2) {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 0 16px;
+    background-color: #eeeeee;
+}
+
+.rating-chart > div > div:nth-child(2) > div {
+    width: 50%;
+    height: 18px;
+    border-radius: 12px;
+    background-color: #FEC107;
+}
+
+.rating-action button {
+    border: none;
+    padding: 10px 72px;
+    background-color: #2f80ed;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.detail-rating-comment > div {
+    border-top: 1px solid #e7e7e7;
+    padding: 15px 0;
+}
+
+.detail-rating-comment > div:last-child {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.detail-rating-comment .product-item-stars i {
+    font-size: 14px;
+    color: #f9a930;
+}
+
+.detail-rating-comment > div > div:first-child {
+    font-weight: bolder;
+}
+
+.detail-rating-comment > div > div:first-child span {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #2ba832;
+}
+
+.detail-rating-comment > div > div:first-child span:last-child {
+    position: relative;
+    color: #999999;
+    margin-left: 14px;
+}
+
+.detail-rating-comment > div > div:first-child span:last-child:before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 1px;
+    background-color: #999999;
+    left: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.detail-rating-comment > div > div:last-child {
+    margin-top: 5px;
 }
