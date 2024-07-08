@@ -11,6 +11,25 @@ import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 
 const categories = ['Sức khỏe - Thư giản', 'Uống chất', 'Ăn lành', 'Chăm sóc nhà cửa-Đồ dùng phòng bếp tắm', 'Làm đẹp & chăm sóc cá nhân', 'Mẹ & bé', 'Đồ gốm', 'Nón lá', 'Áo dài', 'Gạch','Đá','Cát']
 
+export function PopularProducts() {
+    return (
+        <div className="sidebar-item mt-4">
+            <h6 className="list-group-item font-weight-bolder">Sản phẩm phổ biến</h6>
+            <div className="list-group">
+                {Array(9).fill(1).map((value, index) => (
+                    <a className="list-group-item d-flex align-items-center" key={index} href="#">
+                        <div className="align-self-start mt-2 mr-2">
+                            <span className="popular-rank">{++index}</span>
+                        </div>
+                        <img className="mr-2" src={require("../../img/products/lp-1.jpg")} alt=""/>
+                        <span className="popular-title">Áo dài</span>
+                    </a>
+                ))}
+            </div>
+        </div>
+    )
+}
+
 function SideBar() {
     return (
         <div className="sidebar">
@@ -25,21 +44,7 @@ function SideBar() {
                     ))}
                 </div>
             </div>
-            <div className="sidebar-item mt-4">
-                <h6 className="list-group-item font-weight-bolder">Sản phẩm phổ biến</h6>
-                <div className="list-group">
-                    {Array(9).fill(1).map((value, index) => (
-                        <a className="list-group-item d-flex align-items-center" key={index} href="#">
-                            <div className="align-self-start mt-2 mr-2">
-                                <span className="popular-rank">{++index}</span>
-                            </div>
-                            <img className="mr-2" src={require("../../img/products/lp-1.jpg")} alt=""/>
-                            <span className="popular-title">Bundle 5 Android Studio games</span>
-                        </a>
-                    ))}
-            </div>
-
-        </div>
+            <PopularProducts/>
 </div>
 )
 }
@@ -47,12 +52,12 @@ function ProductItem(props) {
     const p = props.data
     return (
         <div className="product-item">
-            <a className="product-item-img">
+            <a href={`/list-products/product/${p.id}`}  className="product-item-img">
                 <img src={p.img} alt=""/>
             </a>
             <div className="product-item-title d-flex justify-content-center align-items-center text-center pt-2">
                 <div className="title-wrapper">
-                    <a>{p.name}</a>
+                    <a  href="">{p.name}</a>
                 </div>
             </div>
             <div className="product-item-stats d-flex justify-content-between">
@@ -62,7 +67,7 @@ function ProductItem(props) {
             <div className="product-item-actions d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-start">
                     <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
-                    <a className="product-item-action"><i className="fa fa-download"></i></a>
+                    <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
                 </div>
                 <div className="product-item-stars">
                     {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
@@ -81,7 +86,7 @@ function ProductItemRow(props) {
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
-                <a className="product-item-img col-lg-4 pr-3">
+                <a href={`/list-products/product/${p.id}`} className="product-item-img col-lg-4 pr-3">
                     <img src={p.img} alt=""/>
                 </a>
                 <div className="product-item-row-content col-lg-6">
@@ -99,7 +104,7 @@ function ProductItemRow(props) {
                         </div>
                         <div className="d-flex justify-content-end">
                             <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
-                            <a className="product-item-action"><i className="fa fa-download"></i></a>
+                            <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +252,7 @@ function ProductsContainer() {
     )
 }
 
-export function ListProducts() {
+export  default  function ListProducts() {
     return (
         <>
             <Header/>

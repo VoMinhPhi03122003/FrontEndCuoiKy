@@ -1,90 +1,206 @@
-function ImagesProductDetails() {
+import Header from "../Commons/Header";
+import Footer from "../Commons/Footer";
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import '../../css/product-detail.css'
+import {useState} from "react";
+import {PopularProducts} from "../TopProductPage/ListProducts";
+
+function DetailLeft() {
+    const [slideIndex, setSlideIndex] = useState(0)
+
+    function moveSlide(dir) {
+        const currentSlide = slideIndex + dir
+        if (currentSlide > -1 && currentSlide < 3)
+            setSlideIndex(currentSlide)
+    }
+
     return (
-        <div className="col-lg-6 col-md-6">
-            <div className="product__details__pic">
-                <div className="product__details__pic__item">
-                    <img className="product__details__pic__item--large"
-                         src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
+        <div className="detail-left">
+            <div className="detail-slider">
+                <div className="detail-slide" style={{transform: `translateX(${100 * (0 - slideIndex)}%)`}}>
+                    <img src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
                 </div>
-                <div className="product__details__pic__slider d-flex justify-content-between">
-                    <div className="other_image">
-                        <img data-imgbigurl={require('../../img/detailsProduct/product-details-2.jpg')}
-                             src={require('../../img/detailsProduct/thumb-1.jpg')} alt=""/>
-                    </div>
-                    <div className="other_image">
-                        <img data-imgbigurl={require('../../img/detailsProduct/product-details-2.jpg')}
-                             src={require('../../img/detailsProduct/thumb-1.jpg')} alt=""/>
-                    </div>
-                    <div className="other_image">
-                        <img data-imgbigurl={require('../../img/detailsProduct/product-details-2.jpg')}
-                             src={require('../../img/detailsProduct/thumb-1.jpg')} alt=""/>
-                    </div>
-                    <div className="other_image">
-                        <img data-imgbigurl={require('../../img/detailsProduct/product-details-2.jpg')}
-                             src={require('../../img/detailsProduct/thumb-1.jpg')} alt=""/>
-                    </div>
-                    <div className="other_image">
-                        <img data-imgbigurl={require('../../img/detailsProduct/product-details-2.jpg')}
-                             src={require('../../img/detailsProduct/thumb-1.jpg')} alt=""/>
-                    </div>
+                <div className="detail-slide" style={{transform: `translateX(${100 * (1 - slideIndex)}%)`}}>
+                    <img src={require('../../img/detailsProduct/product-details-2.jpg')} alt=""/>
+                </div>
+                <div className="detail-slide" style={{transform: `translateX(${100 * (2 - slideIndex)}%)`}}>
+                    <img src={require('../../img/detailsProduct/product-details-3.jpg')} alt=""/>
+                </div>
+            </div>
+            <button className="btn slide-arrow btn-prev" onClick={() => moveSlide(-1)}><i className="bi bi-chevron-left"></i></button>
+            <button className="btn slide-arrow btn-next" onClick={() => moveSlide(1)}><i className="bi bi-chevron-right"></i></button>
+            <div className="slider-thumbnails d-flex justify-content-between">
+                <div className={slideIndex === 0 && 'active'} onClick={() => setSlideIndex(0)}>
+                    <img src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
+                </div>
+                <div className={slideIndex === 1 && 'active'} onClick={() => setSlideIndex(1)}>
+                    <img src={require('../../img/detailsProduct/product-details-2.jpg')} alt=""/>
+                </div>
+                <div className={slideIndex === 2 && 'active'} onClick={() => setSlideIndex(2)}>
+                    <img src={require('../../img/detailsProduct/product-details-3.jpg')} alt=""/>
                 </div>
             </div>
         </div>
     )
 }
-function InforProductDetails(){
-    return(
-        <div className="col-lg-6 col-md-6">
-            <div className="product__details__text">
-                <h3>Vetgetable’s Package</h3>
-                <div className="product__details__rating">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star-half-o"></i>
-                    <span>(18 reviews)</span>
+
+function DetailCenter() {
+    return (
+        <div className="detail-center">
+            <h6>SALE - full source code webiste bán hàng laptop - Sử dụng PHP Framework
+                CodeIgniter <span>[Mã code 36122]</span></h6>
+            <div className="detail-center-stats d-flex align-items-center">
+                <div className="product-item-stars mr-3">
+                    {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
                 </div>
-                <div className="product__details__price">$50.00</div>
-                <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                    vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                    quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
-                <div className="product__details__quantity">
-                    <div className="quantity">
-                        <div className="pro-qty">
-                            <input type="text" value="1"/>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" className="primary-btn">ADD TO CARD</a>
-                <a href="#" className="heart-icon"><span className="icon_heart_alt"></span></a>
-                <ul>
-                    <li><b>Availability</b> <span>In Stock</span></li>
-                    <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                    <li><b>Weight</b> <span>0.5 kg</span></li>
-                    <li><b>Share on</b>
-                        <div className="share">
-                            <a href="#"><i className="fa fa-facebook"></i></a>
-                            <a href="#"><i className="fa fa-twitter"></i></a>
-                            <a href="#"><i className="fa fa-instagram"></i></a>
-                            <a href="#"><i className="fa fa-pinterest"></i></a>
-                        </div>
-                    </li>
-                </ul>
+                <span>(12 Đánh giá)</span>
+                <span><i className="fa fa-eye"></i> 12</span>
+                <span><i className="fa fa-download"></i> 34</span>
+            </div>
+            <div className="detail-center-des">
+                Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành
+                cho sinh viên lập trình tham khảo
+            </div>
+            <div className="detail-center-info">
+                <div><span>Danh mục</span> Android</div>
+                <div><span>Nhóm code</span> Top code</div>
+                <div><span>Ngày đăng</span> 12-06-2023</div>
+                <div><span>Loại file</span> Full code</div>
+                <div><span>File download</span> 23 MB</div>
             </div>
         </div>
     )
 }
-function ProductDetails(){
-    return(
-        <section className="product-details spad">
+
+function DetailRight() {
+    return (
+        <div className="detail-right">
+            <div className="detail-right-offer">
+                <h6>PHÍ DOWNLOAD</h6>
+                <span className="offer-price">150.000 VNĐ</span>
+                <button className="offer-download"><i className="fa fa-download"></i> TẢI NGAY</button>
+                <button className="offer-favorite"><i className="fa fa-thumbs-up"></i> Lưu vào yêu thích</button>
+                <span><span>CHIA SẺ NHANH</span> (CODE 9433)</span>
+                <div>
+                    <img src="https://topcode.vn/assets/images/share-email.png" alt=""/>
+                    <div>Gửi code tới email bạn bè</div>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <span><i className="fa fa-thumbs-up"></i> Like</span>
+                    <span><i className="fa fa-share-alt"></i> Share</span>
+                </div>
+            </div>
+        </div>
+    )
+}
+function DetailDivider({title}) {
+    return (<div className="detail-divider mt-5"><span>{title}</span></div>)
+}
+
+function Comment() {
+    return (
+        <div className="detail-comment">
+            <textarea placeholder="Vui lòng để lại bạn bình luận..."/>
+            <div>
+                <div className="input-box">
+                    <label htmlFor="input-name">Họ và tên <span>*</span></label>
+                    <input name="input-name" type="text"/>
+                </div>
+                <div className="input-box">
+                    <label htmlFor="input-name">Email</label>
+                    <input name="input-name" type="text"/>
+                </div>
+                <button>GỬI</button>
+            </div>
+        </div>
+    )
+}
+
+function DetailContent() {
+    return (
+        <>
+            <DetailDivider title={'MÔ TẢ CHI TIẾT'}/>
+            <div>
+                Source code app đặt trà sữa, cà phê, bánh ngọt Android Studio với giao diện đẹp mắt, dễ sử dụng.
+
+                Source code được chia làm 2 phần: client và server
+
+                Client: viết bằng java, sử dụng Android Studio
+                Server: viết bằng php sử dụng MySQL
+                Các chức năng chính:
+
+                Chức năng của người dùng:
+
+                Chức năng đăng nhập, đăng ký
+                Chức năng Order: chọn kích thước, topping, số lượng, ghi chú,..
+                Chức năng đặt hàng: chỉnh sửa địa chỉ giao hàng, áp dụng voucher, chỉnh sửa order, gửi thông báo đơn hàng mới đến admin
+                Chức năng xem lịch sử đơn hàng: xem đơn hàng đang chờ xác nhận, đang giao, hoàn tất, đã hủy
+                Chức năng xem danh sách voucher: xem thông tin chi tiết voucher
+                Chức năng xem sản phẩm yêu thích
+                Chức năng thay đổi thông tin cá nhân: họ tên, địa chỉ giao hàng mặc định, mật khẩu,..
+                Chức năng của admin:
+
+                Chức năng quản lý đơn hàng: duyệt đơn (gửi thông báo tình trạng đơn đến điện thoại người dùng), hoàn tất đơn, hủy đơn,...
+                Chức năng quản lý tài khoản: thêm, sửa, xóa tài khoản
+                Chức năng quản lý sản phẩm: thêm sửa xóa sản phẩm
+                Chức năng quản lý voucher: tạo voucher, gửi voucher đến tất cả người dùng,...
+                Chức năng quản lý doanh thu: xem doanh số bán hàng
+            </div>
+            <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'}/>
+            <div>
+                Yêu cầu phần mềm XAMPP hỗ trợ phiên bản PHP 7.4
+                Giải nén và copy thư mục Website vào thư mục htdocs của xampp. Thông thường thư mục htdocs sẽ có đường dẫn: C:xampp --> htdocs.
+                Chạy XAMPP.
+                Truy cập đường dẫn: http://localhost/phpmyadmin/ và thêm cơ sở dư liệu với tên là: duan1
+                Nhập lên trình duyệt đường dẫn: localhost/Website/
+                Import cơ sở dữ liệu mẫu duan1.sql vào cơ sở dữ liệu duan1vừa tạo trên phpmyadmin. file cơ sở dữ liệu mới duan1.sql này nằm trong cùng
+                một thư mục với tài liệu hưỡng dẫn này.
+                Đã hoàn thành cài đặt website
+
+                Tài khoản Admin
+                - http://localhost/Website/site/tai_khoan/login.php:
+                - tk: chucchuquan mk: 123456
+            </div>
+            <DetailDivider title={'BÌNH LUẬN'}/>
+            <Comment/>
+        </>
+    )
+}
+
+
+function ProductDetailContainer() {
+    return (
+        <section className="product-details my-5">
             <div className="container">
                 <div className="row">
-                    <ImagesProductDetails/>
-                    <InforProductDetails/>
+                    <div className="col-lg-9">
+                        <div className="row">
+                            <div className="col-lg-5">
+                                <DetailLeft/>
+                            </div>
+                            <div className="col-lg-7">
+                                <DetailCenter/>
+                            </div>
+                        </div>
+                        <DetailContent/>
+                    </div>
+                    <div className="col-lg-3">
+                        <DetailRight/>
+                        <PopularProducts/>
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
-export default ProductDetails;
+
+export default function ProductDetails() {
+    return (
+        <>
+            <Header/>
+            <SectionBreadcrumb/>
+            <ProductDetailContainer/>
+            <Footer/>
+        </>
+    )
+}
