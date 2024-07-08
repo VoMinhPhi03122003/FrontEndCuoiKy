@@ -21,18 +21,6 @@
     border-radius: 50px;
 }
 
-.sidebar-item .list-group-item .popular-rank {
-    display: block;
-    font-weight: bolder;
-    color:  #545454;
-    float: left;
-    font-size: 75%;
-    padding: 0 8px;
-    line-height: 1.3em;
-    border-radius: 3px;
-    background-color: #dde6e9;
-}
-
 .sidebar-item .list-group-item img {
     border-radius: 8px;
     min-width: 40px !important;
@@ -193,7 +181,7 @@
 }
 
 .product-item-stars {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .product-item-stars i {
@@ -261,6 +249,11 @@
     font-weight: 700;
     color: #2c3944 !important;
     cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .product-item-row-title:hover {
     color: #1c252c !important;

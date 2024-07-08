@@ -77,7 +77,7 @@ function DetailRight() {
         <div className="detail-right">
             <div className="detail-right-offer">
                 <h6>PHÍ DOWNLOAD</h6>
-                <span className="offer-price">150.000 VNĐ</span>
+                <span className="offer-price">150.000<sup>đ</sup></span>
                 <button className="offer-download"><i className="fa fa-download"></i> TẢI NGAY</button>
                 <button className="offer-favorite"><i className="fa fa-thumbs-up"></i> Lưu vào yêu thích</button>
                 <span><span>CHIA SẺ NHANH</span> (CODE 9433)</span>
@@ -152,38 +152,14 @@ function Installation() {
     )
 }
 
-function Comment() {
+function RatingModal({closeModal}) {
+    const ratingCriteria = ['Rất tệ', 'Tệ', 'Bình thường', 'Tốt', 'Rất tốt']
     return (
-        <>
-            <DetailDivider title={'BÌNH LUẬN'}/>
-            <div className="detail-comment clearfix">
-                <textarea placeholder="Vui lòng để lại bình luận..."/>
-                <div className="d-flex justify-content-between">
-                    <div>
-                        <div className="input-box">
-                            <label htmlFor="input-name">Họ và tên <span>*</span></label>
-                            <input name="input-name" type="text"/>
-                        </div>
-                        <div className="input-box">
-                            <label htmlFor="input-name">Email</label>
-                            <input name="input-name" type="text"/>
-                        </div>
-                    </div>
-                    <button>GỬI</button>
-                </div>
-            </div>
-        </>
-    )
-}
-
-function RatingModal({display, setDisplay}) {
-    console.log(display)
-    return (
-        <div className="rating-modal" style={{display: `${display ? 'block' : 'none'}`}}>
+        <div className="rating-modal">
             <div className="rating-modal-content">
                 <div>
                     <span>Đánh giá</span>
-                    <span onClick={() => setDisplay(false)}><i className="fa fa-x"></i></span>
+                    <span onClick={closeModal}><i className="fa fa-x"></i></span>
                 </div>
                 <div>
                     <div>
@@ -191,26 +167,12 @@ function RatingModal({display, setDisplay}) {
                         CodeIgniter
                     </div>
                     <div className="rating-modal-stars my-4">
-                        <div>
-                            <i className="fa fa-star-o"></i>
-                            <div>Rất tệ</div>
-                        </div>
-                        <div>
-                            <i className="fa fa-star-o"></i>
-                            <div>Tệ</div>
-                        </div>
-                        <div>
-                            <i className="fa fa-star-o"></i>
-                            <div>Bình thường</div>
-                        </div>
-                        <div>
-                            <i className="fa fa-star-o"></i>
-                            <div>Tốt</div>
-                        </div>
-                        <div>
-                            <i className="fa fa-star-o"></i>
-                            <div>Rất tốt</div>
-                        </div>
+                        {ratingCriteria.map((value, index) => (
+                            <div key={index}>
+                                <i className="fa fa-star-o"></i>
+                                <div>{value}</div>
+                            </div>
+                        ))}
                     </div>
                     <div>
                         <textarea placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..." />
@@ -230,7 +192,7 @@ function RatingModal({display, setDisplay}) {
 }
 
 function Rating() {
-    const [isShow, setIsShow] = useState(false)
+    const [showModal, setShowModal] = useState(false)
     return (
         <>
             <DetailDivider title={'ĐÁNH GIÁ'}/>
@@ -243,7 +205,7 @@ function Rating() {
                         </div>
                         <div className="rating-count">1,233 đánh giá</div>
                         <div className="rating-action mt-3 text-center">
-                            <button onClick={() => setIsShow(true)}><i className="fa fa-star mr-1"></i> Viết đánh giá
+                            <button onClick={() => setShowModal(true)}><i className="fa fa-star mr-1"></i> Viết đánh giá
                             </button>
                         </div>
                     </div>
@@ -252,7 +214,11 @@ function Rating() {
                             {Array(5).fill(1).map((value, index) => (
                                 <div key={index}>
                                     <div>{5 - index} <i className="fa fa-star"></i></div>
-                                    <div><div></div></div>
+                                    <div>
+                                        <div>
+
+                                        </div>
+                                    </div>
                                     <div>1234</div>
                                 </div>
                             ))}
@@ -276,7 +242,75 @@ function Rating() {
                     </div>
                 </div>
             </div>
-            <RatingModal display={isShow} setDisplay={(isShow) => setIsShow(isShow)}/>
+            {showModal && <RatingModal closeModal={() => setShowModal(false)}/>}
+        </>
+    )
+}
+
+function Comment() {
+    return (
+        <>
+            <DetailDivider title={'BÌNH LUẬN'}/>
+            <div className="detail-comment clearfix">
+                <textarea placeholder="Vui lòng để lại bình luận..."/>
+                <div className="d-flex justify-content-between">
+                    <div>
+                        <div className="input-box">
+                            <label htmlFor="input-name">Họ và tên <span>*</span></label>
+                            <input name="input-name" type="text"/>
+                        </div>
+                        <div className="input-box">
+                            <label htmlFor="input-name">Email</label>
+                            <input name="input-name" type="text"/>
+                        </div>
+                    </div>
+                    <button>GỬI</button>
+                </div>
+            </div>
+            <div className="mt-5">
+                <div className="comment-item">
+                    <div className="comment-avatar mr-3">
+                        <div>N</div>
+                    </div>
+                    <div className="comment-detail">
+                        <div>
+                            <div>Ngô Bá Khá</div>
+                            <div>12/06/2023</div>
+                        </div>
+                        <div>
+                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        </div>
+                    </div>
+                </div>
+                <div className="comment-item">
+                    <div className="comment-avatar mr-3">
+                        <div>N</div>
+                    </div>
+                    <div className="comment-detail">
+                        <div>
+                            <div>Ngô Bá Khá</div>
+                            <div>12/06/2023</div>
+                        </div>
+                        <div>
+                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        </div>
+                    </div>
+                </div>
+                <div className="comment-item">
+                    <div className="comment-avatar mr-3">
+                        <div>N</div>
+                    </div>
+                    <div className="comment-detail">
+                        <div>
+                            <div>Ngô Bá Khá</div>
+                            <div>12/06/2023</div>
+                        </div>
+                        <div>
+                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
