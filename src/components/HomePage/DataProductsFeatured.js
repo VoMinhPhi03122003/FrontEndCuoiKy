@@ -1,34 +1,42 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux"
 import {Toast} from 'react-bootstrap';
+import {default as queryString} from 'query-string';
 import {addCart} from '../../redux/Action'
 import products_featured from '../../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
 import {formatCurrency} from '../../javascript/utils';
 import Pagination from '../Pagination/Pagination'
 
+
 function DataProductsFeatured() {
 
     const [products, setProducts] = useState([]) // => trạng thái (state) ban đầu của component ListProductFeatured là []
-    const [pagination, setPagination] = useState({
-        _page: 1,
-        _limit: 6,
-        _totalRows: 100
+    const [pagination, setPagination] = useState({})
+
+    const [filters, setFilters] = useState({
+        _limit: 8,
+        _page: 1
     })
     useEffect(() => {
         // Hàm sử dụng async/await để gọi API và lấy danh sách sản phẩm nổi bật
         async function fetchListProductFeatured() {
             try {
-                const requestUrl = 'http://localhost:9810/products-featured'
+                //_limit=8&_page=1
+                const paramsString = queryString.stringify(filters) // => chuyển object sang chuỗi
+                const requestUrl = `http://localhost:9810/api/products-featured?${paramsString}`
                 // Gửi yêu cầu GET đến API và chờ nhận được phản hồi
                 const response = await fetch(requestUrl);
                 // Chuyển đổi phản hồi thành dữ liệu dạng JSON và chờ cho đến khi hoàn thành
                 const responseJson = await response.json();
 
-                console.log({responseJson});
-                // Lưu dữ liệu vào biến data
-                const data = responseJson;
+                // console.log({responseJson});
+
+                const {data, pagination} = responseJson;
+                console.log("Data :", data);
+                console.log("Pagination :", pagination);
                 // Cập nhật state của component với dữ liệu mới lấy được từ API
                 setProducts(data);
+                setPagination(pagination);
 
             } catch (error) {
                 console.log('Khong the load danh sach san pham noi bat ', error.message)
@@ -56,10 +64,14 @@ function DataProductsFeatured() {
          Bạn có thể xem useEffect như một cách để "kích hoạt" các tác vụ sau khi React hoàn thành việc render giao diện người dùng.
          */
 
-    }, [])
+    }, [filters])
 
     function handlePageChange(newPage) {
         console.log('New page: ' + newPage)
+        setFilters({
+            ...filters,
+            _page: newPage
+        })
     }
     return (
         <>
