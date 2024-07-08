@@ -19,6 +19,7 @@
     "jquery": "^3.7.1",
     "json-server": "^1.0.0-beta.1",
     "mdbreact": "^4.6.1",
+    "query-string": "^9.0.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.5.0-beta.1",
     "react-dom": "^18.3.1",
@@ -38,7 +39,7 @@
     ]
   },
   "scripts": {
-    "start:server": "json-server --watch db.json --port 9810",
+    "start:server": "node server.js",
     "start:app": "react-scripts start",
     "start": "react-scripts start"
   },
