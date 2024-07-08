@@ -576,5 +576,12 @@
       "liked": false,
       "price": 300000
     }
+  ],
+  "account": [
+    {
+      "id": 1,
+      "email": "nguyenphutai840@gmail.com",
+      "password": "123"
+    }
   ]
 }

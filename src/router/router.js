@@ -4,6 +4,31 @@ import ProductDetails from "../components/ProductDetailPage/ProductDetails";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 
 import App from "../App";
+import LoginPage from "../components/AuthenticationPage/Login";
+import RegisterPage from "../components/AuthenticationPage/Register";
+import ForgotPassPage from "../components/AuthenticationPage/ForgotPass";
+import ProfilePage from "../components/ProfilePage/Profile";
+import ChangePassPage from "../components/AuthenticationPage/ChangePass";
+
+const profile = {path: '/profile', element: <ProfilePage/>}
+const listAuthentication = [
+    {
+        path: '/login',
+        element: <LoginPage/>
+    },
+    {
+        path: '/register',
+        element: <RegisterPage/>
+    },
+    {
+        path: '/forgot-password',
+        element: <ForgotPassPage/>
+    },
+    {
+        path: '/change-password',
+        element: <ChangePassPage/>
+    }
+]
 
  const listProducts = [
     {
@@ -42,6 +67,7 @@ export const router = createBrowserRouter([
         path: '/',
         element: <App/>
     },
+    profile,
     ...listProducts,
-    ...cart
+    ...listAuthentication
 ])

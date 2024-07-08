@@ -1,6 +1,26 @@
 import Header from '../Commons/Header';
-import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import Footer from '../Commons/Footer';
+import breadcrumb_1 from "../../img/breadcrumb/breadcrumb_1.png";
+import {Link} from "react-router-dom";
+
+function Breadcrumb(){
+    return(
+        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12 text-center">
+                        <div className="breadcrumb__text">
+                            <div className="breadcrumb__option">
+                                <Link to="/">Trang chủ</Link>
+                                <Link to="/profile">Hồ sơ của tôi</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
 function SectionProfile() {
     return (
         <section className="contact-us profile">
@@ -20,7 +40,7 @@ function SectionProfile() {
                                         <a href="#"><i className="bi bi-receipt"></i> Lịch sử mua hàng</a>
                                     </li>
                                     <li>
-                                        <a href="#"><i className="bi bi-lock"></i> Đổi mật khẩu</a>
+                                        <Link to="/change-password"><i className="bi bi-lock"></i> Đổi mật khẩu</Link>
                                     </li>
                                     <li>
                                         <a href="#">
@@ -105,7 +125,7 @@ export default function ProfilePage(){
     return(
         <>
             <Header/>
-            <SectionBreadcrumb/>
+            <Breadcrumb/>
             <SectionProfile/>
             <Footer/>
         </>
