@@ -24,7 +24,7 @@ const adsList = [
 function HeaderAds() {
     const [adsIndex, setAdsIndex] = useState(0)
     const ads = adsList[adsIndex]
-    console.log(adsIndex)
+
     useEffect(() => {
         const id = setInterval(() => setAdsIndex((adsIndex + 1) % adsList.length), 5000)
         return () => clearInterval(id)

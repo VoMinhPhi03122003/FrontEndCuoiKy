@@ -1,0 +1,147 @@
+.product-details {
+    color: #333333;
+}
+
+.detail-center h6 {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.3em;
+    color: inherit;
+    margin-bottom: 8px;
+}
+
+.detail-center h6 span {
+    color: #cf131f;
+}
+
+.detail-center-stats > span:first-of-type {
+    font-size: 14px;
+    margin-right: 45px;
+}
+
+.detail-center-stats > span:nth-last-child(-n+2) i {
+    color: #8c8c8c;
+    margin-right: 4px;
+}
+
+.detail-center-stats > span:nth-last-child(-n+2) {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.detail-center-stats > span:nth-of-type(2) {
+    margin-right: 25px;
+}
+
+.detail-center-des {
+    font-size: 15px;
+    line-height: 1.5em;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 0;
+    margin: 8px 0 18px 0;
+}
+
+.detail-center-info > div {
+    line-height: 1.6em;
+    font-size: 15px;
+}
+
+.detail-center-info > div span {
+    display: inline-block;
+    width: 30%;
+    color: #acacac;
+    margin-right: 15px;
+}
+
+.detail-right-offer {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    padding: 20px;
+}
+
+.detail-right-offer h6 {
+    color: inherit;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.offer-price {
+    display: block;
+    font-size: 30px;
+    color: #cf131f;
+    font-weight: bold;
+}
+
+.offer-download {
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: #E3E3E3;
+    color: #fff;
+    text-decoration: none;
+    padding: 17px 0 12px 0;
+    margin: 15px 0 20px 0;
+    border: 0;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(top, #7ec72f, #7ec72f);
+    box-shadow: 0 4px 0 #5d941f, 0 6px 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.offer-download:hover {
+    top: 1px;
+    background-color: #D3D3D3;
+    box-shadow: 0 4px 0 0 #5d941f, 0 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.offer-favorite {
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    padding: 8px 24px;
+    color: #7c7c7c;
+    transition: all ease .3s;
+    margin-bottom: 20px;
+}
+
+.offer-favorite:hover {
+    background-color: #fcfcfc;
+    color: var(--color-main);
+}
+
+.offer-favorite ~ span {
+    display: block;
+    font-size: 15px;
+}
+
+.offer-favorite ~ span span {
+    font-weight: bolder;
+}
+
+.offer-favorite ~ span ~ div {
+    margin-top: 15px;
+}
+
+.offer-favorite ~ span ~ div > div {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.offer-favorite ~ span ~ div > span {
+    display: block;
+    background-color: #1877f2;
+    color: #fff;
+    border-radius: 4px;
+    width: 70px;
+    padding: 2px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.offer-favorite ~ span ~ div > span:first-child {
+    margin-right: 8px;
+}

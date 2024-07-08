@@ -197,7 +197,7 @@
 }
 
 .product-item-stars i {
-    color: #f8d425;
+    color: var(--color-star);
     margin-right: 4px;
 }
 
