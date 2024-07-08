@@ -176,7 +176,61 @@ function Comment() {
     )
 }
 
+function RatingModal({display, setDisplay}) {
+    console.log(display)
+    return (
+        <div className="rating-modal" style={{display: `${display ? 'block' : 'none'}`}}>
+            <div className="rating-modal-content">
+                <div>
+                    <span>Đánh giá</span>
+                    <span onClick={() => setDisplay(false)}><i className="fa fa-x"></i></span>
+                </div>
+                <div>
+                    <div>
+                        SALE - full source code webiste bán hàng laptop - Sử dụng PHP Framework
+                        CodeIgniter
+                    </div>
+                    <div className="rating-modal-stars my-4">
+                        <div>
+                            <i className="fa fa-star-o"></i>
+                            <div>Rất tệ</div>
+                        </div>
+                        <div>
+                            <i className="fa fa-star-o"></i>
+                            <div>Tệ</div>
+                        </div>
+                        <div>
+                            <i className="fa fa-star-o"></i>
+                            <div>Bình thường</div>
+                        </div>
+                        <div>
+                            <i className="fa fa-star-o"></i>
+                            <div>Tốt</div>
+                        </div>
+                        <div>
+                            <i className="fa fa-star-o"></i>
+                            <div>Rất tốt</div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..." />
+                    </div>
+                    <div className="d-flex justify-content-between mt-2">
+                        <input type="text" placeholder="Họ và tên (bắt buộc)"/>
+                        <input type="text" placeholder="Số điện thoại"/>
+                    </div>
+                    <div className="my-3 rating-guarantee"><i className="fa fa-check-square-o"></i> Chúng tôi cam kết bảo mật số điện thoại của bạn</div>
+                    <div className="text-center mt-3 mb-1">
+                        <button>Gửi đánh giá ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function Rating() {
+    const [isShow, setIsShow] = useState(false)
     return (
         <>
             <DetailDivider title={'ĐÁNH GIÁ'}/>
@@ -189,7 +243,8 @@ function Rating() {
                         </div>
                         <div className="rating-count">1,233 đánh giá</div>
                         <div className="rating-action mt-3 text-center">
-                            <button><i className="fa fa-star mr-1"></i> Viết đánh giá</button>
+                            <button onClick={() => setIsShow(true)}><i className="fa fa-star mr-1"></i> Viết đánh giá
+                            </button>
                         </div>
                     </div>
                     <div className="col-lg-8">
@@ -221,6 +276,7 @@ function Rating() {
                     </div>
                 </div>
             </div>
+            <RatingModal display={isShow} setDisplay={(isShow) => setIsShow(isShow)}/>
         </>
     )
 }
