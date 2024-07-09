@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_Tuyen";
 import {getListDiscountCode} from "../../javascript/api";
-import {removeItemFromCart, updateDiscountPercent, updateDiscountCode} from "../../redux/redux_tuyen/Action_Tuyen";
+import {removeItemFromCart, updateDiscountCode, updateDiscountPercent} from "../../redux/redux_tuyen/Action_Tuyen";
 
 
 
@@ -62,7 +62,7 @@ function SectionCart() {
             </div>
         </section>
     )
-}
+} // => đây là component cha
 
 function ItemCart(data) {
 
@@ -104,7 +104,7 @@ function ItemCart(data) {
             </td>
         </tr>
     )
-}
+} // => đây là component con
 
 function FormInputDiscount() {
 
