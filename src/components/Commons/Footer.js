@@ -56,7 +56,7 @@ export default function Footer() {
                             <h6>GỬI HỖ TRỢ - GÓP Ý</h6>
                             <form action="/">
                                 <input type="text" placeholder="Nội dung & liên hệ của bạn"/>
-                                <button type="submit" className="site-btn">SEND</button>
+                                <button type="submit" >SEND</button>
                             </form>
                             <div className="footer-widget-social">
                                 <a target="_blank" rel="noreferrer" href="https://facebook.com"><i
