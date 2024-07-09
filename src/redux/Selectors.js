@@ -1,0 +1,1 @@
+export const errorRegisterSelector = (state) => state.error;
