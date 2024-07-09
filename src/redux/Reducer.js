@@ -2,28 +2,29 @@ import {combineReducers} from "redux";
 import {products} from "../data/Products";
 import registerReducer from "../components/AuthenticationPage/RegisterSlice"
 
-const initState = {
+import {checkItemExistCart, totalPrice} from "../javascript/utils"
+
+const initCartState = {
     /* đây là trạng thái ban đầu của ứng dụng */
     cart: [],
     totalPrice: 0
 }
 
- const cartReducer = (state = initState, action) => {
+ const cartReducer = (state = initCartState, action) => {
     /* Đây là Reducer, một hàm xử lý các hành động (actions) để cập nhật trạng thái của ứng dụng */
 
     switch (action.type) {
         case 'cart/add-item': {
+
+            // nếu sản phẩm chưa tồn tại trong giỏ hàng
+            const updatedCart = checkItemExistCart(state.cart, action.payload) === undefined ? [...state.cart, action.payload] : [...state.cart]  /* Cập nhật thuộc tính cart với một mảng mới. Mảng mới này bao gồm toàn bộ phần tử từ state.cart và phần tử mới được thêm vào từ action.payload */
+
+            const newTotalPrice = totalPrice(updatedCart);
+
             return {
                 ...state, // sao chép trạng thái hiện tại
-                cart: [
-                    ...state.cart,
-                    action.payload
-                ],
-                /*
-                Cập nhật thuộc tính cart với một mảng mới.
-                Mảng mới này bao gồm toàn bộ phần tử từ state.cart và phần tử mới được thêm vào từ action.payload
-               */
-                totalPrice: state.totalPrice + action.payload.price // => tổng giá trị mới của đơn hàng
+                cart: updatedCart, // cập nhật số lượng sản phẩm trong giỏ hàng
+                totalPrice: newTotalPrice // => tổng giá trị mới của giỏ hàng
             }
 
             /**
@@ -35,15 +36,16 @@ const initState = {
         }
 
         case 'cart/remove-item': {
-            console.log("Day la Action cart/remove-item");
+            // console.log("Day la Action cart/remove-item");
+            const updatedCart = state.cart.filter(item => item.id !== action.payload.id); /* loại bỏ các phần tử có id trùng khớp với id của action.payload */
+            // => tạo ra mảng mới
 
-            const updatedCart = state.cart.filter(item => item.id !== action.payload.id);
-            console.log("Object cart", updatedCart);
-
+            // console.log("Object cart", updatedCart);
+            const newTotalPrice = totalPrice(updatedCart);
             return {
-                ...state,
-                cart: updatedCart,
-                totalPrice: state.totalPrice - action.payload.price // => tổng giá trị mới của đơn hàng
+                ...state, // sao chép trạng thái hiện tại
+                cart: updatedCart, // cập nhật số lượng sản phẩm trong giỏ hàng
+                totalPrice: newTotalPrice // => tổng giá trị mới của giỏ hàng
             }
         }
 
