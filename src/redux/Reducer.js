@@ -36,11 +36,11 @@ const initCartState = {
         }
 
         case 'cart/remove-item': {
-            // console.log("Day la Action cart/remove-item");
+            console.log("Day la Action cart/remove-item");
             const updatedCart = state.cart.filter(item => item.id !== action.payload.id); /* loại bỏ các phần tử có id trùng khớp với id của action.payload */
             // => tạo ra mảng mới
 
-            // console.log("Object cart", updatedCart);
+            console.log("Object cart", updatedCart);
             const newTotalPrice = totalPrice(updatedCart);
             return {
                 ...state, // sao chép trạng thái hiện tại
@@ -61,48 +61,31 @@ const initCartState = {
     }
 
 }
-const listProductsReducer = (state = {data: products, page: 1, sort: 'most', type: null}, action) => {
+const listProductsReducer = (state = {data: products, page: 1, sort: null, layout: 'grid', type: null}, action) => {
     switch (action.type) {
 
         case 'listProducts/page': {
-            const page = Number(action.payload)
-            const itemsPerPage = 9
-            const lastIndex = page * itemsPerPage
-            const firstIndex = lastIndex - itemsPerPage
-            const items = products.slice(firstIndex, lastIndex)
             return {
                 ...state,
-                data: [...items],
-                page: page
+                page: action.payload
             }
         }
-        case 'listProducts/most': {
+        case 'listProducts/sort': {
             return {
                 ...state,
-                data: [...products],
-                sort: 'most'
-            }
-        }
-        case 'listProducts/mostViewed': {
-            const items = [...state.data].sort((a, b) => a.viewed > b.viewed ? -1 : 1)
-            return {
-                ...state,
-                data: [...items],
-                sort: 'mostViewed'
-            }
-        }
-        case 'listProducts/mostDownloaded': {
-            const item = [...state.data].sort((a, b) => a.downloaded > b.downloaded ? -1 : 1)
-            return {
-                ...state,
-                data: [...item],
-                sort: 'mostDownloaded'
+                sort: action.payload
             }
         }
         case 'listProducts/type': {
             return {
                 ...state,
-                type: action.payload
+               type: action.payload
+            }
+        }
+        case 'listProducts/layout': {
+            return {
+                ...state,
+                layout: action.payload
             }
         }
         default:

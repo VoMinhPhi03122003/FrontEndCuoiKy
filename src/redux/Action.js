@@ -9,7 +9,7 @@ export const addItemToCart = (product) => {
          */
     }
 }
-export const categorize = (type) => {
+export const setType = (type) => {
     return {
         type: 'listProducts/type',
         payload: type
@@ -24,28 +24,24 @@ export const removeItemFromCart = (product) => {
     }
 }
 
-export const switchPage = (page) => {
+export const setPage = (page) => {
     return {
         type: 'listProducts/page',
         payload: page
     }
 }
-export const most = () => {
+export const setSort = (sort) => {
     return {
-        type: 'listProducts/most'
+        type: 'listProducts/sort',
+        payload: sort
     }
 }
 
 
-export const mostViewed = () => {
+export const setLayout = (layout) => {
     return {
-        type: 'listProducts/mostViewed'
-    }
-}
-
-export const mostDownloaded = () => {
-    return {
-        type: 'listProducts/mostDownloaded'
+        type: 'listProducts/layout',
+        payload: layout
     }
 }
 

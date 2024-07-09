@@ -6,7 +6,7 @@ import '../../css/products.css'
 import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
-import {categorize, most, mostDownloaded, mostViewed, switchPage} from "../../redux/Action";
+import {setType, most, mostDownloaded, mostViewed, setLayout, setSort, setPage} from "../../redux/Action";
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link} from "react-router-dom";
 
@@ -57,8 +57,8 @@ function SideBar({type}) {
     const dispatch = useDispatch()
 
     function handleClick(type) {
-        dispatch(categorize(type))
-        dispatch(switchPage(1))
+        dispatch(setType(type))
+        dispatch(setPage(1))
     }
 
     return (
@@ -150,18 +150,19 @@ function ProductItemRow({p, navigate}) {
 }
 
 function Products(props) {
+    const layout = useSelector(state => state.listProductsReducer.layout)
     const dispatch = useDispatch()
 
     function navigate(type) {
-        dispatch(categorize(type))
-        dispatch(switchPage(1))
+        dispatch(setType(type))
+        dispatch(setPage(1))
     }
 
 
     return (
         <div className="row">
             {props.data.map((value, index) => {
-                return props.isGrid ?
+                return layout === 'grid' ?
                     (<div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
                         <ProductItem p={value}  navigate={navigate}/>
                     </div>) :
@@ -173,29 +174,10 @@ function Products(props) {
     )
 }
 
-function Filter({total, onLayout}) {
-    const dispatch = useDispatch()
-    const [layout, setLayout] = useState('grid')
-    const currentPage = useSelector(state => state.listProductsReducer.page)
+function Filter({total}) {
     const sort = useSelector(state => state.listProductsReducer.sort)
-
-    function onLayoutClick(isGrid) {
-       onLayout(isGrid)
-        setLayout(isGrid === true ? 'grid' : 'row')
-    }
-    function onSortClick(sort) {
-        switch (sort) {
-            case 'mostViewed':
-                dispatch(mostViewed())
-                break;
-            case 'mostDownloaded':
-                dispatch(mostDownloaded())
-                break;
-            default:
-                dispatch(most())
-                dispatch(switchPage(currentPage))
-        }
-    }
+    const layout = useSelector(state => state.listProductsReducer.layout)
+    const dispatch = useDispatch()
     return (
         <div className="filters mb-4">
             <div className="row">
@@ -208,22 +190,22 @@ function Filter({total, onLayout}) {
                     <div className="filter-sort mr-5">
                         <span>SẮP XẾP</span>
                         <ul className="d-inline-block">
-                            <li className={sort === 'most' ? "filter-active" : ""}
-                                onClick={() => onSortClick('most')}>Mới nhất
+                            <li className={sort === null && "filter-active"} onClick={() => dispatch(setSort(null))}>Mới
+                                nhất
                             </li>
-                            <li className={sort === 'mostViewed' ? "filter-active" : ""}
-                                onClick={() => onSortClick('mostViewed')}>Xem nhiều
+                            <li className={sort === 'viewed' && "filter-active"}
+                                onClick={() => dispatch(setSort('viewed'))}>Xem nhiều
                             </li>
-                            <li className={sort === 'mostDownloaded' ? "filter-active" : ""}
-                                onClick={() => onSortClick('mostDownloaded')}>Mua nhiều
+                            <li className={sort === 'downloaded' && "filter-active"}
+                                onClick={() => dispatch(setSort('downloaded'))}>Tải nhiều
                             </li>
                         </ul>
                     </div>
                     <div className="filter-layout d-flex align-items-center">
-                        <span className={`bx bx-grid-alt ${layout === 'grid' ? "filter-active" : ""}`}
-                              onClick={() => onLayoutClick(true)}></span>
-                        <span className={`bx bx-list-ul ${layout === 'row' ? "filter-active" : ""}`}
-                              onClick={() => onLayoutClick(false)}></span>
+                        <span className={`bx bx-grid-alt ${layout === 'grid' && "filter-active"}`}
+                              onClick={() => dispatch(setLayout('grid'))}></span>
+                        <span className={`bx bx-list-ul ${layout === 'row' && "filter-active"}`}
+                              onClick={() => dispatch(setLayout('row'))}></span>
                     </div>
                 </div>
             </div>
@@ -232,7 +214,7 @@ function Filter({total, onLayout}) {
 }
 
 function Pagination({total}) {
-    const sort = useSelector(state => state.listProductsReducer.sort)
+
     const currentPage = useSelector(state => state.listProductsReducer.page)
     const dispatch = useDispatch()
     const numbers = [...Array(Math.ceil(total / 12) + 1).keys()].slice(1)
@@ -241,17 +223,7 @@ function Pagination({total}) {
     function onSwitchPage(page) {
         const pages = numbers.length
         const pageNow = page < 1 || page > pages ? currentPage : page
-        dispatch(switchPage(pageNow))
-        switch (sort) {
-            case 'mostViewed':
-                dispatch(mostViewed())
-                break
-            case 'mostDownloaded':
-                dispatch(mostDownloaded())
-                break
-            default:
-
-        }
+        dispatch(setPage(pageNow))
     }
 
     return (
@@ -267,19 +239,27 @@ function Pagination({total}) {
 }
 
 function ProductsContainer() {
-    const currentPage = useSelector(state => state.listProductsReducer.page)
+    const page = useSelector(state => state.listProductsReducer.page)
     const type = useSelector(state => state.listProductsReducer.type)
+    const sort = useSelector(state => state.listProductsReducer.sort)
 
     const [products, setProducts] = useState([])
-    const [grid, setGrid] = useState(true)
     const relTotal = useRef(0)
 
     useEffect(() => {
         let url
         if (type) {
-            url = `http://localhost:9810/products?type.name=${type}&_page=${currentPage}&_limit=12`
+            if (sort) {
+                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12&_sort=${sort}`
+            } else {
+                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12`
+            }
         } else {
-            url = `http://localhost:9810/products?_page=${currentPage}&_limit=12`
+            if (sort) {
+                url = `http://localhost:9810/products?_page=${page}&_limit=12&_sort=${sort}`
+            } else {
+                url = `http://localhost:9810/products?_page=${page}&_limit=12`
+            }
         }
         fetch(url)
             .then(res => res.json())
@@ -287,7 +267,7 @@ function ProductsContainer() {
                 setProducts(json.data)
                 relTotal.current = json.total
             })
-    }, [currentPage, type])
+    }, [page, type, sort])
 
     return (
         <section className="product">
@@ -297,8 +277,8 @@ function ProductsContainer() {
                         <SideBar type={type}/>
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
-                        <Filter total={relTotal.current} onLayout={(idGrid) => setGrid(idGrid)}/>
-                        <Products isGrid={grid} data={products}/>
+                        <Filter total={relTotal.current}/>
+                        <Products data={products}/>
                         <Pagination total={relTotal.current}/>
                     </div>
                 </div>
