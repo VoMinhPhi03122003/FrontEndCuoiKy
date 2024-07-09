@@ -23,3 +23,10 @@ export const updateDiscountPercent = (discount_percent) => {
         payload: discount_percent
     }
 }
+
+export const updateDiscountCode = (code) => {
+    return {
+        type: 'discountCode/update-code',
+        payload: code
+    }
+}

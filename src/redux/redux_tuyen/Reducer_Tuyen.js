@@ -8,7 +8,7 @@ const initCartState = {
     /* đây là trạng thái ban đầu của giỏ hàng */
     cart: loadCartFromLocalStorage() === null ? [] : loadCartFromLocalStorage(),
     totalPrice: localStorage.getItem('total-price') === null ? 0 : localStorage.getItem('total-price'),
-    discount_percent: 0 // phần trăm giảm giá của đơn hàng
+    discount_percent: 0 // % giảm giá của đơn hàng
 }
 
 export const cartReducer = (state = initCartState, action) => {
@@ -70,6 +70,7 @@ export const cartReducer = (state = initCartState, action) => {
             }
         }
 
+
         default :
             return state;
 
@@ -81,4 +82,17 @@ export const cartReducer = (state = initCartState, action) => {
 
     }
 
+}
+export const discountCodeReducer = (state = {code: ''}, action) => {
+
+    switch (action.type) {
+        case 'discountCode/update-code': {
+            return {
+                ...state,
+                code: action.payload
+            }
+        }
+        default:
+            return state
+    }
 }

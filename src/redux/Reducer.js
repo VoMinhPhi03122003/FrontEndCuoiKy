@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
 import {products} from "../data/Products";
-import {cartReducer} from "./redux_tuyen/Reducer_Tuyen";
+import {cartReducer, discountCodeReducer} from "../redux_tuyen/Reducer_Tuyen";
 
 import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
 
@@ -40,4 +40,5 @@ export const reducers = combineReducers({
     cartReducer: cartReducer,
     listProductsReducer: listProductsReducer,
     registerReducer: registerReducer,
+    discountCodeReducer: discountCodeReducer
 })

@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_Tuyen";
 import {getListDiscountCode} from "../../javascript/api";
-import {removeItemFromCart, updateDiscountPercent} from "../../redux/redux_tuyen/Action_Tuyen";
+import {removeItemFromCart, updateDiscountPercent, updateDiscountCode} from "../../redux/redux_tuyen/Action_Tuyen";
 
 
 
@@ -109,7 +109,7 @@ function ItemCart(data) {
 function FormInputDiscount() {
 
     const dispatch = useDispatch();
-    const [discountCode, setDiscountCode] = useState('');
+    const discountCode = useSelector(state => state.discountCodeReducer.code);
 
     const clickApplyDiscountCode = async (e) => {
         e.preventDefault();
@@ -125,7 +125,7 @@ function FormInputDiscount() {
     }
 
     const handleDiscountCodeChange = (e) => {
-        setDiscountCode(e.target.value);
+        dispatch(updateDiscountCode(e.target.value));
     }
     // => cập nhật lại giá trị của discountCode mỗi khi người dùng nhập kí tự
 
