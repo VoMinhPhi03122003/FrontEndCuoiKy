@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 
 import Swal from 'sweetalert2';
 
-import {formatCurrency, getPercentDiscount} from "../../javascript/utils";
+import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_Tuyen";
 import {getListDiscountCode} from "../../javascript/api";
-import {removeItemFromCart, updateDiscountPercent} from "../../redux/Action";
+import {removeItemFromCart, updateDiscountPercent} from "../../redux/redux_tuyen/Action_Tuyen";
 
 
 
