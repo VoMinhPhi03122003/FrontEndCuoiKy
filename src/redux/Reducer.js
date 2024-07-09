@@ -1,13 +1,13 @@
 import {combineReducers} from "redux";
 import {products} from "../data/Products";
-import registerReducer from "../components/AuthenticationPage/RegisterSlice"
+import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
 
 import {checkItemExistCart, totalPrice, loadCartFromLocalStorage} from "../javascript/utils"
 
 const initCartState = {
     /* đây là trạng thái ban đầu của giỏ hàng */
-    cart:  loadCartFromLocalStorage(),
-    totalPrice: localStorage.getItem('total-price')
+    cart:  loadCartFromLocalStorage() === null ? [] : loadCartFromLocalStorage,
+    totalPrice: localStorage.getItem('total-price') === null ? 0 : localStorage.getItem('total-price')
 }
 
  const cartReducer = (state = initCartState, action) => {
@@ -51,7 +51,7 @@ const initCartState = {
             //   console.log("Object cart", updatedCart);
             const newTotalPrice = totalPrice(updatedCart);
             localStorage.setItem('total-price', JSON.stringify(newTotalPrice));
-            
+
             return {
                 ...state, // sao chép trạng thái hiện tại
                 cart: updatedCart, // cập nhật số lượng sản phẩm trong giỏ hàng

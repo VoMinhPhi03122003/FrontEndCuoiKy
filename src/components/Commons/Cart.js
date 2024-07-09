@@ -14,8 +14,11 @@ function Cart() {
 
     return (
         <div className="header-cart">
-            <Link to="/" className="position-relative mr-5"><i className="bi bi-hand-thumbs-up"></i><span>0</span></Link>
-            <Link to="/cart-details" className={`position-relative ${location.pathname === "/cart-details" ? "active" : ""}`}><i className="bi bi-cart"></i> <span>{cart.length}</span></Link>
+            <Link to="/" className="position-relative mr-5"><i
+                className="bi bi-hand-thumbs-up"></i><span>0</span></Link>
+            <Link to="/cart-details"
+                  className={`position-relative ${location.pathname === "/cart-details" ? "active" : ""}`}><i
+                className="bi bi-cart"></i> <span>{cart.length}</span></Link>
         </div>
 
 
