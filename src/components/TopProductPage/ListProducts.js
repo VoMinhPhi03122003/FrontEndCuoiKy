@@ -6,9 +6,11 @@ import '../../css/products.css'
 import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
-import {setType, most, mostDownloaded, mostViewed, setLayout, setSort, setPage} from "../../redux/Action";
+import {setLayout, setPage, setSort, setType} from "../../redux/Action";
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link} from "react-router-dom";
+import {StarRate} from "../ProductDetailPage/ProductDetails";
+import {formatNumber, formatRating} from "../../javascript/utils";
 
 
 
@@ -25,7 +27,7 @@ export function PopularProducts() {
             <h6 className="list-group-item">Sản phẩm phổ biến</h6>
             <div className="list-group">
                 {data.map((product, index) => (
-                    <Link to={`product/${product.id}`} className="list-group-item" key={index}>
+                    <Link to={`product/${product.id}`}  state={product} className="list-group-item" key={index}>
                         <img className="mr-2" src={product.img} alt=""/>
                         <span className="popular-title">{product.name}</span>
                     </Link>
@@ -34,27 +36,30 @@ export function PopularProducts() {
         </div>
     )
 }
+const getTypes = (json) => {
+    const types = []
+    json.data.forEach(product => {
+        const type = types.find(value => value.name === product.type.name)
+        if (type) {
+            type.quantity = type.quantity + 1
+        } else {
+            types.push({name: product.type.name, icon: product.type.icon, quantity: 1})
+        }
+    })
+    return types.sort((a, b) => a.name < b.name ? -1 : 1)
+}
+
 
 function SideBar({type}) {
+    const dispatch = useDispatch()
+
     const relTypes = useRef([])
+
     useEffect(() => {
         fetch(`http://localhost:9810/products`)
             .then(res => res.json())
-            .then(json => {
-                const types = []
-                json.data.forEach(product => {
-                    const type = types.find(value => value.name === product.type.name)
-                    if (type) {
-                        type.quantity = type.quantity + 1
-                    } else {
-                        types.push({name: product.type.name, icon: product.type.icon, quantity: 1})
-                    }
-                })
-                relTypes.current = types.sort((a, b) => a.name < b.name ? -1 : 1)
-            })
+            .then(json => relTypes.current = getTypes(json))
     }, [])
-
-    const dispatch = useDispatch()
 
     function handleClick(type) {
         dispatch(setType(type))
@@ -86,12 +91,12 @@ function SideBar({type}) {
 function ProductItem({p, navigate}) {
     return (
         <div className="product-item">
-            <Link to={`product/${p.id}`} className="product-item-img">
+            <Link to={`product/${p.id}`} state={p} className="product-item-img">
                 <img src={p.img} alt=""/>
             </Link>
             <div className="product-item-title d-flex justify-content-center align-items-center text-center pt-2">
                 <div className="title-wrapper">
-                    <Link to={`product/${p.id}`}>{p.name}</Link>
+                    <Link to={`product/${p.id}`} state={p}>{p.name}</Link>
                 </div>
             </div>
             <div className="product-item-stats d-flex justify-content-between">
@@ -103,14 +108,12 @@ function ProductItem({p, navigate}) {
                     <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
                     <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
                 </div>
-                <div className="product-item-stars">
-                    {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
-                </div>
+                <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
             </div>
             <div className="product-item-bottom d-flex justify-content-between align-items-center">
                 <div className="product-item-brand" onClick={() => navigate(p.type.name)}><i
                     className={p.type.icon}></i> {p.type.name}</div>
-                <Link to={`product/${p.id}`} className="product-item-price">{p.price}đ</Link>
+                <Link to={`product/${p.id}`} state={p} className="product-item-price">{formatNumber(p.price, '.')}đ</Link>
             </div>
         </div>
     )
@@ -120,23 +123,25 @@ function ProductItemRow({p, navigate}) {
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
-                <Link to={`product/${p.id}`} className="product-item-img col-lg-4 pr-3">
+                <Link to={`product/${p.id}`} state={p} className="product-item-img col-lg-4 pr-3">
                     <img src={p.img} alt=""/>
                 </Link>
                 <div className="product-item-row-content col-lg-6">
-                    <Link to={`product/${p.id}`} className="product-item-row-title">{p.name}</Link>
+                    <Link to={`product/${p.id}`} state={p} className="product-item-row-title">{p.name}</Link>
                     <div className="product-item-brand"><i className={p.type.icon}
                                                            onClick={() => navigate(p.type.name)}></i> {p.type.name}
                     </div>
-                    <div className="product-item-stars">
-                        {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                    <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average}
+                                                                  type={"bi bi-star-fill"}/></div>
+                    <div className="product-item-stats d-flex justify-content-start">
+                        <div><i className="fa fa-eye"></i> {p.viewed}</div>
+                        <div><i className="fa fa-download"></i> {p.downloaded}</div>
                     </div>
-                    <p className="product-item-row-description">{p.description}</p>
                 </div>
                 <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
                     <div className="pr-3 pb-3">
                         <div className="product-item-row-price text-center">
-                            <Link to={`product/${p.id}`}  className="d-inline text-center">{p.price}đ</Link>
+                            <Link to={`product/${p.id}`} state={p} className="d-inline text-center">{formatNumber(p.price, '.')}đ</Link>
                         </div>
                         <div className="d-flex justify-content-end">
                             <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
@@ -250,13 +255,13 @@ function ProductsContainer() {
         let url
         if (type) {
             if (sort) {
-                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12&_sort=${sort}`
+                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12&_sort=${sort}&_order=desc`
             } else {
                 url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12`
             }
         } else {
             if (sort) {
-                url = `http://localhost:9810/products?_page=${page}&_limit=12&_sort=${sort}`
+                url = `http://localhost:9810/products?_page=${page}&_limit=12&_sort=${sort}&_order=desc`
             } else {
                 url = `http://localhost:9810/products?_page=${page}&_limit=12`
             }

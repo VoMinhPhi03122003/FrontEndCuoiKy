@@ -18,7 +18,7 @@ function Cart() {
                 className="bi bi-hand-thumbs-up"></i><span>0</span></Link>
             <Link to="/cart-details"
                   className={`position-relative ${location.pathname === "/cart-details" ? "active" : ""}`}><i
-                className="bi bi-cart"></i> <span>{cart.length}</span></Link>
+                className="bi bi-cart"></i> <span>{cart}</span></Link>
         </div>
 
 

@@ -4,8 +4,10 @@ import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import '../../css/product-detail.css'
 import {useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
+import {Link, useLocation} from "react-router-dom";
+import {formatNumber, formatRating} from "../../javascript/utils";
 
-function DetailLeft() {
+function DetailLeft({p}) {
     const [slideIndex, setSlideIndex] = useState(0)
 
     function moveSlide(dir) {
@@ -18,72 +20,81 @@ function DetailLeft() {
         <div className="detail-left">
             <div className="detail-slider">
                 <div className="detail-slide" style={{transform: `translateX(${100 * (0 - slideIndex)}%)`}}>
-                    <img src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
+                    <img src={p.thumbnails[0]} alt=""/>
                 </div>
                 <div className="detail-slide" style={{transform: `translateX(${100 * (1 - slideIndex)}%)`}}>
-                    <img src={require('../../img/detailsProduct/product-details-2.jpg')} alt=""/>
+                    <img src={p.thumbnails[1]} alt=""/>
                 </div>
                 <div className="detail-slide" style={{transform: `translateX(${100 * (2 - slideIndex)}%)`}}>
-                    <img src={require('../../img/detailsProduct/product-details-3.jpg')} alt=""/>
+                    <img src={p.thumbnails[2]} alt=""/>
                 </div>
             </div>
             <button className="btn slide-arrow btn-prev" onClick={() => moveSlide(-1)}><i className="bi bi-chevron-left"></i></button>
             <button className="btn slide-arrow btn-next" onClick={() => moveSlide(1)}><i className="bi bi-chevron-right"></i></button>
             <div className="slider-thumbnails d-flex justify-content-between">
                 <div className={slideIndex === 0 && 'active'} onClick={() => setSlideIndex(0)}>
-                    <img src={require('../../img/detailsProduct/product-details-1.jpg')} alt=""/>
+                    <img src={p.thumbnails[0]} alt=""/>
                 </div>
                 <div className={slideIndex === 1 && 'active'} onClick={() => setSlideIndex(1)}>
-                    <img src={require('../../img/detailsProduct/product-details-2.jpg')} alt=""/>
+                    <img src={p.thumbnails[1]} alt=""/>
                 </div>
                 <div className={slideIndex === 2 && 'active'} onClick={() => setSlideIndex(2)}>
-                    <img src={require('../../img/detailsProduct/product-details-3.jpg')} alt=""/>
+                    <img src={p.thumbnails[2]} alt=""/>
                 </div>
             </div>
         </div>
     )
 }
 
-function DetailCenter() {
+export function StarRate({stars, type}) {
+    const fullStars = Math.floor(stars)
+    const remain = (5 - stars) - Math.floor(5 - stars)
+    return (
+        <>
+            {Array(fullStars).fill(1).map((value, index) => (<i className={type} key={index}></i>))}
+            {remain < 1 && remain > 0 && <i className={type} key={fullStars} style={{color: '#BEBEBE'}}></i>}
+            {Array(Math.floor(5 - stars)).fill(1).map((value, index) =>
+                (<i className={type} key={index} style={{color: '#BEBEBE'}}></i>))}
+        </>
+    )
+}
+
+function DetailCenter({p}) {
     return (
         <div className="detail-center">
-            <h6>SALE - full source code webiste bán hàng laptop - Sử dụng PHP Framework
-                CodeIgniter <span>[Mã code 36122]</span></h6>
-            <div className="detail-center-stats d-flex align-items-center">
+            <h6>{p.name} <span>[Mã sản phẩm {p.id}]</span></h6>
+            <div className="detail-center-stats">
                 <div className="product-item-stars mr-3">
-                    {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                    <StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/>
                 </div>
-                <span>(12 Đánh giá)</span>
-                <span><i className="fa fa-eye"></i> 12</span>
-                <span><i className="fa fa-download"></i> 34</span>
+                <span>({formatRating(p.rating).total} Đánh giá)</span>
+                <span><i className="fa fa-eye"></i> {p.viewed}</span>
+                <span><i className="fa fa-download"></i> {p.downloaded}</span>
             </div>
-            <div className="detail-center-des">
-                Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành
-                cho sinh viên lập trình tham khảo
-            </div>
+            <div className="detail-center-des">{p.description}</div>
             <div className="detail-center-info">
-                <div><span>Danh mục</span> Android</div>
-                <div><span>Nhóm code</span> Top code</div>
-                <div><span>Ngày đăng</span> 12-06-2023</div>
-                <div><span>Loại file</span> Full code</div>
-                <div><span>File download</span> 23 MB</div>
+                <div><i className="fa fa-list"></i><span>Danh mục</span> <Link to={'/'}>{p.type.name}</Link></div>
+                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/'}>Top sản phẩm</Link></div>
+                <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {p.release}</div>
+                <div><i className="fa fa-object-group"></i><span>Loại file</span> {p.fileType}</div>
+                <div><i className="fa fa-file-code"></i><span>File download</span> {p.file}</div>
             </div>
         </div>
     )
 }
 
-function DetailRight() {
+function DetailRight({p}) {
     return (
         <div className="detail-right">
             <div className="detail-right-offer">
                 <h6>PHÍ DOWNLOAD</h6>
-                <span className="offer-price">150.000<sup>đ</sup></span>
-                <button className="offer-download"><i className="fa fa-download"></i> TẢI NGAY</button>
+                <span className="offer-price">{formatNumber((p.price), '.')}<sup>đ</sup></span>
+                <button className="offer-download"><img src="https://topcode.vn/assets/images/ic-down.png" alt=""/> TẢI NGAY</button>
                 <button className="offer-favorite"><i className="fa fa-thumbs-up"></i> Lưu vào yêu thích</button>
-                <span><span>CHIA SẺ NHANH</span> (CODE 9433)</span>
+                <span><span>CHIA SẺ NHANH</span> (CODE  {p.id})</span>
                 <div>
                     <img src="https://topcode.vn/assets/images/share-email.png" alt=""/>
-                    <div>Gửi code tới email bạn bè</div>
+                    <div>Gửi sản phẩm  tới email bạn bè</div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <span><i className="fa fa-thumbs-up"></i> Like</span>
@@ -191,7 +202,7 @@ function RatingModal({closeModal}) {
     )
 }
 
-function Rating() {
+function Rating({p}) {
     const [showModal, setShowModal] = useState(false)
     return (
         <>
@@ -199,13 +210,13 @@ function Rating() {
             <div className="detail-rating">
                 <div className="row mt-5 mb-3">
                     <div className="col-lg-4 text-center">
-                        <div className="rating-average">4.6<span>/5</span></div>
+                        <div className="rating-average">{formatRating(p.rating).average}<span>/5</span></div>
                         <div className="product-item-stars">
-                            {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                            <StarRate stars={formatRating(p.rating).average} type={"fa fa-star"}/>
                         </div>
-                        <div className="rating-count">1,233 đánh giá</div>
+                        <div className="rating-count">{formatNumber(formatRating(p.rating).total, ',')} đánh giá</div>
                         <div className="rating-action mt-3 text-center">
-                            <button onClick={() => setShowModal(true)}><i className="fa fa-star mr-1"></i> Viết đánh giá
+                            <button onClick={() => setShowModal(true)}><i className="bi bi-star-fill mr-1"></i> Viết đánh giá
                             </button>
                         </div>
                     </div>
@@ -213,13 +224,11 @@ function Rating() {
                         <div className="rating-chart">
                             {Array(5).fill(1).map((value, index) => (
                                 <div key={index}>
-                                    <div>{5 - index} <i className="fa fa-star"></i></div>
+                                    <div>{5 - index} <i className="bi bi-star-fill"></i></div>
                                     <div>
-                                        <div>
-
-                                        </div>
+                                        <div style={{width: `${formatRating(p.rating)['avg' + (5 - index)]}%`}}></div>
                                     </div>
-                                    <div>1234</div>
+                                    <div>{p.rating[(5 - index) + 'star']}</div>
                                 </div>
                             ))}
                         </div>
@@ -229,14 +238,14 @@ function Rating() {
                     <div>
                         <div>Anh Hưng <span><i className="fa fa-check-circle"></i> Đã mua hàng</span> <span>3 tuần trước</span></div>
                         <div className="product-item-stars">
-                            {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                            <StarRate stars={5} type={"bi bi-star-fill"}/>
                         </div>
                         <div>Sảm phẩm rất tốt tôi rất hài lòng</div>
                     </div>
                     <div>
                         <div>Chị Hà <span><i className="fa fa-check-circle"></i> Đã mua hàng</span> <span>1 tuần trước</span></div>
                         <div className="product-item-stars">
-                            {Array(5).fill(1).map((value, index) => (<i className="fa fa-star" key={index}></i>))}
+                            <StarRate stars={5} type={"bi bi-star-fill"}/>
                         </div>
                         <div>Rất hài lòng</div>
                     </div>
@@ -315,12 +324,12 @@ function Comment() {
     )
 }
 
-function DetailContent() {
+function DetailContent({p}) {
     return (
         <>
             <DetailDescription/>
             <Installation/>
-            <Rating/>
+            <Rating  p={p}/>
             <Comment/>
         </>
     )
@@ -328,6 +337,8 @@ function DetailContent() {
 
 
 function ProductDetailContainer() {
+    const location = useLocation()
+
     return (
         <section className="product-details my-5">
             <div className="container">
@@ -335,16 +346,16 @@ function ProductDetailContainer() {
                     <div className="col-lg-9">
                         <div className="row">
                             <div className="col-lg-5">
-                                <DetailLeft/>
+                                <DetailLeft p={location.state}/>
                             </div>
                             <div className="col-lg-7">
-                                <DetailCenter/>
+                                <DetailCenter  p={location.state}/>
                             </div>
                         </div>
-                        <DetailContent/>
+                        <DetailContent p={location.state}/>
                     </div>
                     <div className="col-lg-3">
-                        <DetailRight/>
+                        <DetailRight  p={location.state}/>
                         <PopularProducts/>
                     </div>
                 </div>

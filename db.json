@@ -267,11 +267,6 @@
 
 
 
-
-
-
-
-
   "products": [
     {
       "id": 1,
@@ -286,7 +281,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Code Android App bán quần áo thời trang full chức năng giao diện đẹp sử dụng Android Studio + API Springboot + MySQL + Tích hợp thanh toán ZaloPay",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 254,
+        "4star": 12,
+        "3star": 43,
+        "2star": 1,
+        "1star": 1
+      },
       "viewed": 157,
       "downloaded": 0,
       "liked": false,
@@ -305,7 +310,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Android Studio - App Food - Ứng dụng bán đồ ăn trực tuyến",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 231,
       "downloaded": 124,
       "liked": false,
@@ -324,7 +339,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Nhật ký hành trình du lịch - Android app(v1)",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 253,
       "downloaded": 8,
       "liked": false,
@@ -343,7 +368,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code ứng dụng dịch vụ mạng xã hội",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 369,
       "downloaded": 3,
       "liked": false,
@@ -362,7 +397,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Full code ứng dụng di động nghe nhạc trực tuyến",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 714,
       "downloaded": 8,
       "liked": false,
@@ -381,7 +426,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code app đếm ngày yêu flutter",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 223,
       "downloaded": 0,
       "liked": false,
@@ -400,7 +455,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Ứng dụng sách trên nền tảng Android",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 987,
       "downloaded": 7,
       "liked": false,
@@ -419,7 +484,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Code Android Java + Server API MySQL - Ứng Dụng Quản Lý Bán Hàng Có File Báo Cáo",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 178,
       "downloaded": 0,
       "liked": false,
@@ -438,7 +513,17 @@
         "icon": "bi bi-android2"
       },
       "name": "YT-PDF Maker - Ứng dụng tạo file PDF từ nhiều nguồn nội dung (Đã up lên CHPlay)",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 232,
       "downloaded": 0,
       "liked": false,
@@ -457,7 +542,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Android Đặt Đồ Ăn - Quản Lý Nhà Hàng",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 623,
       "downloaded": 16,
       "liked": false,
@@ -476,7 +571,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Mã nguồn Android Quản Lý Kho Hàng",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 486,
       "downloaded": 8,
       "liked": false,
@@ -495,7 +600,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Android Ghi Chú - Note Ghi Chú - Note Android",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 2253,
       "downloaded": 46,
       "liked": false,
@@ -514,7 +629,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Đồ án Ứng dụng hẹn hò Tinder",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1286,
       "downloaded": 0,
       "liked": false,
@@ -533,7 +658,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Full SourceCode Ứng dụng BusGO - Tìm kiếm địa điểm, lịch trình xe bus Hà Nội",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -552,7 +687,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code Ứng dụng Player for Cloud - Nghe nhạc ZingMP3",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -571,7 +716,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Android java + mysql bán hàng linh kiện điện tử",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -590,7 +745,17 @@
         "icon": "bi bi-android2"
       },
       "name": "React Native source code example Xây dựng App bán hàng React Native Assigment Fpoly",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -609,7 +774,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Dịch vụ Spa tại nhà - Flutter App (iOS & Android) cho Khách hàng, Nhân viên Spa với trang Admin quản lý bởi Laravel",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -628,7 +803,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Ứng dụng mạng xã hội soure code +kèm báo cáo",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -647,7 +832,17 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code ứng dụng cửa hàng tạp hóa",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -666,7 +861,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Full source code app iOS Shopping(CHẤT LƯỢNG CAO) đầy đủ các chức năng",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -685,7 +890,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code Ứng dụng Movie Trailer (ĐA thực tập)",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -704,7 +919,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Ứng dụng mua sắm trực tuyến iOS - Đồ án tốt nghiệp",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -723,7 +948,17 @@
         "icon": "fa fa-apple"
       },
       "name": "[Swift] Full code game xếp hình cổ điển, đã được tích hợp đầy đủ quảng cáo admob, mua hàng trong ứng dụng",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -742,7 +977,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Ứng dụng Ghi Chú trên IOS, giao diện đẹp, dễ dùng",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -761,7 +1006,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Code App ios xem video giống 99% app youtube",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -780,7 +1035,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code app IOS tìm địa điểm ăn uống giống app Meete 99%",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -799,7 +1064,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code iOS App xem video",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -818,7 +1093,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code Game hay iOS, gắn quảng cáo kiếm $$$. Where is my birds?",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -837,7 +1122,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Snake vs Block Source code Game iOS giao diện đẹp, mượt",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
@@ -856,7 +1151,17 @@
         "icon": "fa fa-apple"
       },
       "name": "Full Code + Admob IOS ứng dụng nghe nhạc online MP3",
-      "star": 5,
+      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
+      "release": "12-06-2023",
+      "fileType": "Full code",
+      "file": "Website.zip [47.2 MB]",
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
       "viewed": 1000,
       "downloaded": 100,
       "liked": false,
