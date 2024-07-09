@@ -1,8 +1,10 @@
 import {combineReducers} from "redux";
 import {products} from "../data/Products";
+
 const initState = {
     /* đây là trạng thái ban đầu của ứng dụng */
-    cart: []
+    cart: [],
+    totalPrice: 0
 }
 
  const cartReducer = (state = initState, action) => {
@@ -11,11 +13,16 @@ const initState = {
     switch (action.type) {
         case 'cart/add-item': {
             return {
-                ...state,
+                ...state, // sao chép trạng thái hiện tại
                 cart: [
                     ...state.cart,
                     action.payload
-                ]
+                ],
+                /*
+                Cập nhật thuộc tính cart với một mảng mới.
+                Mảng mới này bao gồm toàn bộ phần tử từ state.cart và phần tử mới được thêm vào từ action.payload
+               */
+                totalPrice: state.totalPrice + action.payload.price // => tổng giá trị mới của đơn hàng
             }
 
             /**
@@ -26,9 +33,16 @@ const initState = {
              */
         }
 
-        case 'cart/remove-item':{
-            return {
+        case 'cart/remove-item': {
+            console.log("Day la Action cart/remove-item");
 
+            const updatedCart = state.cart.filter(item => item.id !== action.payload.id);
+            console.log("Object cart", updatedCart);
+             
+            return {
+                ...state,
+                cart: updatedCart,
+                totalPrice: state.totalPrice - action.payload.price // => tổng giá trị mới của đơn hàng
             }
         }
 
@@ -44,7 +58,7 @@ const initState = {
     }
 
 }
-const listProductsReducer = (state = {data: products, page: 1, sort: 'most'}, action) => {
+const listProductsReducer = (state = {data: products, page: 1, sort: 'most', type: null}, action) => {
     switch (action.type) {
 
         case 'listProducts/page': {
@@ -80,6 +94,12 @@ const listProductsReducer = (state = {data: products, page: 1, sort: 'most'}, ac
                 ...state,
                 data: [...item],
                 sort: 'mostDownloaded'
+            }
+        }
+        case 'listProducts/type': {
+            return {
+                ...state,
+                type: action.payload
             }
         }
         default:

@@ -8,6 +8,7 @@
     border-width: 0 0 1px;
     border-radius: 0;
     color: var(--color-text);
+    cursor: pointer;
 }
 .sidebar-item .list-group-item:hover {
     background-color: #f6f8f8;

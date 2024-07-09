@@ -32,11 +32,11 @@ const listAuthentication = [
 
  const listProducts = [
     {
-        path: 'top-products',
+        path: '/top-products',
         element: <ListProducts/>
     },
      {
-         path: 'top-products/product/:productId',
+         path: '/top-products/product/:productId',
          element: <ProductDetails/>
     },
     {
@@ -69,5 +69,7 @@ export const router = createBrowserRouter([
     },
     profile,
     ...listProducts,
-    ...listAuthentication
+    ...listAuthentication,
+    ...listProducts,
+    ...cart
 ])

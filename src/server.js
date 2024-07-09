@@ -12,7 +12,7 @@ const middlewares = jsonServer.defaults();
 
 //  Định nghĩa hàm render cho router
 router.render = (req, res) => {
-    if (req.path === '/products') return res.jsonp({
+    if ((req.path === '/products') || (req.path === '/types')) return res.jsonp({
         data: res.locals.data,
         total: parseInt(res.getHeader('X-Total-Count'), 10)
     })
