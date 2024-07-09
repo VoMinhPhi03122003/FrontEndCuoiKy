@@ -1,6 +1,4 @@
 
-import {store} from './redux/Store'
-import {Provider} from 'react-redux'
 
 import './css/boxicons.min.css'
 import './css/boostrap-icons/bootstrap-icons.min.css'
@@ -15,10 +13,9 @@ import Profile from "./components/ProfilePage/Profile";
 
  function App() {
     return (
-        <Provider store={store}>
             <HomePage/>
-            <Profile/>
-        </Provider>
+
+
     )
 }
 export default App;

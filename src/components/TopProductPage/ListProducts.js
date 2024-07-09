@@ -3,7 +3,7 @@ import Footer from "../Commons/Footer"
 
 
 import '../../css/products.css'
-import {useEffect, useState} from "react";
+import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
 import {most, mostDownloaded, mostViewed, switchPage} from "../../redux/Action";
@@ -45,8 +45,7 @@ function SideBar() {
 </div>
 )
 }
-function ProductItem(props) {
-    const p = props.data
+function ProductItem({p}) {
     return (
         <div className="product-item">
             <a href={`/list-products/product/${p.id}`}  className="product-item-img">
@@ -78,8 +77,7 @@ function ProductItem(props) {
     )
 }
 
-function ProductItemRow(props) {
-    const p = props.data
+function ProductItemRow({p}) {
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
@@ -111,23 +109,16 @@ function ProductItemRow(props) {
 }
 
 function Products(props) {
-    const products = useSelector(state => state.listProductsReducer.data)
-
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(switchPage(1))
-    }, [])
 
     return (
         <div className="row">
-            {products.map((value, index) => {
+            {props.data.map((value, index) => {
                 return props.isGrid ?
                     (<div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
-                        <ProductItem data={value}/>
+                        <ProductItem p={value}/>
                     </div>) :
                     (<div className="product-item-container col-12" key={index}>
-                        <ProductItemRow data={value}/>
+                        <ProductItemRow p={value}/>
                     </div>)
             })}
         </div>
@@ -217,7 +208,8 @@ function Pagination(props) {
         <ul className="product-pagination float-right mt-3">
             <li onClick={() => onSwitchPage(currentPage - 1)}><i className="fa fa-chevron-left"></i></li>
             {props.numbers.map((value, index) => (
-                <li className={value === currentPage ? "active" : ""} key={index} onClick={() => onSwitchPage(value)}>{value}</li>
+                <li className={value === currentPage && "active"} key={index}
+                    onClick={() => onSwitchPage(value)}>{value}</li>
             ))}
             <li onClick={() => onSwitchPage(currentPage + 1)}><i className="fa fa-chevron-right"></i></li>
         </ul>
@@ -225,9 +217,19 @@ function Pagination(props) {
 }
 
 function ProductsContainer() {
-    const itemsPerPage = 10
-    const pages = Math.ceil(products.length / itemsPerPage)
-    const numbers = [...Array(pages + 1).keys()].slice(1)
+    const [products, setProducts] = useState([])
+    const currentPage = useSelector(state => state.listProductsReducer.page)
+    const rel = useRef(0)
+    useEffect(() => {
+        fetch(`http://localhost:9810/products?_page=${currentPage}&_limit=12`)
+            .then(res => res.json())
+            .then(json => {
+                setProducts(json.data)
+                rel.current = json.total
+            })
+    }, [currentPage])
+
+    const numbers = [...Array(Math.ceil(rel.current / 12) + 1).keys()].slice(1)
 
     const [grid, setGrid] = useState(true)
 
@@ -240,7 +242,7 @@ function ProductsContainer() {
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
                         <Filter onLayout={(idGrid) => setGrid(idGrid)}/>
-                        <Products isGrid={grid}/>
+                        <Products isGrid={grid} data={products}/>
                         <Pagination numbers={numbers}/>
                     </div>
                 </div>
@@ -253,7 +255,6 @@ export  default  function ListProducts() {
     return (
         <>
             <Header/>
-            {/*<SectionSubHero/>*/}
             <SectionBreadcrumb/>
             <ProductsContainer/>
             <Footer/>
