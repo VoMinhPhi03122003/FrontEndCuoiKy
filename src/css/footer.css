@@ -45,6 +45,10 @@
 }
 
 .footer-widget form button {
+    border: none;
+    background-color: var(--color-main);
+    color: #fff;
+    font-weight: bolder;
     position: absolute;
     right: 0;
     top: 50%;

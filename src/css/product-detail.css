@@ -1,6 +1,7 @@
 .product-details {
     color: #333333;
 }
+
 /* [ Detail Left ]
 --------------------------------*/
 
@@ -41,13 +42,15 @@
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
-    transition: all ease .15s;
+    transition: all ease .15s, opacity ease .5s;
     color: #989898;
+    opacity: 0;
     top: 33%;
 }
 
 .detail-left .slide-arrow:hover {
     color: #989898;
+    opacity: 1;
 }
 
 .detail-left .slide-arrow i {
@@ -62,20 +65,22 @@
 }
 
 .detail-left .slide-arrow:first-of-type {
-    left: 5%;
+    left: 8%;
 }
 
 .detail-left .btn-next:last-of-type {
-    right: 5%;
+    right: 8%;
 }
 
 .slider-thumbnails > div {
     margin-right: 15px;
+    width: 33.33% !important;
     cursor: pointer;
+    max-height: 100px;
     overflow: hidden;
     border-radius: 3px;
-    border: 1px solid var(--color-border);
-    transition: all .3s;
+    border: 2px solid var(--color-border);
+    transition: all .1s;
 }
 
 .slider-thumbnails > div:last-child {
@@ -83,7 +88,13 @@
 }
 
 .slider-thumbnails > div.active {
-    border: 1px solid var(--color-main);
+    border: 2px solid var(--color-main);
+}
+
+.slider-thumbnails > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 /* [ Detail Center ]
@@ -100,6 +111,12 @@
 
 .detail-center h6 span {
     color: #cf131f;
+}
+
+.detail-center-stats {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
 }
 
 .detail-center-stats > span:first-of-type {
@@ -131,16 +148,36 @@
 }
 
 .detail-center-info > div {
-    line-height: 1.6em;
+    line-height: 2em;
     font-size: 15px;
 }
+
+.detail-center-info > div > i:first-child:before,
+.detail-center-info > div > i:first-child {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: #6e6e6e;
+}
+
 
 .detail-center-info > div span {
     display: inline-block;
     width: 30%;
-    color: #acacac;
+    color: #6e6e6e;
     margin-right: 15px;
+    margin-left: 2px;
 }
+
+.detail-center-info a {
+    color: var(--color-main);
+    transition: all ease .3s;
+}
+
+.detail-center-info a:hover {
+    color: #557920;
+}
+
 /* [ Detail Right ]
 --------------------------------*/
 
@@ -180,6 +217,13 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+}
+
+.offer-download img::before,
+.offer-download img {
+    position: relative;
+    top: -4px;
+    margin-right: 5px;
 }
 
 .offer-download:hover {
@@ -313,8 +357,11 @@
 }
 
 .rating-chart > div > div:nth-child(1) i {
+    color: #353535;
     font-size: 14px;
     margin-left: 6px;
+    position: relative;
+    bottom: .12em;
 }
 
 .rating-chart > div > div:nth-child(2) {
@@ -331,6 +378,12 @@
     border-radius: 12px;
     background-color: #FEC107;
 }
+
+.rating-chart > div > div:last-child {
+    width: 30px;
+    text-align: end;
+}
+
 
 .rating-action button {
     border: none;

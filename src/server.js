@@ -12,6 +12,10 @@ const middlewares = jsonServer.defaults();
 
 //  Định nghĩa hàm render cho router
 router.render = (req, res) => {
+    if ((req.path === '/products') || (req.path === '/types')) return res.jsonp({
+        data: res.locals.data,
+        total: parseInt(res.getHeader('X-Total-Count'), 10)
+    })
     const totalCountHeader = res.getHeader('x-total-count');
     // Kiểm tra nếu request method là GET và tồn tại header 'x-total-count'
     if (req.method === 'GET' && totalCountHeader) {

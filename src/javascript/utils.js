@@ -7,4 +7,45 @@ export function formatCurrency(number) {
 
     return formattedNumber;
 }
+export function checkItemExistCart(cart, product) {
+    /*
+      Sử dụng hàm mảng 'find' để tìm phần tử trong mảng 'cart'
+      có 'id' tương tự với 'id' của 'product.id'
+    */
+    return cart.find(item => item.id === product.id);
+    /*
+       Nếu trong mảng cart không có phần tử nào thỏa mãn điều kiện,
+       thì hàm find sẽ trả về giá trị undefined.
+    */
+}
 
+export function totalPrice(cart){
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price;
+    });
+    return total;
+}
+export function loadCartFromLocalStorage(){
+    return JSON.parse(localStorage.getItem('cart'));
+
+    /*
+        do Local Storage lưu dữ liệu dưới dạng chuỗi Json string
+        nên khi đọc dữ liệu từ Local Storage nên ta phải chuyển nó thành dạng object
+     */
+}
+export const formatNumber = (x, char) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, char)
+
+export function formatRating(rating) {
+    const total = Object.keys(rating).reduce((previous, key) => previous + rating[key], 0)
+    const average = (Object.keys(rating).reduce((previous, key, index) => previous + (rating[key] * (5 - index)), 0) / total).toFixed(1)
+    return {
+        total: total,
+        average: average,
+        avg5: rating['5star'] * 100 / total,
+        avg4: rating['4star'] * 100 / total,
+        avg3: rating['3star'] * 100 / total,
+        avg2: rating['2star'] * 100 / total,
+        avg1: rating['1star'] * 100 / total
+    }
+}

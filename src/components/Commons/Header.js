@@ -1,8 +1,7 @@
-
 import '../../css/header.css'
 import {useEffect, useState} from "react";
 import Cart from './Cart'
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import $ from 'jquery'
 
 
@@ -71,8 +70,8 @@ function HeaderTop() {
                                 </ul>
                             </div>
                             <div className="header-top-right-auth d-flex justify-content-end align-items-center">
-                                <a href=""><i className="fa fa-user"></i> Đăng ký</a>
-                                <a href="" className="mr-0"><i className="fa fa-sign-in"></i> Đăng nhập</a>
+                                <Link to="/register"><i className="fa fa-user"></i> Đăng ký</Link>
+                                <Link to="/login" className="mr-0"><i className="fa fa-sign-in"></i> Đăng nhập</Link>
                             </div>
                         </div>
                     </div>
@@ -89,21 +88,21 @@ function HeaderMenu() {
             <div className="row">
                 <div className="col-lg-2 d-flex justify-content-center align-items-center">
                     <div className="py-4">
-                        <a href="/public"><img src={require('../../img/logo/logo.png')} alt=""/></a>
+                        <Link to={'/'}><img src={require('../../img/logo/logo.png')} alt=""/></Link>
                     </div>
                 </div>
                 <div className="col-lg-8 d-flex justify-content-center align-items-center">
                     <nav className="header-menu">
                         <ul>
-                            <li><a href="/" className={location.pathname === '/' && 'active'}>Trang chủ</a></li>
-                            <li><a href="/top-products" className={location.pathname === '/top-products' && 'active'}>Top
-                                sản phẩm</a></li>
-                            <li><a href="/quality-products" className={location.pathname === '/quality-products' && 'active'}>Sản phẩm
-                                chất lượng</a>
+                            <li><Link to="/" className={location.pathname === '/' && 'active'}>Trang chủ</Link></li>
+                            <li><Link to="/top-products" className={location.pathname === '/top-products' && 'active'}>Top
+                                sản phẩm</Link></li>
+                            <li><Link to="/quality-products" className={location.pathname === '/quality-products' && 'active'}>Sản phẩm
+                                chất lượng</Link>
                                 <img src={require('../../img/ic_hot.gif')} alt=""/>
                             </li>
-                            <li><a href="/free-products" className={location.pathname === '/free-products' && 'active'}>Sản phẩm
-                                miễn phí</a></li>
+                            <li><Link to="/free-products" className={location.pathname === '/free-products' && 'active'}>Sản phẩm
+                                miễn phí</Link></li>
                         </ul>
                     </nav>
                 </div>

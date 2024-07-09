@@ -2,7 +2,30 @@ import authenticationImage from '../../img/authentication/authentication.png';
 import logoGoogle from '../../img/authentication/logo-google.png';
 import logoFacebook from '../../img/authentication/logo-fb.png';
 
-function Login() {
+import Header from '../Commons/Header';
+import Footer from '../Commons/Footer';
+import breadcrumb_1 from "../../img/breadcrumb/breadcrumb_1.png";
+import {Link} from "react-router-dom";
+function Breadcrumb(){
+    return(
+        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12 text-center">
+                        <div className="breadcrumb__text">
+                            <div className="breadcrumb__option">
+                                <Link to="/">Trang chủ</Link>
+                                <Link to="/login">Đăng nhập</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function SectionLogin() {
     return (
         <section className="form-input py-5">
             <div className="container">
@@ -28,8 +51,8 @@ function Login() {
                                    className="google d-flex justify-content-center w-100 mb-3">
                                     <img src={logoFacebook} width="30px" className="mr-2"/>Facebook</a>
                                 <span className="shotcut">
-                                <a className="mr-3" href="#">Quên mật khẩu?</a>
-                                <a href="#">Đăng ký?</a></span>
+                                <Link className="mr-3" to="/forgot-password">Quên mật khẩu?</Link>
+                                <Link to="/register">Đăng ký?</Link></span>
                             </form>
                         </div>
                     </div>
@@ -38,4 +61,13 @@ function Login() {
         </section>
 )
 }
-export default Login;
+export default function LoginPage(){
+    return(
+        <>
+            <Header/>
+            <Breadcrumb/>
+            <SectionLogin/>
+            <Footer/>
+        </>
+    )
+}

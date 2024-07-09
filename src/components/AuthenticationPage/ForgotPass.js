@@ -1,5 +1,28 @@
 import authenticationImage from '../../img/authentication/authentication.png';
-function ForgotPass(){
+import Header from '../Commons/Header';
+import Footer from '../Commons/Footer';
+import breadcrumb_1 from "../../img/breadcrumb/breadcrumb_1.png";
+import {Link} from "react-router-dom";
+
+function Breadcrumb(){
+    return(
+        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12 text-center">
+                        <div className="breadcrumb__text">
+                            <div className="breadcrumb__option">
+                                <Link to="/">Trang chủ</Link>
+                                <Link to="/forgot-password">Quên mật khẩu</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+function SectionForgotPass(){
     return(
         <section className="form-input py-5">
             <div className="container">
@@ -15,8 +38,8 @@ function ForgotPass(){
                                 <input id="email" className="w-100 mb-4" type="text" placeholder="Email" name="email"/>
                                 <button type="submit" className="btn next w-100 mb-3">Xác nhận</button>
                                 <span className="shotcut">
-                                <a className="mr-3" href="#">Đăng nhập?</a>
-                                <a href="#">Đăng ký?</a></span>
+                                 <Link className="mr-3" to="/login">Đăng nhập?</Link>
+                                <Link to="/register">Đăng ký?</Link></span>
                             </form>
                         </div>
                     </div>
@@ -25,4 +48,13 @@ function ForgotPass(){
         </section>
     )
 }
-export default ForgotPass;
+export default function ForgotPassPage(){
+    return(
+        <>
+            <Header/>
+            <Breadcrumb/>
+            <SectionForgotPass/>
+            <Footer/>
+        </>
+    )
+};
