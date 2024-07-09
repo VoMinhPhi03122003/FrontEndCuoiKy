@@ -296,7 +296,7 @@ export  default  function ListProducts() {
     return (
         <>
             <Header/>
-            <SectionBreadcrumb/>
+            {/*<SectionBreadcrumb/>*/}
             <ProductsContainer/>
             <Footer/>
         </>

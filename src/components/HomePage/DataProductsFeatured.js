@@ -2,9 +2,9 @@ import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux"
 import {Toast} from 'react-bootstrap';
 import {default as queryString} from 'query-string';
-import {addItemToCart} from '../../redux/Action'
+import {addItemToCart} from '../../redux/redux_tuyen/Action_Tuyen';
 import products_featured from '../../data/ProductData.js'; //=> danh sách sản phẩm nổi bật
-import {formatCurrency} from '../../javascript/utils';
+import {formatCurrency} from '../../javascript/utils/Utils_Tuyen';
 import Pagination from '../HomePage/Pagination'
 
 
