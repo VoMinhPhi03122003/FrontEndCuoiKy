@@ -18,9 +18,9 @@ function SectionCart() {
      Bằng cách truyền một hàm selector,
      bạn có thể lựa chọn các phần của state mà bạn muốn truy xuất từ store.
      */
-
-    return (
-        <section className="shoping-cart spad">
+    let content;
+    if (cart.length > 0) {
+        content = (
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
@@ -29,7 +29,7 @@ function SectionCart() {
                                 <thead>
                                 <tr>
                                     <th></th>
-                                    <th className="shoping__product">Sản phẩm</th>
+                                    <th className="shoping__product">Mã nguồn</th>
                                     <th>Giá</th>
                                     <th></th>
                                 </tr>
@@ -42,15 +42,15 @@ function SectionCart() {
                                 ))}
                                 </tbody>
                             </table>
-                        </div>
                     </div>
+                </div>
                 </div>
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="shoping__cart__btns">
-                            <Link to="/"  className="primary-btn cart-btn">Tiếp tục mua sản phẩm</Link>
-                            <Link to="/" className="primary-btn cart-btn cart-btn-right">Tiếp tục mua sản phẩm</Link>
-                        </div>
+                            <Link to="/" className="primary-btn cart-btn">Tiếp tục mua code</Link>
+                            <Link to="/" className="primary-btn cart-btn cart-btn-right">Tiếp tục mua code</Link>
+                    </div>
                     </div>
                     <div className="col-lg-6">
                         <FormInputDiscount/>
@@ -59,8 +59,21 @@ function SectionCart() {
                         <TotalCart/>
                     </div>
                 </div>
+            </div>)
+    } else {
+        content = (<div className="container">
+                <div className="text-center">
+                    <div style={{maxWidth: "300px", margin: "0 auto"}}>
+                        <img style={{width: "100%", height: "auto"}} src={require('../../img/cart/empty_cart.png')}
+                             alt="No data"/>
+                    </div>
+                    <p className="mt-3">Không có sản phẩm nào trong giỏ hàng</p>
+                </div>
             </div>
-        </section>
+        )
+    }
+    return (
+        <section className="shoping-cart spad">{content}</section>
     )
 } // => đây là component cha
 
