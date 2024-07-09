@@ -26,3 +26,12 @@ export function totalPrice(cart){
     });
     return total;
 }
+export function loadCartFromLocalStorage(){
+    return JSON.parse(localStorage.getItem('cart'));
+
+    /*
+        do Local Storage lưu dữ liệu dưới dạng chuỗi Json string
+        nên khi đọc dữ liệu từ Local Storage nên ta phải chuyển nó thành dạng object
+     */
+}
+
