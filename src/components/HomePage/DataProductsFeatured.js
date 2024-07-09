@@ -144,7 +144,7 @@ function ItemProductFeatured(data) {
                 <div className="featured__item__pic set-bg"
                      style={{backgroundImage: `url(${product.img})`}}>
                     <ul className="featured__item__pic__hover">
-                        <li><a><i className="fa fa-heart"></i></a></li>
+                        <li><a><i className="bi bi-hand-thumbs-up"></i></a></li>
                         <li><a onClick={clickAddItemToCart}><i className="fa fa-shopping-cart"></i></a></li>
                     </ul>
                 </div>
