@@ -1,10 +1,9 @@
 import {combineReducers} from "redux";
-import {products} from "../data/Products";
 import {cartReducer, discountCodeReducer} from "../redux_tuyen/Reducer_Tuyen";
 
 import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
 
-const listProductsReducer = (state = {data: products, page: 1, sort: null, layout: 'grid', type: null}, action) => {
+const listProductsReducer = (state = {page: 1, sort: null, layout: 'grid', type: null}, action) => {
     switch (action.type) {
 
         case 'listProducts/page': {

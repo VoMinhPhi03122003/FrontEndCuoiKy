@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Swal from 'sweetalert2';
 
 import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_Tuyen";
-import {getListDiscountCode} from "../../javascript/api";
+import {getListDiscountCode} from "../../javascript/api/Api_Tuyen";
 import {removeItemFromCart, updateDiscountCode, updateDiscountPercent} from "../../redux/redux_tuyen/Action_Tuyen";
 
 
