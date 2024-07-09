@@ -1,13 +1,16 @@
 import {Link} from "react-router-dom";
 
-function SectionBreadcrumb() {
+function SectionBreadcrumb(props) {
     const styleBreadcrumb = {display: "flex", justifyContent: "center"}
     return (
         <div className="container">
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb" style={styleBreadcrumb}>
-                    <li className="breadcrumb-item"><Link to="/">Trang chủ</Link></li>
-                    <li className="breadcrumb-item"><Link to="">Chi tiết giỏ hàng</Link></li>
+                    {props.breadcrumbs.map((breadcrumb,index) => (
+                        <li className="breadcrumb-item" key={index}>
+                            <Link to={breadcrumb.link}>{breadcrumb.name}</Link>
+                        </li>
+                    ))}
                 </ol>
             </nav>
         </div>
