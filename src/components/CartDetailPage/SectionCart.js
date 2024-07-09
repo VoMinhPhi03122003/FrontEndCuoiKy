@@ -1,10 +1,13 @@
-import React,{useEffect, useState}  from "react";
-import {useSelector, useDispatch} from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import React, {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {Link} from "react-router-dom";
+
 import Swal from 'sweetalert2';
 
-import {formatCurrency} from "../../javascript/utils";
-import {removeItemFromCart} from "../../redux/Action";
+import {formatCurrency, getPercentDiscount} from "../../javascript/utils";
+import {getListDiscountCode} from "../../javascript/api";
+import {removeItemFromCart, updateDiscountPercent} from "../../redux/Action";
+
 
 
 function SectionCart() {
@@ -50,15 +53,7 @@ function SectionCart() {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="shoping__continue">
-                            <div className="shoping__discount">
-                                <h5>Mã giảm giá</h5>
-                                <form action="#">
-                                    <input type="text" placeholder="Nhập mã giảm giá"/>
-                                    <button type="submit" className="site-btn">Áp dụng</button>
-                                </form>
-                            </div>
-                        </div>
+                        <FormInputDiscount/>
                     </div>
                     <div className="col-lg-6">
                         <TotalCart/>
@@ -111,22 +106,70 @@ function ItemCart(data) {
     )
 }
 
+function FormInputDiscount() {
+
+    const dispatch = useDispatch();
+    const [discountCode, setDiscountCode] = useState('');
+
+    const clickApplyDiscountCode = async (e) => {
+        e.preventDefault();
+        try {
+            const list_discount_code = await getListDiscountCode();
+            const percent = getPercentDiscount(discountCode, list_discount_code);
+            console.log(percent);
+
+            dispatch(updateDiscountPercent(percent));  // => dispatch(action) - Gửi action đến Redux store (nếu bạn sử dụng Redux)
+        } catch (error) {
+            console.error('Error fetching discount codes:', error);
+        }
+    }
+
+    const handleDiscountCodeChange = (e) => {
+        setDiscountCode(e.target.value);
+    }
+    // => cập nhật lại giá trị của discountCode mỗi khi người dùng nhập kí tự
+
+    return (
+        <div className="shoping__continue">
+            <div className="shoping__discount">
+                <h5>Mã giảm giá</h5>
+                <form onSubmit={clickApplyDiscountCode}>
+                    <input
+                        type="text"
+                        placeholder="Nhập mã giảm giá"
+                        value={discountCode}
+                        onChange={handleDiscountCodeChange}
+                    />
+                    <button type="submit" className="site-btn">Áp dụng</button>
+                </form>
+            </div>
+        </div>
+    )
+}
+
 function TotalCart() {
     const totalPrice = useSelector(state => state.cartReducer.totalPrice);
+    const discount = useSelector(state => state.cartReducer.discount_percent); // phần trăm giảm giá của đơn hàng
+
+    let content;
+    if (discount > 0 && discount <= 1) {
+        content = (<ul>
+            <li>Tổng <span>{formatCurrency(totalPrice)}</span></li>
+            <li>Giảm giá <span>{formatCurrency(discount * totalPrice)}</span></li>
+            <li>Còn lại <span> {formatCurrency(totalPrice - (discount * totalPrice))}</span></li>
+        </ul>);
+    } else {
+        content = (<ul>
+            <li>Tổng <span>{formatCurrency(totalPrice)}</span></li>
+        </ul>);
+    }
     return (
         <div className="shoping__checkout">
             <h5>Đơn hàng</h5>
-            {/*<ul>
-                <li>Tổng <span> 500.000 VND</span></li>
-                <li>Giảm giá <span> 100.000 VND</span></li>
-                <li>Còn lại <span> 400.000 VND</span></li>
-            </ul>*/}
-            <ul>
-                <li>Tổng <span>{formatCurrency(totalPrice)}</span></li>
-            </ul>
-                <a href="" className="primary-btn">Tiến hành thanh toán</a>
+            {content}
+            <a href="" className="primary-btn">Tiến hành thanh toán</a>
         </div>
-)
+    )
 }
 
 export default SectionCart;

@@ -2,12 +2,13 @@ import {combineReducers} from "redux";
 import {products} from "../data/Products";
 import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
 
-import {checkItemExistCart, totalPrice, loadCartFromLocalStorage} from "../javascript/utils"
+import {checkItemExistCart, loadCartFromLocalStorage, totalPrice} from "../javascript/utils"
 
 const initCartState = {
     /* đây là trạng thái ban đầu của giỏ hàng */
-    cart:  loadCartFromLocalStorage() === null ? [] : loadCartFromLocalStorage,
-    totalPrice: localStorage.getItem('total-price') === null ? 0 : localStorage.getItem('total-price')
+    cart: loadCartFromLocalStorage() === null ? [] : loadCartFromLocalStorage(),
+    totalPrice: localStorage.getItem('total-price') === null ? 0 : localStorage.getItem('total-price'),
+    discount_percent: 0 // phần trăm giảm giá của đơn hàng
 }
 
  const cartReducer = (state = initCartState, action) => {
@@ -58,7 +59,14 @@ const initCartState = {
                 totalPrice: newTotalPrice // => tổng giá trị mới của giỏ hàng
             }
         }
+        case 'cart/update-discount-percent': {
+            // console.log("Day la Action cart/update-discount-percent");
 
+            return {
+                ...state,
+                discount_percent: action.payload
+            }
+        }
         default :
             return state;
         /**

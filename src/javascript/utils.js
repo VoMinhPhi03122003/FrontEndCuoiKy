@@ -26,7 +26,7 @@ export function totalPrice(cart){
     });
     return total;
 }
-export function loadCartFromLocalStorage(){
+export function loadCartFromLocalStorage() {
     return JSON.parse(localStorage.getItem('cart'));
 
     /*
@@ -34,6 +34,21 @@ export function loadCartFromLocalStorage(){
         nên khi đọc dữ liệu từ Local Storage nên ta phải chuyển nó thành dạng object
      */
 }
+export function getPercentDiscount(discount_code, list_discount_code) {
+    let percent = 0;
+    for (let item of list_discount_code) {
+        if (item.code === discount_code) {
+            percent = item.discount_percent;
+            break;
+        }
+    }
+    return percent;
+
+    /*
+       lấy ra giá trị (% giảm giá) của mã giảm giá có trong danh sách mã giảm giá lấy từ server
+     */
+}
+
 export const formatNumber = (x, char) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, char)
 
 export function formatRating(rating) {
