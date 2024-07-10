@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 
@@ -35,10 +35,8 @@ function SectionCart() {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {cart.map(cart_item => (
-                                    <ItemCart key={cart_item.id} id={cart_item.id} img={cart_item.img}
-                                              name={cart_item.name}
-                                              price={cart_item.price}/>
+                                {cart.map((value, index) => (
+                                    <ItemCart key={index} product={value}/>
                                 ))}
                                 </tbody>
                             </table>
@@ -77,15 +75,13 @@ function SectionCart() {
     )
 } // => đây là component cha
 
-function ItemCart(data) {
-
-    const [product, setProduct] = useState(data);
+function ItemCart({product}) {
 
     const styleImage = {
         width: '60%',
         height: '60%'
     }
-    const dispatch = useDispatch();
+    const dispatch = useDispatch();// dùng để gửi Action đến Store
 
     function clickRemoveItemFromCart() {
 
@@ -129,7 +125,7 @@ function FormInputDiscount() {
     const clickApplyDiscountCode = async (e) => {
         e.preventDefault();
         try {
-            const list_discount_code = await getListDiscountCode();
+            const list_discount_code = await getListDiscountCode(); // lấy danh sách mã giảm giá từ api của server
             const percent = getPercentDiscount(discountCode, list_discount_code);
             console.log(percent);
 
