@@ -169,6 +169,12 @@
     margin-left: 2px;
 }
 
+.detail-center-info > div:last-child span:last-child {
+    font-weight: bolder;
+    color: #333333;
+}
+
+
 .detail-center-info a {
     color: var(--color-main);
     transition: all ease .3s;
@@ -309,6 +315,69 @@
     border-bottom: 3px solid var(--color-main);
     padding: 5px 0;
 }
+
+.detail-description {
+    font-size: 15px;
+}
+
+.detail-description li {
+    list-style: disc inside;
+    margin-left: 15px;
+}
+
+.detail-description .d-feature {
+    margin-top: 5px;
+}
+
+.detail-description .di-guide {
+    margin-top: 15px;
+}
+
+.detail-description .di-guide span {
+    font-size: 16px;
+    display: inline-block;
+    color: #404040;
+}
+
+.detail-description .di-guide a {
+    color: var(--color-main);
+    transition: color .3s;
+}
+
+.detail-description .di-guide a:hover {
+    color: #597928;
+}
+
+.installation {
+    font-size: 15px;
+}
+
+.installation > div:last-child {
+    margin-top: 5px;
+}
+
+.installation > div > span:first-child {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.installation code {
+    background-color: #f3f3f3;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: #3678f3;
+    border: 1px solid #e3e3e3;
+}
+
+.installation a {
+    color: var(--color-main);
+    transition: color ease .3s;
+}
+
+.installation a:hover {
+    color: #597928;
+}
+
 
 /* [ Detail Rating ]
 --------------------------------*/

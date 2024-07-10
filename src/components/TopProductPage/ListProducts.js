@@ -7,7 +7,7 @@ import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
 import {setLayout, setPage, setSort, setType} from "../../redux/Action";
-import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+
 import {Link} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating} from "../../javascript/utils";
@@ -53,12 +53,12 @@ const getTypes = (json) => {
 function SideBar({type}) {
     const dispatch = useDispatch()
 
-    const relTypes = useRef([])
+    const refTypes = useRef([])
 
     useEffect(() => {
         fetch(`http://localhost:9810/products`)
             .then(res => res.json())
-            .then(json => relTypes.current = getTypes(json))
+            .then(json => refTypes.current = getTypes(json))
     }, [])
 
     function handleClick(type) {
@@ -71,7 +71,7 @@ function SideBar({type}) {
             <div className="sidebar-item">
                 <h6 className="list-group-item">Phân loại sản phâm</h6>
                 <div className="list-group">
-                    {relTypes.current.map((value, index) => (
+                    {refTypes.current.map((value, index) => (
                         <div className={`list-group-item ${value.name === type && 'item-active'}`} key={index}
                              onClick={() => handleClick(value.name)}>
                             <div>
@@ -186,7 +186,7 @@ function Filter({total}) {
     return (
         <div className="filters mb-4">
             <div className="row">
-                <div className="col-lg-4 d-flex justify-content-start align-items-center">
+                <div className="col-lg-4 d-flex align-items-center">
                     <div className="filter-found">
                         <h6>Tìm thấy <b>{total}</b> sản phẩm</h6>
                     </div>
@@ -249,7 +249,7 @@ function ProductsContainer() {
     const sort = useSelector(state => state.listProductsReducer.sort)
 
     const [products, setProducts] = useState([])
-    const relTotal = useRef(0)
+    const refTotal = useRef(0)
 
     useEffect(() => {
         let url
@@ -270,7 +270,7 @@ function ProductsContainer() {
             .then(res => res.json())
             .then(json => {
                 setProducts(json.data)
-                relTotal.current = json.total
+                refTotal.current = json.total
             })
     }, [page, type, sort])
 
@@ -282,9 +282,9 @@ function ProductsContainer() {
                         <SideBar type={type}/>
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
-                        <Filter total={relTotal.current}/>
+                        <Filter total={refTotal.current}/>
                         <Products data={products}/>
-                        <Pagination total={relTotal.current}/>
+                        <Pagination total={refTotal.current}/>
                     </div>
                 </div>
             </div>
