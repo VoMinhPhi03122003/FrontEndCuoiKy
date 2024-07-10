@@ -2,11 +2,28 @@ import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Hồ sơ cá nhân", link: "/profile"}]
 
 function SectionProfile() {
+    const [email, setEmail] = useState('');
+    const navigate = useNavigate();
+    useEffect(() => {
+        const storedEmail = localStorage.getItem('account');
+        if (storedEmail) {
+            setEmail(storedEmail);
+        } else {
+            navigate('/login');
+        }
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem('account');
+        setEmail('');
+        navigate('/');
+    };
     return (
         <section className="contact-us profile">
             <div className="container">
@@ -25,8 +42,7 @@ function SectionProfile() {
                                         <Link to="/change-password"><i className="bi bi-lock"></i> Đổi mật khẩu</Link>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i className="bi bi-box-arrow-in-right"></i> Đăng xuất</a>
+                                        <a href="/" onClick={handleLogout}><i className="bi bi-box-arrow-in-right"></i> Đăng xuất</a>
                                     </li>
                                 </ul>
                             </div>

@@ -51,6 +51,6 @@ const listProductsReducer = (state = initialState, action) => {
 export const reducers = combineReducers({
     cartReducer: cartReducer,
     listProductsReducer: listProductsReducer,
-    registerReducer: errorReducer,
+    errorReducer: errorReducer,
     discountCodeReducer: discountCodeReducer
 })

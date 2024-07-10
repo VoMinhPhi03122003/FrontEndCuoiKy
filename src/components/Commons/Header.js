@@ -42,6 +42,19 @@ function HeaderAds() {
 }
 
 function HeaderTop() {
+    const [email, setEmail] = useState('');
+
+    useEffect(() => {
+        const storedEmail = localStorage.getItem('account');
+        if (storedEmail) {
+            setEmail(storedEmail);
+        }
+    }, []);
+    const handleLogout = () => {
+        // Xử lý đăng xuất
+        localStorage.removeItem('account');
+        setEmail('');
+    };
     return (
         <div className="header-top">
             <div className="container">
@@ -72,10 +85,17 @@ function HeaderTop() {
                                     <li>English</li>
                                 </ul>
                             </div>
-                            <div className="header-top-right-auth d-flex justify-content-end align-items-center">
-                                <Link to="/register"><i className="fa fa-user"></i> Đăng ký</Link>
-                                <Link to="/login" className="mr-0"><i className="fa fa-sign-in"></i> Đăng nhập</Link>
-                            </div>
+                            {email ? (
+                                <div className="header-top-right-auth d-flex justify-content-end align-items-center">
+                                    <Link to="/profile"><i className="fa fa-user"></i>Xin chào, {email}</Link>
+                                    <Link to="/" onClick={handleLogout} className="mr-0"><i className="fa fa-sign-in"></i> Đăng xuất</Link>
+                                </div>
+                            ) : (
+                                <div className="header-top-right-auth d-flex justify-content-end align-items-center">
+                                    <Link to="/register"><i className="fa fa-user"></i> Đăng ký</Link>
+                                    <Link to="/login" className="mr-0"><i className="fa fa-sign-in"></i> Đăng nhập</Link>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

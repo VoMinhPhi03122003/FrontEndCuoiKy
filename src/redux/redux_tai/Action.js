@@ -4,3 +4,10 @@ export const registerError = (data) =>{
         payload: data
     }
 }
+
+export const loginError = (data) =>{
+    return{
+        type: 'login/error',
+        payload: data
+    }
+}

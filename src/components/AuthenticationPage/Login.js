@@ -4,14 +4,67 @@ import logoFacebook from '../../img/authentication/logo-fb.png';
 
 import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
-import React from "react";
+
+import React, {useState} from "react";
+import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
+import {loginError} from "../../redux/redux_tai/Action";
+import {checkEmailExists, checkLogin} from "../../javascript/api/Api_Tai";
+import {useDispatch, useSelector} from "react-redux";
+import {errorLoginSelector, errorRegisterSelector} from "../../redux/redux_tai/Selectors";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Đăng nhập", link: "/login"}]
 
 function SectionLogin() {
+    const timeOut = 2000
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
+    const errorString = useSelector(errorLoginSelector);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(isEmpty(email) || isEmpty(password)){
+            dispatch(loginError({
+                errorLogin: "Hãy điền đầy đủ thông tin"
+            }))
+        }else if(!isEmail(email)){
+            dispatch(loginError({
+                errorLogin: "Nhập đúng định dạng email"
+            }))
+        }else{
+            checkEmailExists(email).then(emailExists => {
+                if(!emailExists){
+                    dispatch(loginError({
+                        errorLogin: "Tài khoản không tồn tại vui lòng nhập lại!"
+                    }))
+                }else{
+                    dispatch(loginError({
+                        errorLogin: ""
+                    }))
+                    checkLogin(email, password).then((check)=>{
+                        if(check){
+                            navigate("/");
+                            localStorage.setItem("account", email);
+                        }else{
+                            dispatch(loginError({
+                                errorLogin: "Tài khoản hoặc mật khẩu không đúng. Vui lòng đăng nhập lại!"
+                            }))
+                        }
+                    })
+                }
+            })
+        }
+    }
+    const handleInputEmail = (e) =>{
+        setEmail(e.target.value)
+    }
+    const handleInputPassword = (e) =>{
+        setPassword(e.target.value)
+    }
     return (
         <section className="form-input py-5">
             <div className="container">
@@ -21,15 +74,15 @@ function SectionLogin() {
                     </div>
                     <div className="col-lg-5 col-md-5 col-12">
                         <div className="h-100 d-flex align-items-center">
-                            <form id="form-login" className="m-0 p-5 text-center" name="form_login">
+                            <form id="form-login" className="m-0 p-5 text-center" name="form_login" onSubmit={handleSubmit}>
                                 <h5 className="mb-4">Đăng Nhập</h5>
-                                <span id="error-email" className="error-mess text-danger"></span>
-                                <input id="email" className="w-100 mb-3" type="email" placeholder="Email" name="email"/>
-                                <span id="error-password" className="error-mess text-danger"></span>
-                                <input id="password" className="w-100 mb-4" type="password" placeholder="Mật khẩu"
+                                {errorString && <div className="alert alert-danger" role="alert">
+                                    {errorString}
+                                </div>}
+                                <input value={email} onChange={handleInputEmail} id="email" className="w-100 mb-3" placeholder="Email" name="email"/>
+                                <input value={password} onChange={handleInputPassword} id="password" className="w-100 mb-4" type="password" placeholder="Mật khẩu"
                                        name="password"/>
                                 <button type="submit" className="btn next w-100">Đăng nhập</button>
-                                <span className="or d-inline-block text-uppercase my-4 position-relative">Hoặc</span>
                                 <a id="google-login-button"
                                    className="google d-flex justify-content-center w-100 mb-3">
                                     <img src={logoGoogle} width="25px" className="mr-2"/>Google</a>
