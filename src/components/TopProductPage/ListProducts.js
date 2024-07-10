@@ -7,7 +7,7 @@ import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
 import {setLayout, setPage, setSort, setType} from "../../redux/Action";
-import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+
 import {Link} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating} from "../../javascript/utils";
@@ -39,11 +39,11 @@ export function PopularProducts() {
 const getTypes = (json) => {
     const types = []
     json.data.forEach(product => {
-        const type = types.find(value => value.name === product.type.name)
+        const type = types.find(value => value.id === product.type.id)
         if (type) {
             type.quantity = type.quantity + 1
         } else {
-            types.push({name: product.type.name, icon: product.type.icon, quantity: 1})
+            types.push({...product.type, quantity: 1})
         }
     })
     return types.sort((a, b) => a.name < b.name ? -1 : 1)
@@ -53,12 +53,12 @@ const getTypes = (json) => {
 function SideBar({type}) {
     const dispatch = useDispatch()
 
-    const relTypes = useRef([])
+    const refTypes = useRef([])
 
     useEffect(() => {
         fetch(`http://localhost:9810/products`)
             .then(res => res.json())
-            .then(json => relTypes.current = getTypes(json))
+            .then(json => refTypes.current = getTypes(json))
     }, [])
 
     function handleClick(type) {
@@ -71,11 +71,11 @@ function SideBar({type}) {
             <div className="sidebar-item">
                 <h6 className="list-group-item">Phân loại sản phâm</h6>
                 <div className="list-group">
-                    {relTypes.current.map((value, index) => (
-                        <div className={`list-group-item ${value.name === type && 'item-active'}`} key={index}
-                             onClick={() => handleClick(value.name)}>
-                            <div>
-                                <span><i className={value.icon}></i></span>
+                    {refTypes.current.map(value => (
+                        <div className={`list-group-item ${value.id === type.id && 'item-active'}`} key={value.id}
+                             onClick={() => handleClick({id: value.id, name: value.name})}>
+                            <div className="list-group-item-left">
+                                <span><img src={value.img} alt=""/></span>
                                 <span>{value.name}</span>
                             </div>
                             <span className="badge badge-light">{value.quantity}</span>
@@ -111,9 +111,11 @@ function ProductItem({p, navigate}) {
                 <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
             </div>
             <div className="product-item-bottom d-flex justify-content-between align-items-center">
-                <div className="product-item-brand" onClick={() => navigate(p.type.name)}><i
-                    className={p.type.icon}></i> {p.type.name}</div>
-                <Link to={`product/${p.id}`} state={p} className="product-item-price">{formatNumber(p.price, '.')}đ</Link>
+                <div className="product-item-brand" onClick={() => navigate({id: p.type.id, name: p.type.name})}>
+                    <img src={p.type.img} alt=""></img> {p.type.name}
+                </div>
+                <Link to={`product/${p.id}`} state={p}
+                      className="product-item-price">{formatNumber(p.price, '.')}đ</Link>
             </div>
         </div>
     )
@@ -128,9 +130,9 @@ function ProductItemRow({p, navigate}) {
                 </Link>
                 <div className="product-item-row-content col-lg-6">
                     <Link to={`product/${p.id}`} state={p} className="product-item-row-title">{p.name}</Link>
-                    <div className="product-item-brand"><i className={p.type.icon}
-                                                           onClick={() => navigate(p.type.name)}></i> {p.type.name}
-                    </div>
+                    <div className="product-item-brand">
+                        <img src={p.type.img} alt=""
+                             onClick={() => navigate({id: p.type.id, name: p.type.name})}/> {p.type.name}</div>
                     <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average}
                                                                   type={"bi bi-star-fill"}/></div>
                     <div className="product-item-stats d-flex justify-content-start">
@@ -186,7 +188,7 @@ function Filter({total}) {
     return (
         <div className="filters mb-4">
             <div className="row">
-                <div className="col-lg-4 d-flex justify-content-start align-items-center">
+                <div className="col-lg-4 d-flex align-items-center">
                     <div className="filter-found">
                         <h6>Tìm thấy <b>{total}</b> sản phẩm</h6>
                     </div>
@@ -249,16 +251,17 @@ function ProductsContainer() {
     const sort = useSelector(state => state.listProductsReducer.sort)
 
     const [products, setProducts] = useState([])
-    const relTotal = useRef(0)
+    const refTotal = useRef(0)
 
     useEffect(() => {
         let url
-        if (type) {
+        if (type.id) {
             if (sort) {
-                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12&_sort=${sort}&_order=desc`
+                url = `http://localhost:9810/products?type.id=${type.id}&_page=${page}&_limit=12&_sort=${sort}&_order=desc`
             } else {
-                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12`
+                url = `http://localhost:9810/products?type.id=${type.id}&_page=${page}&_limit=12`
             }
+            console.log(url)
         } else {
             if (sort) {
                 url = `http://localhost:9810/products?_page=${page}&_limit=12&_sort=${sort}&_order=desc`
@@ -270,7 +273,7 @@ function ProductsContainer() {
             .then(res => res.json())
             .then(json => {
                 setProducts(json.data)
-                relTotal.current = json.total
+                refTotal.current = json.total
             })
     }, [page, type, sort])
 
@@ -282,9 +285,9 @@ function ProductsContainer() {
                         <SideBar type={type}/>
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
-                        <Filter total={relTotal.current}/>
+                        <Filter total={refTotal.current}/>
                         <Products data={products}/>
-                        <Pagination total={relTotal.current}/>
+                        <Pagination total={refTotal.current}/>
                     </div>
                 </div>
             </div>

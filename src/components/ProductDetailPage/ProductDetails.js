@@ -1,11 +1,11 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer";
-import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import '../../css/product-detail.css'
-import {useState} from "react";
+import {useRef, useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
 import {Link, useLocation} from "react-router-dom";
 import {formatNumber, formatRating} from "../../javascript/utils";
+import Parser from 'html-react-parser'
 
 function DetailLeft({p}) {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -74,10 +74,12 @@ function DetailCenter({p}) {
             <div className="detail-center-des">{p.description}</div>
             <div className="detail-center-info">
                 <div><i className="fa fa-list"></i><span>Danh mục</span> <Link to={'/'}>{p.type.name}</Link></div>
-                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/'}>Top sản phẩm</Link></div>
+                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/'}>Top sản phẩm</Link>
+                </div>
                 <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {p.release}</div>
-                <div><i className="fa fa-object-group"></i><span>Loại file</span> {p.fileType}</div>
-                <div><i className="fa fa-file-code"></i><span>File download</span> {p.file}</div>
+                <div><i className="fa fa-object-group"></i><span>Loại file</span> {p.file.type}</div>
+                <div><i className="fa fa-file-code"></i><span>File download</span> {p.file.name}
+                    <span>[{p.file.size} {p.file.unit}]</span></div>
             </div>
         </div>
     )
@@ -104,60 +106,48 @@ function DetailRight({p}) {
         </div>
     )
 }
-function DetailDivider({title}) {
-    return (<div className="detail-divider mt-5"><span>{title}</span></div>)
+function DetailDivider({title, refData}) {
+    return (<div className="detail-divider mt-5" ref={refData}><span>{title}</span></div>)
 }
 
-function DetailDescription() {
+function DetailDescription({p, goTo}) {
     return (
         <>
             <DetailDivider title={'MÔ TẢ CHI TIẾT'}/>
-            <div>
-                Source code app đặt trà sữa, cà phê, bánh ngọt Android Studio với giao diện đẹp mắt, dễ sử dụng.
-
-                Source code được chia làm 2 phần: client và server
-
-                Client: viết bằng java, sử dụng Android Studio
-                Server: viết bằng php sử dụng MySQL
-                Các chức năng chính:
-
-                Chức năng của người dùng:
-
-                Chức năng đăng nhập, đăng ký
-                Chức năng Order: chọn kích thước, topping, số lượng, ghi chú,..
-                Chức năng đặt hàng: chỉnh sửa địa chỉ giao hàng, áp dụng voucher, chỉnh sửa order, gửi thông báo đơn hàng mới đến admin
-                Chức năng xem lịch sử đơn hàng: xem đơn hàng đang chờ xác nhận, đang giao, hoàn tất, đã hủy
-                Chức năng xem danh sách voucher: xem thông tin chi tiết voucher
-                Chức năng xem sản phẩm yêu thích
-                Chức năng thay đổi thông tin cá nhân: họ tên, địa chỉ giao hàng mặc định, mật khẩu,..
-                Chức năng của admin:
-
-                Chức năng quản lý đơn hàng: duyệt đơn (gửi thông báo tình trạng đơn đến điện thoại người dùng), hoàn tất đơn, hủy đơn,...
-                Chức năng quản lý tài khoản: thêm, sửa, xóa tài khoản
-                Chức năng quản lý sản phẩm: thêm sửa xóa sản phẩm
-                Chức năng quản lý voucher: tạo voucher, gửi voucher đến tất cả người dùng,...
-                Chức năng quản lý doanh thu: xem doanh số bán hàng
+            <div className="detail-description">
+                <div>{p.description}</div>
+                {Parser(p.detail)}
+                <div className="di-guide">XEM THÊM <span>==></span><span
+                    onClick={goTo}> Hướng dẫn cài đặt chi tiết</span></div>
             </div>
         </>
     )
 }
 
-function Installation() {
+function DemoImage({p}) {
     return (
         <>
-            <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'}/>
-            <div>
-                Yêu cầu phần mềm XAMPP hỗ trợ phiên bản PHP 7.4
-                Giải nén và copy thư mục Website vào thư mục htdocs của xampp. Thông thường thư mục htdocs sẽ có đường dẫn: C:xampp -- htdocs.
-                Chạy XAMPP.
-                Truy cập đường dẫn: http://localhost/phpmyadmin/ và thêm cơ sở dư liệu với tên là: duan1
-                Nhập lên trình duyệt đường dẫn: localhost/Website/
-                Import cơ sở dữ liệu mẫu duan1.sql vào cơ sở dữ liệu duan1vừa tạo trên phpmyadmin. file cơ sở dữ liệu mới duan1.sql này nằm trong cùng
-                một thư mục với tài liệu hưỡng dẫn này.
-                Đã hoàn thành cài đặt website
-                Tài khoản Admin
-                - http://localhost/Website/site/tai_khoan/login.php:
-                - tk: chucchuquan mk: 123456
+            <DetailDivider title={'HÌNH ẢNH DEMO'}/>
+            <div className="text-center">
+                {p.thumbnails.map((value, index) => {
+                    return (
+                        <>
+                            <img style={{display: 'inline-block', marginBottom: '15px'}} key={index} src={value} alt=""/>
+                            <p className="text-center mt-0 mb-5 font-italic text-dark">Hình {index + 1}</p>
+                        </>
+                    )
+                })}
+            </div>
+        </>
+    )
+}
+
+function Installation({p, refData}) {
+    return (
+        <>
+            <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'} refData={refData}/>
+            <div className="installation">
+                {Parser(p.installation)}
             </div>
         </>
     )
@@ -325,10 +315,13 @@ function Comment() {
 }
 
 function DetailContent({p}) {
+    const ref = useRef(null)
+    const goToInstallation = () => ref.current.scrollIntoView({behavior: "auto"})
     return (
         <>
-            <DetailDescription/>
-            <Installation/>
+            <DetailDescription p={p} goTo={goToInstallation}/>
+            <DemoImage p={p}/>
+            <Installation p={p} refData={ref}/>
             <Rating  p={p}/>
             <Comment/>
         </>
@@ -368,7 +361,7 @@ export default function ProductDetails() {
     return (
         <>
             <Header/>
-            <SectionBreadcrumb/>
+            {/*<SectionBreadcrumb/>*/}
             <ProductDetailContainer/>
             <Footer/>
         </>

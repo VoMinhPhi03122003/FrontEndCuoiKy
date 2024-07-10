@@ -24,9 +24,9 @@ export const updateDiscountPercent = (discount_percent) => {
     }
 }
 
-export const updateDiscountCode = (code) => {
+export const updateDiscountCode = (product) => {
     return {
         type: 'discountCode/update-code',
-        payload: code
+        payload: product
     }
 }

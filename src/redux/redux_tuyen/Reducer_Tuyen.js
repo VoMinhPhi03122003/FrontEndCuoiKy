@@ -83,13 +83,13 @@ export const cartReducer = (state = initCartState, action) => {
     }
 
 }
-export const discountCodeReducer = (state = {code: ''}, action) => {
+export const discountCodeReducer = (state = {product: ''}, action) => {
 
     switch (action.type) {
         case 'discountCode/update-code': {
             return {
                 ...state,
-                code: action.payload
+                product: action.payload
             }
         }
         default:

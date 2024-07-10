@@ -3,7 +3,17 @@ import {cartReducer, discountCodeReducer} from "../redux_tuyen/Reducer_Tuyen";
 
 import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
 
-const listProductsReducer = (state = {page: 1, sort: null, layout: 'grid', type: null}, action) => {
+const initialState = {
+    page: 1,
+    sort: null,
+    layout: 'grid',
+    type: {
+        id: null,
+        name: null
+    }
+}
+
+const listProductsReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case 'listProducts/page': {
