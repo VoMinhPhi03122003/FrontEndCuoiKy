@@ -6,7 +6,7 @@ import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link, useNavigate} from "react-router-dom";
 
 import {registerError} from "../../redux/redux_tai/Action";
-import {isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
+import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
 import {errorRegisterSelector} from "../../redux/redux_tai/Selectors";
 import React, {useState} from "react";
 
@@ -47,7 +47,8 @@ function SectionRegister(){
                     dispatch(registerError({
                         errorRegister: ""
                     }))
-                    let account = {email, password};
+                    let hashPass = hashText(password);
+                    let account = {email, hashPass};
                     addAccount(account).then(() =>{
                         navigate('/login');
                     })

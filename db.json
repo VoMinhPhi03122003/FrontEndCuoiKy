@@ -3892,24 +3892,9 @@
   ],
   "accounts": [
     {
-      "id": 1,
-      "email": "nguyenphutai840@gmail.com",
-      "password": "123456"
-    },
-    {
       "email": "nguyenphutai1234@gmail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "email": "nguyenphutai@gmail.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "email": "abc@gmail.com",
-      "password": "123",
-      "id": 4
+      "hashPass": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "id": 1
     }
   ]
 }
