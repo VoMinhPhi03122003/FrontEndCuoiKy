@@ -363,6 +363,38 @@
     margin-right: 6px;
 }
 
+/* [ Search Not Found ]
+--------------------------------*/
+.search-not-found {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.search-not-found img {
+    width: 300px;
+    height: auto;
+}
+
+.search-not-found img + div {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #282828;
+    margin-top: 15px;
+}
+
+.search-not-found img + div + div {
+    color: #333333;
+    margin-top: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.search-not-found img + div + div span {
+    color: #ec964f;
+}
+
+
 /* [ Pagination ]
 --------------------------------*/
 

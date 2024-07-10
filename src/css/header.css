@@ -237,17 +237,20 @@
     transition: background-color ease .1s;
     border-radius: 0 !important;
     border-width: 0 0 1px;
+    line-height: 39px;
+    color: #333333;
+    font-size: 15px;
+    display: block;
+    cursor: pointer;
 }
 
 .header-categories ul li:hover {
     background-color: #e8e8e8;
 }
-
-.header-categories ul li a {
-    font-size: 16px;
-    color: #1c1c1c;
-    line-height: 39px;
-    display: block;
+.header-categories ul li i {
+    color: var(--color-secondary);
+    display: inline-block;
+    margin-right: 8px;
 }
 
 .header-search form {
@@ -263,14 +266,10 @@
 .header-search-categories {
     width: 30%;
     font-size: 15px;
-    color: #3a3a3a;
+    color: #333333;
     position: relative;
     cursor: pointer;
     transition: color ease .3s;
-}
-
-.header-search-categories:hover {
-    color: var(--color-main);
 }
 
 .header-search-categories:after {
@@ -284,6 +283,12 @@
     content: "";
 }
 
+.header-search-categories span:first-child {
+    display: inline-block;
+    width: 120px;
+}
+
+
 .header-search-categories span i {
     position: absolute;
     right: -30px;
@@ -292,6 +297,46 @@
     font-size: 13px;
     color: #888;
 }
+.header-search-categories ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+.header-search-categories ul::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+    border-radius: 3px;
+}
+
+.header-search-categories ul::-webkit-scrollbar-thumb {
+    background-color: #8d8d8d;
+    border-radius: 3px;
+}
+
+.header-search-categories ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 10px 0;
+    z-index: 10;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    transition: top linear .2s, opacity ease .3s;
+}
+
+.header-search-categories ul li {
+    padding: 8px 16px;
+    transition: all ease .1s;
+}
+
+.header-search-categories ul li:hover {
+    color: white;
+    background-color: #4e89fa;
+}
+
 
 .header-search form input {
     width: 60%;
@@ -316,7 +361,7 @@
 }
 
 .header-upload-action {
-    background-color: #ff921d;
+    background-color: var(--color-secondary);
     padding: 0 24px;
     height: 100%;
     color: #fff;
