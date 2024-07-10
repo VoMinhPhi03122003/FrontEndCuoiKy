@@ -28,13 +28,6 @@ export const setLayout = (layout) => {
     }
 }
 
-export const registerError = (data) =>{
-    return{
-        type: 'register/error',
-        payload: data
-    }
-}
-
 export const reset = () => {
     return {
         type: 'reset'

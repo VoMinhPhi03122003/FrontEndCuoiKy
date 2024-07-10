@@ -1,16 +1,16 @@
 
 const initState = {
-    error: ""
+    errorRegister: ""
 }
-const registerReducer = (state = initState, action) =>{
+const errorReducer = (state = initState, action) =>{
     switch (action.type) {
         case 'register/error':
             return{
                 ...state,
-                error: action.payload.error
+                errorRegister: action.payload.errorRegister
             };
         default:
             return state;
     }
 }
-export default registerReducer
+export default errorReducer

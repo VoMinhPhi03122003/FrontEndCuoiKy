@@ -1,31 +1,19 @@
 import authenticationImage from '../../img/authentication/authentication.png';
 import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
-import breadcrumb_1 from "../../img/breadcrumb/breadcrumb_1.png";
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+
 import {Link} from "react-router-dom";
-import {registerError} from "../../redux/Action";
-import {isEmail, isEmpty} from "./utils/Utils";
-import {errorRegisterSelector} from "../../redux/Selectors";
-import {useState} from "react";
+
+import {registerError} from "../../redux/redux_tai/Action";
+import {isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
+import {errorRegisterSelector} from "../../redux/redux_tai/Selectors";
+import React, {useState} from "react";
+
 import {useSelector, useDispatch} from "react-redux";
-function Breadcrumb(){
-    return(
-        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12 text-center">
-                        <div className="breadcrumb__text">
-                            <div className="breadcrumb__option">
-                                <Link to="/">Trang chủ</Link>
-                                <Link to="/register">Đăng ký</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+
+const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Đăng ký", link: "/register"}]
+
 function SectionRegister(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -36,26 +24,26 @@ function SectionRegister(){
         if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_pass)){
             e.preventDefault();
             dispatch(registerError({
-                error: "Hãy điền đầy đủ thông tin"
+                errorRegister: "Hãy điền đầy đủ thông tin"
             }))
             console.log(errorString);
         }else if(!isEmail(email)){
             e.preventDefault();
             dispatch(registerError({
-                error: "Nhập đúng định dạng email"
+                errorRegister: "Nhập đúng định dạng email"
             }))
             console.log(errorString);
         }else if(password.localeCompare(confirm_pass) !==0){
             e.preventDefault();
             dispatch(registerError({
-                error: "Xác thực mật khẩu không chính xác"
+                errorRegister: "Xác thực mật khẩu không chính xác"
             }))
             console.log(errorString);
         }
         else{
             e.preventDefault();
             dispatch(registerError({
-                error: ""
+                errorRegister: ""
             }))
             console.log(errorString);
         }
@@ -103,7 +91,7 @@ export default function RegisterPage(){
     return(
         <>
             <Header/>
-            <Breadcrumb/>
+            <SectionBreadcrumb breadcrumbs={breadcrumbs}/>
             <SectionRegister/>
             <Footer/>
         </>

@@ -1,7 +1,7 @@
 import {combineReducers} from "redux";
 import {cartReducer, discountCodeReducer} from "../redux_tuyen/Reducer_Tuyen";
 
-import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
+import errorReducer from "./redux_tai/ErrorSlice";
 
 export  const initialState = {
     layout: 'grid',
@@ -51,6 +51,6 @@ const listProductsReducer = (state = initialState, action) => {
 export const reducers = combineReducers({
     cartReducer: cartReducer,
     listProductsReducer: listProductsReducer,
-    registerReducer: registerReducer,
+    registerReducer: errorReducer,
     discountCodeReducer: discountCodeReducer
 })

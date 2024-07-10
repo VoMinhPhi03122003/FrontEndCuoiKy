@@ -1,1 +1,0 @@
-export const errorRegisterSelector = (state) => state.registerReducer.error

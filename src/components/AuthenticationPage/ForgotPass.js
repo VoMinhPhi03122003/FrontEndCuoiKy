@@ -1,27 +1,11 @@
 import authenticationImage from '../../img/authentication/authentication.png';
 import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
-import breadcrumb_1 from "../../img/breadcrumb/breadcrumb_1.png";
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link} from "react-router-dom";
+import React from "react";
 
-function Breadcrumb(){
-    return(
-        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12 text-center">
-                        <div className="breadcrumb__text">
-                            <div className="breadcrumb__option">
-                                <Link to="/">Trang chủ</Link>
-                                <Link to="/forgot-password">Quên mật khẩu</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Quên mật khẩu", link: "/forgot-password"}]
 function SectionForgotPass(){
     return(
         <section className="form-input py-5">
@@ -52,7 +36,7 @@ export default function ForgotPassPage(){
     return(
         <>
             <Header/>
-            <Breadcrumb/>
+            <SectionBreadcrumb breadcrumbs={breadcrumbs}/>
             <SectionForgotPass/>
             <Footer/>
         </>
