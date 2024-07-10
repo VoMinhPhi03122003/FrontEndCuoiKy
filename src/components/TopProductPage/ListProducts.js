@@ -4,11 +4,12 @@ import '../../css/products.css'
 import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
-import {setLayout, setPage, setSort, setType} from "../../redux/Action";
+import {addLiked, setLayout, setPage, setSort, setType} from "../../redux/Action";
 
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating, getTypes, makeURL} from "../../javascript/utils";
+import {store} from "../../redux/Store";
 
 
 
@@ -77,40 +78,8 @@ function SideBar() {
     )
 }
 
-function ProductItem({p, navigate}) {
-    return (
-        <div className="product-item">
-            <Link to={`product/${p.id}`} state={p} className="product-item-img">
-                <img src={p.img} alt=""/>
-            </Link>
-            <div className="product-item-title d-flex justify-content-center align-items-center text-center pt-2">
-                <div className="title-wrapper">
-                    <Link to={`product/${p.id}`} state={p}>{p.name}</Link>
-                </div>
-            </div>
-            <div className="product-item-stats d-flex justify-content-between">
-                <div><i className="fa fa-eye"></i> {p.viewed}</div>
-                <div><i className="fa fa-download"></i>{p.downloaded}</div>
-            </div>
-            <div className="product-item-actions d-flex justify-content-between align-items-center">
-                <div className="d-flex justify-content-start">
-                    <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
-                    <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
-                </div>
-                <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
-            </div>
-            <div className="product-item-bottom d-flex justify-content-between align-items-center">
-                <div className="product-item-brand" onClick={() => navigate({id: p.type.id, name: p.type.name})}>
-                    <img src={p.type.img} alt=""></img> {p.type.name}
-                </div>
-                <Link to={`product/${p.id}`} state={p}
-                      className="product-item-price">{formatNumber(p.price, '.')}đ</Link>
-            </div>
-        </div>
-    )
-}
-
-function ProductItemRow({p, navigate}) {
+function ProductItemRow({p, navigate, addToLiked}) {
+    const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
@@ -135,7 +104,9 @@ function ProductItemRow({p, navigate}) {
                             <Link to={`product/${p.id}`} state={p} className="d-inline text-center">{formatNumber(p.price, '.')}đ</Link>
                         </div>
                         <div className="d-flex justify-content-end">
-                            <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
+                            <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
+                                 onClick={() => addToLiked(p)}><i
+                                className="fa fa-thumbs-up"></i></div>
                             <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
@@ -145,7 +116,43 @@ function ProductItemRow({p, navigate}) {
     )
 }
 
-function ProductContainer({query, total, data}) {
+function ProductItem({p, navigate, addToLiked}) {
+    const likedCodes = useSelector(state => state.likedCodesReducer.liked)
+
+    return (
+        <div className="product-item">
+            <Link to={`product/${p.id}`} state={p} className="product-item-img">
+                <img src={p.img} alt=""/>
+            </Link>
+            <div className="product-item-title d-flex justify-content-center align-items-center text-center pt-2">
+                <div className="title-wrapper">
+                    <Link to={`product/${p.id}`} state={p}>{p.name}</Link>
+                </div>
+            </div>
+            <div className="product-item-stats d-flex justify-content-between">
+                <div><i className="fa fa-eye"></i> {p.viewed}</div>
+                <div><i className="fa fa-download"></i> {p.downloaded}</div>
+            </div>
+            <div className="product-item-actions d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-start">
+                    <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
+                         onClick={() => addToLiked(p)}><i
+                        className="fa fa-thumbs-up"></i></div>
+                    <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
+                </div>
+                <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
+            </div>
+            <div className="product-item-bottom d-flex justify-content-between align-items-center">
+                <div className="product-item-brand" onClick={() => navigate({id: p.type.id, name: p.type.name})}>
+                    <img src={p.type.img} alt=""></img> {p.type.name}
+                </div>
+                <Link to={`product/${p.id}`} state={p} className="product-item-price">{formatNumber(p.price, '.')}đ</Link>
+            </div>
+        </div>
+    )
+}
+
+export function ProductContainer({query, total, data, forLiked}) {
     const layout = useSelector(state => state.listProductsReducer.layout)
     const dispatch = useDispatch()
 
@@ -154,6 +161,9 @@ function ProductContainer({query, total, data}) {
         dispatch(setPage(1))
     }
 
+    function addToLiked(code) {
+        dispatch(addLiked(code))
+    }
 
     return (
         <>
@@ -161,19 +171,19 @@ function ProductContainer({query, total, data}) {
                 <div className="row">
                     {data.map((value, index) => {
                         return layout === 'grid' ?
-                            (<div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
-                                <ProductItem p={value} navigate={navigate}/>
+                            (<div className={`product-item-container col-lg-${forLiked ? '3' : '4'}`} key={index}>
+                                <ProductItem p={value} navigate={navigate} addToLiked={addToLiked}/>
                             </div>) :
-                            (<div className="product-item-container col-12" key={index}>
-                                <ProductItemRow p={value} navigate={navigate}/>
+                            (<div className="product-item-container col-lg-12" key={index}>
+                                <ProductItemRow p={value} navigate={navigate} addToLiked={addToLiked}/>
                             </div>)
                     })}
                 </div>
             ) : (
                 <div className="search-not-found">
-                    <img src={require('../../img/not_found.jpg')} alt=""/>
-                    <div>Không có kết quả</div>
-                    <div>Không tìm thấy sản phẩm cho từ khóa <span>{query}</span></div>
+                    {forLiked ? <img src={require('../../img/empty.png')} alt=""/> : <img src={require('../../img/not_found.jpg')} alt=""/>}
+                    {forLiked ? <div>Danh mục yêu thích trống</div> : <div>Không có kết quả</div>}
+                    {!forLiked && <div>Không tìm thấy code cho từ khóa <span>{query}</span></div>}
                 </div>
             )}
         </>
