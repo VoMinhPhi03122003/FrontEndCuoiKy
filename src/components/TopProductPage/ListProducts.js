@@ -254,11 +254,13 @@ function ProductsContainer() {
     useEffect(() => {
         let url
         if (type) {
+            const formattedType = type.split(' ').join('+')
             if (sort) {
-                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12&_sort=${sort}&_order=desc`
+                url = `http://localhost:9810/products?type.name=${formattedType}&_page=${page}&_limit=12&_sort=${sort}&_order=desc`
             } else {
-                url = `http://localhost:9810/products?type.name=${type}&_page=${page}&_limit=12`
+                url = `http://localhost:9810/products?type.name=${formattedType}&_page=${page}&_limit=12`
             }
+            console.log(url)
         } else {
             if (sort) {
                 url = `http://localhost:9810/products?_page=${page}&_limit=12&_sort=${sort}&_order=desc`
