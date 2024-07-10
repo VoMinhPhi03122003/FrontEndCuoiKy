@@ -163,9 +163,8 @@
 
 .detail-center-info > div span {
     display: inline-block;
-    width: 30%;
+    width: 25%;
     color: #6e6e6e;
-    margin-right: 15px;
     margin-left: 2px;
 }
 
@@ -319,6 +318,10 @@
 .detail-description {
     font-size: 15px;
 }
+.detail-description div:nth-child(2) {
+    margin: 15px 0;
+}
+
 
 .detail-description li {
     list-style: disc inside;
@@ -330,7 +333,7 @@
 }
 
 .detail-description .di-guide {
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .detail-description .di-guide span {
@@ -339,12 +342,17 @@
     color: #404040;
 }
 
-.detail-description .di-guide a {
+.detail-description .di-guide span:last-child {
     color: var(--color-main);
-    transition: color .3s;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
 }
 
-.detail-description .di-guide a:hover {
+.detail-description .di-guide span:last-child:hover {
+    text-decoration: underline;
     color: #597928;
 }
 

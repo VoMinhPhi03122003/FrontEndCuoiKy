@@ -271,12 +271,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Code Android App bán quần áo thời trang full chức năng giao diện đẹp sử dụng Android Studio + API Springboot + MySQL + Tích hợp thanh toán ZaloPay",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Source code app ứng dụng bán hàng thời trang viết trên android studio sử dụng retrofit2 để kết nối với API Spring boot, database MySQL.",
+      "release": "27-05-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "FinalApp.rar",
         "type": "Full code",
-        "size": 47.2,
+        "size": 64,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -289,7 +290,7 @@
       "viewed": 157,
       "downloaded": 0,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 115000
     },
@@ -306,12 +307,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Android Studio - App Food - Ứng dụng bán đồ ăn trực tuyến",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "App sử dụng ngôn ngữ Java để lập trình và CSDL Firebase để lưu trữ dữ liệu, giao diện đẹp, đơn giản và bắt mắt. Phù hợp để làm đề tài báo cáo hoặc đồ án nghiên cứu.",
+      "release": "26-05-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "app_Food_Basic.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 53.8,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -324,7 +326,7 @@
       "viewed": 231,
       "downloaded": 124,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 73000
     },
@@ -341,12 +343,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Nhật ký hành trình du lịch - Android app(v1)",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Cuốn nhật ký lưu trữ lại hình ảnh chuyến hành trình của bạn, cùng thời gian, mô tả,...",
+      "release": "19-05-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "NhatKyDuLich.rar",
         "type": "Full code",
-        "size": 47.2,
+        "size": 57,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -359,7 +362,7 @@
       "viewed": 253,
       "downloaded": 8,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 50000
     },
@@ -376,12 +379,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code ứng dụng dịch vụ mạng xã hội",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Ứng dụng dịch vụ mạng xã hội xây dựng bằng React Native + NestJS tích hợp quảng cáo AdMob.",
+      "release": "26-04-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "MyFollowers.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 743,
+        "unit": "KB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -394,8 +398,8 @@
       "viewed": 369,
       "downloaded": 3,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+     "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 80000
     },
     {
@@ -411,12 +415,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Full code ứng dụng di động nghe nhạc trực tuyến",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Project này được xây dựng trên mô hình Client-Server, dùng React Native Framework để làm việc. Free database + Backend server.",
+      "release": "05-04-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "cmusic-mobile-app.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 8.56,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -429,7 +434,7 @@
       "viewed": 714,
       "downloaded": 8,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 120000
     },
@@ -446,12 +451,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code app đếm ngày yêu flutter",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Source code app đếm ngày yêu viết bằng flutter tích hợp admod, push notification firebase. Thích hợp làm bài tập lớn, đồ án hoặc phát triển tiếp.",
+      "release": "03-04-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "been_love.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 114,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -464,7 +470,7 @@
       "viewed": 223,
       "downloaded": 0,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 30000
     },
@@ -481,12 +487,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Ứng dụng sách trên nền tảng Android",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Code này tôi code để tài tiểu luận, đây là code ứng dụng sách trực tuyến gồm có những chức năng tôi đề cập ở mô tả chi tiết.",
+      "release": "18-03-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "appbook.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 241,
+        "unit": "Bytes",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -499,7 +506,7 @@
       "viewed": 987,
       "downloaded": 7,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 235000
     },
@@ -516,12 +523,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Code Android Java + Server API MySQL - Ứng Dụng Quản Lý Bán Hàng Có File Báo Cáo",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Ứng Dụng Quản Lý Bán Hàng Andoird Java - Server lấy dữ liệu bằng API code php, CSDL dùng MySQL, vì đây là quản lý bán hàng nên bạn có thể đổi thành bán sản phẩm khác bằng cách đổi hình ảnh.",
+      "release": "11-03-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "Quan_Ly_Ban_Hang.rar",
         "type": "Full code",
-        "size": 47.2,
+        "size": 50,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -534,7 +542,7 @@
       "viewed": 178,
       "downloaded": 0,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 34000
     },
@@ -551,12 +559,13 @@
         "icon": "bi bi-android2"
       },
       "name": "YT-PDF Maker - Ứng dụng tạo file PDF từ nhiều nguồn nội dung (Đã up lên CHPlay)",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Bạn có thể dễ dàng tạo file PDF từ nhiều nguồn nội dung khác nhau: hình ảnh, file văn bản, file excel hoặc quét qr-code & barcode.",
+      "release": "01-03-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "YT-PDF Maker-code.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 167,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -569,7 +578,7 @@
       "viewed": 232,
       "downloaded": 0,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 40000
     },
@@ -586,12 +595,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Android Đặt Đồ Ăn - Quản Lý Nhà Hàng",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Phần Mềm Đặt Đồ Ăn - Quản Lý Nhà Hàng - Full Source, Báo Cáo, Powerpoint.",
+      "release": "25-02-2023",
       "file": {
-        "name": "Website.zip",
-        "type": "Full code",
-        "size": 47.2,
+        "name": "Android_DatDoAn_Done.zip",
+        "type": "Full code + Báo cáo",
+        "size": 54.7,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -604,7 +614,7 @@
       "viewed": 623,
       "downloaded": 16,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 115000
     },
@@ -621,12 +631,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Mã nguồn Android Quản Lý Kho Hàng",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Android Kho Hàng - Quản Lý Kho Hàng- Full Source, Báo Cáo, Powerpoint - Di Động.",
+      "release": "25-02-2023",
       "file": {
-        "name": "Website.zip",
-        "type": "Full code",
-        "size": 47.2,
+        "name": "QuanLyKho_Android.zip",
+        "type": "Full code + Báo cáo",
+        "size": 37.1,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -639,7 +650,7 @@
       "viewed": 486,
       "downloaded": 8,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 99000
     },
@@ -656,12 +667,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Android Ghi Chú - Note Ghi Chú - Note Android",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Ứng dụng note Android - Đồ Án Di Động - Full Báo Cáo PDF, Powerpoint, Source.",
+      "release": "25-02-2023",
       "file": {
-        "name": "Website.zip",
-        "type": "Full code",
-        "size": 47.2,
+        "name": "PhanMemGhiChu.rar",
+        "type": "Full code + Báo cáo",
+        "size": 30.8,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -674,7 +686,7 @@
       "viewed": 2253,
       "downloaded": 46,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 760000
     },
@@ -691,12 +703,12 @@
         "icon": "bi bi-android2"
       },
       "name": "Đồ án Ứng dụng hẹn hò Tinder",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "file": {
-        "name": "Website.zip",
+        "name": "du_an_app_Tinder.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 51,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -709,7 +721,7 @@
       "viewed": 1286,
       "downloaded": 0,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 920000
     },
@@ -726,12 +738,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Full SourceCode Ứng dụng BusGO - Tìm kiếm địa điểm, lịch trình xe bus Hà Nội",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Ứng dụng BusGO - Tìm kiếm địa điểm, lịch trình xe bus Hà Nội giúp bạn dễ dàng tìm kiếm các địa điểm bán vé, trạm xe bus và lịch trình xe bus trên địa bản Hà Nội.",
+      "release": "13-01-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "Bus-Go.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 4.52,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -744,7 +757,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 100000
     },
@@ -761,12 +774,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code Ứng dụng Player for Cloud - Nghe nhạc ZingMP3",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Full code Ứng dụng nghe nhạc online/offline Player For Cloud với đầy đủ tính năng, giao diện đẹp như ZingMP3.",
+      "release": "13-01-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "Player-For-Cloud.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 9.58,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -779,7 +793,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 200000
     },
@@ -796,12 +810,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Android java + mysql bán hàng linh kiện điện tử",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Code android bán hàng linh kiện giao diện đẹp bắt mắt đầy đủ chức năng.",
+      "release": "23-12-2022",
       "file": {
-        "name": "Website.zip",
+        "name": "Android-linh-kien.rar",
         "type": "Full code",
-        "size": 47.2,
+        "size": 61.2,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -814,8 +829,8 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+        "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 300000
     },
     {
@@ -831,12 +846,13 @@
         "icon": "bi bi-android2"
       },
       "name": "React Native source code example Xây dựng App bán hàng React Native Assigment Fpoly",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Xây dựng app React Native App bán hàng React Native app bán giầy assigment của trường FPT polytechnic Đầy đủ full code.",
+      "release": "22-12-2022",
       "file": {
-        "name": "Website.zip",
+        "name": "AssigmentMobileShoesApp.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 391,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -849,7 +865,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 100000
     },
@@ -866,12 +882,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Dịch vụ Spa tại nhà - Flutter App (iOS & Android) cho Khách hàng, Nhân viên Spa với trang Admin quản lý bởi Laravel",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Ứng dụng Dịch vụ Spa tại nhà - Flutter App (iOS & Android) cho Khách hàng, Nhân viên Spa với trang Admin quản lý bởi Laravel.",
+      "release": "17-12-2022",
       "file": {
-        "name": "Website.zip",
+        "name": "sharecode-spa.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 56,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -884,7 +901,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 200000
     },
@@ -900,13 +917,14 @@
         "name": "Sức khỏe - Thư giản",
         "icon": "bi bi-android2"
       },
-      "name": "Ứng dụng mạng xã hội soure code +kèm báo cáo",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "name": "Ứng dụng mạng xã hội soure code + kèm báo cáo",
+      "description": "Đây là code app android mạng xã hội từ app Instagram nâng cấp lên có thêm chức năng chats + chat group kết nối cơ sở dữ liệu firebase và dùng android studio để code.",
+      "release": "09-12-2022",
       "file": {
-        "name": "Website.zip",
-        "type": "Full code",
-        "size": 47.2,
+        "name": "mang_xa_hoi.rar",
+        "type": "Full code + Báo cáo",
+        "size": 94.2,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -919,7 +937,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 300000
     },
@@ -936,12 +954,13 @@
         "icon": "bi bi-android2"
       },
       "name": "Source code ứng dụng cửa hàng tạp hóa",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Code này tôi code trong vòng 30 ngày, đây là code ứng dụng cửa hàng tạp hóa gồm có những chức năng tuyệt vời và thú vị nó hay lắm, tôi sẽ mô tả ở phần mô tả chi tiết, mong các bạn ủng hộ cho tôi.",
+      "release": "09-12-2022",
       "file": {
-        "name": "Website.zip",
+        "name": "Grocery.rar",
         "type": "Full code",
-        "size": 47.2,
+        "size": 42.6,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -954,7 +973,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 300000
     },
@@ -970,13 +989,14 @@
         "name": "Uống chất",
         "icon": "fa fa-apple"
       },
-      "name": "Full source code app iOS Shopping(CHẤT LƯỢNG CAO) đầy đủ các chức năng",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "name": "Full source code app iOS Shopping (CHẤT LƯỢNG CAO) đầy đủ các chức năng",
+      "description": "App iOS code bằng UIKit(Swift) đầy đủ các chức năng từ thanh toán, chat, API, Load JSON, Notification từ Firebase,...",
+      "release": "24-04-2023",
       "file": {
-        "name": "Website.zip",
+        "name": "Shopizilla.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 129,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -989,7 +1009,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
@@ -1006,12 +1026,13 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code Ứng dụng Movie Trailer (ĐA thực tập)",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Source code Đồ án thực tập Ứng dụng giúp người dùng xem review phim trước khi quyết ra định mua vé. Dành cho tham khảo nghiên cứu.",
+      "release": "14-10-2020",
       "file": {
-        "name": "Website.zip",
+        "name": "thuc-tap-tot-nghiep-2020.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 236,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1024,7 +1045,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
@@ -1041,12 +1062,13 @@
         "icon": "fa fa-apple"
       },
       "name": "Ứng dụng mua sắm trực tuyến iOS - Đồ án tốt nghiệp",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Ứng dụng mua sắm trực tuyến iOS được viết bằng ngôn ngữ Swift 5 theo mô hình MVC. Ứng dụng được đồng bộ với Webservice quản trị.",
+      "release": "27-7-2020",
       "file": {
-        "name": "Website.zip",
+        "name": "FStore.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 173,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1059,7 +1081,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
@@ -1076,12 +1098,13 @@
         "icon": "fa fa-apple"
       },
       "name": "[Swift] Full code game xếp hình cổ điển, đã được tích hợp đầy đủ quảng cáo admob, mua hàng trong ứng dụng",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "[Swift] Full code game xếp hình cổ điển, đã được tích hợp đầy đủ quảng cáo admob, mua hàng trong ứng dụng, tải về là xài ngay có thể upload lên appstore được ngay.",
+      "release": "11-10-2019",
       "file": {
-        "name": "Website.zip",
+        "name": "CartoonPluzzleSliding.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 324,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1094,7 +1117,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 5000000
     },
@@ -1110,13 +1133,14 @@
         "name": "Uống chất",
         "icon": "fa fa-apple"
       },
-      "name": "Ứng dụng Ghi Chú trên IOS, giao diện đẹp, dễ dùng",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "name": "Ứng dụng Ghi Chú trên iOS, giao diện đẹp, dễ dùng",
+      "description": "Ứng dụng Ghi Chú trên IOS,giao diện đẹp, dễ dùng Thích hợp các bạn đang làm đồ án lớn, hoặc với mục đích kiếm tiền khác.",
+      "release": "17-5-2019",
       "file": {
-        "name": "Website.zip",
+        "name": "Note2019IOS.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 79.6,
+        "unit": "KB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1129,7 +1153,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
@@ -1145,13 +1169,14 @@
         "name": "Uống chất",
         "icon": "fa fa-apple"
       },
-      "name": "Code App ios xem video giống 99% app youtube",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "name": "Code App iOS xem video giống 99% app youtube",
+      "description": "Code app ios xem video giống 99% app youtube dễ đọc dễ hiểu dành cho các bạn sinh viên năm cuối tham khảo làm đồ án tốt nghiệp. Dùng code 100% không dùng file Storyboard hay file XIB.",
+      "release": "15-3-2018",
       "file": {
-        "name": "Website.zip",
+        "name": "youtube.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 1.08,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1164,7 +1189,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
@@ -1180,13 +1205,14 @@
         "name": "Uống chất",
         "icon": "fa fa-apple"
       },
-      "name": "Source code app IOS tìm địa điểm ăn uống giống app Meete 99%",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "name": "Source code app iOS tìm địa điểm ăn uống giống app Meete 99%",
+      "description": "Source code app IOS giống app Meete, code dễ đọc dể hiểu .Dành cho sinh viên cuối khoá tham khảo làm đồ án tốt nghiệp.",
+      "release": "28-2-2018",
       "file": {
-        "name": "Website.zip",
+        "name": "intern08-hanhpn-meete-master.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 195.62,
+        "unit": "KB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1199,8 +1225,8 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+     "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
     {
@@ -1216,12 +1242,13 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code iOS App xem video",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Code app xem video iOS dùng ngôn ngữ swift 3, xcode 8, mô hình MVC, dàng cho sinh viên làm đồ án. Code dễ đọc dể hiểu.",
+      "release": "28-2-2018",
       "file": {
-        "name": "Website.zip",
+        "name": "intern08-haivl-youtube-master.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 551.3,
+        "unit": "KB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1234,8 +1261,8 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+    "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
     {
@@ -1251,12 +1278,13 @@
         "icon": "fa fa-apple"
       },
       "name": "Source code Game hay iOS, gắn quảng cáo kiếm $$$. Where is my birds?",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Game hot trên iOS, nhẹ, giao diện đẹp, hiện đại. Có tích hợp quảng cáo Google Admob Doanh thu hằng tháng 100-200$ Có hướng dẫn cài đặt rõ ràng, dễ thực hiện, release. Rành cho các bạn muốn kinh doanh về game.",
+      "release": "07-2-2018",
       "file": {
-        "name": "Website.zip",
+        "name": "WhereIsMyBird.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 25.9,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1269,7 +1297,7 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
@@ -1286,12 +1314,13 @@
         "icon": "fa fa-apple"
       },
       "name": "Snake vs Block Source code Game iOS giao diện đẹp, mượt",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "description": "Source Game vui mô phỏng Snake vs Block. Có tích hợp gắn quảng cáo Google Admob, doanh thu > 100$/tháng giao diện đẹp, mượt.",
+      "release": "04-1-2018",
       "file": {
-        "name": "Website.zip",
+        "name": "SnakeVsBlock.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 1.31,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1304,8 +1333,8 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+     "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     },
     {
@@ -1320,13 +1349,14 @@
         "name": "Uống chất",
         "icon": "fa fa-apple"
       },
-      "name": "Full Code + Admob IOS ứng dụng nghe nhạc online MP3",
-      "description": "Chia sẻ code + database website tuyển dụng người giúp việc xây dựng trên PHP thuần, đơn giản, dễ hiểu, dành cho sinh viên lập trình tham khảo",
-      "release": "12-06-2023",
+      "name": "Full Code + Admob iOS ứng dụng nghe nhạc online MP3",
+      "description": "Full code IOS +Admob Ứng dụng nghe nhạc mp3 online cho IOS, web service PHP, tải về cài web server là chạy luôn. Hỗ trợ ios 7.0+. Load cực nhanh.",
+      "release": "03-01-2019",
       "file": {
-        "name": "Website.zip",
+        "name": "codester-6031-music-mp3-ios-app-source-code.zip",
         "type": "Full code",
-        "size": 47.2,
+        "size": 126,
+        "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
       },
       "rating": {
@@ -1339,8 +1369,8 @@
       "viewed": 1000,
       "downloaded": 100,
       "liked": 13,
-      "detail": "<div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+     "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
     }
   ],

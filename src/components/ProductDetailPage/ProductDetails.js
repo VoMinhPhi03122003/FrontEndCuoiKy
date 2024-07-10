@@ -1,7 +1,7 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer";
 import '../../css/product-detail.css'
-import {useState} from "react";
+import {useRef, useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
 import {Link, useLocation} from "react-router-dom";
 import {formatNumber, formatRating} from "../../javascript/utils";
@@ -79,7 +79,7 @@ function DetailCenter({p}) {
                 <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {p.release}</div>
                 <div><i className="fa fa-object-group"></i><span>Loại file</span> {p.file.type}</div>
                 <div><i className="fa fa-file-code"></i><span>File download</span> {p.file.name}
-                    <span>[{p.file.size} MB]</span></div>
+                    <span>[{p.file.size} {p.file.unit}]</span></div>
             </div>
         </div>
     )
@@ -106,22 +106,24 @@ function DetailRight({p}) {
         </div>
     )
 }
-function DetailDivider({title}) {
-    return (<div className="detail-divider mt-5"><span>{title}</span></div>)
+function DetailDivider({title, refData}) {
+    return (<div className="detail-divider mt-5" ref={refData}><span>{title}</span></div>)
 }
 
-function DetailDescription({p}) {
+function DetailDescription({p, goTo}) {
     return (
         <>
             <DetailDivider title={'MÔ TẢ CHI TIẾT'}/>
             <div className="detail-description">
                 <div>{p.description}</div>
                 {Parser(p.detail)}
-                <div className="di-guide">XEM THÊM <span> ==> </span> <a href="/">Hướng dẫn cài đặt chi tiết</a></div>
+                <div className="di-guide">XEM THÊM <span>==></span><span
+                    onClick={goTo}> Hướng dẫn cài đặt chi tiết</span></div>
             </div>
         </>
     )
 }
+
 function DemoImage({p}) {
     return (
         <>
@@ -140,10 +142,10 @@ function DemoImage({p}) {
     )
 }
 
-function Installation({p}) {
+function Installation({p, refData}) {
     return (
         <>
-            <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'}/>
+            <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'} refData={refData}/>
             <div className="installation">
                 {Parser(p.installation)}
             </div>
@@ -313,11 +315,13 @@ function Comment() {
 }
 
 function DetailContent({p}) {
+    const ref = useRef(null)
+    const goToInstallation = () => ref.current.scrollIntoView({behavior: "auto"})
     return (
         <>
-            <DetailDescription p={p}/>
+            <DetailDescription p={p} goTo={goToInstallation}/>
             <DemoImage p={p}/>
-            <Installation p={p}/>
+            <Installation p={p} refData={ref}/>
             <Rating  p={p}/>
             <Comment/>
         </>
