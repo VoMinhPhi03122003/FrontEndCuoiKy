@@ -34,3 +34,9 @@ export const registerError = (data) =>{
         payload: data
     }
 }
+
+export const reset = () => {
+    return {
+        type: 'reset'
+    }
+}

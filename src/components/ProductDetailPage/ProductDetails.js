@@ -361,7 +361,6 @@ export default function ProductDetails() {
     return (
         <>
             <Header/>
-            {/*<SectionBreadcrumb/>*/}
             <ProductDetailContainer/>
             <Footer/>
         </>

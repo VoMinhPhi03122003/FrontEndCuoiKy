@@ -1,16 +1,14 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer"
-
-
 import '../../css/products.css'
 import {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
 import {setLayout, setPage, setSort, setType} from "../../redux/Action";
 
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
-import {formatNumber, formatRating} from "../../javascript/utils";
+import {formatNumber, formatRating, getTypes, makeURL} from "../../javascript/utils";
 
 
 
@@ -26,8 +24,8 @@ export function PopularProducts() {
         <div className="sidebar-item sidebar-popular mt-5">
             <h6 className="list-group-item">Sản phẩm phổ biến</h6>
             <div className="list-group">
-                {data.map((product, index) => (
-                    <Link to={`product/${product.id}`}  state={product} className="list-group-item" key={index}>
+                {data.map((product) => (
+                    <Link to={`product/${product.id}`} state={product} className="list-group-item" key={product.id}>
                         <img className="mr-2" src={product.img} alt=""/>
                         <span className="popular-title">{product.name}</span>
                     </Link>
@@ -36,29 +34,17 @@ export function PopularProducts() {
         </div>
     )
 }
-const getTypes = (json) => {
-    const types = []
-    json.data.forEach(product => {
-        const type = types.find(value => value.id === product.type.id)
-        if (type) {
-            type.quantity = type.quantity + 1
-        } else {
-            types.push({...product.type, quantity: 1})
-        }
-    })
-    return types.sort((a, b) => a.name < b.name ? -1 : 1)
-}
 
-
-function SideBar({type}) {
+function SideBar() {
+    const type = useSelector(state => state.listProductsReducer.type)
+    const [types, setTypes] = useState([])
     const dispatch = useDispatch()
 
-    const refTypes = useRef([])
 
     useEffect(() => {
         fetch(`http://localhost:9810/products`)
             .then(res => res.json())
-            .then(json => refTypes.current = getTypes(json))
+            .then(json => setTypes(getTypes(json)))
     }, [])
 
     function handleClick(type) {
@@ -71,9 +57,9 @@ function SideBar({type}) {
             <div className="sidebar-item">
                 <h6 className="list-group-item">Phân loại sản phâm</h6>
                 <div className="list-group">
-                    {refTypes.current.map(value => (
-                        <div className={`list-group-item ${value.id === type.id && 'item-active'}`} key={value.id}
-                             onClick={() => handleClick({id: value.id, name: value.name})}>
+                    {types.map(value => (
+                        <div className={`list-group-item ${value.id === type && 'item-active'}`} key={value.id}
+                             onClick={() => handleClick(value.id)}>
                             <div className="list-group-item-left">
                                 <span><img src={value.img} alt=""/></span>
                                 <span>{value.name}</span>
@@ -156,7 +142,7 @@ function ProductItemRow({p, navigate}) {
     )
 }
 
-function Products(props) {
+function ProductContainer(props) {
     const layout = useSelector(state => state.listProductsReducer.layout)
     const dispatch = useDispatch()
 
@@ -245,48 +231,37 @@ function Pagination({total}) {
 )
 }
 
-function ProductsContainer() {
+function Products() {
     const page = useSelector(state => state.listProductsReducer.page)
     const type = useSelector(state => state.listProductsReducer.type)
     const sort = useSelector(state => state.listProductsReducer.sort)
 
     const [products, setProducts] = useState([])
     const refTotal = useRef(0)
+    const location = useLocation()
+    const query = new URLSearchParams(location.search).get('search');
+
 
     useEffect(() => {
-        let url
-        if (type.id) {
-            if (sort) {
-                url = `http://localhost:9810/products?type.id=${type.id}&_page=${page}&_limit=12&_sort=${sort}&_order=desc`
-            } else {
-                url = `http://localhost:9810/products?type.id=${type.id}&_page=${page}&_limit=12`
-            }
-            console.log(url)
-        } else {
-            if (sort) {
-                url = `http://localhost:9810/products?_page=${page}&_limit=12&_sort=${sort}&_order=desc`
-            } else {
-                url = `http://localhost:9810/products?_page=${page}&_limit=12`
-            }
-        }
+        const url = makeURL(query, type, page, sort)
         fetch(url)
             .then(res => res.json())
             .then(json => {
                 setProducts(json.data)
                 refTotal.current = json.total
             })
-    }, [page, type, sort])
+    }, [page, type, sort, query])
 
     return (
         <section className="product">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-5">
-                        <SideBar type={type}/>
+                        <SideBar/>
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
                         <Filter total={refTotal.current}/>
-                        <Products data={products}/>
+                        <ProductContainer data={products}/>
                         <Pagination total={refTotal.current}/>
                     </div>
                 </div>
@@ -299,8 +274,7 @@ export  default  function ListProducts() {
     return (
         <>
             <Header/>
-            {/*<SectionBreadcrumb/>*/}
-            <ProductsContainer/>
+            <Products/>
             <Footer/>
         </>
     )

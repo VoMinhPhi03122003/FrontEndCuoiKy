@@ -237,17 +237,20 @@
     transition: background-color ease .1s;
     border-radius: 0 !important;
     border-width: 0 0 1px;
+    line-height: 39px;
+    color: #333333;
+    font-size: 15px;
+    display: block;
+    cursor: pointer;
 }
 
 .header-categories ul li:hover {
     background-color: #e8e8e8;
 }
-
-.header-categories ul li a {
-    font-size: 16px;
-    color: #1c1c1c;
-    line-height: 39px;
-    display: block;
+.header-categories ul li i {
+    color: var(--color-secondary);
+    display: inline-block;
+    margin-right: 8px;
 }
 
 .header-search form {
@@ -316,7 +319,7 @@
 }
 
 .header-upload-action {
-    background-color: #ff921d;
+    background-color: var(--color-secondary);
     padding: 0 24px;
     height: 100%;
     color: #fff;

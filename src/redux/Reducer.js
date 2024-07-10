@@ -4,17 +4,20 @@ import {cartReducer, discountCodeReducer} from "../redux_tuyen/Reducer_Tuyen";
 import registerReducer from "../components/AuthenticationPage/redux/RegisterSlice"
 
 const initialState = {
+    layout: 'grid',
     page: 1,
     sort: null,
-    layout: 'grid',
-    type: {
-        id: null,
-        name: null
-    }
+    type: null
 }
 
 const listProductsReducer = (state = initialState, action) => {
     switch (action.type) {
+        case 'reset': {
+            return {
+                ...state,
+                ...initialState
+            }
+        }
 
         case 'listProducts/page': {
             return {

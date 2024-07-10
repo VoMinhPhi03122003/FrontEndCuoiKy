@@ -13,3 +13,28 @@ export function formatRating(rating) {
         avg1: rating['1star'] * 100 / total
     }
 }
+
+export const getTypes = (json) => {
+    const types = []
+    json.data.forEach(product => {
+        const type = types.find(value => value.id === product.type.id)
+        if (type) type.quantity = type.quantity + 1
+        else types.push({...product.type, quantity: 1})
+    })
+    return types.sort((a, b) => a.name < b.name ? -1 : 1)
+}
+
+export const makeURL = (search, type, page, sort) => {
+    const searchPart = search != null ? `name_like=${search}&` : ''
+    const typePart = type != null ? `type.id=${type}&` : ''
+    const pagePart = page != null ? `_page=${page}&_limit=12&` : ''
+    const sortPart = sort != null ? `_sort=${sort}&_order=desc` : ''
+    return trim(trim(`http://localhost:9810/products?${searchPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
+}
+
+function trim(s, c) {
+    if (c === "]") c = "\\]";
+    if (c === "^") c = "\\^";
+    if (c === "\\") c = "\\\\";
+    return s.replace(new RegExp("^[" + c + "]+|[" + c + "]+$", "g"), "");
+}

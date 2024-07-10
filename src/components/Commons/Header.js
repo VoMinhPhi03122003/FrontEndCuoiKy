@@ -1,9 +1,12 @@
 import '../../css/header.css'
 import {useEffect, useState} from "react";
 import Cart from './Cart'
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import $ from 'jquery'
 
+import {getTypes} from "../../javascript/utils"
+import {useDispatch} from "react-redux";
+import {setType} from "../../redux/Action";
 
 const adsList = [
     {
@@ -95,19 +98,25 @@ function HeaderMenu() {
                     <nav className="header-menu">
                         <ul>
                             <li><Link to="/" className={location.pathname === '/' && 'active'}>Trang chủ</Link></li>
-                            <li><Link to="/top-products" className={location.pathname === '/top-products' && 'active'}>Top
-                                sản phẩm</Link></li>
-                            <li><Link to="/quality-products" className={location.pathname === '/quality-products' && 'active'}>Sản phẩm
-                                chất lượng</Link>
+                            <li><Link to="/top-products"
+                                      className={location.pathname.indexOf('top-products') > 0 && 'active'}>Top sản
+                                phẩm</Link>
+                            </li>
+                            <li><Link to="/quality-products"
+                                      className={location.pathname.indexOf('quality-products') > 0 && 'active'}>Sản phẩm
+                                chất
+                                lượng</Link>
                                 <img src={require('../../img/ic_hot.gif')} alt=""/>
                             </li>
-                            <li><Link to="/free-products" className={location.pathname === '/free-products' && 'active'}>Sản phẩm
-                                miễn phí</Link></li>
+
+                            <li><Link to="/free-codes"
+                                      className={location.pathname.indexOf('free-codes') > 0 && 'active'}>Sản phẩm miễn
+                                phí</Link></li>
                         </ul>
                     </nav>
                 </div>
                 <div className="col-lg-2 d-flex justify-content-center align-items-center">
-                    <Cart/>
+                <Cart/>
                 </div>
             </div>
         </div>
@@ -115,7 +124,31 @@ function HeaderMenu() {
 }
 
 function HeaderSearch() {
-    const categories = ['Sức khỏe - Thư giản', 'Uống chất', 'Ăn lành', 'Chăm sóc nhà cửa-Đồ dùng phòng bếp tắm', 'Làm đẹp & chăm sóc cá nhân', 'Mẹ & bé', 'Đồ gốm', 'Nón lá', 'Áo dài', 'Gạch','Đá','Cát']
+    const [query, setQuery] = useState('')
+    const [types, setTypes] = useState([])
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        fetch(`http://localhost:9810/products`)
+            .then(res => res.json())
+            .then(json => setTypes(getTypes(json)))
+    }, [])
+
+    function handleChange(event) {
+        setQuery(event.target.value)
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        navigate(`/top-products?search=${query}`)
+    }
+
+    function handleNavigation(typeId) {
+        dispatch(setType(typeId))
+        navigate(`/top-products/type=${typeId}`)
+    }
+
     return (
         <div className="container mb-4">
             <div className="row">
@@ -130,17 +163,21 @@ function HeaderSearch() {
                             <i className="bi bi-chevron-down"></i>
                         </div>
                         <ul>
-                            {categories.map((value, index) => (<li className="list-group-item" key={index}><a href="/">{value}</a></li>))}
+                            {types.map(type => (
+                                <li onClick={() => handleNavigation(type.id)}
+                                    className="list-group-item" key={type.id}><i className="fa fa-code"></i> {type.name}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
                 <div className="col-lg-7">
                     <div className="header-search h-100">
-                        <form action="">
+                        <form onSubmit={handleSubmit}>
                             <div className="header-search-categories pl-3">
-                            <span className="position-relative align-middle">TẤT CẢ SẢN PHẨM <i className="fa fa-caret-down"></i></span>
+                                <span className="position-relative align-middle">TẤT CẢ SẢN PHẨM <i
+                                    className="fa fa-caret-down"></i></span>
                             </div>
-                            <input type="text" placeholder="Nhập từ khóa"/>
+                            <input type="text" value={query} placeholder="Nhập từ khóa" onChange={handleChange}/>
                             <button type="submit"><i className="fa fa-search"></i></button>
                         </form>
                     </div>
