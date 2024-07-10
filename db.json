@@ -3890,11 +3890,26 @@
       "discount_percent": 0.1
     }
   ],
-  "account": [
+  "accounts": [
     {
       "id": 1,
       "email": "nguyenphutai840@gmail.com",
-      "password": "123"
+      "password": "123456"
+    },
+    {
+      "email": "nguyenphutai1234@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "email": "nguyenphutai@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": 4
     }
   ]
 }

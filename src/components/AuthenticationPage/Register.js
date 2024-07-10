@@ -3,7 +3,7 @@ import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 import {registerError} from "../../redux/redux_tai/Action";
 import {isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
@@ -11,41 +11,48 @@ import {errorRegisterSelector} from "../../redux/redux_tai/Selectors";
 import React, {useState} from "react";
 
 import {useSelector, useDispatch} from "react-redux";
+import {checkEmailExists, addAccount} from "../../javascript/api/Api_Tai";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Đăng ký", link: "/register"}]
 
 function SectionRegister(){
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirm_pass,setConfirm_pass] = useState("");
     const dispatch = useDispatch();
     const errorString = useSelector(errorRegisterSelector);
     const handleSubmit = (e) => {
+        e.preventDefault();
         if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_pass)){
-            e.preventDefault();
             dispatch(registerError({
                 errorRegister: "Hãy điền đầy đủ thông tin"
             }))
-            console.log(errorString);
         }else if(!isEmail(email)){
-            e.preventDefault();
             dispatch(registerError({
                 errorRegister: "Nhập đúng định dạng email"
             }))
-            console.log(errorString);
         }else if(password.localeCompare(confirm_pass) !==0){
-            e.preventDefault();
             dispatch(registerError({
                 errorRegister: "Xác thực mật khẩu không chính xác"
             }))
-            console.log(errorString);
         }
         else{
-            e.preventDefault();
-            dispatch(registerError({
-                errorRegister: ""
-            }))
-            console.log(errorString);
+            checkEmailExists(email).then(emailExists => {
+                if(emailExists){
+                    dispatch(registerError({
+                        errorRegister: "Tài khoản đã tồn tại vui lòng đăng ký email khác!"
+                    }))
+                }else{
+                    dispatch(registerError({
+                        errorRegister: ""
+                    }))
+                    let account = {email, password};
+                    addAccount(account).then(() =>{
+                        navigate('/login');
+                    })
+                }
+            })
         }
     }
     const handleInputEmail = (e) =>{
@@ -77,8 +84,8 @@ function SectionRegister(){
                                 <input value={confirm_pass} onChange={handleInputRePassword} id="confirm-pass" className="w-100 mb-4" type="password"
                                        placeholder="Nhập lại mật khẩu" name="confirm-pass"/>
                                 <button className="btn next w-100 mb-3">Tiếp theo</button>
-                                <span className="shotcut">Bạn đã có tài khoản? <Link
-                                    to="/login">Đăng nhập</Link></span>
+                                <span className="shotcut">Bạn đã có tài khoản?
+                                    <Link to="/login">Đăng nhập</Link></span>
                             </form>
                         </div>
                     </div>
