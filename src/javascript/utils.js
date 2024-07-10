@@ -24,12 +24,23 @@ export const getTypes = (json) => {
     return types.sort((a, b) => a.name < b.name ? -1 : 1)
 }
 
-export const makeURL = (search, type, page, sort) => {
+export function getTypeName(typeId) {
+    if (typeId === 'android') return 'Android'
+    if (typeId === 'java_jsp') return 'Java/JSP'
+    if (typeId === 'php_mysql') return 'PHP & MySQL'
+    if (typeId === 'visual_csharp') return 'Visual C#'
+    if (typeId === 'wordpress') return 'WordPress'
+    if (typeId === 'ios') return 'iOS'
+    return null
+}
+
+export const makeURL = (search, from, type, page, sort) => {
     const searchPart = search != null ? `name_like=${search}&` : ''
+    const fromPart = from != null ? `type.id=${from}&` : ''
     const typePart = type != null ? `type.id=${type}&` : ''
     const pagePart = page != null ? `_page=${page}&_limit=12&` : ''
     const sortPart = sort != null ? `_sort=${sort}&_order=desc` : ''
-    return trim(trim(`http://localhost:9810/products?${searchPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
+    return trim(trim(`http://localhost:9810/products?${searchPart}${fromPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
 }
 
 function trim(s, c) {

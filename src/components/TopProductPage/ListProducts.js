@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
 import {setLayout, setPage, setSort, setType} from "../../redux/Action";
 
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating, getTypes, makeURL} from "../../javascript/utils";
 
@@ -39,6 +39,7 @@ function SideBar() {
     const type = useSelector(state => state.listProductsReducer.type)
     const [types, setTypes] = useState([])
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -50,6 +51,8 @@ function SideBar() {
     function handleClick(type) {
         dispatch(setType(type))
         dispatch(setPage(1))
+        dispatch(setSort(null))
+        navigate(`/top-products/type=${type}`)
     }
 
     return (
@@ -142,7 +145,7 @@ function ProductItemRow({p, navigate}) {
     )
 }
 
-function ProductContainer(props) {
+function ProductContainer({query, total, data}) {
     const layout = useSelector(state => state.listProductsReducer.layout)
     const dispatch = useDispatch()
 
@@ -153,17 +156,27 @@ function ProductContainer(props) {
 
 
     return (
-        <div className="row">
-            {props.data.map((value, index) => {
-                return layout === 'grid' ?
-                    (<div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
-                        <ProductItem p={value}  navigate={navigate}/>
-                    </div>) :
-                    (<div className="product-item-container col-12" key={index}>
-                        <ProductItemRow p={value}/>
-                    </div>)
-            })}
-        </div>
+        <>
+            {total ? (
+                <div className="row">
+                    {data.map((value, index) => {
+                        return layout === 'grid' ?
+                            (<div className="product-item-container col-lg-4 col-md-6 col-sm-6" key={index}>
+                                <ProductItem p={value} navigate={navigate}/>
+                            </div>) :
+                            (<div className="product-item-container col-12" key={index}>
+                                <ProductItemRow p={value} navigate={navigate}/>
+                            </div>)
+                    })}
+                </div>
+            ) : (
+                <div className="search-not-found">
+                    <img src={require('../../img/not_found.jpg')} alt=""/>
+                    <div>Không có kết quả</div>
+                    <div>Không tìm thấy sản phẩm cho từ khóa <span>{query}</span></div>
+                </div>
+            )}
+        </>
     )
 }
 
@@ -220,14 +233,17 @@ function Pagination({total}) {
     }
 
     return (
-        <ul className="product-pagination float-right mt-3">
-            <li onClick={() => onSwitchPage(currentPage - 1)}><i className="fa fa-chevron-left"></i></li>
-            {numbers.map((value, index) => (
-                <li className={value === currentPage && "active"} key={index}
-                    onClick={() => onSwitchPage(value)}>{value}</li>
-            ))}
-            <li onClick={() => onSwitchPage(currentPage + 1)}><i className="fa fa-chevron-right"></i></li>
-        </ul>
+        <>
+            {total ? (
+                <ul className="product-pagination float-right mt-3">
+                    <li onClick={() => onSwitchPage(currentPage - 1)}><i className="fa fa-chevron-left"></i></li>
+                    {numbers.map((value, index) => (
+                        <li className={value === currentPage && "active"} key={index} onClick={() => onSwitchPage(value)}>{value}</li>
+                    ))}
+                    <li onClick={() => onSwitchPage(currentPage + 1)}><i className="fa fa-chevron-right"></i></li>
+                </ul>
+            ) : null}
+        </>
 )
 }
 
@@ -239,18 +255,19 @@ function Products() {
     const [products, setProducts] = useState([])
     const refTotal = useRef(0)
     const location = useLocation()
-    const query = new URLSearchParams(location.search).get('search');
+    const query = new URLSearchParams(location.search).get('search')
+    const from = new URLSearchParams(location.search).get('from')
 
 
     useEffect(() => {
-        const url = makeURL(query, type, page, sort)
+        const url = makeURL(query, from, type, page, sort)
         fetch(url)
             .then(res => res.json())
             .then(json => {
                 setProducts(json.data)
                 refTotal.current = json.total
             })
-    }, [page, type, sort, query])
+    }, [page, type, sort, query, from])
 
     return (
         <section className="product">
@@ -261,7 +278,7 @@ function Products() {
                     </div>
                     <div className="col-lg-9 col-md-7 pl-4">
                         <Filter total={refTotal.current}/>
-                        <ProductContainer data={products}/>
+                        <ProductContainer query={query} total={refTotal.current} data={products}/>
                         <Pagination total={refTotal.current}/>
                     </div>
                 </div>
