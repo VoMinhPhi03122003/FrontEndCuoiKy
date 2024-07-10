@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {Modal, ModalHeader, ModalBody} from "reactstrap"
+import {Modal,ModalBody, ModalHeader} from "reactstrap"
 import Swal from 'sweetalert2';
 
 import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_Tuyen";
@@ -176,6 +176,12 @@ function TotalCart() {
         </ul>);
     }
     const [showModal, setShowModal] = useState(false);
+
+    const wallets = [
+        {name: 'Momo', link_image: 'https://sharecode.vn/assets/images/vi-momo.png'},
+        {name: 'ViettelPay', link_image: 'https://sharecode.vn/assets/images/vi-vietel-pay.png'},
+        {name: 'NganLuong', link_image: 'https://sharecode.vn/assets/images/vi-ngan-luong.png'}
+    ]
     return (
         <>
             <Modal size='lg' isOpen={showModal} toggle={() => setShowModal(false)}>
@@ -187,8 +193,16 @@ function TotalCart() {
                         </div>
                     </div>
                 </ModalHeader>
-                <ModalBody>
-                    {/* Nội dung trong phần ModalBody */}
+                <ModalBody className="body-modal">
+                    <div className="body-content">
+                        {
+                            wallets.map((value, index) => (
+                                <div className="electronic-wallet">
+                                    <img src={value.link_image} alt=""/>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </ModalBody>
             </Modal>
 

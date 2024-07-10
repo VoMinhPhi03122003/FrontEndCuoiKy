@@ -21,3 +21,24 @@
 .custom-close-button:hover {
     color: #ff0000; /* Màu khi di chuột qua nút đóng */
 }
+
+.body-content {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.electronic-wallet {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.electronic-wallet img {
+    padding: 5px;
+}
+
+.electronic-wallet:hover{
+    background-color: #e1d1d1;
+    cursor: pointer;
+}
