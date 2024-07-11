@@ -2,6 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import ListProducts from "../components/TopProductPage/ListProducts";
 import ProductDetails from "../components/ProductDetailPage/ProductDetails";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
+import {LikedCodes} from "./components/Commons/LikedCodes";
 
 import App from "../App";
 import LoginPage from "../components/AuthenticationPage/Login";
@@ -57,6 +58,11 @@ const listAuthentication = [
     }
  ]
 
+const likedCodes = [{
+    path: '/liked-codes',
+    element: <LikedCodes/>
+}]
+
 const cart = [{
     path: '/cart-details',
     element: <CartDetailPage/>
@@ -70,5 +76,6 @@ export const router = createBrowserRouter([
     profile,
     ...listProducts,
     ...listAuthentication,
-    ...cart
+    ...cart,
+    ...likedCodes
 ])

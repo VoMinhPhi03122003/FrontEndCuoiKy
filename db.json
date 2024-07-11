@@ -3864,6 +3864,1153 @@
       "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
       "price": 600000
+    },
+    {
+      "id": 81,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/source-bubble-elf---pop-shooter-source-unity-16151.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/source-bubble-elf---pop-shooter-source-unity-16151.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-bubble-elf---pop-shooter-source-unity-16152.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-bubble-elf---pop-shooter-source-unity-16153.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Source Bubble Elf - Pop Shooter Source Unity",
+      "description": "Thích chơi game bắn bong bóng miễn phí? Source code game bắn bong bóng hay nhất! Nhiều sự kết hợp của các kỹ năng & tên lửa đẩy mạnh mẽ giúp bạn giải các câu đố.",
+      "release": "13-4-2023",
+      "file": {
+        "name": "BubbleBubble.rar",
+        "type": "Full code",
+        "size": 132.2,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 82,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/break-it---game-3d-co-san-google-admob---game-co-tren-chplay-103510.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/break-it---game-3d-co-san-google-admob---game-co-tren-chplay-103510.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/break-it---game-3d-co-san-google-admob---game-co-tren-chplay-103510.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/break-it---game-3d-co-san-google-admob---game-co-tren-chplay-103511.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Break it - game 3D có sẵn google admob - game có trên Chplay",
+      "description": "Break It là một game di động bình thường, nhịp độ nhanh. Lối chơi độc đáo, một chạm (và giữ) mang lại trải nghiệm đơn giản nhưng thú vị.",
+      "release": "23-3-2023",
+      "file": {
+        "name": "breakit.unitypackage",
+        "type": "Full code",
+        "size": 355,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 83,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/angry-birds-va-nhung-nguoi-ban.-13192.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/angry-birds-va-nhung-nguoi-ban.-13192.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/angry-birds-va-nhung-nguoi-ban.-13192.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/angry-birds-va-nhung-nguoi-ban.-13193.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Angry Birds và những người bạn",
+      "description": "Game đã được phát triển thêm các nhân vật và các tính năng so với các phiên bản free hiện có.",
+      "release": "06-1-2023",
+      "file": {
+        "name": "game angrybirds.zip",
+        "type": "Full code",
+        "size": 660,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 84,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/mo-phong-khong-gian-bao-tang-unity3d-source-code-game-182857.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/mo-phong-khong-gian-bao-tang-unity3d-source-code-game-182857.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/mo-phong-khong-gian-bao-tang-unity3d-source-code-game-182857.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/mo-phong-khong-gian-bao-tang-unity3d-source-code-game-182858.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Mô phỏng không gian bảo tàng Unity3D Source code game",
+      "description": "Sử dụng công cụ Unity 3D để xây dựng không gian bảo tàng trưng bày mẫu vật, tượng điêu khắc, tranh nghệ thuật,... Mô phỏng hoạt động thăm quan của du khách với các tương tác từ bàn phím.",
+      "release": "14-11-2022",
+      "file": {
+        "name": "MuseumUnity.rar",
+        "type": "Full code",
+        "size": 440,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 85,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/unity-game-happy-glass-draw-lines-unity-game-100-cap-do-14297.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/unity-game-happy-glass-draw-lines-unity-game-100-cap-do-14297.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/unity-game-happy-glass-draw-lines-unity-game-100-cap-do-14297.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/unity-game-happy-glass-draw-lines-unity-game-100-cap-do-14298.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Unity Game Happy Glass Draw Lines | Unity Game 100 Cấp độ",
+      "description": "Happy Glass - Draw Lines là trò chơi Xếp hình đường vẽ mới. Ly buồn vì cạn. Công việc của bạn là vẽ một đường để làm cho chiếc ly chứa đầy chất lỏng và mỉm cười trở lại!",
+      "release": "15-7-2022",
+      "file": {
+        "name": "happyglass.zip",
+        "type": "Full code",
+        "size": 1.68,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 86,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/unity-game-archery-clash-unity-game-40-cap-do-14368.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/unity-game-archery-clash-unity-game-40-cap-do-14368.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/unity-game-archery-clash-unity-game-40-cap-do-14368.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/unity-game-archery-clash-unity-game-40-cap-do-143610.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Unity Game Archery Clash | Unity Game 40 cấp độ",
+      "description": "Dễ dàng reskin 40 cấp độ. Dễ dàng sửa đổi Dễ dàng tạo cấp độ mới Quảng cáo Admob và Unity",
+      "release": "14-7-2022",
+      "file": {
+        "name": "ArcheryClash.zip",
+        "type": "Full code",
+        "size": 84,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 87,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/source-code-game-game-air-plane-demo-full-code-full-do-an-kem-bao-cao-1126.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/source-code-game-game-air-plane-demo-full-code-full-do-an-kem-bao-cao-1126.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-game-game-air-plane-demo-full-code-full-do-an-kem-bao-cao-1126.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-game-game-air-plane-demo-full-code-full-do-an-kem-bao-cao-1127.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Source code game Game Air-plane demo + full code + full đồ án kèm báo cáo",
+      "description": "Code đồ án Game Air-plane lấy ý tưởng từ game plappy bird nhưng đã bỏ qua phần trọng lực và có 2 màn chơi dễ và khó. full file báo cáo.",
+      "release": "22-6-2022",
+      "file": {
+        "name": "game_airplane.rar",
+        "type": "Full code",
+        "size": 50,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 88,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/3d-car-model---mo-hinh-3d-xe-oto-audi-voi-nhieu-bo-phan-chi-tiet-kem-theo-mot-so-chuyen-dong-animation-chay-tot-tren-3ds-max-va-xuat-file-fbx-18136.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/3d-car-model---mo-hinh-3d-xe-oto-audi-voi-nhieu-bo-phan-chi-tiet-kem-theo-mot-so-chuyen-dong-animation-chay-tot-tren-3ds-max-va-xuat-file-fbx-18136.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/3d-car-model---mo-hinh-3d-xe-oto-audi-voi-nhieu-bo-phan-chi-tiet-kem-theo-mot-so-chuyen-dong-animation-chay-tot-tren-3ds-max-va-xuat-file-fbx-18136.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/3d-car-model---mo-hinh-3d-xe-oto-audi-voi-nhieu-bo-phan-chi-tiet-kem-theo-mot-so-chuyen-dong-animation-chay-tot-tren-3ds-max-va-xuat-file-fbx-18138.jpg"
+      ],
+      "type": {
+        "id": "unity",
+        "name": "Unity",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "3D car model - mô hình 3d xe ôtô Audi với nhiều bộ phận chi tiết + kèm theo một số chuyển động Animation chạy tốt trên 3ds max và xuất file fbx",
+      "description": "Mô hình 3D xe ôtô Audi với nhiều bộ phận chi tiết, thiết kế rõ, đẹp, dễ chỉnh sửa, kèm theo một số chuyển động animation mượt. Chạy tốt trên 3ds max và xuất file FBX... dùng tốt cho các 3d game, soft.",
+      "release": "02-7-2022",
+      "file": {
+        "name": "CarAudi_ver1.rar",
+        "type": "Full code",
+        "size": 34,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 89,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/code-web-ban-hang-thoi-trang-nam-nu-mat-kinh-giay-phu-kien-html-css-js-responsive-14025.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/code-web-ban-hang-thoi-trang-nam-nu-mat-kinh-giay-phu-kien-html-css-js-responsive-14025.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/code-web-ban-hang-thoi-trang-nam-nu-mat-kinh-giay-phu-kien-html-css-js-responsive-14025.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/code-web-ban-hang-thoi-trang-nam-nu-mat-kinh-giay-phu-kien-html-css-js-responsive-14027.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Code Web bán hàng thời trang nam nữ, mắt kính, giày, phụ kiện (html, css, js, responsive)",
+      "description": "Giao diện trang Web bán hàng thời trang nam nữ, mắt kính, giày, phụ kiện (html, css, js, responsive).",
+      "release": "08-6-2023",
+      "file": {
+        "name": "hoanghaifashion.zip",
+        "type": "Full code",
+        "size": 53.3,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 90,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-web-ban-do-dien-tu-thoi-trang-do-gia-dung-bang-html-css-js-153728.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-web-ban-do-dien-tu-thoi-trang-do-gia-dung-bang-html-css-js-153728.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-web-ban-do-dien-tu-thoi-trang-do-gia-dung-bang-html-css-js-153728.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-web-ban-do-dien-tu-thoi-trang-do-gia-dung-bang-html-css-js-153729.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template web bán đồ điện tử, thời trang, đồ gia dụng bằng html, css, js",
+      "description": "Giao diện Website bán hàng thương mại điện tử bằng HTML+CSS thuần Dành cho muốn sử dụng để tham khảo và làm code php.",
+      "release": "08-5-2023",
+      "file": {
+        "name": "alice.rar",
+        "type": "Full code",
+        "size": 14.9,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 91,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-shop-ban-thuc-an-cho-meo-bang-html5cssjs-104555.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-shop-ban-thuc-an-cho-meo-bang-html5cssjs-104555.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-shop-ban-thuc-an-cho-meo-bang-html5cssjs-104555.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-shop-ban-thuc-an-cho-meo-bang-html5cssjs-104556.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website shop bán thức ăn cho mèo bằng html5,css,js",
+      "description": "Template web bán thức ăn cho mèo : + Tự thiết kế trên figma và cắt + Code bằng html5, css, js.",
+      "release": "05-5-2023",
+      "file": {
+        "name": "Catto_Shop.rar",
+        "type": "Code",
+        "size": 8.78,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 92,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/source-houzing-%e2%80%93-real-estate-wordpress-theme-154119.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/source-houzing-%e2%80%93-real-estate-wordpress-theme-154119.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-houzing-%E2%80%93-real-estate-wordpress-theme-154119.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-houzing-%E2%80%93-real-estate-wordpress-theme-154120.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Source Houzing – Real Estate WordPress Theme",
+      "description": "With Houzing – Real Estate WordPress Theme users are able to manage their own listings without accessing admin dashboard. They can manage their profile, password and payment backlog too.",
+      "release": "02-4-2023",
+      "file": {
+        "name": "wordpress_theme.zip",
+        "type": "Full code",
+        "size": 44,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 93,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/source-code-do-an-website-shop-ban-thoi-trang---php---xampp-134351.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/source-code-do-an-website-shop-ban-thoi-trang---php---xampp-134351.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-do-an-website-shop-ban-thoi-trang---php---xampp-134351.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-do-an-website-shop-ban-thoi-trang---php---xampp-134352.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Source code đồ án webSite Shop bán Thời Trang - PHP - Xampp",
+      "description": "Code Web động được viết trên nền tảng PHP kết nối với Xampp xây dựng cơ sở dữ liệu, có các chức năng cơ bản của một website thương mại điện tử.",
+      "release": "29-3-2023",
+      "file": {
+        "name": "camperstore.rar",
+        "type": "Full code",
+        "size": 132,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 94,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-giao-dien-website-gioi-thieu-quang-ba-du-lich-dat-tour-du-lich-chuan-seo-05334.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-giao-dien-website-gioi-thieu-quang-ba-du-lich-dat-tour-du-lich-chuan-seo-05334.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-giao-dien-website-gioi-thieu-quang-ba-du-lich-dat-tour-du-lich-chuan-seo-05334.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-giao-dien-website-gioi-thieu-quang-ba-du-lich-dat-tour-du-lich-chuan-seo-05335.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template giao diện website giới thiệu quảng bá du lịch đặt tour du lịch chuẩn seo",
+      "description": "Template giao diện website giới thiệu quảng bá du lịch đặt tour du lịch chuẩn seo sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "22-12-2022",
+      "file": {
+        "name": "pacific-main.zip",
+        "type": "Full code",
+        "size": 16.9,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 95,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-gioi-thieu-va-kinh-doanh-coffee-dat-coffee-online-04250.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-gioi-thieu-va-kinh-doanh-coffee-dat-coffee-online-04250.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-gioi-thieu-va-kinh-doanh-coffee-dat-coffee-online-04250.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-gioi-thieu-va-kinh-doanh-coffee-dat-coffee-online-04251.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website giới thiệu và kinh doanh coffee đặt coffee online",
+      "description": "Template website giới thiệu và kinh doanh coffee đặt coffee online sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "22-12-2022",
+      "file": {
+        "name": "coffee-master.zip",
+        "type": "Full code",
+        "size": 6.64,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 96,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-ban-hang-noi-that-shop-ban-hang-noi-that-chuan-seo-html-css-03514.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-ban-hang-noi-that-shop-ban-hang-noi-that-chuan-seo-html-css-03514.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-ban-hang-noi-that-shop-ban-hang-noi-that-chuan-seo-html-css-03514.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-ban-hang-noi-that-shop-ban-hang-noi-that-chuan-seo-html-css-03515.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template bán hàng nội thất shop bán hàng nội thất chuẩn seo html css",
+      "description": "Template bán hàng nội thất shop bán hàng nội thất chuẩn seo html css sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "22-12-2022",
+      "file": {
+        "name": "temp_noi_that.zip",
+        "type": "Full code",
+        "size": 8.24,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 97,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-xem-phim-anime-cuc-dep-chuan-seo-2022-02841.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-xem-phim-anime-cuc-dep-chuan-seo-2022-02841.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-xem-phim-anime-cuc-dep-chuan-seo-2022-02841.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-xem-phim-anime-cuc-dep-chuan-seo-2022-02845.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website xem phim anime cực đẹp chuẩn seo 2022",
+      "description": "Template website xem phim anime cực đẹp chuẩn seo 2022 sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "22-12-2022",
+      "file": {
+        "name": "temp-anime.zip",
+        "type": "Full code",
+        "size": 29.9,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 98,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-ban-hang-thoi-trang-nam-nu-shop-ban-hang-thoi-trang-chuan-seo-2022-01942.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-ban-hang-thoi-trang-nam-nu-shop-ban-hang-thoi-trang-chuan-seo-2022-01942.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-ban-hang-thoi-trang-nam-nu-shop-ban-hang-thoi-trang-chuan-seo-2022-01942.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-ban-hang-thoi-trang-nam-nu-shop-ban-hang-thoi-trang-chuan-seo-2022-01943.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website bán hàng thời trang nam nữ shop bán hàng thời trang chuẩn seo 2022",
+      "description": "Template website bán hàng thời trang nam nữ shop bán hàng thời trang chuẩn seo 2022 sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "22-12-2022",
+      "file": {
+        "name": "thoi_trang.rar",
+        "type": "Full code",
+        "size": 6.38,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 99,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-ban-hang-thoi-trang-nu-theo-phong-cach-chau-au-cuc-dep-2022-0119.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-ban-hang-thoi-trang-nu-theo-phong-cach-chau-au-cuc-dep-2022-0119.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-ban-hang-thoi-trang-nu-theo-phong-cach-chau-au-cuc-dep-2022-01111.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-ban-hang-thoi-trang-nu-theo-phong-cach-chau-au-cuc-dep-2022-01113.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website bán hàng thời trang nữ theo phong cách châu âu cực đẹp 2022",
+      "description": "Template website bán hàng thời trang nữ theo phong cách châu âu cực đẹp 2022 sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "22-12-2022",
+      "file": {
+        "name": "team-violet.zip",
+        "type": "Full code",
+        "size": 10.4,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 100,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-gioi-thieu-lo-trinh-hoc-tu-duy-iq-moi-nhat-chuan-data-235344.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-gioi-thieu-lo-trinh-hoc-tu-duy-iq-moi-nhat-chuan-data-235344.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-gioi-thieu-lo-trinh-hoc-tu-duy-iq-moi-nhat-chuan-data-235344.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-gioi-thieu-lo-trinh-hoc-tu-duy-iq-moi-nhat-chuan-data-235345.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website giới thiệu lộ trình học tư duy IQ mới nhất chuẩn data",
+      "description": "Template website giới thiệu lộ trình học tư duy IQ mới nhất chuẩn data sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "21-12-2022",
+      "file": {
+        "name": "lo_trinh_iq.rar",
+        "type": "Full code",
+        "size": 3.73,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 101,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-giao-dien-website-quan-ly-admin-quan-ly-thanh-toan-truc-tuyen-234413.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-giao-dien-website-quan-ly-admin-quan-ly-thanh-toan-truc-tuyen-234413.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-giao-dien-website-quan-ly-admin-quan-ly-thanh-toan-truc-tuyen-234413.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-giao-dien-website-quan-ly-admin-quan-ly-thanh-toan-truc-tuyen-234414.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template giao diện website quản lý admin quản lý thanh toán trực tuyến",
+      "description": "Template giao diện website quản lý admin quản lý thanh toán trực tuyến sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "21-12-2022",
+      "file": {
+        "name": "template_website.rar",
+        "type": "Full code",
+        "size": 24.7,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 102,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/template-website-giao-dien-website-gioi-thieu-va-moi-gioi-bat-dong-san-cho-thue-biet-thu-vina-233335.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/template-website-giao-dien-website-gioi-thieu-va-moi-gioi-bat-dong-san-cho-thue-biet-thu-vina-233335.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-giao-dien-website-gioi-thieu-va-moi-gioi-bat-dong-san-cho-thue-biet-thu-vina-233335.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/template-website-giao-dien-website-gioi-thieu-va-moi-gioi-bat-dong-san-cho-thue-biet-thu-vina-233336.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Template website giao diện website giới thiệu và môi giới bất động sản cho thuê biệt thự vina",
+      "description": "Template website giao diện website giới thiệu và môi giới bất động sản cho thuê biệt thự vina sử dụng cho đồ án hoặc học tập rất tốt.",
+      "release": "21-12-2022",
+      "file": {
+        "name": "gioi_thieu_bds.rar",
+        "type": "Full code",
+        "size": 7.99,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 103,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/source-code-web-cong-cu-tai-video-tiktok-douyin-api-goc---reactjs-api-php-23121.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/source-code-web-cong-cu-tai-video-tiktok-douyin-api-goc---reactjs-api-php-23121.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-web-cong-cu-tai-video-tiktok-douyin-api-goc---reactjs-api-php-23121.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-web-cong-cu-tai-video-tiktok-douyin-api-goc---reactjs-api-php-23122.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Source code web công cụ tải video TikTok, Douyin",
+      "description": "Source code web công cụ tải video TikTok, Douyin bằng ReactJS kết hợp API PHP.",
+      "release": "21-12-2022",
+      "file": {
+        "name": "tiktok_download.zip",
+        "type": "Full code",
+        "size": 727,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 104,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/source-code-website-phong-gymfitness-bang-angularjs-62645.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/source-code-website-phong-gymfitness-bang-angularjs-62645.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-website-phong-gymfitness-bang-angularjs-62757.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/source-code-website-phong-gymfitness-bang-angularjs-6285.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Source code website phòng Gym&Fitness bằng AngularJs",
+      "description": "Source code website phòng Gym & Fitness bằng Angular FrameWork - Đang giảm giá.",
+      "release": "18-11-2022",
+      "file": {
+        "name": "gym_website.rar",
+        "type": "Full code",
+        "size": 77,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 105,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/ung-dung-chat-realtime-reactjs-nodejs---zalo-clone-1138.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/ung-dung-chat-realtime-reactjs-nodejs---zalo-clone-1138.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/ung-dung-chat-realtime-reactjs-nodejs---zalo-clone-1138.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/ung-dung-chat-realtime-reactjs-nodejs---zalo-clone-1139.jpg"
+      ],
+      "type": {
+        "id": "html",
+        "name": "HTML & Template",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Ứng dụng chat realtime Reactjs Nodejs - Zalo clone",
+      "description": "Ứng dụng chat realtime Reactjs Nodejs - Zalo clone Db: mongoDB Feature: login, signup, forgot pass, chat, add friend like facebook, upate avatar.",
+      "release": "29-10-2022",
+      "file": {
+        "name": "zalo_server.rar",
+        "type": "Full code",
+        "size": 33.4,
+        "unit": "KB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 106,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/tu-dong-nhan-dang-bien-so-xe-voi-visual-studio-opencv-94852.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/tu-dong-nhan-dang-bien-so-xe-voi-visual-studio-opencv-94852.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/tu-dong-nhan-dang-bien-so-xe-voi-visual-studio-opencv-94854.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/tu-dong-nhan-dang-bien-so-xe-voi-visual-studio-opencv-94855.jpg"
+      ],
+      "type": {
+        "id": "c_cpp",
+        "name": "C/C++",
+        "img": "https://www.codester.com/static/uploads/categories/6/icon-alt.png"
+      },
+      "name": "Tự động nhận dạng biển số xe với Visual Studio OpenCV",
+      "description": "OpenCV Tự động nhận dạng biển số xe Tiền xử lý Tìm & cắt biển số Chia tách kí tự và Nhận dạng ký tự và chiến thôi anh em. Vẫn còn thiếu sót một số chức năng anh em đọc tài liệu và cải thiện nhé.",
+      "release": "24-5-2023",
+      "file": {
+        "name": "ducbaopro.rar",
+        "type": "Full code",
+        "size": 91,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 107,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/code-website-ban-hang-asp.net-mvc5-sql-server-entity-framework-24737.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/code-website-ban-hang-asp.net-mvc5-sql-server-entity-framework-24737.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/code-website-ban-hang-asp.net-mvc5-sql-server-entity-framework-24737.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/code-website-ban-hang-asp.net-mvc5-sql-server-entity-framework-24738.jpg"
+      ],
+      "type": {
+        "id": "c_cpp",
+        "name": "C/C++",
+        "img": "https://www.codester.com/static/uploads/categories/6/icon-alt.png"
+      },
+      "name": "Code Website bán hàng Asp.Net MVC5 + Sql server + Entity Framework",
+      "description": "Source Code website bán hàng Asp.Net MVC5 sử dụng đúng phiên bản Visual studio 2019 và SQL Server 2019.",
+      "release": "23-2-2023",
+      "file": {
+        "name": "web-ban-hang.rar",
+        "type": "Full code",
+        "size": 211,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 108,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/do-an-lap-trinh-huong-doi-tuong-quan-ly-thu-vien-bang-c-232426.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/do-an-lap-trinh-huong-doi-tuong-quan-ly-thu-vien-bang-c-232426.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/do-an-lap-trinh-huong-doi-tuong-quan-ly-thu-vien-bang-c-232426.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/do-an-lap-trinh-huong-doi-tuong-quan-ly-thu-vien-bang-c-232426.jpg"
+      ],
+      "type": {
+        "id": "c_cpp",
+        "name": "C/C++",
+        "img": "https://www.codester.com/static/uploads/categories/6/icon-alt.png"
+      },
+      "name": "Đồ án lập trình hướng đối tượng Quản lý thư viện bằng C++",
+      "description": "Đồ án lập trình hướng đối tượng Quản lý thư viện bằng C++, danh sách liên kết, menu động",
+      "release": "03-1-2023",
+      "file": {
+        "name": "Sharecode.zip",
+        "type": "Full code",
+        "size": 349,
+        "unit": "KB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 109,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/full-code-phan-mem-quan-ly-thu-vien-bang-c-23231.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/full-code-phan-mem-quan-ly-thu-vien-bang-c-23231.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/full-code-phan-mem-quan-ly-thu-vien-bang-c-23231.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/full-code-phan-mem-quan-ly-thu-vien-bang-c-23231.jpg"
+      ],
+      "type": {
+        "id": "c_cpp",
+        "name": "C/C++",
+        "img": "https://www.codester.com/static/uploads/categories/6/icon-alt.png"
+      },
+      "name": "Full code phần mềm Quản lý thư viện bằng C",
+      "description": "Quản lý thư viện bằng C, sử dụng danh sách liên kết, xem danh sách sách, tìm kiếm, mượn trả sách, đọc và lưu từ file text.",
+      "release": "02-1-2023",
+      "file": {
+        "name": "zalo_server.rar",
+        "type": "Full code",
+        "size": 5.22,
+        "unit": "KB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 110,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/full-source-code-game-gomoku-co-caro-144353.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/full-source-code-game-gomoku-co-caro-144353.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/full-source-code-game-gomoku-co-caro-144353.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/full-code-phan-mem-quan-ly-thu-vien-bang-c-23231.jpg"
+      ],
+      "type": {
+        "id": "c_cpp",
+        "name": "C/C++",
+        "img": "https://www.codester.com/static/uploads/categories/6/icon-alt.png"
+      },
+      "name": "Full source code Game Gomoku cờ caro",
+      "description": "Source code Game Gomoku hay còn gọi là cờ caro đơn giản sử dụng mô hình Server/Client và giao thức vào ra MFC.AsyncSelect. Game gồm 2 project con là Project Server và Project Client.",
+      "release": "06-4-2021",
+      "file": {
+        "name": "Gomoku.rar",
+        "type": "Full code",
+        "size": 457,
+        "unit": "KB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 111,
+      "img": "https://topcode.vn/FilesUpload/CodeLarge/ma-nguon-trinh-duyet-web-tcg-phien-ban-1.0-17717.jpg",
+      "thumbnails": [
+        "https://topcode.vn/FilesUpload/CodeLarge/ma-nguon-trinh-duyet-web-tcg-phien-ban-1.0-17717.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/ma-nguon-trinh-duyet-web-tcg-phien-ban-1.0-17717.jpg",
+        "https://topcode.vn/FilesUpload/CodeUpload/ma-nguon-trinh-duyet-web-tcg-phien-ban-1.0-17719.jpg"
+      ],
+      "type": {
+        "id": "c_cpp",
+        "name": "C/C++",
+        "img": "https://www.codester.com/static/uploads/categories/6/icon-alt.png"
+      },
+      "name": "Mã Nguồn Trình Duyệt Web TCG Phiên bản 1.0",
+      "description": "Đây là mã nguồn Trình duyệt web do TC Team phát triển và đã đăng ký bản quyền. Hỗ trợ nhiều chức năng như trình duyệt ẩn danh, mở tập tin trên trình duyệt, lịch sử duyệt web,...",
+      "release": "12-4-2020",
+      "file": {
+        "name": "TCGBrowser.zip",
+        "type": "Full code",
+        "size": 46.42,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "viewed": 1000,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "<div>Chức năng xác thực cơ bản: đăng nhập, đăng ký, đăng xuất, xác thực email. Kiểm tra role của tài khoản trước khi đăng nhập vào ứng dụng. Hiển thị giao diện tùy theo role của tài khoản. Hiển thị thông tin cá nhân. Không ai có thể đăng nhập nếu tài khoản chưa được xác thực.<br/>Phục hồi mật khẩu khi quên mật khẩu bằng email (quên demo :v).<br/>Sử dụng ViewPager2 để lưu trữ Fragment và giữ trạng thái cho các Fragment.<br/>Sử dụng ViewPager2 để chèn nhiều Fragment vào một Activity hoặc một Fragment khác.</div><div className='d-feature'>Các chức năng chính:</div><ul><li>100% Kotlin</li><li>Native Android</li><li>Jetpack Compose</li><li>Hỗ trờ ngôn ngữ đánh dấu Markdown</li><li>Lưu lịch sử chat</li><li>Truy cập toàn bộ mã nguồn</li><li>Mua trong ứng dụng để mở khóa phiên bản PRO</li><li>Tích hợp Admob Ads</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
     }
   ],
 
@@ -3890,11 +5037,16 @@
       "discount_percent": 0.1
     }
   ],
-  "account": [
+  "accounts": [
     {
-      "id": 1,
+      "email": "nguyenphutai1234@gmail.com",
+      "hashPass": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "id": 1
+    },
+    {
       "email": "nguyenphutai840@gmail.com",
-      "password": "123"
+      "hashPass": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "id": 2
     }
   ]
 }

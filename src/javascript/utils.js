@@ -31,6 +31,9 @@ export function getTypeName(typeId) {
     if (typeId === 'visual_csharp') return 'Visual C#'
     if (typeId === 'wordpress') return 'WordPress'
     if (typeId === 'ios') return 'iOS'
+    if (typeId === 'html') return 'HTML & Template'
+    if (typeId === 'c_cpp') return 'C/C++'
+    if (typeId === 'unity') return 'Unity'
     return null
 }
 

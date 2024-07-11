@@ -229,6 +229,100 @@
     background-color: #edf1f2;
 }
 
+.action-like.a-active {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3c62b2;
+    -webkit-animation: 0.8s;
+    animation: 0.8s;
+}
+
+.action-like {
+    display: table;
+    width: 32px;
+    text-align: center;
+    height: 32px;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(90, 90, 90, .1);
+    color: #58666e;
+    border: 1px solid #dee5e7;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.action-like i {
+    display: table-cell;
+    vertical-align: middle;
+    transition: 0.2s;
+}
+
+.action-like:hover, .action-like:focus {
+    background-color: #edf1f2;
+}
+
+.action-like.is-active {
+    color: #fff;
+    background-color: #fd88fb;
+    border-color: #fd88fb;
+    transition: .05s;
+    -webkit-animation: 0.8s;
+    animation: 0.8s;
+}
+
+.action-like.is-active:before, .action-like.is-active:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -2px;
+    margin-top: -2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    transform: scale(0);
+    color: #fd88fb;
+    border: 1px solid transparent;
+    box-shadow: -0.8em 0 0 -2px, 0.8em 0 0 -2px, 0 -0.8em 0 -2px, 0 0.8em 0 -2px, -0.6em -0.6em 0 -2px, -0.6em 0.6em 0 -2px, 0.6em -0.6em 0 -2px, 0.6em 0.6em 0 -2px;
+}
+
+.action-like.is-active:before {
+    -webkit-animation: effect-01-animation 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: effect-01-animation 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.action-like.is-active:after {
+    -webkit-animation: effect-02-animation 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: effect-02-animation 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes effect-01-animation {
+    from {
+        transform: rotate(-15deg) scale(0);
+    }
+    40% {
+        opacity: 1;
+    }
+    to {
+        transform: rotate(-30deg) scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes effect-02-animation {
+    from {
+        transform: rotate(10deg) scale(0);
+    }
+    40% {
+        opacity: 1;
+    }
+    to {
+        transform: rotate(30deg) scale(2);
+        opacity: 0;
+    }
+}
+
 .product-item-stars {
     font-size: 15px;
 }
@@ -254,7 +348,7 @@
 
 .product-item-brand {
     cursor: pointer;
-    max-width: 50%;
+    max-width: 60%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -366,7 +460,7 @@
 /* [ Search Not Found ]
 --------------------------------*/
 .search-not-found {
-    padding-top: 100px;
+    padding: 100px 0 100px 0;
     text-align: center;
 }
 

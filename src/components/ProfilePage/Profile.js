@@ -1,27 +1,29 @@
 import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
-import breadcrumb_1 from "../../img/breadcrumb/breadcrumb_1.png";
-import {Link} from "react-router-dom";
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 
-function Breadcrumb(){
-    return(
-        <section className="breadcrumb-section set-bg" style={{ backgroundImage: `url(${breadcrumb_1})` }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12 text-center">
-                        <div className="breadcrumb__text">
-                            <div className="breadcrumb__option">
-                                <Link to="/">Trang chủ</Link>
-                                <Link to="/profile">Hồ sơ của tôi</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+import {Link, useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
+
+const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Hồ sơ cá nhân", link: "/profile"}]
+
 function SectionProfile() {
+    const [email, setEmail] = useState('');
+    const navigate = useNavigate();
+    useEffect(() => {
+        const storedEmail = localStorage.getItem('account');
+        if (storedEmail) {
+            setEmail(storedEmail);
+        } else {
+            navigate('/login');
+        }
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem('account');
+        setEmail('');
+        navigate('/');
+    };
     return (
         <section className="contact-us profile">
             <div className="container">
@@ -37,14 +39,10 @@ function SectionProfile() {
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="#"><i className="bi bi-receipt"></i> Lịch sử mua hàng</a>
-                                    </li>
-                                    <li>
                                         <Link to="/change-password"><i className="bi bi-lock"></i> Đổi mật khẩu</Link>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i className="bi bi-box-arrow-in-right"></i> Đăng xuất</a>
+                                        <a href="/" onClick={handleLogout}><i className="bi bi-box-arrow-in-right"></i> Đăng xuất</a>
                                     </li>
                                 </ul>
                             </div>
@@ -125,7 +123,7 @@ export default function ProfilePage(){
     return(
         <>
             <Header/>
-            <Breadcrumb/>
+            <SectionBreadcrumb breadcrumbs={breadcrumbs}/>
             <SectionProfile/>
             <Footer/>
         </>

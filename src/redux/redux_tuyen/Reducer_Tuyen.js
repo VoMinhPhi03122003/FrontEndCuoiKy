@@ -11,6 +11,10 @@ const initCartState = {
     discount_percent: 0 // % giảm giá của đơn hàng
 }
 
+const initModalState = {
+    modal_payment: false
+}
+
 export const cartReducer = (state = initCartState, action) => {
 
     /* Đây là Reducer, một hàm xử lý các hành động (actions) để cập nhật trạng thái của ứng dụng */
@@ -90,6 +94,25 @@ export const discountCodeReducer = (state = {product: ''}, action) => {
             return {
                 ...state,
                 product: action.payload
+            }
+        }
+        default:
+            return state
+    }
+}
+
+export const modalReducer = (state = initModalState, action) => {
+    switch (action.type) {
+        case'modal/show-modal-payment': {
+            return {
+                ...state,
+                modal_payment: action.payload
+            }
+        }
+        case'modal/close-model-payment': {
+            return {
+                ...state,
+                modal_payment: action.payload
             }
         }
         default:

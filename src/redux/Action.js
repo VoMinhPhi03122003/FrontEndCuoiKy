@@ -1,42 +1,6 @@
-
-export const setType = (type) => {
-    return {
-        type: 'listProducts/type',
-        payload: type
-    }
-}
-
-
-export const setPage = (page) => {
-    return {
-        type: 'listProducts/page',
-        payload: page
-    }
-}
-export const setSort = (sort) => {
-    return {
-        type: 'listProducts/sort',
-        payload: sort
-    }
-}
-
-
-export const setLayout = (layout) => {
-    return {
-        type: 'listProducts/layout',
-        payload: layout
-    }
-}
-
-export const registerError = (data) =>{
-    return{
-        type: 'register/error',
-        payload: data
-    }
-}
-
-export const reset = () => {
-    return {
-        type: 'reset'
-    }
-}
+export const setType = (type) => ({type: 'products/type', payload: type})
+export const setPage = (page) => ({type: 'products/page', payload: page})
+export const setSort = (sort) => ({type: 'products/sort', payload: sort})
+export const setLayout = (layout) => ({type: 'products/layout', payload: layout})
+export const addLiked = (code) => ({type: 'liked/add', payload: code})
+export const reset = () => ({type: 'reset'})
