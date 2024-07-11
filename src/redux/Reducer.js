@@ -48,14 +48,14 @@ const listProductsReducer = (state = initialState, action) => {
     }
 }
 
-const likedCodesReducer = (state = {liked: []}, action) => {
+const likedCodesReducer = (state = {liked: JSON.parse(localStorage.getItem('liked'))}, action) => {
     switch (action.type) {
         case 'liked/add': {
             let likedCodes = undefined
             if (!state.liked.some(c => c.id === action.payload.id)) {
                 likedCodes = [...state.liked, action.payload]
             } else {
-                const index = state.liked.indexOf(action.payload)
+                const index = state.liked.findIndex(value => value.id === action.payload.id)
                 likedCodes = index > -1 ? [...state.liked.slice(0, index), ...state.liked.slice(index + 1)] : undefined
             }
             localStorage.setItem('liked', JSON.stringify(likedCodes))
