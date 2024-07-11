@@ -8,7 +8,7 @@ import {Link, useNavigate} from "react-router-dom";
 
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
 import {loginError} from "../../redux/redux_tai/Action";
 import {checkEmailExists, checkLogin} from "../../javascript/api/Api_Tai";
@@ -24,6 +24,13 @@ function SectionLogin() {
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
     const errorString = useSelector(errorLoginSelector);
+
+    useEffect(()=>{
+        const storedEmail = localStorage.getItem("account");
+        if(storedEmail){
+            navigate('/');
+        }
+    },[]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

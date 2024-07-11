@@ -1,4 +1,3 @@
-import {forEach} from "react-bootstrap/ElementChildren";
 import {hashText} from "../utils/Utils_Tai";
 
 export async function checkEmailExists(email) {
@@ -50,6 +49,36 @@ export async function checkLogin(email, passwordEnter) {
         } else {
             throw new Error('Something went wrong');
         }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+export async function changePassword(email, newPassword) {
+    try {
+        const hashPass = hashText(newPassword);
+        const url = `http://localhost:9810/api/accounts/?email=${encodeURIComponent(email)}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Failed to fetch account data.');
+        }
+        const accounts = await response.json();
+        const account = accounts.find((acc) => acc.email === email);
+        if (!account) {
+            throw new Error('Account not found.');
+        }
+        account.hashPass = hashPass;
+        const updateResponse = await fetch(`http://localhost:9810/api/accounts/${account.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(account),
+        });
+        if (!updateResponse.ok) {
+            throw new Error('Failed to update password.');
+        }
+        console.log('Password updated successfully!');
     } catch (error) {
         console.error('Error:', error);
     }
