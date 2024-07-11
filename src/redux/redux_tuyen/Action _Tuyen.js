@@ -30,3 +30,19 @@ export const updateDiscountCode = (product) => {
         payload: product
     }
 }
+
+export const showModalPayment = (checkShow) => {
+
+    if (checkShow === true) {
+        return {
+            type: 'modal/show-modal-payment',
+            payload: checkShow
+        }
+    }
+
+    return {
+        type: 'modal/close-model-payment',
+        payload: checkShow
+    }
+
+}

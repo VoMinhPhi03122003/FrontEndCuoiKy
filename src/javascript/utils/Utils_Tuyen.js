@@ -51,3 +51,20 @@ export function getPercentDiscount(discount_code, list_discount_code) {
        lấy ra giá trị (% giảm giá) của mã giảm giá có trong danh sách mã giảm giá lấy từ server
      */
 }
+
+export function payWithPaypal() {
+    alert('Thanh toán với PayPal');
+}
+
+export function payWithMomo() {
+    alert('Thanh toán với Momo');
+}
+
+export function payWithViettelPay() {
+    alert('Thanh toán với ViettelPay');
+
+}
+
+export function payWithNganLuong() {
+    alert('Thanh toán với NganLuong');
+}
