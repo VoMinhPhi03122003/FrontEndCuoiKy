@@ -3,7 +3,7 @@ import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link, useNavigate} from "react-router-dom";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
 import {useDispatch, useSelector} from "react-redux";
 import {forgotPassError} from "../../redux/redux_tai/Action";
@@ -32,7 +32,7 @@ function SectionForgotPass(){
         }else{
             checkEmailExists(email).then(check=>{
                 if(check){
-                    localStorage.setItem("EmailForgot", email);
+                    sessionStorage.setItem("email_forgot", email);
                     dispatch(forgotPassError({
                         errorForgotPass: ""
                     }))

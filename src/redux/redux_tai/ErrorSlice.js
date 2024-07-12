@@ -3,7 +3,8 @@ const initState = {
     errorRegister: "",
     errorLogin:"",
     errorChangePass:"",
-    errorForgotPass:""
+    errorForgotPass:"",
+    errorVerifyPass:""
 }
 const errorReducer = (state = initState, action) =>{
     switch (action.type) {
@@ -26,6 +27,11 @@ const errorReducer = (state = initState, action) =>{
             return {
                 ...state,
                 errorForgotPass: action.payload.errorForgotPass
+            }
+        case 'verifyPass/error':
+            return {
+                ...state,
+                errorVerifyPass: action.payload.errorVerifyPass
             }
         default:
             return state;
