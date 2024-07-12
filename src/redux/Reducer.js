@@ -12,37 +12,16 @@ export  const initialState = {
 
 const listProductsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'reset': {
-            return {
-                ...state,
-                ...initialState
-            }
-        }
-
-        case 'products/page': {
-            return {
-                ...state,
-                page: action.payload
-            }
-        }
-        case 'products/sort': {
-            return {
-                ...state,
-                sort: action.payload
-            }
-        }
-        case 'products/type': {
-            return {
-                ...state,
-               type: action.payload
-            }
-        }
-        case 'products/layout': {
-            return {
-                ...state,
-                layout: action.payload
-            }
-        }
+        case 'reset':
+            return {...state, ...initialState}
+        case 'products/page':
+            return {...state, page: action.payload}
+        case 'products/sort':
+            return {...state, sort: action.payload}
+        case 'products/type':
+            return {...state, type: action.payload}
+        case 'products/layout':
+            return {...state, layout: action.payload}
         default:
             return state
     }
@@ -69,11 +48,42 @@ const likedCodesReducer = (state = {liked: JSON.parse(localStorage.getItem('like
     }
 }
 
+const productReducer = (state = {product: null}, action) => {
+    switch (action.type) {
+        case 'product/put': {
+            return {
+                ...state,
+                product: action.payload
+            }
+        }
+        case 'product/increaseDownloaded': {
+            const data = {
+                "downloaded": state.product.downloaded + 1
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    downloaded: state.product.downloaded + 1
+                }
+            }
+        }
+        default:
+            return state
+    }
+}
+
 export const reducers = combineReducers({
     cartReducer: cartReducer,
     listProductsReducer: listProductsReducer,
-    errorReducer: errorReducer,
     discountCodeReducer: discountCodeReducer,
     likedCodesReducer: likedCodesReducer,
-    modalReducer: modalReducer
+    errorReducer: errorReducer,
+    productReducer
 })

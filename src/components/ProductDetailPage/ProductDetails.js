@@ -1,13 +1,16 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer";
 import '../../css/product-detail.css'
-import {useRef, useState} from "react";
+import {useMemo, useRef, useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
 import {Link, useLocation} from "react-router-dom";
 import {formatNumber, formatRating} from "../../javascript/utils";
 import Parser from 'html-react-parser'
+import {useDispatch, useSelector} from "react-redux";
+import {increaseDownloaded, putProduct} from "../../redux/Action";
 
-function DetailLeft({p}) {
+function DetailLeft() {
+    const p = useSelector(state => state.productReducer.product)
     const [slideIndex, setSlideIndex] = useState(0)
 
     function moveSlide(dir) {
@@ -59,7 +62,9 @@ export function StarRate({stars, type}) {
     )
 }
 
-function DetailCenter({p}) {
+function DetailCenter() {
+    const p = useSelector(state => state.productReducer.product)
+
     return (
         <div className="detail-center">
             <h6>{p.name} <span>[Mã sản phẩm {p.id}]</span></h6>
@@ -85,18 +90,26 @@ function DetailCenter({p}) {
     )
 }
 
-function DetailRight({p}) {
+function DetailRight() {
+    const product = useSelector(state => state.productReducer.product)
+    const dispatch = useDispatch()
+
+    function handledDownload() {
+        dispatch(increaseDownloaded())
+    }
+
     return (
         <div className="detail-right">
             <div className="detail-right-offer">
                 <h6>PHÍ DOWNLOAD</h6>
-                <span className="offer-price">{formatNumber((p.price), '.')}<sup>đ</sup></span>
-                <button className="offer-download"><img src="https://topcode.vn/assets/images/ic-down.png" alt=""/> TẢI NGAY</button>
+                <span className="offer-price">{formatNumber((product.price), '.')}<sup>đ</sup></span>
+                <button className="offer-download" onClick={handledDownload}>
+                    <img src="https://topcode.vn/assets/images/ic-down.png" alt=""/> TẢI NGAY</button>
                 <button className="offer-favorite"><i className="fa fa-thumbs-up"></i> Lưu vào yêu thích</button>
-                <span><span>CHIA SẺ NHANH</span> (CODE  {p.id})</span>
+                <span><span>CHIA SẺ NHANH</span> (CODE {product.id})</span>
                 <div>
                     <img src="https://topcode.vn/assets/images/share-email.png" alt=""/>
-                    <div>Gửi sản phẩm  tới email bạn bè</div>
+                    <div>Gửi sản phẩm tới email bạn bè</div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <span><i className="fa fa-thumbs-up"></i> Like</span>
@@ -106,6 +119,7 @@ function DetailRight({p}) {
         </div>
     )
 }
+
 function DetailDivider({title, refData}) {
     return (<div className="detail-divider mt-5" ref={refData}><span>{title}</span></div>)
 }
@@ -117,7 +131,7 @@ function DetailDescription({p, goTo}) {
             <div className="detail-description">
                 <div>{p.description}</div>
                 {Parser(p.detail)}
-                <div className="di-guide">XEM THÊM <span>==></span><span
+                <div className="di-guide">XEM THÊM <span>==</span><span
                     onClick={goTo}> Hướng dẫn cài đặt chi tiết</span></div>
             </div>
         </>
@@ -314,7 +328,8 @@ function Comment() {
     )
 }
 
-function DetailContent({p}) {
+function DetailContent() {
+    const p = useSelector(state => state.productReducer.product)
     const ref = useRef(null)
     const goToInstallation = () => ref.current.scrollIntoView({behavior: "auto"})
     return (
@@ -331,6 +346,11 @@ function DetailContent({p}) {
 
 function ProductDetailContainer() {
     const location = useLocation()
+    const dispatch = useDispatch()
+
+    useMemo(() => {
+        dispatch(putProduct(location.state))
+    }, [dispatch, location.state])
 
     return (
         <section className="product-details my-5">
@@ -339,16 +359,16 @@ function ProductDetailContainer() {
                     <div className="col-lg-9">
                         <div className="row">
                             <div className="col-lg-5">
-                                <DetailLeft p={location.state}/>
+                                <DetailLeft/>
                             </div>
                             <div className="col-lg-7">
-                                <DetailCenter  p={location.state}/>
+                                <DetailCenter/>
                             </div>
                         </div>
-                        <DetailContent p={location.state}/>
+                        <DetailContent/>
                     </div>
                     <div className="col-lg-3">
-                        <DetailRight  p={location.state}/>
+                        <DetailRight/>
                         <PopularProducts/>
                     </div>
                 </div>
