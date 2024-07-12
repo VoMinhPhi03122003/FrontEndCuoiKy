@@ -82,6 +82,20 @@ export const cartReducer = (state = initCartState, action) => {
             }
         }
 
+        case 'cart/reset': {
+
+            const updateCart = [];
+            const newTotalPrice = 0;
+            localStorage.setItem('cart', JSON.stringify(updateCart));
+            localStorage.setItem('total-price', JSON.stringify(newTotalPrice));
+
+            return {
+                ...state,
+                cart: updateCart,
+                totalPrice: newTotalPrice,
+                discount_percent: 0
+            }
+        }
 
         default :
             return state;

@@ -17,6 +17,12 @@ export const removeItemFromCart = (product) => {
     }
 }
 
+export const resetCart = () => {
+    return {
+        type: 'cart/reset'
+    }
+}
+
 export const updateDiscountPercent = (discount_percent) => {
     return {
         type: 'cart/update-discount-percent',

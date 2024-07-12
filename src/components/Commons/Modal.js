@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 
 import {downloadFile} from "../../javascript/utils/Utils_Tuyen";
 
-import {showModalPayment, updateStatePayment} from "../../redux/redux_tuyen/Action_Tuyen";
+import {showModalPayment, updateStatePayment, resetCart} from "../../redux/redux_tuyen/Action_Tuyen";
 
 import '../../css/modal.css';
 
@@ -42,6 +42,7 @@ export function ModalPayment() {
         }
     ]
 
+    const [contentRight, setContentRight] = useState(<div>Bạn cần thanh toán để tải code qua chức năng này!</div>);
     let content;
     if (cart.length > 0) {
         content = (
@@ -68,7 +69,9 @@ export function ModalPayment() {
 
                         </div>
                     </Col>
-                    <Col md={4}></Col>
+                    <Col md={4}>
+                        {contentRight}
+                    </Col>
                 </Row>
             </Container>
         )
@@ -77,35 +80,47 @@ export function ModalPayment() {
     }
     const clickPayment = (name_payment) => {
 
-        dispatch(updateStatePayment(name_payment)) // => gửi Action đến Store để cập nhật trạng thái thanh toán
+        dispatch(updateStatePayment(name_payment)); // Gửi Action đến Store để cập nhật trạng thái thanh toán
 
         setTimeout(() => {
-
-            /* nếu trạng thái thanh toán đã được cập nhật sau 1s kể từ khi bắt đầu gửi hàm dispatch */
-            if (checkPayment === true) {
-                Swal.fire({
-                    title: '',
-                    text: 'Thanh toán đơn hàng thành công',
-                    icon: 'success',
-                    confirmButtonText: 'OK',
-                    timer: 3000, // Thời gian tự động tắt thông báo sau 3 giây
-                    timerProgressBar: true // Hiển thị thanh tiến trình đếm ngược
-                }).then(() => {
-                    setShowButtonDownload(true);
-                });
-            }
-        }, 1000)
-
-    }
+            Swal.fire({
+                title: '',
+                text: 'Thanh toán đơn hàng thành công',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                timer: 3000, // Thời gian tự động tắt thông báo sau 3 giây
+                timerProgressBar: true // Hiển thị thanh tiến trình đếm ngược
+            }).then(() => {
+                setShowButtonDownload(true);
+                setContentRight(
+                    <Row className="d-flex align-items-center justify-content-center">
+                        <Row className="mt-3">
+                            <div>Bạn đã thanh toán thành công</div>
+                        </Row>
+                        <Row className="mt-3">
+                            <div>
+                                <Button variant="success" className="d-flex align-items-center">
+                                    <i className="fa fa-download"/> TẢI TẤT CẢ
+                                </Button>
+                            </div>
+                        </Row>
+                    </Row>
+                )
+            });
+        }, 1000);
+    };
 
     const clickCloseModal = () => {
         dispatch(showModalPayment(false)); // => đóng Modal thanh toán
-        dispatch(updateStatePayment("reset")); // => reset lại trạng thái thanh toán
-        setShowButtonDownload(false);
+        // nếu đơn hàng đã được thanh toán
+        if (checkPayment === true) {
+            dispatch(resetCart());
+            dispatch(updateStatePayment("reset")); // => reset lại trạng thái thanh toán
+        }
 
         setTimeout(() => {
             console.log("Trạng thái của statePayment: ", JSON.stringify(payment))
-        })
+        }, 1000)
 
     }
 
