@@ -74,9 +74,9 @@ function SectionProfile() {
                                             </div>
                                             <div className="form-check form-check-inline mr-4 d-inline-flex  align-items-center">
                                                 <input className="form-check-input" type="radio"
-                                                       name="sex" id="male" value="Nam"/>
+                                                       name="sex" id="female" value="Nữ"/>
                                                 <label className="form-check-label d-inline-block ml-2"
-                                                       htmlFor="male">Nam</label>
+                                                       htmlFor="male">Nữ</label>
                                             </div>
                                         </div>
                                     </div>
@@ -101,7 +101,12 @@ function SectionProfile() {
                                     <div className="col-lg-4 col-12">
                                         <div className="form-group">
                                             <label htmlFor="company">Tỉnh / Thành phố<span>*</span></label>
-                                            <select name="city" id="company"></select>
+                                            <select className="region" name="city" id="company">
+                                                <option value="volvo">Volvo</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="mercedes">Mercedes</option>
+                                                <option value="audi">Audi</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div className="col-lg-4 col-12">
