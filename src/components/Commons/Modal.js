@@ -73,7 +73,8 @@ export function ModalPayment() {
                                     </Col>
                                     <Col md={7}>
                                         <div><Button variant="warning"
-                                                     onClick={() => downloadFile(value.file.link)}> Download </Button>
+                                                     onClick={() => downloadFile(value.file.link)}><i
+                                            className="fa fa-download"/> TẢI NGAY </Button>
                                         </div>
                                     </Col>
                                 </Row>
