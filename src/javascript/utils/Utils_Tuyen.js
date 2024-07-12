@@ -56,15 +56,34 @@ export function payWithPaypal() {
     alert('Thanh toán với PayPal');
 }
 
-export function payWithMomo() {
-    alert('Thanh toán với Momo');
+export function payWithMomo(cart) {
+    alert('Số lượng sản phẩm trong giỏ hàng: ' + cart.length);
 }
 
 export function payWithViettelPay() {
     alert('Thanh toán với ViettelPay');
-
 }
 
 export function payWithNganLuong() {
     alert('Thanh toán với NganLuong');
+}
+
+export function downloadFile(fileUrl) {
+    // Tạo một thẻ <a> ẩn
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.style.display = 'none';
+
+    // Đặt tên file dựa trên tên file trong URL
+    const fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+    link.setAttribute('download', fileName);
+
+    // Thêm thẻ <a> vào DOM
+    document.body.appendChild(link);
+
+    // Kích hoạt sự kiện click để tải xuống file
+    link.click();
+
+    // Xóa thẻ <a> khỏi DOM
+    document.body.removeChild(link);
 }
