@@ -42,8 +42,8 @@ export function ModalPayment() {
         }
     ]
 
-    const [contentRight, setContentRight] = useState(<div>Bạn cần thanh toán để tải code qua chức năng này!</div>);
     let content;
+    const [contentRight, setContentRight] = useState(<div>Bạn cần thanh toán để tải code qua chức năng này!</div>);
     if (cart.length > 0) {
         content = (
             <Container>
@@ -59,7 +59,8 @@ export function ModalPayment() {
                                         </div>
                                     </Col>
                                     <Col md={7}>
-                                        <div><Button variant="warning" disabled={showButtonDownload === false}
+                                        <div>
+                                            <Button variant="warning" disabled={showButtonDownload === false}
                                                      onClick={() => downloadFile(value.file.link)}><i
                                             className="fa fa-download"/> TẢI NGAY </Button>
                                         </div>
@@ -99,7 +100,7 @@ export function ModalPayment() {
                         </Row>
                         <Row className="mt-3">
                             <div>
-                                <Button variant="success" className="d-flex align-items-center">
+                                <Button onClick={() => clickDownloadAll()} variant="success">
                                     <i className="fa fa-download"/> TẢI TẤT CẢ
                                 </Button>
                             </div>
@@ -122,6 +123,19 @@ export function ModalPayment() {
             console.log("Trạng thái của statePayment: ", JSON.stringify(payment))
         }, 1000)
 
+    }
+
+    const clickDownloadAll = () => {
+        Swal.fire({
+            title: '',
+            text: 'Chức năng này đang được phát triển',
+            icon: 'warning',
+            confirmButtonText: 'OK',
+            timer: 3000, // Thời gian tự động tắt thông báo sau 3 giây
+            timerProgressBar: true // Hiển thị thanh tiến trình đếm ngược
+        }).then(() => {
+
+        })
     }
 
     return (
