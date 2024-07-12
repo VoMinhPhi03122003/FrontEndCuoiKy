@@ -31,7 +31,7 @@ const initialLiked = {
     liked: localStorage.getItem('liked') ? JSON.parse(localStorage.getItem('liked')) : []
 }
 
-const likedCodesReducer = (state = {liked: JSON.parse(localStorage.getItem('liked')) === null ? [] : JSON.parse(localStorage.getItem('liked'))}, action) => {
+const likedCodesReducer = (state = initialLiked, action) => {
     switch (action.type) {
         case 'liked/add': {
             let likedCodes = undefined
@@ -150,5 +150,6 @@ export const reducers = combineReducers({
     likedCodesReducer: likedCodesReducer,
     errorReducer: errorReducer,
     modalReducer: modalReducer,
-    paymentReducer: paymentReducer
+    paymentReducer: paymentReducer,
+    productReducer
 })

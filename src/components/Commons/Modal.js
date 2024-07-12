@@ -118,7 +118,7 @@ export function ModalPayment() {
         dispatch(showModalPayment(false)); // => đóng Modal thanh toán
         // nếu đơn hàng đã được thanh toán
         if (checkPayment === true) {
-            dispatch(resetCart());
+            dispatch(resetCart()); // reset lại giỏ hàng
             dispatch(updateStatePayment("reset")); // => reset lại trạng thái thanh toán
         }
 
