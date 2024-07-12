@@ -3,6 +3,7 @@ import ListProducts from "../components/TopProductPage/ListProducts";
 import ProductDetails from "../components/ProductDetailPage/ProductDetails";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 import {LikedCodes} from "./components/Commons/LikedCodes";
+import VerifyPassPage from "./components/AuthenticationPage/VerifyPass";
 
 import App from "../App";
 import LoginPage from "../components/AuthenticationPage/Login";
@@ -28,6 +29,10 @@ const listAuthentication = [
     {
         path: '/change-password',
         element: <ChangePassPage/>
+    },
+    {
+        path: "/verify-password",
+        element: <VerifyPassPage/>
     }
 ]
 

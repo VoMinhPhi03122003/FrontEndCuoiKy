@@ -89,7 +89,7 @@ function SectionLogin() {
                                 <input value={email} onChange={handleInputEmail} id="email" className="w-100 mb-3" placeholder="Email" name="email"/>
                                 <input value={password} onChange={handleInputPassword} id="password" className="w-100 mb-4" type="password" placeholder="Mật khẩu"
                                        name="password"/>
-                                <button type="submit" className="btn next w-100">Đăng nhập</button>
+                                <button type="submit" className="mb-4 btn next w-100">Đăng nhập</button>
                                 <a id="google-login-button"
                                    className="google d-flex justify-content-center w-100 mb-3">
                                     <img src={logoGoogle} width="25px" className="mr-2"/>Google</a>
