@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {cartReducer, discountCodeReducer, modalReducer} from "../redux_tuyen/Reducer_Tuyen";
+import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "../redux_tuyen/Reducer_Tuyen";
 
 import errorReducer from "./redux_tai/ErrorSlice";
 
@@ -103,5 +103,6 @@ export const reducers = combineReducers({
     discountCodeReducer: discountCodeReducer,
     likedCodesReducer: likedCodesReducer,
     errorReducer: errorReducer,
-    productReducer
+    modalReducer: modalReducer,
+    paymentReducer: paymentReducer
 })

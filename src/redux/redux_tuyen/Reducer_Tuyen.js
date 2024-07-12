@@ -15,6 +15,14 @@ const initModalState = {
     modal_payment: false
 }
 
+const initPaymentState = {
+    payment_with_paypal: false,
+    payment_with_momo: false,
+    payment_with_viettelpay: false,
+    payment_with_nganluong: false,
+    payment: false
+}
+
 export const cartReducer = (state = initCartState, action) => {
 
     /* Đây là Reducer, một hàm xử lý các hành động (actions) để cập nhật trạng thái của ứng dụng */
@@ -117,5 +125,57 @@ export const modalReducer = (state = initModalState, action) => {
         }
         default:
             return state
+    }
+}
+
+export const paymentReducer = (state = initPaymentState, action) => {
+    switch (action.type) {
+
+        case 'payment/paypal': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_paypal: true,
+                payment: true
+            }
+        }
+        case 'payment/momo': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_momo: true,
+                payment: true
+            }
+        }
+        case 'payment/viettelpay': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_viettelpay: true,
+                payment: true
+            }
+        }
+        case 'payment/nganluong': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_nganluong: true,
+                payment: true
+            }
+        }
+
+        case 'payment/reset': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_paypal: false,
+                payment_with_momo: false,
+                payment_with_viettelpay: false,
+                payment_with_nganluong: false,
+                payment: false
+            }
+        }
+        default:
+            return state;
     }
 }

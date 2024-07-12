@@ -57,7 +57,7 @@ export function payWithPaypal() {
 }
 
 export function payWithMomo(cart) {
-    alert('Số lượng sản phẩm trong giỏ hàng: ' + cart.length);
+    alert('Thanh toán với Momo');
 }
 
 export function payWithViettelPay() {
