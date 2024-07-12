@@ -27,8 +27,11 @@ const listProductsReducer = (state = initialState, action) => {
     }
 }
 
-const likedCodesReducer = (state = {liked: JSON.parse(localStorage.getItem('liked'))}, action) => {
-    switch (action.type) {
+const initialLiked = {
+    liked: localStorage.getItem('liked') ? JSON.parse(localStorage.getItem('liked')) : []
+}
+
+const likedCodesReducer = (state = initialLiked, action) => {    switch (action.type) {
         case 'liked/add': {
             let likedCodes = undefined
             if (!state.liked.some(c => c.id === action.payload.id)) {
@@ -91,7 +94,46 @@ const productReducer = (state = {
                 ...state,
                 product: {
                     ...state.product,
-                    viewed: state.product.viewed + 1
+                    ...data
+                }
+            }
+        }
+        case 'product/increaseRating': {
+            const data = {
+                rating: {
+                    ...state.product.rating,
+                    [action.payload]: state.product.rating[action.payload] + 1
+                }
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    ...data
+                }
+            }
+        }
+        case 'product/putRatingComment': {
+            const data = {
+                'rating-comment': [...state.product['rating-comment'], {...action.payload}]
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    ...data
                 }
             }
         }
