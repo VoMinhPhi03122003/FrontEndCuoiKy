@@ -3,11 +3,11 @@ import Footer from "../Commons/Footer";
 import '../../css/product-detail.css'
 import {useMemo, useRef, useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {formatNumber, formatRating} from "../../javascript/utils";
 import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
-import {increaseDownloaded, putProduct} from "../../redux/Action";
+import {increaseDownloaded, increaseViewed, putProduct} from "../../redux/Action";
 
 function DetailLeft() {
     const p = useSelector(state => state.productReducer.product)
@@ -93,9 +93,12 @@ function DetailCenter() {
 function DetailRight() {
     const product = useSelector(state => state.productReducer.product)
     const dispatch = useDispatch()
+    const location = useLocation()
+    const navigate = useNavigate()
 
     function handledDownload() {
         dispatch(increaseDownloaded())
+        navigate(".", {state: {...location.state, downloaded: location.state.downloaded + 1}})
     }
 
     return (
@@ -351,6 +354,8 @@ function ProductDetailContainer() {
     useMemo(() => {
         dispatch(putProduct(location.state))
     }, [dispatch, location.state])
+
+    dispatch(increaseViewed())
 
     return (
         <section className="product-details my-5">

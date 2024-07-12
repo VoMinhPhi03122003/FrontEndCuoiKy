@@ -5,4 +5,5 @@ export const setLayout = (layout) => ({type: 'products/layout', payload: layout}
 export const addLiked = (code) => ({type: 'liked/add', payload: code})
 export const putProduct = (product) => ({type: 'product/put', payload: product})
 export const increaseDownloaded = () => ({type: 'product/increaseDownloaded'})
+export const increaseViewed = () => ({type: 'product/increaseViewed'})
 export const reset = () => ({type: 'reset'})

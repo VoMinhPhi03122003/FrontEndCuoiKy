@@ -74,6 +74,24 @@ const productReducer = (state = {product: null}, action) => {
                 }
             }
         }
+        case 'product/increaseViewed': {
+            const data = {
+                "viewed": state.product.viewed + 1
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    viewed: state.product.viewed + 1
+                }
+            }
+        }
         default:
             return state
     }
