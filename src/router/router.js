@@ -11,8 +11,6 @@ import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 import {LikedCodes} from "../components/Commons/LikedCodes";
 import {ErrorPage404} from "./components/ErrorPage/ErrorPage404";
 
-import ErrorPage from "./ErrorPage";
-
 const profile = {path: '/profile', element: <ProfilePage/>}
 const listAuthentication = [
     {
