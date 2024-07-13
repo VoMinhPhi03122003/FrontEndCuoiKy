@@ -3,26 +3,28 @@ import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link, useNavigate} from "react-router-dom";
 import React, {useEffect, useState} from "react";
-import {getProvinces, loadInfo} from "../../javascript/api/Api_Tai";
+import {changeProfile, getProvinces, loadInfo} from "../../javascript/api/Api_Tai";
 import {isEmail, isEmpty, isPhoneNumber} from "../../javascript/utils/Utils_Tai";
 import {useDispatch, useSelector} from "react-redux";
 import {profileError} from "../../redux/redux_tai/Action";
 import {errorProfileSelector} from "../../redux/redux_tai/Selectors";
+import Swal from "sweetalert2";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Hồ sơ cá nhân", link: "/profile"}]
 
 function SectionProfile() {
-    const [fullnameInput, setFullnameInput] = useState('');
-    const [genderInput, setGenderInput] = useState('');
-    const [phoneInput, setPhoneInput] = useState('');
-    const [emailInput, setEmailInput] = useState('');
-    const [addressInput, setAddressInput] = useState('');
-    const [provinceInput, setProvinceInput] = useState('');
     const [provinces, setProvinces] = useState([]);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const errorString = useSelector(errorProfileSelector);
     const storedEmail = localStorage.getItem('account');
+
+    const [fullnameInput, setFullnameInput] = useState('');
+    const [genderInput, setGenderInput] = useState('');
+    const [phoneInput, setPhoneInput] = useState('');
+    const [emailInput, setEmailInput] = useState('');
+    const [addressInput, setAddressInput] = useState('');
+    const [provinceInput, setProvinceInput] = useState('Thành phố Hà Nội');
 
     useEffect(() => {
         if (!storedEmail) {
@@ -47,7 +49,7 @@ function SectionProfile() {
                 setPhoneInput(data.phone);
                 setEmailInput(data.personal_email);
                 setAddressInput(data.address);
-                setProvinceInput(data.province);
+                setProvinceInput(data.province === ""? 'Thành phố Hà Nội': data.province);
             })
         }catch (error){
             console.error('Lỗi khi gọi API:', error)
@@ -96,6 +98,20 @@ function SectionProfile() {
             dispatch(profileError({
                 errorProfile: ""
             }))
+            const data = {fullname: fullnameInput, gender: genderInput, phone: phoneInput, personal_email: emailInput,
+                address: addressInput, province: provinceInput};
+            console.log(data.fullname);
+            changeProfile(storedEmail, data);
+            Swal.fire({
+                title: '',
+                text: 'Cập nhập thông tin thành công',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                timer: 3000, // Thời gian tự động tắt thông báo sau 3 giây
+                timerProgressBar: true // Hiển thị thanh tiến trình đếm ngược
+            }).then(() => {
+
+            });
         }
     }
     return (
@@ -183,7 +199,7 @@ function SectionProfile() {
                                     <div className="col-lg-4 col-12">
                                         <div className="form-group">
                                             <label htmlFor="company">Tỉnh / Thành phố<span>*</span></label>
-                                            <select className="region" name="city" id="company" value={provinceInput}
+                                            <select className="region" name="city" id="company" value={provinceInput === ""? "Thành phố Hà Nội": provinceInput}
                                                     onChange={handleInputProvince}>
                                                 {provinces.map(province => (
                                                     <option key={province.code} value={province.name}>
