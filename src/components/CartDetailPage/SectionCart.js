@@ -14,9 +14,6 @@ import {
     updateDiscountPercent
 } from "../../redux/redux_tuyen/Action_Tuyen";
 
-import {ModalPayment} from "../Commons/Modal"
-
-
 function SectionCart() {
     const cart = useSelector(state => state.cartReducer.cart);
     /**
@@ -189,7 +186,6 @@ function TotalCart() {
 
     return (
         <>
-            <ModalPayment/>
             <div className="shoping__checkout">
                 <h5>Đơn hàng</h5>
                 {content}

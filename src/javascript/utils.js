@@ -46,9 +46,39 @@ export const makeURL = (search, from, type, page, sort) => {
     return trim(trim(`http://localhost:9810/products?${searchPart}${fromPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
 }
 
+export const buildQuery = (ids) => {
+    let query = ''
+    for (let id of ids) {
+        query = query + `id=${id}&`
+    }
+    return trim(trim(`http://localhost:9810/products?${query}`, '&'), '?')
+}
+
 function trim(s, c) {
     if (c === "]") c = "\\]";
     if (c === "^") c = "\\^";
     if (c === "\\") c = "\\\\";
     return s.replace(new RegExp("^[" + c + "]+|[" + c + "]+$", "g"), "");
 }
+
+export function getPassedTimeInText(when) {
+    const elapseTime = Date.now() - when;
+
+    if (elapseTime < 60 * 1000) {
+        return "Vừa xong";
+    } else if (elapseTime < 60 * 60 * 1000) {
+        return `${Math.floor(elapseTime / (60 * 1000))} phút trước`
+    } else if (elapseTime < 24 * 60 * 60 * 1000) {
+        return `${Math.floor(elapseTime / (60 * 60 * 1000))} giờ trước`
+    } else if (elapseTime < 7 * 24 * 60 * 60 * 1000) {
+        return `${Math.floor(elapseTime / (24 * 60 * 60 * 1000))} ngày trước`
+    } else if (elapseTime < 4 * 7 * 24 * 60 * 60 * 1000) {
+        return `${Math.floor(elapseTime / (7 * 24 * 60 * 60 * 1000))} tuần trước`
+    } else if (elapseTime < 12 * 4 * 7 * 24 * 60 * 60 * 1000) {
+        return `${Math.floor(elapseTime / (4 * 7 * 24 * 60 * 60 * 1000))} tháng trước`
+    }
+
+    return `${Math.floor(elapseTime / (12 * 30 * 24 * 60 * 60 * 1000))} năm trước`
+}
+
+export const getFirstLetter = (name) => name.charAt(0).toUpperCase()

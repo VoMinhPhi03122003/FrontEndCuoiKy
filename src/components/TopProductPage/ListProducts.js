@@ -1,14 +1,15 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer"
 import '../../css/products.css'
-import {useEffect,useRef, useState} from "react";
+import React, {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {products} from "../../data/Products";
 import {addLiked, setLayout, setPage, setSort, setType} from "../../redux/Action";
-
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating, getTypes, makeURL} from "../../javascript/utils";
+import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
+import {Toast} from "react-bootstrap";
 
 export function PopularProducts() {
     const [data, setData] = useState([])
@@ -75,7 +76,7 @@ function SideBar() {
     )
 }
 
-function ProductItemRow({p, navigate, addToLiked}) {
+function ProductItemRow({p, navigate, addToLiked, addToCart}) {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     return (
         <div className="product-item-row mb-4">
@@ -104,7 +105,7 @@ function ProductItemRow({p, navigate, addToLiked}) {
                             <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
                                  onClick={() => addToLiked(p)}><i
                                 className="fa fa-thumbs-up"></i></div>
-                            <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
+                            <div className="product-item-action"  onClick={() => addToCart(p)}><i className="fa fa-shopping-cart"></i></div>
                         </div>
                     </div>
                 </div>
@@ -113,10 +114,24 @@ function ProductItemRow({p, navigate, addToLiked}) {
     )
 }
 
-function ProductItem({p, navigate, addToLiked}) {
+function ProductItem({p, navigate, addToLiked, addToCart}) {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
+    const [showToast, setShowToast] = useState(false)
+
+    function onAddToCartClicked(p) {
+        setShowToast(true)
+        addToCart(p)
+    }
 
     return (
+        <>
+        <div>
+            <Toast show={showToast} onClose={() => setShowToast(false)} delay={3000} autohide>
+                <Toast.Body className="text-white" style={{backgroundColor: '#7fad39'}}>
+                    Mã nguồn đã được thêm vào giỏ hàng
+                </Toast.Body>
+            </Toast>
+        </div>
         <div className="product-item">
             <Link to={`product/${p.id}`} state={p} className="product-item-img">
                 <img src={p.img} alt=""/>
@@ -133,19 +148,26 @@ function ProductItem({p, navigate, addToLiked}) {
             <div className="product-item-actions d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-start">
                     <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
-                         onClick={() => addToLiked(p)}><i
-                        className="fa fa-thumbs-up"></i></div>
-                    <a className="product-item-action"><i className="fa fa-shopping-cart"></i></a>
+                         onClick={() => addToLiked(p)}><i className="fa fa-thumbs-up"></i>
+                    </div>
+                    <div className="product-item-action" onClick={() => onAddToCartClicked(p)}>
+                        <i className="fa fa-shopping-cart"></i>
+                    </div>
                 </div>
-                <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
+                <div className="product-item-stars"><StarRate
+                    stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/>
+                </div>
             </div>
             <div className="product-item-bottom d-flex justify-content-between align-items-center">
                 <div className="product-item-brand" onClick={() => navigate({id: p.type.id, name: p.type.name})}>
                     <img src={p.type.img} alt=""></img> {p.type.name}
                 </div>
-                <Link to={`product/${p.id}`} state={p} className="product-item-price">{formatNumber(p.price, '.')}đ</Link>
+                <Link to={`product/${p.id}`} state={p}
+                      className="product-item-price">{formatNumber(p.price, '.')}đ
+                </Link>
             </div>
         </div>
+        </>
     )
 }
 
@@ -162,6 +184,10 @@ export function ProductContainer({query, total, data, forLiked}) {
         dispatch(addLiked(code))
     }
 
+    function addToCart(code) {
+        dispatch(addItemToCart(code))
+    }
+
     return (
         <>
             {total ? (
@@ -169,16 +195,17 @@ export function ProductContainer({query, total, data, forLiked}) {
                     {data.map((value, index) => {
                         return layout === 'grid' ?
                             (<div className={`product-item-container col-lg-${forLiked ? '3' : '4'}`} key={index}>
-                                <ProductItem p={value} navigate={navigate} addToLiked={addToLiked}/>
+                                <ProductItem p={value} navigate={navigate} addToLiked={addToLiked} addToCart={addToCart}/>
                             </div>) :
                             (<div className="product-item-container col-lg-12" key={index}>
-                                <ProductItemRow p={value} navigate={navigate} addToLiked={addToLiked}/>
+                                <ProductItemRow p={value} navigate={navigate} addToLiked={addToLiked} addToCart={addToCart}/>
                             </div>)
                     })}
                 </div>
             ) : (
                 <div className="search-not-found">
-                    {forLiked ? <img src={require('../../img/empty.png')} alt=""/> : <img src={require('../../img/not_found.jpg')} alt=""/>}
+                    {forLiked ? <img src={require('../../img/empty.png')} alt=""/> :
+                        <img src={require('../../img/not_found.jpg')} alt=""/>}
                     {forLiked ? <div>Danh mục yêu thích trống</div> : <div>Không có kết quả</div>}
                     {!forLiked && <div>Không tìm thấy code cho từ khóa <span>{query}</span></div>}
                 </div>

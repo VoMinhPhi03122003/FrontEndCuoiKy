@@ -1,13 +1,16 @@
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer";
 import '../../css/product-detail.css'
-import {useRef, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
-import {Link, useLocation} from "react-router-dom";
-import {formatNumber, formatRating} from "../../javascript/utils";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
 import Parser from 'html-react-parser'
+import {useDispatch, useSelector} from "react-redux";
+import {addLiked, increaseDownloaded, increaseRating, increaseViewed, postComment, putProduct, putRatingComment} from "../../redux/Action";
 
-function DetailLeft({p}) {
+function DetailLeft() {
+    const p = useSelector(state => state.productReducer.product)
     const [slideIndex, setSlideIndex] = useState(0)
 
     function moveSlide(dir) {
@@ -59,7 +62,9 @@ export function StarRate({stars, type}) {
     )
 }
 
-function DetailCenter({p}) {
+function DetailCenter() {
+    const p = useSelector(state => state.productReducer.product)
+
     return (
         <div className="detail-center">
             <h6>{p.name} <span>[Mã sản phẩm {p.id}]</span></h6>
@@ -85,18 +90,35 @@ function DetailCenter({p}) {
     )
 }
 
-function DetailRight({p}) {
+function DetailRight() {
+    const likedCodes = useSelector(state => state.likedCodesReducer.liked)
+    const product = useSelector(state => state.productReducer.product)
+    const dispatch = useDispatch()
+    const location = useLocation()
+    const navigate = useNavigate()
+    const inLiked = likedCodes.some(c => c.id === product.id)
+
+    function handledDownload() {
+        dispatch(increaseDownloaded())
+        navigate(".", {state: {...location.state, downloaded: location.state.downloaded + 1}})
+    }
+
     return (
         <div className="detail-right">
             <div className="detail-right-offer">
                 <h6>PHÍ DOWNLOAD</h6>
-                <span className="offer-price">{formatNumber((p.price), '.')}<sup>đ</sup></span>
-                <button className="offer-download"><img src="https://topcode.vn/assets/images/ic-down.png" alt=""/> TẢI NGAY</button>
-                <button className="offer-favorite"><i className="fa fa-thumbs-up"></i> Lưu vào yêu thích</button>
-                <span><span>CHIA SẺ NHANH</span> (CODE  {p.id})</span>
+                <span className="offer-price">{formatNumber((product.price), '.')}<sup>đ</sup></span>
+                <button className="offer-download" onClick={handledDownload}>
+                    <img src="https://topcode.vn/assets/images/ic-down.png" alt=""/> TẢI NGAY
+                </button>
+                <button className={`offer-favorite ${inLiked && 'offer-active'}`}
+                        onClick={() => dispatch(addLiked(product))}><i
+                    className="fa fa-thumbs-up"></i> {inLiked ? 'Xóa khỏi' : 'Lưu vào'} yêu thích
+                </button>
+                <span><span>CHIA SẺ NHANH</span> (CODE {product.id})</span>
                 <div>
                     <img src="https://topcode.vn/assets/images/share-email.png" alt=""/>
-                    <div>Gửi sản phẩm  tới email bạn bè</div>
+                    <div>Gửi sản phẩm tới email bạn bè</div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <span><i className="fa fa-thumbs-up"></i> Like</span>
@@ -106,35 +128,38 @@ function DetailRight({p}) {
         </div>
     )
 }
+
 function DetailDivider({title, refData}) {
     return (<div className="detail-divider mt-5" ref={refData}><span>{title}</span></div>)
 }
 
-function DetailDescription({p, goTo}) {
+function DetailDescription({goTo}) {
+    const p = useSelector(state => state.productReducer.product)
     return (
         <>
             <DetailDivider title={'MÔ TẢ CHI TIẾT'}/>
             <div className="detail-description">
                 <div>{p.description}</div>
                 {Parser(p.detail)}
-                <div className="di-guide">XEM THÊM <span>==></span><span
+                <div className="di-guide">XEM THÊM <span>==</span><span
                     onClick={goTo}> Hướng dẫn cài đặt chi tiết</span></div>
             </div>
         </>
     )
 }
 
-function DemoImage({p}) {
+function DemoImage() {
+    const p = useSelector(state => state.productReducer.product)
     return (
         <>
             <DetailDivider title={'HÌNH ẢNH DEMO'}/>
             <div className="text-center">
                 {p.thumbnails.map((value, index) => {
                     return (
-                        <>
+                        <div key={index}>
                             <img style={{display: 'inline-block', marginBottom: '15px'}} key={index} src={value} alt=""/>
                             <p className="text-center mt-0 mb-5 font-italic text-dark">Hình {index + 1}</p>
-                        </>
+                        </div>
                     )
                 })}
             </div>
@@ -142,7 +167,8 @@ function DemoImage({p}) {
     )
 }
 
-function Installation({p, refData}) {
+function Installation({refData}) {
+    const p = useSelector(state => state.productReducer.product)
     return (
         <>
             <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'} refData={refData}/>
@@ -155,9 +181,67 @@ function Installation({p, refData}) {
 
 function RatingModal({closeModal}) {
     const ratingCriteria = ['Rất tệ', 'Tệ', 'Bình thường', 'Tốt', 'Rất tốt']
+    const [starIndex, setStarIndex] = useState(-1)
+    const [feel, setFeel] = useState('')
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const starRef = useRef(-1)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    useEffect(() => {
+        document.querySelectorAll('.rating-modal-stars > div').forEach(function (value) {
+            value.addEventListener('mouseover', function () {
+                setStarIndex(Number(this.getAttribute('aria-valuenow')))
+            })
+            value.addEventListener('mouseleave', function () {
+                if (starRef.current !== Number(this.getAttribute('aria-valuenow'))) {
+                    setStarIndex(-1)
+                }
+                if (starRef.current !== -1) {
+                    setStarIndex(starRef.current)
+                }
+            })
+        })
+    }, [starIndex])
+
+    function onStarClicked(index) {
+        setStarIndex(index)
+        starRef.current = index
+    }
+
+    function sendRating() {
+        if (starRef.current !== -1) {
+            const star = `${5 - starRef.current}star`
+            const rc = {
+                name: name,
+                phone: phone,
+                star: 5 - starRef.current,
+                when: Date.now(),
+                comment: feel
+            }
+            dispatch(increaseRating(star))
+            dispatch(putRatingComment(rc))
+            navigate(".", {
+                state: {
+                    ...location.state,
+                    rating: {
+                        ...location.state.rating,
+                        [star]: location.state.rating[star] + 1
+                    },
+                    'rating-comment': [
+                        ...location.state['rating-comment'],
+                        rc
+                    ]
+                }
+            })
+        }
+        closeModal()
+    }
     return (
-        <div className="rating-modal">
-            <div className="rating-modal-content">
+        <div className="rating-modal" onClick={closeModal}>
+            <div className="rating-modal-content" onClick={(e) => e.stopPropagation()}>
                 <div>
                     <span>Đánh giá</span>
                     <span onClick={closeModal}><i className="fa fa-x"></i></span>
@@ -169,22 +253,23 @@ function RatingModal({closeModal}) {
                     </div>
                     <div className="rating-modal-stars my-4">
                         {ratingCriteria.map((value, index) => (
-                            <div key={index}>
-                                <i className="fa fa-star-o"></i>
-                                <div>{value}</div>
+                            <div aria-valuenow={index} className={starIndex === index && 'bg-active'} key={index}
+                                 onClick={() => onStarClicked(index)}>
+                                <div className={`s${index}`}></div>
+                                <div>{ratingCriteria[4 - index]}</div>
                             </div>
                         ))}
                     </div>
                     <div>
-                        <textarea placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..." />
+                        <textarea value={feel} onChange={e => setFeel(e.target.value)} placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..."/>
                     </div>
                     <div className="d-flex justify-content-between mt-2">
-                        <input type="text" placeholder="Họ và tên (bắt buộc)"/>
-                        <input type="text" placeholder="Số điện thoại"/>
+                        <input value={name} onChange={e => setName(e.target.value)} type="text" placeholder="Họ và tên (bắt buộc)"/>
+                        <input value={phone} onChange={e => setPhone(e.target.value)} type="text" placeholder="Số điện thoại"/>
                     </div>
                     <div className="my-3 rating-guarantee"><i className="fa fa-check-square-o"></i> Chúng tôi cam kết bảo mật số điện thoại của bạn</div>
                     <div className="text-center mt-3 mb-1">
-                        <button>Gửi đánh giá ngay</button>
+                        <button onClick={sendRating}>Gửi đánh giá ngay</button>
                     </div>
                 </div>
             </div>
@@ -192,8 +277,10 @@ function RatingModal({closeModal}) {
     )
 }
 
-function Rating({p}) {
+function Rating() {
+    const p = useSelector(state => state.productReducer.product)
     const [showModal, setShowModal] = useState(false)
+    const rc = [...p['rating-comment']].sort((a, b) => a.when - b.when > 0 ? -1 : 1)
     return (
         <>
             <DetailDivider title={'ĐÁNH GIÁ'}/>
@@ -225,20 +312,16 @@ function Rating({p}) {
                     </div>
                 </div>
                 <div className="detail-rating-comment">
-                    <div>
-                        <div>Anh Hưng <span><i className="fa fa-check-circle"></i> Đã mua hàng</span> <span>3 tuần trước</span></div>
-                        <div className="product-item-stars">
-                            <StarRate stars={5} type={"bi bi-star-fill"}/>
+                    {rc.map((rating, index) => (
+                        <div key={index}>
+                            <div>{rating.name} <span><i className="fa fa-check-circle"></i> Đã mua hàng</span>
+                                <span>{getPassedTimeInText(rating.when)}</span></div>
+                            <div className="product-item-stars">
+                                <StarRate stars={rating.star} type={"bi bi-star-fill"}/>
+                            </div>
+                            <div>{rating.comment}</div>
                         </div>
-                        <div>Sảm phẩm rất tốt tôi rất hài lòng</div>
-                    </div>
-                    <div>
-                        <div>Chị Hà <span><i className="fa fa-check-circle"></i> Đã mua hàng</span> <span>1 tuần trước</span></div>
-                        <div className="product-item-stars">
-                            <StarRate stars={5} type={"bi bi-star-fill"}/>
-                        </div>
-                        <div>Rất hài lòng</div>
-                    </div>
+                    ))}
                 </div>
             </div>
             {showModal && <RatingModal closeModal={() => setShowModal(false)}/>}
@@ -247,82 +330,89 @@ function Rating({p}) {
 }
 
 function Comment() {
+    const p = useSelector(state => state.productReducer.product)
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [content, setContent] = useState('')
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const sortedComments = [...p.comments].sort((a, b) => a.when - b.when > 0 ? -1 : 1)
+
+    function sendComment() {
+        if (name && email && content) {
+            const data = {
+                name: name,
+                email: email,
+                when: Date.now(),
+                content: content
+            }
+            dispatch(postComment(data))
+            navigate(".", {
+                state: {
+                    ...location.state,
+                    comments: [
+                        ...location.state.comments,
+                        data
+                    ]
+                }
+            })
+        }
+    }
+
     return (
         <>
             <DetailDivider title={'BÌNH LUẬN'}/>
             <div className="detail-comment clearfix">
-                <textarea placeholder="Vui lòng để lại bình luận..."/>
+                <textarea value={content} onChange={e => setContent(e.target.value)} placeholder="Vui lòng để lại bình luận..."/>
                 <div className="d-flex justify-content-between">
                     <div>
                         <div className="input-box">
                             <label htmlFor="input-name">Họ và tên <span>*</span></label>
-                            <input name="input-name" type="text"/>
+                            <input value={name} onChange={e => setName(e.target.value)} name="input-name" type="text"/>
                         </div>
                         <div className="input-box">
                             <label htmlFor="input-name">Email</label>
-                            <input name="input-name" type="text"/>
+                            <input value={email} onChange={e => setEmail(e.target.value)} name="input-name" type="text"/>
                         </div>
                     </div>
-                    <button>GỬI</button>
+                    <button onClick={sendComment}>GỬI</button>
                 </div>
             </div>
             <div className="mt-5">
-                <div className="comment-item">
-                    <div className="comment-avatar mr-3">
-                        <div>N</div>
-                    </div>
-                    <div className="comment-detail">
-                        <div>
-                            <div>Ngô Bá Khá</div>
-                            <div>12/06/2023</div>
-                        </div>
-                        <div>
-                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
-                        </div>
-                    </div>
+                <div style={{fontSize: '17px', fontFamily: 'Roboto', fontWeight: '500', color: '#333333'}}>
+                    {p.comments.length} comments
                 </div>
-                <div className="comment-item">
-                    <div className="comment-avatar mr-3">
-                        <div>N</div>
-                    </div>
-                    <div className="comment-detail">
-                        <div>
-                            <div>Ngô Bá Khá</div>
-                            <div>12/06/2023</div>
+                {sortedComments.map((value, index) => (
+                    <div className="comment-item" key={index}>
+                        <div className="comment-avatar mr-3">
+                            <div>{getFirstLetter(value.name)}</div>
                         </div>
-                        <div>
-                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
-                        </div>
-                    </div>
-                </div>
-                <div className="comment-item">
-                    <div className="comment-avatar mr-3">
-                        <div>N</div>
-                    </div>
-                    <div className="comment-detail">
-                        <div>
-                            <div>Ngô Bá Khá</div>
-                            <div>12/06/2023</div>
-                        </div>
-                        <div>
-                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        <div className="comment-detail">
+                            <div>
+                                <div>{value.name}</div>
+                                <div>{getPassedTimeInText(value.when)}</div>
+                            </div>
+                            <div>{value.content}</div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </>
     )
 }
 
-function DetailContent({p}) {
+function DetailContent() {
+    const p = useSelector(state => state.productReducer.product)
     const ref = useRef(null)
     const goToInstallation = () => ref.current.scrollIntoView({behavior: "auto"})
     return (
         <>
-            <DetailDescription p={p} goTo={goToInstallation}/>
-            <DemoImage p={p}/>
-            <Installation p={p} refData={ref}/>
-            <Rating  p={p}/>
+            <DetailDescription goTo={goToInstallation}/>
+            <DemoImage/>
+            <Installation refData={ref}/>
+            <Rating/>
             <Comment/>
         </>
     )
@@ -331,6 +421,13 @@ function DetailContent({p}) {
 
 function ProductDetailContainer() {
     const location = useLocation()
+    const dispatch = useDispatch()
+
+    useMemo(() => {
+        dispatch(putProduct(location.state))
+    }, [dispatch, location.state])
+
+    dispatch(increaseViewed())
 
     return (
         <section className="product-details my-5">
@@ -339,16 +436,16 @@ function ProductDetailContainer() {
                     <div className="col-lg-9">
                         <div className="row">
                             <div className="col-lg-5">
-                                <DetailLeft p={location.state}/>
+                                <DetailLeft/>
                             </div>
                             <div className="col-lg-7">
-                                <DetailCenter  p={location.state}/>
+                                <DetailCenter/>
                             </div>
                         </div>
-                        <DetailContent p={location.state}/>
+                        <DetailContent/>
                     </div>
                     <div className="col-lg-3">
-                        <DetailRight  p={location.state}/>
+                        <DetailRight/>
                         <PopularProducts/>
                     </div>
                 </div>
