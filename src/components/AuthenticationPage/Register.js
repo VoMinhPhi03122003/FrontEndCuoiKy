@@ -53,7 +53,13 @@ function SectionRegister(){
                         errorRegister: ""
                     }))
                     let hashPass = hashText(password);
-                    let account = {email, hashPass};
+                    let fullname = "";
+                    let gender = "";
+                    let phone = "";
+                    let personal_email = "";
+                    let address = "";
+                    let province = "";
+                    let account = {email, hashPass, fullname, gender, phone, personal_email, address, province};
                     addAccount(account).then(() =>{
                         setTimeout(() => {
                             navigate('/login');
