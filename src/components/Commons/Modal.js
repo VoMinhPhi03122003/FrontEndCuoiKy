@@ -14,7 +14,6 @@ import '../../css/modal.css';
 import {resetCart, showModalPayment, showModalPayPal, updateStatePayment} from "../../redux/redux_tuyen/Action_Tuyen";
 import {ButtonPayPal} from "../Commons/Buttons";
 import {PayPalScriptProvider} from "@paypal/react-paypal-js";
-import img_logo from '../../img/logo/logo.png';
 
 export function ModalPayment() {
     const [showButtonDownload, setShowButtonDownload] = useState(false);
@@ -149,7 +148,9 @@ export function ModalPayment() {
             <Modal size="lg" show={showModal}>
                 <Modal.Header className="header-modal">
                     <div className="header-content">
-                        <div><span>Chọn đơn vị thanh toán</span></div>
+                        <div style={{color: '#8C6635', fontWeight: 'bold'}}>
+                            <span>Chọn đơn vị thanh toán</span>
+                        </div>
                         <div>
                             <button className="custom-close-button"
                                     onClick={() => clickCloseModal()}>X
@@ -159,7 +160,7 @@ export function ModalPayment() {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="body-content">
-                        <div className="electronic-wallet" onClick={() => clickPaymentWithPaypal()}>
+                    <div className="electronic-wallet" onClick={() => clickPaymentWithPaypal()}>
                             <img src="https://sharecode.vn/assets/images/btn-paypal.png" alt=""/>
                         </div>
                         {
@@ -179,7 +180,7 @@ export function ModalPayment() {
     )
 }
 
-export function ModalPaypal({isShow}) {
+export function ModalPaypal() {
 
     const showModal = useSelector(state => state.modalReducer.modal_paypal);
     const dispatch = useDispatch();
@@ -189,7 +190,7 @@ export function ModalPaypal({isShow}) {
     }
 
     if (showModal === true) {
-        dispatch(showModalPayment(false));
+        dispatch(showModalPayment(false)); // đóng cửa sổ thanh toán và download code
     }
 
     return (
@@ -201,7 +202,7 @@ export function ModalPaypal({isShow}) {
             <Modal size="lg" show={showModal} aria-labelledby="contained-modal-title-vcenter"
                    centered>
                 <Modal.Header>
-                    <Modal.Title>Thanh toán với PayPal</Modal.Title>
+                    <Modal.Title style={{color: '#84c52c', fontWeight: 'bold'}}>Thanh toán với PayPal</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Row>
@@ -209,10 +210,13 @@ export function ModalPaypal({isShow}) {
                             <ButtonPayPal currency={"USD"}
                                           showSpinner={false}/>
                         </Col>
-                        <Col xs={6} md={4}>
-                            <div className="justify-content-center">
-                                <img src={img_logo} alt=""/>
-                            </div>
+                        <Col xs={6} md={4}className="d-flex justify-content-center">
+                            <Row>
+                                <div>
+                                    <img src="https://sharecode.vn/assets/images/secure.png" alt=""/>
+                                </div>
+                                <div style={{color: '#84c52c', fontWeight: 'bold'}}>Chứng nhận giao dịch an toàn!</div>
+                            </Row>
                         </Col>
                     </Row>
                 </Modal.Body>

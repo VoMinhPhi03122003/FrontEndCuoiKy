@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {PayPalButtons, usePayPalScriptReducer} from "@paypal/react-paypal-js";
 
-const amount = "2";
+const amount = "981";
 const style = {"layout": "vertical"};
 
 export function ButtonPayPal({currency, showSpinner}) {
