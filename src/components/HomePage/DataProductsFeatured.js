@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import {Toast} from 'react-bootstrap';
 import {default as queryString} from 'query-string';
 import {addItemToCart} from '../../redux/redux_tuyen/Action_Tuyen';
@@ -8,7 +8,7 @@ import Pagination from '../HomePage/Pagination'
 import {Link} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating} from "../../javascript/utils";
-
+import {addLiked} from "../../redux/Action";
 
 function DataProductsFeatured() {
 
@@ -103,7 +103,7 @@ function DataProductsFeatured() {
 }
 
 function ItemProductFeatured({product}) {
-
+    const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     const [showToast, setShowToast] = useState(false)
     /**
      useState là một hook dùng để lưu trữ và quản lý state(trạng thái) của một component
@@ -128,6 +128,11 @@ function ItemProductFeatured({product}) {
         dispatch(addItemToCart(product))
         setShowToast(true)
     }
+
+    function clickAddLiked(){
+        dispatch(addLiked(product))
+    }
+
     return (
 
         <div className="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
@@ -156,7 +161,8 @@ function ItemProductFeatured({product}) {
                 </div>
                 <div className="product-item-actions d-flex justify-content-between align-items-center">
                     <div className="d-flex justify-content-start">
-                        <a className="product-item-action mr-1"><i className="fa fa-thumbs-up"></i></a>
+                        <a className={`mr-1 action-like ${likedCodes.some(c => c.id === product.id) && 'is-active'}`}>
+                            <i className="fa fa-thumbs-up" onClick={clickAddLiked}></i></a>
                         <a className="product-item-action"><i className="fa fa-shopping-cart"
                                                               onClick={clickAddItemToCart}></i></a>
                     </div>
