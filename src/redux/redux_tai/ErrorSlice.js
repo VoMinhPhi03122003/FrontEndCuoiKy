@@ -5,7 +5,7 @@ const initState = {
     errorChangePass:"",
     errorForgotPass:"",
     errorVerifyPass:"",
-    errorProfile:""
+    errorProfile:''
 }
 const errorReducer = (state = initState, action) =>{
     switch (action.type) {
