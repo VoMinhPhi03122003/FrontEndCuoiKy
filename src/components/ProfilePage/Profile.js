@@ -8,6 +8,12 @@ import {getProvinces, loadInfo} from "../../javascript/api/Api_Tai";
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Hồ sơ cá nhân", link: "/profile"}]
 
 function SectionProfile() {
+    const [fullnameInput, setFullnameInput] = useState("");
+    const [genderInput, setGenderInput] = useState("");
+    const [phoneInput, setPhoneInput] = useState("");
+    const [emailInput, setEmailInput] = useState("");
+    const [addressInput, setAddressInput] = useState("");
+    const [provinceInput, setProvinceInput] = useState("");
     const [info, setInfo] = useState([]);
     const [provinces, setProvinces] = useState([]);
     const navigate = useNavigate();
@@ -42,7 +48,30 @@ function SectionProfile() {
         localStorage.removeItem('account');
         navigate('/');
     };
-
+    const handleInputFullname = (e) =>{
+        setFullnameInput(e.target.value);
+        info.fullname = e.target.value;
+    }
+    const handleInputPhone = (e) =>{
+        setPhoneInput(e.target.value);
+        info.phone = e.target.value;
+    }
+    const handleInputEmail = (e) =>{
+        setEmailInput(e.target.value);
+        info.personal_email = e.target.value;
+    }
+    const handleInputAddress = (e) =>{
+        setAddressInput(e.target.value)
+        info.address = e.target.value;
+    }
+    const handleInputGender = (e) =>{
+        setGenderInput(e.target.value)
+        info.gender = e.target.value;
+    }
+    const handleInputProvince = (e) =>{
+        setProvinceInput(e.target.value)
+        info.province= e.target.value;
+    }
     return (
         <section className="contact-us profile">
             <div className="container">
@@ -54,7 +83,7 @@ function SectionProfile() {
                                     <img className="rounded-circle" width="150px"
                                          src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
                                          alt=""/>
-                                    <span className="font-weight-bold">Edogaru</span>
+                                    <span className="font-weight-bold">{info.email}</span>
                                 </div>
                                 <ul>
                                     <li>
@@ -79,20 +108,20 @@ function SectionProfile() {
                                     <div className="col-lg-12 col-12">
                                         <div className="form-group">
                                             <label>Họ và tên</label>
-                                            <input value={info.fullname} name="name" type="text"/>
+                                            <input value={info.fullname} onChange={handleInputFullname} name="name" type="text"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-12 col-12">
                                         <div className="form-group sex">
                                             <label className="mr-4">Giới tính:</label>
                                             <div className="form-check form-check-inline mr-4 d-inline-flex  align-items-center">
-                                                <input checked={info.gender === 'Nam'} className="form-check-input" type="radio"
+                                                <input checked={info.gender === 'Nam'} onChange={handleInputGender} className="form-check-input" type="radio"
                                                        name="sex" id="male" value="Nam"/>
                                                 <label className="form-check-label d-inline-block ml-2"
                                                        htmlFor="male">Nam</label>
                                             </div>
                                             <div className="form-check form-check-inline mr-4 d-inline-flex  align-items-center">
-                                                <input checked={info.gender === 'Nữ'} className="form-check-input" type="radio"
+                                                <input checked={info.gender === 'Nữ'} onChange={handleInputGender} className="form-check-input" type="radio"
                                                        name="sex" id="female" value="Nữ"/>
                                                 <label className="form-check-label d-inline-block ml-2"
                                                        htmlFor="male">Nữ</label>
@@ -102,25 +131,25 @@ function SectionProfile() {
                                     <div className="col-lg-6 col-12">
                                         <div className="form-group">
                                             <label>Số điện thoại<span>*</span></label>
-                                            <input value={info.phone} name="phone" type="text"/>
+                                            <input onChange={handleInputPhone} value={info.phone} name="phone" type="text"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-12">
                                         <div className="form-group">
                                             <label>Email<span>*</span></label>
-                                            <input value={info.personal_email} name="email_customer" type="email"/>
+                                            <input onChange={handleInputEmail} value={info.personal_email} name="email_customer" type="email"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-8 col-12">
                                         <div className="form-group">
                                             <label>Địa chỉ<span>*</span></label>
-                                            <input value={info.address} name="address" type="text"/>
+                                            <input onChange={handleInputAddress} value={info.address} name="address" type="text"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-4 col-12">
                                         <div className="form-group">
                                             <label htmlFor="company">Tỉnh / Thành phố<span>*</span></label>
-                                            <select className="region" name="city" id="company" value={info.province}>
+                                            <select className="region" name="city" id="company" value={info.province} onChange={handleInputProvince}>
                                                 {provinces.map(province =>(
                                                     <option key={province.code} value={province.name}>
                                                         {province.name}

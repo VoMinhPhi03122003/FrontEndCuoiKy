@@ -32,3 +32,10 @@ export const verifyPassError = (data) =>{
         payload: data
     }
 }
+
+export const profileError = (data) =>{
+    return{
+        type: 'profile/error',
+        payload: data
+    }
+}
