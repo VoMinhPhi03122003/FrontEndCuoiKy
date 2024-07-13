@@ -4,10 +4,10 @@ import '../../css/product-detail.css'
 import {useEffect, useMemo, useRef, useState} from "react";
 import {PopularProducts} from "../TopProductPage/ListProducts";
 import {Link, useLocation, useNavigate} from "react-router-dom";
-import {formatNumber, formatRating, getPassedTimeInText} from "../../javascript/utils";
+import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
 import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
-import {addLiked, increaseDownloaded, increaseRating, increaseViewed, putProduct, putRatingComment} from "../../redux/Action";
+import {addLiked, increaseDownloaded, increaseRating, increaseViewed, postComment, putProduct, putRatingComment} from "../../redux/Action";
 
 function DetailLeft() {
     const p = useSelector(state => state.productReducer.product)
@@ -330,68 +330,74 @@ function Rating() {
 }
 
 function Comment() {
+    const p = useSelector(state => state.productReducer.product)
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [content, setContent] = useState('')
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const sortedComments = [...p.comments].sort((a, b) => a.when - b.when > 0 ? -1 : 1)
+
+    function sendComment() {
+        if (name && email && content) {
+            const data = {
+                name: name,
+                email: email,
+                when: Date.now(),
+                content: content
+            }
+            dispatch(postComment(data))
+            navigate(".", {
+                state: {
+                    ...location.state,
+                    comments: [
+                        ...location.state.comments,
+                        data
+                    ]
+                }
+            })
+        }
+    }
+
     return (
         <>
             <DetailDivider title={'BÌNH LUẬN'}/>
             <div className="detail-comment clearfix">
-                <textarea placeholder="Vui lòng để lại bình luận..."/>
+                <textarea value={content} onChange={e => setContent(e.target.value)} placeholder="Vui lòng để lại bình luận..."/>
                 <div className="d-flex justify-content-between">
                     <div>
                         <div className="input-box">
                             <label htmlFor="input-name">Họ và tên <span>*</span></label>
-                            <input name="input-name" type="text"/>
+                            <input value={name} onChange={e => setName(e.target.value)} name="input-name" type="text"/>
                         </div>
                         <div className="input-box">
                             <label htmlFor="input-name">Email</label>
-                            <input name="input-name" type="text"/>
+                            <input value={email} onChange={e => setEmail(e.target.value)} name="input-name" type="text"/>
                         </div>
                     </div>
-                    <button>GỬI</button>
+                    <button onClick={sendComment}>GỬI</button>
                 </div>
             </div>
             <div className="mt-5">
-                <div className="comment-item">
-                    <div className="comment-avatar mr-3">
-                        <div>N</div>
-                    </div>
-                    <div className="comment-detail">
-                        <div>
-                            <div>Ngô Bá Khá</div>
-                            <div>12/06/2023</div>
-                        </div>
-                        <div>
-                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
-                        </div>
-                    </div>
+                <div style={{fontSize: '17px', fontFamily: 'Roboto', fontWeight: '500', color: '#333333'}}>
+                    {p.comments.length} comments
                 </div>
-                <div className="comment-item">
-                    <div className="comment-avatar mr-3">
-                        <div>N</div>
-                    </div>
-                    <div className="comment-detail">
-                        <div>
-                            <div>Ngô Bá Khá</div>
-                            <div>12/06/2023</div>
+                {sortedComments.map((value, index) => (
+                    <div className="comment-item" key={index}>
+                        <div className="comment-avatar mr-3">
+                            <div>{getFirstLetter(value.name)}</div>
                         </div>
-                        <div>
-                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
-                        </div>
-                    </div>
-                </div>
-                <div className="comment-item">
-                    <div className="comment-avatar mr-3">
-                        <div>N</div>
-                    </div>
-                    <div className="comment-detail">
-                        <div>
-                            <div>Ngô Bá Khá</div>
-                            <div>12/06/2023</div>
-                        </div>
-                        <div>
-                            Dạ cho em hỏi thời hạn bảo hành máy này khi mua ở TTDĐ là ntn? Nếu lỗi thì sẽ xử lí trong bao lâu?
+                        <div className="comment-detail">
+                            <div>
+                                <div>{value.name}</div>
+                                <div>{getPassedTimeInText(value.when)}</div>
+                            </div>
+                            <div>{value.content}</div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </>
     )

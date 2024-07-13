@@ -80,3 +80,5 @@ export function getPassedTimeInText(when) {
 
     return `${Math.floor(elapseTime / (12 * 30 * 24 * 60 * 60 * 1000))} năm trước`
 }
+
+export const getFirstLetter = (name) => name.charAt(0).toUpperCase()
