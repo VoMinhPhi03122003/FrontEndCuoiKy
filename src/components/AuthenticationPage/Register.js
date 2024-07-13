@@ -56,7 +56,7 @@ function SectionRegister(){
                     let fullname = "";
                     let gender = "";
                     let phone = "";
-                    let personal_email = "";
+                    let personal_email = email;
                     let address = "";
                     let province = "";
                     let account = {email, hashPass, fullname, gender, phone, personal_email, address, province};

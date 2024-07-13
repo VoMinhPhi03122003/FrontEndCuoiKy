@@ -90,3 +90,28 @@ export async function getProvinces() {
     const data = await response.json();
     return data;
 }
+
+export async function loadInfo(email){
+    try {
+        const url = `http://localhost:9810/api/accounts/?email=${encodeURIComponent(email)}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Failed to fetch account data.');
+        }
+        const accounts = await response.json();
+        const account = accounts.find((acc) => acc.email === email);
+        if (!account) {
+            throw new Error('Account not found.');
+        }
+
+        const updateResponse = await fetch(`http://localhost:9810/api/accounts/${account.id}`);
+        if (!updateResponse.ok) {
+            throw new Error('Failed to update password.');
+        }
+        const dataInfo = await updateResponse.json()
+        return dataInfo;
+        console.log('Password updated successfully!');
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}

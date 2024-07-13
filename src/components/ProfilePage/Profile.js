@@ -3,20 +3,18 @@ import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import {Link, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {getProvinces} from "../../javascript/api/Api_Tai";
+import {getProvinces, loadInfo} from "../../javascript/api/Api_Tai";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Hồ sơ cá nhân", link: "/profile"}]
 
 function SectionProfile() {
-    const [email, setEmail] = useState('');
+    const [info, setInfo] = useState([]);
     const [provinces, setProvinces] = useState([]);
     const navigate = useNavigate();
+    const storedEmail = localStorage.getItem('account');
 
     useEffect(() => {
-        const storedEmail = localStorage.getItem('account');
-        if (storedEmail) {
-            setEmail(storedEmail);
-        } else {
+        if (!storedEmail) {
             navigate('/login');
         }
     }, []);
@@ -30,13 +28,20 @@ function SectionProfile() {
             console.error('Lỗi khi gọi API:', error)
         }
     },[])
+    useEffect(()=>{
+        try {
+            loadInfo(storedEmail).then(data =>{
+                setInfo(data);
+            })
+        }catch (error){
+            console.error('Lỗi khi gọi API:', error)
+        }
+    },[])
 
     const handleLogout = () => {
         localStorage.removeItem('account');
-        setEmail('');
         navigate('/');
     };
-    console.log(provinces)
 
     return (
         <section className="contact-us profile">
@@ -74,20 +79,20 @@ function SectionProfile() {
                                     <div className="col-lg-12 col-12">
                                         <div className="form-group">
                                             <label>Họ và tên</label>
-                                            <input name="name" type="text"/>
+                                            <input value={info.fullname} name="name" type="text"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-12 col-12">
                                         <div className="form-group sex">
                                             <label className="mr-4">Giới tính:</label>
                                             <div className="form-check form-check-inline mr-4 d-inline-flex  align-items-center">
-                                                <input className="form-check-input" type="radio"
+                                                <input checked={info.gender === 'Nam'} className="form-check-input" type="radio"
                                                        name="sex" id="male" value="Nam"/>
                                                 <label className="form-check-label d-inline-block ml-2"
                                                        htmlFor="male">Nam</label>
                                             </div>
                                             <div className="form-check form-check-inline mr-4 d-inline-flex  align-items-center">
-                                                <input className="form-check-input" type="radio"
+                                                <input checked={info.gender === 'Nữ'} className="form-check-input" type="radio"
                                                        name="sex" id="female" value="Nữ"/>
                                                 <label className="form-check-label d-inline-block ml-2"
                                                        htmlFor="male">Nữ</label>
@@ -97,27 +102,27 @@ function SectionProfile() {
                                     <div className="col-lg-6 col-12">
                                         <div className="form-group">
                                             <label>Số điện thoại<span>*</span></label>
-                                            <input name="phone" type="text"/>
+                                            <input value={info.phone} name="phone" type="text"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-12">
                                         <div className="form-group">
                                             <label>Email<span>*</span></label>
-                                            <input name="email_customer" type="email"/>
+                                            <input value={info.personal_email} name="email_customer" type="email"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-8 col-12">
                                         <div className="form-group">
                                             <label>Địa chỉ<span>*</span></label>
-                                            <input name="address" type="text"/>
+                                            <input value={info.address} name="address" type="text"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-4 col-12">
                                         <div className="form-group">
                                             <label htmlFor="company">Tỉnh / Thành phố<span>*</span></label>
-                                            <select className="region" name="city" id="company">
+                                            <select className="region" name="city" id="company" value={info.province}>
                                                 {provinces.map(province =>(
-                                                    <option key={province.code} value={province.code}>
+                                                    <option key={province.code} value={province.name}>
                                                         {province.name}
                                                     </option>)
                                                 )}
