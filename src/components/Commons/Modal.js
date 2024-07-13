@@ -6,14 +6,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-
 import Swal from 'sweetalert2';
-
 import {downloadFile} from "../../javascript/utils/Utils_Tuyen";
 
 import {showModalPayment, updateStatePayment, resetCart} from "../../redux/redux_tuyen/Action_Tuyen";
-
 import '../../css/modal.css';
+import {resetCart, showModalPayment, showModalPayPal, updateStatePayment} from "../../redux/redux_tuyen/Action_Tuyen";
+import {ButtonPayPal} from "../Commons/Buttons";
+import {PayPalScriptProvider} from "@paypal/react-paypal-js";
+import img_logo from '../../img/logo/logo.png';
 
 export function ModalPayment() {
     const [showButtonDownload, setShowButtonDownload] = useState(false);
@@ -24,10 +25,6 @@ export function ModalPayment() {
     const payment = useSelector(state => state.paymentReducer);
 
     const wallets = [
-        {
-            name: 'Paypal',
-            link_image: 'https://sharecode.vn/assets/images/btn-paypal.png',
-        },
         {
             name: 'Momo',
             link_image: 'https://sharecode.vn/assets/images/vi-momo.png',
@@ -141,9 +138,15 @@ export function ModalPayment() {
         })
     }
 
+    const clickPaymentWithPaypal = () => {
+        dispatch(showModalPayPal(true));
+    }
+
     return (
+        <>
+        <ModalPaypal/>
         <div>
-            <Modal size="lg" show={showModal} toggle={() => dispatch(showModalPayment(false))}>
+            <Modal size="lg" show={showModal}>
                 <Modal.Header className="header-modal">
                     <div className="header-content">
                         <div><span>Chọn đơn vị thanh toán</span></div>
@@ -156,6 +159,9 @@ export function ModalPayment() {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="body-content">
+                        <div className="electronic-wallet" onClick={() => clickPaymentWithPaypal()}>
+                            <img src="https://sharecode.vn/assets/images/btn-paypal.png" alt=""/>
+                        </div>
                         {
                             wallets.map((value, index) => (
                                 <div className="electronic-wallet" key={index}
@@ -169,5 +175,51 @@ export function ModalPayment() {
                 </Modal.Body>
             </Modal>
         </div>
+        </>
+    )
+}
+
+export function ModalPaypal({isShow}) {
+
+    const showModal = useSelector(state => state.modalReducer.modal_paypal);
+    const dispatch = useDispatch();
+    const clickCloseModal = () => {
+        dispatch(showModalPayPal(false)); // đóng cửa sổ thanh toán PayPal
+        dispatch(showModalPayment(true)); // hiển thị cửa sổ thanh toán và download code
+    }
+
+    if (showModal === true) {
+        dispatch(showModalPayment(false));
+    }
+
+    return (
+        <PayPalScriptProvider options={{
+            "clientId": "test",
+            components: "buttons",
+            currency: "USD"
+        }}>
+            <Modal size="lg" show={showModal} aria-labelledby="contained-modal-title-vcenter"
+                   centered>
+                <Modal.Header>
+                    <Modal.Title>Thanh toán với PayPal</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Row>
+                        <Col xs={12} md={8}>
+                            <ButtonPayPal currency={"USD"}
+                                          showSpinner={false}/>
+                        </Col>
+                        <Col xs={6} md={4}>
+                            <div className="justify-content-center">
+                                <img src={img_logo} alt=""/>
+                            </div>
+                        </Col>
+                    </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => clickCloseModal()}>Close</Button>
+                </Modal.Footer>
+            </Modal>
+        </PayPalScriptProvider>
     )
 }

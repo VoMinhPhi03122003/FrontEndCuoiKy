@@ -140,7 +140,7 @@ function SectionProfile() {
                     </div>
                     <div className="col-lg-8 col-12">
                         <div className="form-main">
-                            <div className="title">
+                            <div className="title-profile">
                                 <h3>Hồ sơ của tôi</h3>
                                 <p className="m-0">Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
                             </div>

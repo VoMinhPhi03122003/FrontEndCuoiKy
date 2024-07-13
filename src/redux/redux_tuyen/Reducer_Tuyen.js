@@ -12,7 +12,8 @@ const initCartState = {
 }
 
 const initModalState = {
-    modal_payment: false
+    modal_payment: false,
+    modal_paypal: false
 }
 
 const initPaymentState = {
@@ -131,10 +132,22 @@ export const modalReducer = (state = initModalState, action) => {
                 modal_payment: action.payload
             }
         }
-        case'modal/close-model-payment': {
+        case'modal/close-modal-payment': {
             return {
                 ...state,
                 modal_payment: action.payload
+            }
+        }
+        case'modal/show-modal-paypal': {
+            return {
+                ...state,
+                modal_paypal: action.payload
+            }
+        }
+        case'modal/close-modal-paypal': {
+            return {
+                ...state,
+                modal_paypal: action.payload
             }
         }
         default:
