@@ -42,3 +42,15 @@
     background-color: #e1d1d1;
     cursor: pointer;
 }
+
+.notify-warning-content-right{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #8C6635;
+}
+
+.notify-success-content-right {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #7fad39;
+}

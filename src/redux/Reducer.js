@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {cartReducer, discountCodeReducer, modalReducer} from "../redux_tuyen/Reducer_Tuyen";
+import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "../redux_tuyen/Reducer_Tuyen";
 
 import errorReducer from "./redux_tai/ErrorSlice";
 
@@ -12,43 +12,26 @@ export  const initialState = {
 
 const listProductsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'reset': {
-            return {
-                ...state,
-                ...initialState
-            }
-        }
-
-        case 'products/page': {
-            return {
-                ...state,
-                page: action.payload
-            }
-        }
-        case 'products/sort': {
-            return {
-                ...state,
-                sort: action.payload
-            }
-        }
-        case 'products/type': {
-            return {
-                ...state,
-               type: action.payload
-            }
-        }
-        case 'products/layout': {
-            return {
-                ...state,
-                layout: action.payload
-            }
-        }
+        case 'reset':
+            return {...state, ...initialState}
+        case 'products/page':
+            return {...state, page: action.payload}
+        case 'products/sort':
+            return {...state, sort: action.payload}
+        case 'products/type':
+            return {...state, type: action.payload}
+        case 'products/layout':
+            return {...state, layout: action.payload}
         default:
             return state
     }
 }
 
-const likedCodesReducer = (state = {liked: JSON.parse(localStorage.getItem('liked'))}, action) => {
+const initialLiked = {
+    liked: localStorage.getItem('liked') ? JSON.parse(localStorage.getItem('liked')) : []
+}
+
+const likedCodesReducer = (state = initialLiked, action) => {
     switch (action.type) {
         case 'liked/add': {
             let likedCodes = undefined
@@ -69,11 +52,125 @@ const likedCodesReducer = (state = {liked: JSON.parse(localStorage.getItem('like
     }
 }
 
+const productReducer = (state = {
+    liked: JSON.parse(localStorage.getItem('liked')) === null
+        ? localStorage.setItem('liked', JSON.stringify(""))
+        : JSON.parse(localStorage.getItem('liked'))}, action) => {
+    switch (action.type) {
+        case 'product/put': {
+            return {
+                ...state,
+                product: action.payload
+            }
+        }
+        case 'product/increaseDownloaded': {
+            const data = {
+                "downloaded": state.product.downloaded + 1
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    downloaded: state.product.downloaded + 1
+                }
+            }
+        }
+        case 'product/increaseViewed': {
+            const data = {
+                "viewed": state.product.viewed + 1
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    ...data
+                }
+            }
+        }
+        case 'product/increaseRating': {
+            const data = {
+                rating: {
+                    ...state.product.rating,
+                    [action.payload]: state.product.rating[action.payload] + 1
+                }
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    ...data
+                }
+            }
+        }
+        case 'product/putRatingComment': {
+            const data = {
+                'rating-comment': [...state.product['rating-comment'], {...action.payload}]
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    ...data
+                }
+            }
+        }
+        case 'product/postComment': {
+            const data = {
+                comments: [
+                    ...state.product.comments,
+                    action.payload
+                ]
+            }
+            fetch(`http://localhost:9810/products/${state.product.id}`, {
+                method: "PATCH",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then()
+
+            return {
+                ...state,
+                product: {
+                    ...state.product,
+                    ...data
+                }
+            }
+        }
+        default:
+            return state
+    }
+}
+
 export const reducers = combineReducers({
     cartReducer: cartReducer,
     listProductsReducer: listProductsReducer,
-    errorReducer: errorReducer,
     discountCodeReducer: discountCodeReducer,
     likedCodesReducer: likedCodesReducer,
-    modalReducer: modalReducer
+    errorReducer: errorReducer,
+    modalReducer: modalReducer,
+    paymentReducer: paymentReducer,
+    productReducer
 })

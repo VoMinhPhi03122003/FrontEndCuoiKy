@@ -1,4 +1,6 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap);
 
 :root {
     --color-main: #7fad39;
@@ -18,7 +20,7 @@ html,
 body {
     body {
         height: 100%;
-        font-family: Helvetica, Arial, sans;
+        font-family: Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         font-smoothing: antialiased;
     }
@@ -3569,7 +3571,7 @@ body {
         font-weight: 400;
     }
 
-    .contact-us .form .form-group input {
+    .contact-us .form .form-group input, .contact-us .form .form-group select {
         height: 48px;
         outline: unset;
         line-height: 48px;
@@ -3653,7 +3655,7 @@ body {
     }
 
 
-    .profile .form-main .title {
+    .profile .form-main .title-profile{
         border-bottom: 1px solid rgb(210, 210, 210);
         padding-bottom: 8px;
         margin-bottom: 24px;

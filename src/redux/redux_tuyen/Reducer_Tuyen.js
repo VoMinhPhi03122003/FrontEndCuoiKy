@@ -12,7 +12,16 @@ const initCartState = {
 }
 
 const initModalState = {
-    modal_payment: false
+    modal_payment: false,
+    modal_paypal: false
+}
+
+const initPaymentState = {
+    payment_with_paypal: false,
+    payment_with_momo: false,
+    payment_with_viettelpay: false,
+    payment_with_nganluong: false,
+    payment: false
 }
 
 export const cartReducer = (state = initCartState, action) => {
@@ -74,6 +83,20 @@ export const cartReducer = (state = initCartState, action) => {
             }
         }
 
+        case 'cart/reset': {
+
+            const updateCart = [];
+            const newTotalPrice = 0;
+            localStorage.setItem('cart', JSON.stringify(updateCart));
+            localStorage.setItem('total-price', JSON.stringify(newTotalPrice));
+
+            return {
+                ...state,
+                cart: updateCart,
+                totalPrice: newTotalPrice,
+                discount_percent: 0
+            }
+        }
 
         default :
             return state;
@@ -109,13 +132,77 @@ export const modalReducer = (state = initModalState, action) => {
                 modal_payment: action.payload
             }
         }
-        case'modal/close-model-payment': {
+        case'modal/close-modal-payment': {
             return {
                 ...state,
                 modal_payment: action.payload
             }
         }
+        case'modal/show-modal-paypal': {
+            return {
+                ...state,
+                modal_paypal: action.payload
+            }
+        }
+        case'modal/close-modal-paypal': {
+            return {
+                ...state,
+                modal_paypal: action.payload
+            }
+        }
         default:
             return state
+    }
+}
+
+export const paymentReducer = (state = initPaymentState, action) => {
+    switch (action.type) {
+
+        case 'payment/paypal': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_paypal: true,
+                payment: true
+            }
+        }
+        case 'payment/momo': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_momo: true,
+                payment: true
+            }
+        }
+        case 'payment/viettelpay': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_viettelpay: true,
+                payment: true
+            }
+        }
+        case 'payment/nganluong': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_nganluong: true,
+                payment: true
+            }
+        }
+
+        case 'payment/reset': {
+            console.log('Đây là Action updateStatePayment: ', action.payload)
+            return {
+                ...state,
+                payment_with_paypal: false,
+                payment_with_momo: false,
+                payment_with_viettelpay: false,
+                payment_with_nganluong: false,
+                payment: false
+            }
+        }
+        default:
+            return state;
     }
 }

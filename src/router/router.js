@@ -1,15 +1,15 @@
 import {createBrowserRouter} from "react-router-dom";
-import ListProducts from "../components/TopProductPage/ListProducts";
-import ProductDetails from "../components/ProductDetailPage/ProductDetails";
-import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
-import {LikedCodes} from "./components/Commons/LikedCodes";
-
 import App from "../App";
+import ListProducts from "../components/TopCodePage/ListProducts";
+import ProductDetails from "../components/ProductDetailPage/ProductDetails";
 import LoginPage from "../components/AuthenticationPage/Login";
 import RegisterPage from "../components/AuthenticationPage/Register";
 import ForgotPassPage from "../components/AuthenticationPage/ForgotPass";
 import ProfilePage from "../components/ProfilePage/Profile";
 import ChangePassPage from "../components/AuthenticationPage/ChangePass";
+import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
+import {LikedCodes} from "../components/Commons/LikedCodes";
+import {ErrorPage404} from "./components/ErrorPage/ErrorPage404";
 
 const profile = {path: '/profile', element: <ProfilePage/>}
 const listAuthentication = [
@@ -28,6 +28,10 @@ const listAuthentication = [
     {
         path: '/change-password',
         element: <ChangePassPage/>
+    },
+    {
+        path: "/verify-password",
+        element: <VerifyPassPage/>
     }
 ]
 
@@ -55,7 +59,11 @@ const listAuthentication = [
      {
          path: '/free-products/product/:productId',
          element: <ProductDetails/>
-    }
+     },
+     {
+         path: '/product/:productId',
+         element: <ProductDetails/>
+     }
  ]
 
 const likedCodes = [{
@@ -72,6 +80,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <App/>,
+        errorElement: <ErrorPage404/>
     },
     profile,
     ...listProducts,
