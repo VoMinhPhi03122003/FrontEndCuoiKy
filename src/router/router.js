@@ -9,6 +9,8 @@ import ProfilePage from "../components/ProfilePage/Profile";
 import ChangePassPage from "../components/AuthenticationPage/ChangePass";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 import {LikedCodes} from "../components/Commons/LikedCodes";
+import {ErrorPage404} from "./components/ErrorPage/ErrorPage404";
+
 import ErrorPage from "./ErrorPage";
 
 const profile = {path: '/profile', element: <ProfilePage/>}
@@ -59,7 +61,11 @@ const listAuthentication = [
      {
          path: '/free-products/product/:productId',
          element: <ProductDetails/>
-    }
+     },
+     {
+         path: '/product/:productId',
+         element: <ProductDetails/>
+     }
  ]
 
 const likedCodes = [{
@@ -76,7 +82,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <App/>,
-        errorElement: <ErrorPage/>
+        errorElement: <ErrorPage404/>
     },
     profile,
     ...listProducts,
