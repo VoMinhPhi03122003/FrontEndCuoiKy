@@ -404,7 +404,6 @@ function Comment() {
 }
 
 function DetailContent() {
-    const p = useSelector(state => state.productReducer.product)
     const ref = useRef(null)
     const goToInstallation = () => ref.current.scrollIntoView({behavior: "auto"})
     return (
