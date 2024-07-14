@@ -220,16 +220,14 @@
     border-radius: 5px;
     background-image: -webkit-linear-gradient(to bottom, #7ec72f, #7ec72f);
     box-shadow: 0 4px 0 #5d941f, 0 6px 5px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
 }
 
-.offer-download img::before,
-.offer-download img {
-    position: relative;
-    top: -4px;
+.offer-download i {
+    display: inline-block;
     margin-right: 5px;
 }
 
@@ -545,18 +543,18 @@
 
 @keyframes slideIn {
     from {
-        margin: 7% auto;
+        margin: 3% auto;
         opacity: 0
     }
     to {
-        margin: 10% auto;
+        margin: 6% auto;
         opacity: 1
     }
 }
 
 .rating-modal-content {
     width: 550px;
-    margin: 10% auto;
+    margin: 6% auto;
     background-color: #fff;
     border-radius: 8px;
     font-size: 15px;

@@ -2,12 +2,14 @@ import Header from "../Commons/Header";
 import Footer from "../Commons/Footer";
 import '../../css/product-detail.css'
 import {useEffect, useMemo, useRef, useState} from "react";
-import {PopularProducts} from "../TopProductPage/ListProducts";
+import {PopularProducts} from "../ListProductsPage/Codes";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
 import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
-import {addLiked, increaseDownloaded, increaseRating, increaseViewed, postComment, putProduct, putRatingComment} from "../../redux/Action";
+import {addLiked, increaseRating, increaseViewed, postComment, putProduct, putRatingComment} from "../../redux/Action";
+import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
+
 
 function DetailLeft() {
     const p = useSelector(state => state.productReducer.product)
@@ -91,16 +93,14 @@ function DetailCenter() {
 }
 
 function DetailRight() {
+    const cart = useSelector(state => state.cartReducer.cart)
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     const product = useSelector(state => state.productReducer.product)
     const dispatch = useDispatch()
-    const location = useLocation()
-    const navigate = useNavigate()
     const inLiked = likedCodes.some(c => c.id === product.id)
 
     function handledDownload() {
-        dispatch(increaseDownloaded())
-        navigate(".", {state: {...location.state, downloaded: location.state.downloaded + 1}})
+        dispatch(addItemToCart(product))
     }
 
     return (
@@ -109,7 +109,9 @@ function DetailRight() {
                 <h6>PHÍ DOWNLOAD</h6>
                 <span className="offer-price">{formatNumber((product.price), '.')}<sup>đ</sup></span>
                 <button className="offer-download" onClick={handledDownload}>
-                    <img src="https://topcode.vn/assets/images/ic-down.png" alt=""/> TẢI NGAY
+                    {cart.some(item => item.id === product.id)
+                        ? (<><i className="fa fa-check"></i> ĐÃ THÊM</>)
+                        : (<><i className="fa fa-cart-shopping"></i> THÊM VÀO GIỎ HÀNG</>)}
                 </button>
                 <button className={`offer-favorite ${inLiked && 'offer-active'}`}
                         onClick={() => dispatch(addLiked(product))}><i

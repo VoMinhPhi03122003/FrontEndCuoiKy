@@ -1,13 +1,10 @@
-import Header from "../Commons/Header";
-import Footer from "../Commons/Footer"
 import '../../css/products.css'
-import React, {useEffect,useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {products} from "../../data/Products";
 import {addLiked, setLayout, setPage, setSort, setType} from "../../redux/Action";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
-import {formatNumber, formatRating, getTypes, makeURL} from "../../javascript/utils";
+import {formatNumber, formatRating, getTypes} from "../../javascript/utils";
 import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
 import {Toast} from "react-bootstrap";
 
@@ -34,7 +31,7 @@ export function PopularProducts() {
     )
 }
 
-function SideBar() {
+export  function SideBar() {
     const type = useSelector(state => state.listProductsReducer.type)
     const [types, setTypes] = useState([])
     const dispatch = useDispatch()
@@ -76,7 +73,7 @@ function SideBar() {
     )
 }
 
-function ProductItemRow({p, navigate, addToLiked, addToCart}) {
+export function ProductItemRow({p, navigate, addToLiked, addToCart}) {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     return (
         <div className="product-item-row mb-4">
@@ -99,7 +96,8 @@ function ProductItemRow({p, navigate, addToLiked, addToCart}) {
                 <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
                     <div className="pr-3 pb-3">
                         <div className="product-item-row-price text-center">
-                            <Link to={`product/${p.id}`} state={p} className="d-inline text-center">{formatNumber(p.price, '.')}đ</Link>
+                            <Link to={`product/${p.id}`} state={p}
+                                  className="d-inline text-center">{p.price === 0 ? 'FREE' : formatNumber(p.price, '.') + 'đ'}</Link>
                         </div>
                         <div className="d-flex justify-content-end">
                             <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
@@ -114,7 +112,7 @@ function ProductItemRow({p, navigate, addToLiked, addToCart}) {
     )
 }
 
-function ProductItem({p, navigate, addToLiked, addToCart}) {
+export function ProductItem({p, navigate, addToLiked, addToCart}) {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     const [showToast, setShowToast] = useState(false)
 
@@ -163,8 +161,7 @@ function ProductItem({p, navigate, addToLiked, addToCart}) {
                     <img src={p.type.img} alt=""></img> {p.type.name}
                 </div>
                 <Link to={`product/${p.id}`} state={p}
-                      className="product-item-price">{formatNumber(p.price, '.')}đ
-                </Link>
+                      className="product-item-price">{p.price === 0 ? 'FREE' : formatNumber(p.price, '.') + 'đ'}</Link>
             </div>
         </div>
         </>
@@ -214,7 +211,7 @@ export function ProductContainer({query, total, data, forLiked}) {
     )
 }
 
-function Filter({total}) {
+export function Filter({total}) {
     const sort = useSelector(state => state.listProductsReducer.sort)
     const layout = useSelector(state => state.listProductsReducer.layout)
     const dispatch = useDispatch()
@@ -253,7 +250,7 @@ function Filter({total}) {
     )
 }
 
-function Pagination({total}) {
+export function Pagination({total}) {
 
     const currentPage = useSelector(state => state.listProductsReducer.page)
     const dispatch = useDispatch()
@@ -279,54 +276,4 @@ function Pagination({total}) {
             ) : null}
         </>
 )
-}
-
-function Products() {
-    const page = useSelector(state => state.listProductsReducer.page)
-    const type = useSelector(state => state.listProductsReducer.type)
-    const sort = useSelector(state => state.listProductsReducer.sort)
-
-    const [products, setProducts] = useState([])
-    const refTotal = useRef(0)
-    const location = useLocation()
-    const query = new URLSearchParams(location.search).get('search')
-    const from = new URLSearchParams(location.search).get('from')
-
-
-    useEffect(() => {
-        const url = makeURL(query, from, type, page, sort)
-        fetch(url)
-            .then(res => res.json())
-            .then(json => {
-                setProducts(json.data)
-                refTotal.current = json.total
-            })
-    }, [page, type, sort, query, from])
-
-    return (
-        <section className="product">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-3 col-md-5">
-                        <SideBar/>
-                    </div>
-                    <div className="col-lg-9 col-md-7 pl-4">
-                        <Filter total={refTotal.current}/>
-                        <ProductContainer query={query} total={refTotal.current} data={products}/>
-                        <Pagination total={refTotal.current}/>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
-
-export  default  function ListProducts() {
-    return (
-        <>
-            <Header/>
-            <Products/>
-            <Footer/>
-        </>
-    )
 }

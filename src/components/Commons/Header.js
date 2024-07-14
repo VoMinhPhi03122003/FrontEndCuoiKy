@@ -8,34 +8,25 @@ import {getTypes} from "../../javascript/utils"
 import {useDispatch} from "react-redux";
 import {setPage, setSort, setType} from "../../redux/Action";
 
-const adsList = [
-    {
-        img: 'ads/code-hay-upload-kiem-tien.jpg',
-        color: '#86BD3B'
-    },
-    {
-        img: 'ads/share-code-clould-vps.jpg',
-        color: '#34A5CD'
-    },
-    {
-        img: 'ads/thiet-ke-website.jpg',
-        color: '#2175BA'
-    }
-]
-
 function HeaderAds() {
+    const [adsList, setAdsList] = useState([])
     const [adsIndex, setAdsIndex] = useState(0)
-    const ads = adsList[adsIndex]
 
     useEffect(() => {
-        const id = setInterval(() => setAdsIndex((adsIndex + 1) % adsList.length), 5000)
-        return () => clearInterval(id)
-    }, [adsIndex])
+        fetch('http://localhost:9810/ads')
+            .then(value => value.json())
+            .then(json => setAdsList(json))
+    }, [])
+
+    useEffect(() => {
+        const id = setTimeout(() => setAdsIndex((adsIndex + 1) % adsList.length), 5000)
+        return () => clearTimeout(id)
+    }, [adsIndex, adsList.length])
 
     return (
-        <div className="header-ads" style={{backgroundColor: `${ads.color}`}}>
+        <div className="header-ads" style={{backgroundColor: `${adsList[adsIndex] && adsList[adsIndex].color}`}}>
             <div className="container">
-                <img src={require(`../../img/${ads.img}`)} alt=""/>
+                <img src={adsList[adsIndex] && adsList[adsIndex].img} alt=""/>
             </div>
         </div>
     )

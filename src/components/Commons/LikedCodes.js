@@ -1,9 +1,9 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import {useSelector} from "react-redux";
-import {ProductContainer} from "../TopCodePage/ListProducts";
 import {buildQuery} from "../../javascript/utils";
 import {useEffect, useState} from "react";
+import {ProductContainer} from "../ListProductsPage/Codes";
 
 export function Codes() {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)

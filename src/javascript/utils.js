@@ -37,13 +37,14 @@ export function getTypeName(typeId) {
     return null
 }
 
-export const makeURL = (search, from, type, page, sort) => {
+export const makeURL = (search, from, type, page, sort, price) => {
     const searchPart = search != null ? `name_like=${search}&` : ''
     const fromPart = from != null ? `type.id=${from}&` : ''
     const typePart = type != null ? `type.id=${type}&` : ''
     const pagePart = page != null ? `_page=${page}&_limit=12&` : ''
+    const pricePart = price != null ? `price=${price}&` : ''
     const sortPart = sort != null ? `_sort=${sort}&_order=desc` : ''
-    return trim(trim(`http://localhost:9810/products?${searchPart}${fromPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
+    return trim(trim(`http://localhost:9810/products?${searchPart}${fromPart}${typePart}${pagePart}${pricePart}${sortPart}`, '&'), '?')
 }
 
 export const buildQuery = (ids) => {
