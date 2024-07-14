@@ -1,18 +1,14 @@
-import Header from "../Commons/Header";
-import Footer from "../Commons/Footer";
 import '../../css/product-detail.css'
 import {useEffect, useMemo, useRef, useState} from "react";
-import {PopularProducts} from "../ListProductsPage/Codes";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import {PopularCode} from "../ListProductsPage/Products";
 import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
 import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
-import {addLiked, increaseRating, increaseViewed, postComment, putProduct, putRatingComment} from "../../redux/Action";
+import {addLiked} from "../../redux/Action";
 import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
 
-
-function DetailLeft() {
-    const p = useSelector(state => state.productReducer.product)
+function DetailLeft({product}) {
     const [slideIndex, setSlideIndex] = useState(0)
 
     function moveSlide(dir) {
@@ -25,26 +21,26 @@ function DetailLeft() {
         <div className="detail-left">
             <div className="detail-slider">
                 <div className="detail-slide" style={{transform: `translateX(${100 * (0 - slideIndex)}%)`}}>
-                    <img src={p.thumbnails[0]} alt=""/>
+                    <img src={product.thumbnails[0]} alt=""/>
                 </div>
                 <div className="detail-slide" style={{transform: `translateX(${100 * (1 - slideIndex)}%)`}}>
-                    <img src={p.thumbnails[1]} alt=""/>
+                    <img src={product.thumbnails[1]} alt=""/>
                 </div>
                 <div className="detail-slide" style={{transform: `translateX(${100 * (2 - slideIndex)}%)`}}>
-                    <img src={p.thumbnails[2]} alt=""/>
+                    <img src={product.thumbnails[2]} alt=""/>
                 </div>
             </div>
             <button className="btn slide-arrow btn-prev" onClick={() => moveSlide(-1)}><i className="bi bi-chevron-left"></i></button>
             <button className="btn slide-arrow btn-next" onClick={() => moveSlide(1)}><i className="bi bi-chevron-right"></i></button>
             <div className="slider-thumbnails d-flex justify-content-between">
                 <div className={slideIndex === 0 && 'active'} onClick={() => setSlideIndex(0)}>
-                    <img src={p.thumbnails[0]} alt=""/>
+                    <img src={product.thumbnails[0]} alt=""/>
                 </div>
                 <div className={slideIndex === 1 && 'active'} onClick={() => setSlideIndex(1)}>
-                    <img src={p.thumbnails[1]} alt=""/>
+                    <img src={product.thumbnails[1]} alt=""/>
                 </div>
                 <div className={slideIndex === 2 && 'active'} onClick={() => setSlideIndex(2)}>
-                    <img src={p.thumbnails[2]} alt=""/>
+                    <img src={product.thumbnails[2]} alt=""/>
                 </div>
             </div>
         </div>
@@ -64,38 +60,37 @@ export function StarRate({stars, type}) {
     )
 }
 
-function DetailCenter() {
-    const p = useSelector(state => state.productReducer.product)
+function DetailCenter({product}) {
 
     return (
         <div className="detail-center">
-            <h6>{p.name} <span>[Mã sản phẩm {p.id}]</span></h6>
+            <h6>{product.name} <span>[Mã sản phẩm {product.id}]</span></h6>
             <div className="detail-center-stats">
                 <div className="product-item-stars mr-3">
-                    <StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/>
+                    <StarRate stars={formatRating(product.rating).average} type={"bi bi-star-fill"}/>
                 </div>
-                <span>({formatRating(p.rating).total} Đánh giá)</span>
-                <span><i className="fa fa-eye"></i> {p.viewed}</span>
-                <span><i className="fa fa-download"></i> {p.downloaded}</span>
+                <span>({formatRating(product.rating).total} Đánh giá)</span>
+                <span><i className="fa fa-eye"></i> {product.viewed}</span>
+                <span><i className="fa fa-download"></i> {product.downloaded}</span>
             </div>
-            <div className="detail-center-des">{p.description}</div>
+            <div className="detail-center-des">{product.description}</div>
             <div className="detail-center-info">
-                <div><i className="fa fa-list"></i><span>Danh mục</span> <Link to={'/'}>{p.type.name}</Link></div>
-                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/'}>Top sản phẩm</Link>
+                <div><i className="fa fa-list"></i><span>Danh mục</span> <Link
+                    to={'products/'}>{product.type.name}</Link></div>
+                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/top-products'}>Top sản phẩm</Link>
                 </div>
-                <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {p.release}</div>
-                <div><i className="fa fa-object-group"></i><span>Loại file</span> {p.file.type}</div>
-                <div><i className="fa fa-file-code"></i><span>File download</span> {p.file.name}
-                    <span>[{p.file.size} {p.file.unit}]</span></div>
+                <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {product.release}</div>
+                <div><i className="fa fa-object-group"></i><span>Loại file</span> {product.file.type}</div>
+                <div><i className="fa fa-file-code"></i><span>File download</span> {product.file.name}
+                    <span>[{product.file.size} {product.file.unit}]</span></div>
             </div>
         </div>
     )
 }
 
-function DetailRight() {
+function DetailRight({product}) {
     const cart = useSelector(state => state.cartReducer.cart)
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
-    const product = useSelector(state => state.productReducer.product)
     const dispatch = useDispatch()
     const inLiked = likedCodes.some(c => c.id === product.id)
 
@@ -107,7 +102,8 @@ function DetailRight() {
         <div className="detail-right">
             <div className="detail-right-offer">
                 <h6>PHÍ DOWNLOAD</h6>
-                <span className="offer-price">{formatNumber((product.price), '.')}<sup>đ</sup></span>
+                <span
+                    className="offer-price">{product.price === 0 ? 'FREE' : <>{formatNumber((product.price), '.')}<sup>đ</sup></>}</span>
                 <button className="offer-download" onClick={handledDownload}>
                     {cart.some(item => item.id === product.id)
                         ? (<><i className="fa fa-check"></i> ĐÃ THÊM</>)
@@ -135,14 +131,13 @@ function DetailDivider({title, refData}) {
     return (<div className="detail-divider mt-5" ref={refData}><span>{title}</span></div>)
 }
 
-function DetailDescription({goTo}) {
-    const p = useSelector(state => state.productReducer.product)
+function DetailDescription({product, goTo}) {
     return (
         <>
             <DetailDivider title={'MÔ TẢ CHI TIẾT'}/>
             <div className="detail-description">
-                <div>{p.description}</div>
-                {Parser(p.detail)}
+                <div>{product.description}</div>
+                {Parser(product.detail)}
                 <div className="di-guide">XEM THÊM <span>==</span><span
                     onClick={goTo}> Hướng dẫn cài đặt chi tiết</span></div>
             </div>
@@ -150,13 +145,12 @@ function DetailDescription({goTo}) {
     )
 }
 
-function DemoImage() {
-    const p = useSelector(state => state.productReducer.product)
+function DemoImage({product}) {
     return (
         <>
             <DetailDivider title={'HÌNH ẢNH DEMO'}/>
             <div className="text-center">
-                {p.thumbnails.map((value, index) => {
+                {product.thumbnails.map((value, index) => {
                     return (
                         <div key={index}>
                             <img style={{display: 'inline-block', marginBottom: '15px'}} key={index} src={value} alt=""/>
@@ -169,28 +163,24 @@ function DemoImage() {
     )
 }
 
-function Installation({refData}) {
-    const p = useSelector(state => state.productReducer.product)
+function Installation({product, refData}) {
     return (
         <>
             <DetailDivider title={'HƯỚNG DẪN CÀI ĐẶT'} refData={refData}/>
             <div className="installation">
-                {Parser(p.installation)}
+                {Parser(product.installation)}
             </div>
         </>
     )
 }
 
-function RatingModal({closeModal}) {
+function RatingModal({product, setProduct, closeModal}) {
     const ratingCriteria = ['Rất tệ', 'Tệ', 'Bình thường', 'Tốt', 'Rất tốt']
     const [starIndex, setStarIndex] = useState(-1)
     const [feel, setFeel] = useState('')
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const starRef = useRef(-1)
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const location = useLocation()
 
     useEffect(() => {
         document.querySelectorAll('.rating-modal-stars > div').forEach(function (value) {
@@ -216,27 +206,16 @@ function RatingModal({closeModal}) {
     function sendRating() {
         if (starRef.current !== -1) {
             const star = `${5 - starRef.current}star`
-            const rc = {
-                name: name,
-                phone: phone,
-                star: 5 - starRef.current,
-                when: Date.now(),
-                comment: feel
-            }
-            dispatch(increaseRating(star))
-            dispatch(putRatingComment(rc))
-            navigate(".", {
-                state: {
-                    ...location.state,
-                    rating: {
-                        ...location.state.rating,
-                        [star]: location.state.rating[star] + 1
-                    },
-                    'rating-comment': [
-                        ...location.state['rating-comment'],
-                        rc
-                    ]
-                }
+            setProduct({
+                ...product,
+                rating: {...product.rating, [star]: product.rating[star] + 1},
+                'rating-comment': [...product['rating-comment'], {
+                    name: name,
+                    phone: phone,
+                    star: 5 - starRef.current,
+                    when: Date.now(),
+                    comment: feel
+                }]
             })
         }
         closeModal()
@@ -279,42 +258,43 @@ function RatingModal({closeModal}) {
     )
 }
 
-function Rating() {
-    const p = useSelector(state => state.productReducer.product)
+function Rating({product, setProduct}) {
     const [showModal, setShowModal] = useState(false)
-    const rc = [...p['rating-comment']].sort((a, b) => a.when - b.when > 0 ? -1 : 1)
     return (
         <>
             <DetailDivider title={'ĐÁNH GIÁ'}/>
             <div className="detail-rating">
                 <div className="row mt-5 mb-3">
                     <div className="col-lg-4 text-center">
-                        <div className="rating-average">{formatRating(p.rating).average}<span>/5</span></div>
+                        <div className="rating-average">{formatRating(product.rating).average}<span>/5</span></div>
                         <div className="product-item-stars">
-                            <StarRate stars={formatRating(p.rating).average} type={"fa fa-star"}/>
+                            <StarRate stars={formatRating(product.rating).average} type={"fa fa-star"}/>
                         </div>
-                        <div className="rating-count">{formatNumber(formatRating(p.rating).total, ',')} đánh giá</div>
+                        <div className="rating-count">{formatNumber(formatRating(product.rating).total, ',')} đánh giá
+                        </div>
                         <div className="rating-action mt-3 text-center">
-                            <button onClick={() => setShowModal(true)}><i className="bi bi-star-fill mr-1"></i> Viết đánh giá
+                            <button onClick={() => setShowModal(true)}><i className="bi bi-star-fill mr-1"></i> Viết
+                                đánh giá
                             </button>
                         </div>
                     </div>
                     <div className="col-lg-8">
                         <div className="rating-chart">
-                            {Array(5).fill(1).map((value, index) => (
-                                <div key={index}>
-                                    <div>{5 - index} <i className="bi bi-star-fill"></i></div>
-                                    <div>
-                                        <div style={{width: `${formatRating(p.rating)['avg' + (5 - index)]}%`}}></div>
-                                    </div>
-                                    <div>{p.rating[(5 - index) + 'star']}</div>
+                        {Array(5).fill(1).map((value, index) => (
+                            <div key={index}>
+                                <div>{5 - index} <i className="bi bi-star-fill"></i></div>
+                                <div>
+                                    <div
+                                        style={{width: `${formatRating(product.rating)['avg' + (5 - index)]}%`}}></div>
                                 </div>
-                            ))}
+                                <div>{product.rating[(5 - index) + 'star']}</div>
+                            </div>
+                        ))}
                         </div>
                     </div>
                 </div>
                 <div className="detail-rating-comment">
-                    {rc.map((rating, index) => (
+                    {[...product['rating-comment']].sort((a, b) => a.when - b.when > 0 ? -1 : 1).map((rating, index) => (
                         <div key={index}>
                             <div>{rating.name} <span><i className="fa fa-check-circle"></i> Đã mua hàng</span>
                                 <span>{getPassedTimeInText(rating.when)}</span></div>
@@ -326,39 +306,26 @@ function Rating() {
                     ))}
                 </div>
             </div>
-            {showModal && <RatingModal closeModal={() => setShowModal(false)}/>}
+            {showModal && <RatingModal product={product} setProduct={setProduct} closeModal={() => setShowModal(false)}/>}
         </>
     )
 }
 
-function Comment() {
-    const p = useSelector(state => state.productReducer.product)
+function Comment({product, setProduct}) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [content, setContent] = useState('')
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const location = useLocation()
 
-    const sortedComments = [...p.comments].sort((a, b) => a.when - b.when > 0 ? -1 : 1)
 
     function sendComment() {
         if (name && email && content) {
-            const data = {
-                name: name,
-                email: email,
-                when: Date.now(),
-                content: content
-            }
-            dispatch(postComment(data))
-            navigate(".", {
-                state: {
-                    ...location.state,
-                    comments: [
-                        ...location.state.comments,
-                        data
-                    ]
-                }
+            setProduct({
+                ...product, comments: [...product.comments, {
+                    name: name,
+                    email: email,
+                    when: Date.now(),
+                    content: content
+                }]
             })
         }
     }
@@ -384,9 +351,9 @@ function Comment() {
             </div>
             <div className="mt-5">
                 <div style={{fontSize: '17px', fontFamily: 'Roboto', fontWeight: '500', color: '#333333'}}>
-                    {p.comments.length} comments
+                    {product.comments.length} comments
                 </div>
-                {sortedComments.map((value, index) => (
+                {[...product.comments].sort((a, b) => a.when - b.when > 0 ? -1 : 1).map((value, index) => (
                     <div className="comment-item" key={index}>
                         <div className="comment-avatar mr-3">
                             <div>{getFirstLetter(value.name)}</div>
@@ -405,30 +372,44 @@ function Comment() {
     )
 }
 
-function DetailContent() {
+function DetailContent({product, setProduct}) {
     const ref = useRef(null)
     const goToInstallation = () => ref.current.scrollIntoView({behavior: "auto"})
     return (
         <>
-            <DetailDescription goTo={goToInstallation}/>
-            <DemoImage/>
-            <Installation refData={ref}/>
-            <Rating/>
-            <Comment/>
+            <DetailDescription product={product} goTo={goToInstallation}/>
+            <DemoImage product={product}/>
+            <Installation product={product} refData={ref}/>
+            <Rating product={product} setProduct={setProduct}/>
+            <Comment product={product} setProduct={setProduct}/>
         </>
     )
 }
 
 
-function ProductDetailContainer() {
-    const location = useLocation()
-    const dispatch = useDispatch()
+export default function ProductDetails() {
+    const [product, setProduct] = useState({})
+    const [loading, setLoading] = useState(true)
+    const {id} = useParams()
 
     useMemo(() => {
-        dispatch(putProduct(location.state))
-    }, [dispatch, location.state])
+        fetch(`http://localhost:9810/products/${id}`)
+            .then(res => res.json())
+            .then(json => {
+                setProduct(json)
+                setProduct(product => ({...product, viewed: product.viewed + 1}))
+                setLoading(false)
+            })
+    }, [])
+    useEffect(() => {
+        fetch(`http://localhost:9810/products/${product.id}`, {
+            method: "PATCH",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(product)
+        }).then()
+    }, [product])
 
-    dispatch(increaseViewed())
+    if (loading) return <div>Loading...</div>
 
     return (
         <section className="product-details my-5">
@@ -437,30 +418,21 @@ function ProductDetailContainer() {
                     <div className="col-lg-9">
                         <div className="row">
                             <div className="col-lg-5">
-                                <DetailLeft/>
+                                <DetailLeft product={product}/>
                             </div>
                             <div className="col-lg-7">
-                                <DetailCenter/>
+                                <DetailCenter product={product}/>
                             </div>
                         </div>
-                        <DetailContent/>
+                        <DetailContent product={product} setProduct={setProduct}/>
                     </div>
                     <div className="col-lg-3">
-                        <DetailRight/>
-                        <PopularProducts/>
+                        <DetailRight product={product}/>
+                        <PopularCode/>
                     </div>
                 </div>
             </div>
         </section>
     )
-}
 
-export default function ProductDetails() {
-    return (
-        <>
-            <Header/>
-            <ProductDetailContainer/>
-            <Footer/>
-        </>
-    )
 }
