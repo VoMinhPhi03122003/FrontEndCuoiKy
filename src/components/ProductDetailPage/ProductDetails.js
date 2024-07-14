@@ -1,5 +1,5 @@
 import '../../css/product-detail.css'
-import {useEffect, useMemo, useRef, useState} from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import {PopularCode} from "../ListProductsPage/Products";
 import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
@@ -7,6 +7,8 @@ import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
 import {addLiked} from "../../redux/Action";
 import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
+import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import {fetchCodes, putCodes} from "../../javascript/api/Api_Dat";
 
 function DetailLeft({product}) {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -75,9 +77,12 @@ function DetailCenter({product}) {
             </div>
             <div className="detail-center-des">{product.description}</div>
             <div className="detail-center-info">
-                <div><i className="fa fa-list"></i><span>Danh mục</span> <Link
-                    to={'products/'}>{product.type.name}</Link></div>
-                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/top-products'}>Top sản phẩm</Link>
+                <div>
+                    <i className="fa fa-list"></i><span>Danh mục</span> <Link
+                    to={`/products?type=${product.type.id}`}>{product.type.name}</Link>
+                </div>
+                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/top-products'}>Top sản
+                    phẩm</Link>
                 </div>
                 <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {product.release}</div>
                 <div><i className="fa fa-object-group"></i><span>Loại file</span> {product.file.type}</div>
@@ -180,6 +185,9 @@ function RatingModal({product, setProduct, closeModal}) {
     const [feel, setFeel] = useState('')
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
+    const [limit, setLimit] = useState(0)
+    const [checkFeel, setCheckFeel] = useState(false)
+    const [checkName, setCheckName] = useState(false)
     const starRef = useRef(-1)
 
     useEffect(() => {
@@ -202,9 +210,23 @@ function RatingModal({product, setProduct, closeModal}) {
         setStarIndex(index)
         starRef.current = index
     }
+    function handleFeel(e) {
+        const text = e.target.value
+        setFeel(text)
+        setLimit(text.length)
+        if (text.length >= 3) setCheckFeel(false)
+    }
+
+    function handleName(e) {
+        setName(e.target.value)
+        setCheckName(false)
+    }
 
     function sendRating() {
-        if (starRef.current !== -1) {
+        if (limit < 3) setCheckFeel(true)
+        if (!name) setCheckName(true)
+
+        if (name && limit >= 3 && starRef.current !== -1) {
             const star = `${5 - starRef.current}star`
             setProduct({
                 ...product,
@@ -217,8 +239,11 @@ function RatingModal({product, setProduct, closeModal}) {
                     comment: feel
                 }]
             })
+            setName('')
+            setFeel('')
+            setLimit(0)
+            closeModal()
         }
-        closeModal()
     }
     return (
         <div className="rating-modal" onClick={closeModal}>
@@ -241,14 +266,25 @@ function RatingModal({product, setProduct, closeModal}) {
                             </div>
                         ))}
                     </div>
-                    <div>
-                        <textarea value={feel} onChange={e => setFeel(e.target.value)} placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..."/>
+                    <div className="rating-content">
+                        <span style={{display: checkFeel ? 'inline-block' : 'none'}}>Nội dung tối thiểu 3 ký tự</span>
+                        <span style={{display: limit < 3 ? 'inline-block' : 'none'}}>{limit}/3</span>
+                        <textarea style={{borderColor: checkFeel ? '#e70a0a' : 'var(--color-border)'}}
+                                  value={feel} onChange={handleFeel}
+                                  placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..."/>
                     </div>
                     <div className="d-flex justify-content-between mt-2">
-                        <input value={name} onChange={e => setName(e.target.value)} type="text" placeholder="Họ và tên (bắt buộc)"/>
-                        <input value={phone} onChange={e => setPhone(e.target.value)} type="text" placeholder="Số điện thoại"/>
+                        <div className="input-container">
+                            <span style={{display: checkName ? 'block' : 'none'}}><i className="fa fa-warning"></i> Vui lòng nhập Họ và tên</span>
+                            <input style={{borderColor: checkName ? '#e70a0a' : 'var(--color-border)'}}
+                                   value={name} onChange={handleName} type="text" placeholder="Họ và tên (bắt buộc)"/>
+                        </div>
+                        <input value={phone} onChange={e => setPhone(e.target.value)} type="text"
+                               placeholder="Số điện thoại"/>
                     </div>
-                    <div className="my-3 rating-guarantee"><i className="fa fa-check-square-o"></i> Chúng tôi cam kết bảo mật số điện thoại của bạn</div>
+                    <div style={{marginTop: '30px'}} className="mb-3 rating-guarantee"><i className="fa fa-check-square-o"></i> Chúng tôi cam kết bảo
+                        mật số điện thoại của bạn
+                    </div>
                     <div className="text-center mt-3 mb-1">
                         <button onClick={sendRating}>Gửi đánh giá ngay</button>
                     </div>
@@ -312,13 +348,20 @@ function Rating({product, setProduct}) {
 }
 
 function Comment({product, setProduct}) {
+    const [limit, setLimit] = useState(0)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [content, setContent] = useState('')
+    const [checkName, setCheckName] = useState(false)
+    const [checkContent, setCheckContent] = useState(false)
+    const chars = 3
 
 
     function sendComment() {
-        if (name && email && content) {
+        if (!name) setCheckName(true)
+        if (limit < chars) setCheckContent(true)
+
+        if (name && limit >= chars) {
             setProduct({
                 ...product, comments: [...product.comments, {
                     name: name,
@@ -327,23 +370,52 @@ function Comment({product, setProduct}) {
                     content: content
                 }]
             })
+            setName('')
+            setContent('')
+            setEmail('')
+            setLimit(0)
         }
     }
+    function handleCommentChange(e) {
+        const text = e.target.value
+        setContent(text)
+        setLimit(text.length)
+        if (text.length >= chars) setCheckContent(false)
+    }
+
+    function handleNameChange(e) {
+        const text = e.target.value
+        setName(text)
+        setCheckName(false)
+    }
+
 
     return (
         <>
             <DetailDivider title={'BÌNH LUẬN'}/>
             <div className="detail-comment clearfix">
-                <textarea value={content} onChange={e => setContent(e.target.value)} placeholder="Vui lòng để lại bình luận..."/>
+                <div>
+                    <span
+                        style={{display: checkContent ? 'inline-block' : 'none'}}>Nội dung tối thiểu {chars} ký tự</span>
+                    <span style={{display: limit < chars ? 'inline-block' : 'none'}}>{limit}/{chars}</span>
+                    <textarea style={{borderColor: checkContent ? '#e70a0a' : 'var(--color-border)'}}
+                              value={content} onChange={handleCommentChange}
+                              placeholder="Vui lòng để lại bình luận..."/>
+                </div>
                 <div className="d-flex justify-content-between">
                     <div>
                         <div className="input-box">
                             <label htmlFor="input-name">Họ và tên <span>*</span></label>
-                            <input value={name} onChange={e => setName(e.target.value)} name="input-name" type="text"/>
+                            <input style={{borderColor: checkName ? '#e70a0a' : 'var(--color-border)'}}
+                                   value={name} onChange={handleNameChange} name="input-name" type="text"/>
+                            <div style={{display: checkName ? 'block' : 'none'}}><i className="fa fa-warning"></i> Vui
+                                lòng nhập Họ và tên
+                            </div>
                         </div>
                         <div className="input-box">
                             <label htmlFor="input-name">Email</label>
-                            <input value={email} onChange={e => setEmail(e.target.value)} name="input-name" type="text"/>
+                            <input value={email} onChange={e => setEmail(e.target.value)} name="input-name"
+                                   type="text"/>
                         </div>
                     </div>
                     <button onClick={sendComment}>GỬI</button>
@@ -393,16 +465,14 @@ export default function ProductDetails() {
     const {id} = useParams()
 
     useMemo(() => {
-        fetch(`http://localhost:9810/products/${id}`)
-            .then(res => res.json())
-            .then(json => {
-                setProduct(json)
-                setProduct(product => ({...product, viewed: product.viewed + 1}))
-                setLoading(false)
-            })
-    }, [])
+        fetchCodes(`http://localhost:9810/products/${id}`).then(json => {
+            setProduct(json)
+            setProduct(product => ({...product, viewed: product.viewed + 1}))
+            setLoading(false)
+        })
+    }, [id])
     useEffect(() => {
-        fetch(`http://localhost:9810/products/${product.id}`, {
+        putCodes(`http://localhost:9810/products/${product.id}`, {
             method: "PATCH",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(product)
@@ -411,7 +481,18 @@ export default function ProductDetails() {
 
     if (loading) return <div>Loading...</div>
 
+    function breadcrumbs() {
+        return [{name: 'Trang chủ', link: '/'}, {name: 'Danh sách codes', link: `/products`}, {
+            name: 'Chi tiết sản phẩm',
+            link: `/products/product/${product.id}`
+        }, {name: `Mã code ${product.id}`, link: `/products/product/${product.id}`}]
+    }
+
+
+
     return (
+        <>
+        <SectionBreadcrumb breadcrumbs={breadcrumbs()}/>
         <section className="product-details my-5">
             <div className="container">
                 <div className="row">
@@ -423,16 +504,17 @@ export default function ProductDetails() {
                             <div className="col-lg-7">
                                 <DetailCenter product={product}/>
                             </div>
-                        </div>
+                            </div>
                         <DetailContent product={product} setProduct={setProduct}/>
                     </div>
                     <div className="col-lg-3">
                         <DetailRight product={product}/>
                         <PopularCode/>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
+        </>
     )
 
 }

@@ -668,6 +668,28 @@
 .rating-modal-stars > div.bg-active ~ div div:first-child {
     background-image: url("../img/star-fill.png");
 }
+.rating-content {
+    position: relative;
+}
+
+.rating-content span:first-child {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+    color: #e70a0a;
+    font-size: 13px;
+}
+
+.rating-content span:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    letter-spacing: .1em;
+    display: block;
+    color: #484848;
+    font-size: 14px;
+}
 
 .rating-modal-content textarea {
     width: 100%;
@@ -679,9 +701,24 @@
     height: 90px;
 }
 
+.input-container {
+    width: 100%;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.input-container span {
+    font-size: 13px;
+    color: #e70a0a;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+}
+
 .rating-modal-content input {
     width: 100%;
-    display: inline-block;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
     padding: 8px 10px;
@@ -706,6 +743,30 @@
 
 /* [ Detail Comment ]
 --------------------------------*/
+.detail-comment > div:first-child {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.detail-comment > div:first-child > span:first-child {
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+    display: block;
+    color: #e70a0a;
+    font-size: 13px;
+}
+
+.detail-comment > div:first-child > span:nth-child(2) {
+    user-select: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    letter-spacing: .1em;
+    display: block;
+    color: #484848;
+    font-size: 14px;
+}
 
 .detail-comment textarea {
     width: 100%;
@@ -727,6 +788,7 @@
 
 .detail-comment > div button {
     float: right;
+    height: 55px;
     border: none;
     background-color: #ff921d;
     color: #fff;
@@ -740,6 +802,13 @@
     position: relative;
     float: left;
 }
+
+.detail-comment .input-box > div:last-child {
+    font-size: 13px;
+    color: #e70a0a;
+    margin-top: 5px;
+}
+
 
 .detail-comment label {
     position: absolute;
@@ -778,10 +847,14 @@
     align-items: center;
 }
 
+.comment-detail > div:last-child {
+    margin-top: 5px;
+}
+
+
 .comment-detail > div:first-child > div:first-child {
     font-weight: bolder;
     color: #353535;
-    margin-bottom: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
 }
