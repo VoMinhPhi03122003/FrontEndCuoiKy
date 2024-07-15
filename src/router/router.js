@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import App from "../App";
-import ListProducts from "../components/TopCodePage/ListProducts";
+import ListProducts from "../components/TopProductPage/ListProducts";
 import ProductDetails from "../components/ProductDetailPage/ProductDetails";
 import LoginPage from "../components/AuthenticationPage/Login";
 import RegisterPage from "../components/AuthenticationPage/Register";
@@ -9,7 +9,8 @@ import ProfilePage from "../components/ProfilePage/Profile";
 import ChangePassPage from "../components/AuthenticationPage/ChangePass";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 import {LikedCodes} from "../components/Commons/LikedCodes";
-import {ErrorPage404} from "./components/ErrorPage/ErrorPage404";
+import {ErrorPage404} from "../components/ErrorPage/ErrorPage404";
+import VerifyPassPage from "../components/AuthenticationPage/VerifyPass";
 
 const profile = {path: '/profile', element: <ProfilePage/>}
 const listAuthentication = [

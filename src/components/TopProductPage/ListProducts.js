@@ -3,7 +3,7 @@ import Footer from "../Commons/Footer"
 import '../../css/products.css'
 import React, {useEffect,useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {products} from "../../data/Products";
+// import {products} from "../../data/Products";
 import {addLiked, setLayout, setPage, setSort, setType} from "../../redux/Action";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
@@ -321,7 +321,7 @@ function Products() {
     )
 }
 
-export  default  function ListProducts() {
+export default function ListProducts() {
     return (
         <>
             <Header/>

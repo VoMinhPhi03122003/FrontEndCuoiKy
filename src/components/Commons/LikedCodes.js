@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import {useSelector} from "react-redux";
-import {ProductContainer} from "../TopCodePage/ListProducts";
+import {ProductContainer} from "../TopProductPage/ListProducts";
 import {buildQuery} from "../../javascript/utils";
 import {useEffect, useState} from "react";
 

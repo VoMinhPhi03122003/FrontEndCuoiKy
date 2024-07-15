@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "../redux_tuyen/Reducer_Tuyen";
+import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "./redux_tuyen/Reducer_Tuyen";
 
 import errorReducer from "./redux_tai/ErrorSlice";
 

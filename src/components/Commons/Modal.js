@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2';
 import {downloadFile} from "../../javascript/utils/Utils_Tuyen";
 
-import {showModalPayment, updateStatePayment, resetCart} from "../../redux/redux_tuyen/Action_Tuyen";
+// import {showModalPayment, updateStatePayment, resetCart} from "../../redux/redux_tuyen/Action_Tuyen";
 import '../../css/modal.css';
 import {resetCart, showModalPayment, showModalPayPal, updateStatePayment} from "../../redux/redux_tuyen/Action_Tuyen";
 import {ButtonPayPal} from "../Commons/Buttons";
