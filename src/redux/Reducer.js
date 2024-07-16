@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "../redux_tuyen/Reducer_Tuyen";
+import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "../redux/redux_tuyen/Reducer_Tuyen";
 
 import errorReducer from "./redux_tai/ErrorSlice";
 
@@ -67,7 +67,7 @@ const productReducer = (state = {
             const data = {
                 "downloaded": state.product.downloaded + 1
             }
-            fetch(`http://localhost:9810/products/${state.product.id}`, {
+            fetch(`https://server-share-code.onrender.com/products/${state.product.id}`, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
@@ -85,7 +85,7 @@ const productReducer = (state = {
             const data = {
                 "viewed": state.product.viewed + 1
             }
-            fetch(`http://localhost:9810/products/${state.product.id}`, {
+            fetch(`https://server-share-code.onrender.com/products/${state.product.id}`, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
@@ -106,7 +106,7 @@ const productReducer = (state = {
                     [action.payload]: state.product.rating[action.payload] + 1
                 }
             }
-            fetch(`http://localhost:9810/products/${state.product.id}`, {
+            fetch(`https://server-share-code.onrender.com/products/${state.product.id}`, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
@@ -124,7 +124,7 @@ const productReducer = (state = {
             const data = {
                 'rating-comment': [...state.product['rating-comment'], {...action.payload}]
             }
-            fetch(`http://localhost:9810/products/${state.product.id}`, {
+            fetch(`https://server-share-code.onrender.com/products/${state.product.id}`, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
@@ -145,7 +145,7 @@ const productReducer = (state = {
                     action.payload
                 ]
             }
-            fetch(`http://localhost:9810/products/${state.product.id}`, {
+            fetch(`https://server-share-code.onrender.com/products/${state.product.id}`, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)

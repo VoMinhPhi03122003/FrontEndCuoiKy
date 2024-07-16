@@ -1,7 +1,7 @@
 import '../../css/product-detail.css'
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {Link, useParams} from "react-router-dom";
-import {PopularCode} from "../ListProductsPage/Products";
+import {PopularProducts} from "../ListProductsPage/Products";
 import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
 import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
@@ -509,7 +509,7 @@ export default function ProductDetails() {
                     </div>
                     <div className="col-lg-3">
                         <DetailRight product={product}/>
-                        <PopularCode/>
+                        <PopularProducts/>
                         </div>
                     </div>
                 </div>

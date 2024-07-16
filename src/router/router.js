@@ -9,7 +9,7 @@ import ProfilePage from "../components/ProfilePage/Profile";
 import ChangePassPage from "../components/AuthenticationPage/ChangePass";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 import {LikedCodes} from "../components/Commons/LikedCodes";
-import {ErrorPage404} from "./components/ErrorPage/ErrorPage404";
+import {ErrorPage404} from "../components/ErrorPage/ErrorPage404";
 import VerifyPassPage from "../components/AuthenticationPage/VerifyPass";
 import FreeCodes from "../components/ListProductsPage/FreeCodes";
 import HighQualityCodes from "../components/ListProductsPage/HighQualityCodes";
