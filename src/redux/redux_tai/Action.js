@@ -11,7 +11,6 @@ export const loginError = (data) =>{
         payload: data
     }
 }
-
 export const changePassError = (data) =>{
     return{
         type: 'changePass/error',
@@ -39,3 +38,4 @@ export const profileError = (data) =>{
         payload: data
     }
 }
+

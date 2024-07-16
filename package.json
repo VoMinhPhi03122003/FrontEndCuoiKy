@@ -12,16 +12,15 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.4.0",
-    "bootstrap": "^4.6.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^4.6.0",
     "crypto-js": "^4.1.1",
     "html-react-parser": "^5.1.10",
     "jquery": "^3.7.1",
-    "json-server": "^1.0.0-beta.1",
     "mdbreact": "^4.27.0",
     "query-string": "^9.0.0",
     "react": "^18.3.1",
@@ -50,6 +49,7 @@
     "start:server": "node server.js",
     "start:app": "react-scripts start",
     "start": "react-scripts start"
+
   },
   "browserslist": {
     "production": [

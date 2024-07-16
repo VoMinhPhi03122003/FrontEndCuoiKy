@@ -4,38 +4,29 @@ import Cart from './Cart'
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import $ from 'jquery'
 
-import {getTypes} from "../../javascript/utils"
+import {getTypeName, getTypes} from "../../javascript/utils"
 import {useDispatch} from "react-redux";
-import {setPage, setSort, setType} from "../../redux/Action";
-
-const adsList = [
-    {
-        img: 'ads/code-hay-upload-kiem-tien.jpg',
-        color: '#86BD3B'
-    },
-    {
-        img: 'ads/share-code-clould-vps.jpg',
-        color: '#34A5CD'
-    },
-    {
-        img: 'ads/thiet-ke-website.jpg',
-        color: '#2175BA'
-    }
-]
+import {setLayout, setPage, setSort, setType} from "../../redux/Action";
 
 function HeaderAds() {
+    const [adsList, setAdsList] = useState([])
     const [adsIndex, setAdsIndex] = useState(0)
-    const ads = adsList[adsIndex]
 
     useEffect(() => {
-        const id = setInterval(() => setAdsIndex((adsIndex + 1) % adsList.length), 5000)
-        return () => clearInterval(id)
-    }, [adsIndex])
+        fetch('https://server-share-code.onrender.com/ads')
+            .then(value => value.json())
+            .then(json => setAdsList(json))
+    }, [])
+
+    useEffect(() => {
+        const id = setTimeout(() => setAdsIndex((adsIndex + 1) % adsList.length), 5000)
+        return () => clearTimeout(id)
+    }, [adsIndex, adsList.length])
 
     return (
-        <div className="header-ads" style={{backgroundColor: `${ads.color}`}}>
+        <div className="header-ads" style={{backgroundColor: `${adsList[adsIndex] && adsList[adsIndex].color}`}}>
             <div className="container">
-                <img src={require(`../../img/${ads.img}`)} alt=""/>
+                <img src={adsList[adsIndex] && adsList[adsIndex].img} alt=""/>
             </div>
         </div>
     )
@@ -105,7 +96,17 @@ function HeaderTop() {
 }
 
 function HeaderMenu() {
+    const navigate = useNavigate()
     const location = useLocation()
+    const dispatch = useDispatch()
+
+    function handledLink(link) {
+        dispatch(setPage(1))
+        dispatch(setSort(null))
+        dispatch(setLayout('grid'))
+        navigate(link)
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -117,31 +118,30 @@ function HeaderMenu() {
                 <div className="col-lg-8 d-flex justify-content-center align-items-center">
                     <nav className="header-menu">
                         <ul>
-                            <li><Link to="/" className={location.pathname === '/' && 'active'}>Trang chủ</Link></li>
-                            <li><Link to="/top-products"
-                                      className={location.pathname.indexOf('top-products') > 0 && 'active'}>Top sản
-                                phẩm</Link>
+                            <li><span onClick={() => handledLink('/')}
+                                      className={location.pathname === '/' && 'active'}>Trang chủ</span></li>
+                            <li><span onClick={() => handledLink('/top-products')}
+                                      className={location.pathname.indexOf('top-products') > 0 && 'active'}>Top sản phẩm </span>
                             </li>
-                            <li><Link to="/quality-products"
-                                      className={location.pathname.indexOf('quality-products') > 0 && 'active'}>Sản phẩm
-                                chất
-                                lượng</Link>
+                            <li><span onClick={() => handledLink('/quality-products')}
+                                      className={location.pathname.indexOf('quality-products') > 0 && 'active'}>Sản phẩm chất
+                                lượng</span>
                                 <img src={require('../../img/ic_hot.gif')} alt=""/>
                             </li>
-
-                            <li><Link to="/free-codes"
-                                      className={location.pathname.indexOf('free-codes') > 0 && 'active'}>Sản phẩm miễn
-                                phí</Link></li>
+                            <li><span onClick={() => handledLink('/free-products')}
+                                      className={location.pathname.indexOf('free-products') > 0 && 'active'}>Sản phẩm miễn phí</span>
+                            </li>
                         </ul>
                     </nav>
                 </div>
                 <div className="col-lg-2 d-flex justify-content-center align-items-center">
-                <Cart/>
+                    <Cart/>
                 </div>
             </div>
         </div>
     )
 }
+
 function CodeCategories({types}) {
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -150,7 +150,7 @@ function CodeCategories({types}) {
         dispatch(setType(typeId))
         dispatch(setPage(1))
         dispatch(setSort(null))
-        navigate(`/top-products/type=${typeId}`)
+        navigate(`/products?type=${typeId}`)
     }
 
     return (
@@ -173,14 +173,18 @@ function CodeCategories({types}) {
     )
 }
 function HeaderSearch() {
-    const [search, setSearch] = useState({})
+    const location = useLocation()
+    const [search, setSearch] = useState({
+        query: new URLSearchParams(location.search).get('search'),
+        from: new URLSearchParams(location.search).get('from')
+    })
     const [types, setTypes] = useState([])
     const [toggle, setToggle] = useState(false)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:9810/products`)
+        fetch(`https://server-share-code.onrender.com/products`)
             .then(res => res.json())
             .then(json => setTypes(getTypes(json)))
     }, [])
@@ -191,10 +195,10 @@ function HeaderSearch() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        dispatch(setType(null))
         dispatch(setPage(1))
         dispatch(setSort(null))
-        navigate(`/top-products?search=${search.query}${search.from ? `&from=${search.from}` : ''}`)
+        dispatch(setLayout('grid'))
+        navigate(`/products?search=${search.query}${search.from ? `&from=${search.from}` : ''}`)
     }
 
     return (
@@ -212,7 +216,7 @@ function HeaderSearch() {
                                      $('.header-search-categories ul').slideToggle(300)
                                      setToggle(!toggle)
                                  }}>
-                                <span className="position-relative align-middle">{search.from || 'TẤT CẢ SẢN PHẨM'} <i
+                                <span className="position-relative align-middle">{search.from ? getTypeName(search.from) : 'TẤT CẢ SẢN PHẨM'} <i
                                     className={toggle ? "fa fa-caret-up" : "fa fa-caret-down"}></i></span>
                                 <ul>
                                     {types.map(type => (

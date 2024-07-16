@@ -11,7 +11,7 @@ import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import React, {useEffect, useState} from "react";
 import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
 import {loginError} from "../../redux/redux_tai/Action";
-import {checkEmailExists, checkLogin} from "../../javascript/api/Api_Tai";
+import {checkEmailExists, checkLogin, getProvinces} from "../../javascript/api/Api_Tai";
 import {useDispatch, useSelector} from "react-redux";
 import {errorLoginSelector, errorRegisterSelector} from "../../redux/redux_tai/Selectors";
 

@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import App from "../App";
-import ListProducts from "../components/TopCodePage/ListProducts";
+import TopCodes from "../components/ListProductsPage/TopCodes";
 import ProductDetails from "../components/ProductDetailPage/ProductDetails";
 import LoginPage from "../components/AuthenticationPage/Login";
 import RegisterPage from "../components/AuthenticationPage/Register";
@@ -9,7 +9,11 @@ import ProfilePage from "../components/ProfilePage/Profile";
 import ChangePassPage from "../components/AuthenticationPage/ChangePass";
 import CartDetailPage from "../components/CartDetailPage/CartDetailPage";
 import {LikedCodes} from "../components/Commons/LikedCodes";
-import {ErrorPage404} from "./components/ErrorPage/ErrorPage404";
+import {ErrorPage404} from "../components/ErrorPage/ErrorPage404";
+import VerifyPassPage from "../components/AuthenticationPage/VerifyPass";
+import FreeCodes from "../components/ListProductsPage/FreeCodes";
+import HighQualityCodes from "../components/ListProductsPage/HighQualityCodes";
+import Products, {ProductsContent} from "../components/ListProductsPage/Products";
 
 const profile = {path: '/profile', element: <ProfilePage/>}
 const listAuthentication = [
@@ -37,32 +41,31 @@ const listAuthentication = [
 
  const listProducts = [
     {
-        path: '/top-products/*',
-        element: <ListProducts/>
+        path: '/products',
+        element: <Products/>,
+        children: [
+            {
+                index: true,
+                element: <ProductsContent/>
+            },
+            {
+                path: "product/:id",
+                element: <ProductDetails/>
+            }
+        ]
     },
      {
-         path: '/top-products/product/:productId',
-         element: <ProductDetails/>
+         path: '/top-products',
+         element: <TopCodes/>
     },
     {
         path: '/quality-products',
-        element: <ListProducts/>
+        element: <HighQualityCodes/>
     },
-     {
-         path: '/quality-products/product/:productId',
-         element: <ProductDetails/>
-     },
+
      {
          path: '/free-products',
-         element: <ListProducts/>
-     },
-     {
-         path: '/free-products/product/:productId',
-         element: <ProductDetails/>
-     },
-     {
-         path: '/product/:productId',
-         element: <ProductDetails/>
+         element: <FreeCodes/>
      }
  ]
 
