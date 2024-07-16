@@ -185,8 +185,7 @@ function SectionProfile() {
                                     <div className="col-lg-6 col-12">
                                         <div className="form-group">
                                             <label>Email<span>*</span></label>
-                                            <input onChange={handleInputEmail} value={emailInput} name="email_customer"
-                                                   type="email"/>
+                                            <input onChange={handleInputEmail} value={emailInput} name="email_customer"/>
                                         </div>
                                     </div>
                                     <div className="col-lg-8 col-12">
