@@ -493,7 +493,7 @@ export default function ProductDetails() {
     return (
         <>
         <SectionBreadcrumb breadcrumbs={breadcrumbs()}/>
-        <section className="product-details my-5">
+        <section className="product-details ">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-9">

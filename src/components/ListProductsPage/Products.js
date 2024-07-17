@@ -307,14 +307,14 @@ export function ProductsContent({group}) {
 
     function breadcrumbs() {
         const home = {name: 'Trang chủ', link: '/'}
-        const ds = location.pathname.includes('products') ? {name: 'Danh sách codes', link: '/products'} : undefined
+        const ds = location.pathname.includes('products') ? {name: 'Danh sách sản phẩm', link: '/products'} : undefined
         const t = type && {name: getTypeName(type), link: `/products?type=${type}`}
-        const tc = location.pathname.includes('top-codes') ? {name: 'Top codes', link: '/top-codes'} : undefined
-        const qc = location.pathname.includes('quality-codes') ? {
-            name: 'Code chất lượng',
-            link: '/quality-codes'
+        const tc = location.pathname.includes('top-products') ? {name: 'Top sản phẩm', link: '/top-products'} : undefined
+        const qc = location.pathname.includes('quality-products') ? {
+            name: 'Sản phẩm chất lượng',
+            link: '/quality-products'
         } : undefined
-        const fc = location.pathname.includes('free-codes') ? {name: 'Code miễn phí', link: '/free-codes'} : undefined
+        const fc = location.pathname.includes('free-products') ? {name: 'Sản phẩm miễn phí', link: '/free-peoducts'} : undefined
         return [home, ds, t, tc, qc, fc].filter(i => i)
     }
 
