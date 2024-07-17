@@ -25,15 +25,15 @@ export const getTypes = (json) => {
 }
 
 export function getTypeName(typeId) {
-    if (typeId === 'android') return 'Android'
-    if (typeId === 'java_jsp') return 'Java/JSP'
-    if (typeId === 'php_mysql') return 'PHP & MySQL'
-    if (typeId === 'visual_csharp') return 'Visual C#'
-    if (typeId === 'wordpress') return 'WordPress'
-    if (typeId === 'ios') return 'iOS'
-    if (typeId === 'html') return 'HTML & Template'
-    if (typeId === 'c_cpp') return 'C/C++'
-    if (typeId === 'unity') return 'Unity'
+    if (typeId === 'dogomsu') return 'Đồ gốm sứ'
+    if (typeId === 'domaytredan') return 'Đồ mây tre đan'
+    if (typeId === 'dogo') return 'Đồ gỗ'
+    if (typeId === 'dotheuvadet') return 'Đồ thêu và dệt '
+    if (typeId === 'dotrangsucthucong') return 'Đồ trang sức'
+    if (typeId === 'doda') return 'Đồ da'
+    if (typeId === 'nenthucong') return 'Nến thủ công'
+    if (typeId === 'xaphong') return 'Xà phòng'
+    if (typeId === 'dungcu') return 'Dụng cụ'
     return null
 }
 
@@ -43,7 +43,7 @@ export const makeURL = (search, from, type, page, sort) => {
     const typePart = type != null ? `type.id=${type}&` : ''
     const pagePart = page != null ? `_page=${page}&_limit=12&` : ''
     const sortPart = sort != null ? `_sort=${sort}&_order=desc` : ''
-    return trim(trim(`https://server-share-code.onrender.com/products?${searchPart}${fromPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
+    return trim(trim(`http://localhost:9810/products?${searchPart}${fromPart}${typePart}${pagePart}${sortPart}`, '&'), '?')
 }
 
 export const buildQuery = (ids) => {
@@ -51,7 +51,7 @@ export const buildQuery = (ids) => {
     for (let id of ids) {
         query = query + `id=${id}&`
     }
-    return trim(trim(`https://server-share-code.onrender.com/products?${query}`, '&'), '?')
+    return trim(trim(`http://localhost:9810/products?${query}`, '&'), '?')
 }
 
 function trim(s, c) {
@@ -82,3 +82,14 @@ export function getPassedTimeInText(when) {
 }
 
 export const getFirstLetter = (name) => name.charAt(0).toUpperCase()
+
+export function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+    return array;
+}

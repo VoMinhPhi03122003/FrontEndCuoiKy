@@ -13,7 +13,7 @@ function HeaderAds() {
     const [adsIndex, setAdsIndex] = useState(0)
 
     useEffect(() => {
-        fetch('https://server-share-code.onrender.com/ads')
+        fetch('http://localhost:9810/ads')
             .then(value => value.json())
             .then(json => setAdsList(json))
     }, [])
@@ -78,12 +78,12 @@ function HeaderTop() {
                             </div>
                             {email ? (
                                 <div className="header-top-right-auth d-flex justify-content-end align-items-center">
-                                    <Link to="/profile"><i className="fa fa-user"></i>Xin chào, {email}</Link>
+                                    <Link to="/profile"><i className="fa fa-user-plus"></i>Xin chào, {email}</Link>
                                     <Link to="/" onClick={handleLogout} className="mr-0"><i className="fa fa-sign-in"></i> Đăng xuất</Link>
                                 </div>
                             ) : (
                                 <div className="header-top-right-auth d-flex justify-content-end align-items-center">
-                                    <Link to="/register"><i className="fa fa-user"></i> Đăng ký</Link>
+                                    <Link to="/register"><i className="fa fa-user-plus"></i> Đăng ký</Link>
                                     <Link to="/login" className="mr-0"><i className="fa fa-sign-in"></i> Đăng nhập</Link>
                                 </div>
                             )}
@@ -184,7 +184,7 @@ function HeaderSearch() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`https://server-share-code.onrender.com/products`)
+        fetch(`http://localhost:9810/products`)
             .then(res => res.json())
             .then(json => setTypes(getTypes(json)))
     }, [])
@@ -202,7 +202,7 @@ function HeaderSearch() {
     }
 
     return (
-        <div className="container mb-4">
+        <div className="container">
             <div className="row">
                 <div className="col-lg-3">
                     <CodeCategories types={types}/>
@@ -253,7 +253,7 @@ export default function Header() {
     }, [])
 
     return (
-        <header className="header">
+        <header className="header mb-3">
             <HeaderAds/>
             <HeaderTop/>
             <HeaderMenu/>
