@@ -3701,7 +3701,7 @@ body {
         border-color: #9ecb59;
     }
 
-    /* [ Detail Left ]
+    /* [ Detail Breadcrumb  ]
     --------------------------------*/
 
     .my-breadcrumb {
@@ -3727,6 +3727,33 @@ body {
 
     .my-breadcrumb li:hover a {
         color: var(--color-main);
+    }
+
+    /* [ Banner Left ]
+    --------------------------------*/
+
+    .banner-left a {
+        color: #333333;
+        transition: .1s;
+    }
+
+    .banner-left a:hover {
+        background-color: #A9D961CC;
+        border-color: #A9D961CC;
+        color: rgba(37, 56, 10, 0.8);
+    }
+
+    .banner-left a i {
+        color: #ec964f;
+        margin-right: 6px;
+    }
+
+    /* [ Banner Right ]
+    --------------------------------*/
+
+    .banner-right img {
+        height: 442px;
+        width: 92%;
     }
 
     .hero__search__form form .hero__search__categories {
