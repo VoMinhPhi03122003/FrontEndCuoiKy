@@ -6,11 +6,11 @@ export function formatRating(rating) {
     return {
         total: total,
         average: average,
-        avg5: rating['5star'] * 100 / total,
-        avg4: rating['4star'] * 100 / total,
-        avg3: rating['3star'] * 100 / total,
-        avg2: rating['2star'] * 100 / total,
-        avg1: rating['1star'] * 100 / total
+        avg5: total > 0 ? (rating['5star'] * 100 / total) : 0,
+        avg4: total > 0 ? (rating['4star'] * 100 / total) : 0,
+        avg3: total > 0 ? (rating['3star'] * 100 / total) : 0,
+        avg2: total > 0 ? (rating['2star'] * 100 / total) : 0,
+        avg1: total > 0 ? (rating['1star'] * 100 / total) : 0
     }
 }
 

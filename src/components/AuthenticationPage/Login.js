@@ -5,19 +5,17 @@ import logoFacebook from '../../img/authentication/logo-fb.png';
 import Header from '../Commons/Header';
 import Footer from '../Commons/Footer';
 import {Link, useNavigate} from "react-router-dom";
-
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
-
 import React, {useEffect, useState} from "react";
-import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
-import {loginError} from "../../redux/redux_tai/Action";
-import {checkEmailExists, checkLogin, getProvinces} from "../../javascript/api/Api_Tai";
+import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_B";
+import {loginError} from "../../redux/redux_B/Action";
+import {checkEmailExists, checkLogin, getProvinces} from "../../javascript/api/Api_B";
 import {useDispatch, useSelector} from "react-redux";
-import {errorLoginSelector, errorRegisterSelector} from "../../redux/redux_tai/Selectors";
+import {errorLoginSelector, errorRegisterSelector} from "../../redux/redux_B/Selectors";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Đăng nhập", link: "/login"}]
 
-function SectionLogin() {
+function SectionLogin(){
     const timeOut = 2000
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
@@ -31,7 +29,6 @@ function SectionLogin() {
             navigate('/');
         }
     },[]);
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if(isEmpty(email) || isEmpty(password)){
@@ -72,7 +69,7 @@ function SectionLogin() {
     const handleInputPassword = (e) =>{
         setPassword(e.target.value)
     }
-    return (
+    return(
         <section className="form-input py-5">
             <div className="container">
                 <div className="row">
@@ -105,7 +102,7 @@ function SectionLogin() {
                 </div>
             </div>
         </section>
-)
+    )
 }
 export default function LoginPage(){
     return(

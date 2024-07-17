@@ -9,10 +9,11 @@ import img_banner_3 from '../../img/banner/banner-3.jpg';
 import {Link} from "react-router-dom";
 
 function Banner() {
+
     // Định nghĩa thuộc tính của hình ảnh slide
     const styleImage = {
-      //  width: '80%',
-       // height: '30%'
+        // width: '80%',
+        // height: '30%'
     }
 
     // Định nghĩa các thiết lập của carousel
@@ -33,23 +34,15 @@ function Banner() {
                 <div className="row">
                     <div className="col-sm-3">
                         <div className="banner-left list-group">
-                            <Link to="/products?type=dogomsu" className="list-group-item"><i
-                                className="fa fa-code"></i> Đồ gốm sứ</Link>
-                            <Link to="/products?type=domaytredan" className="list-group-item"><i
-                                className="fa fa-code"></i> Đồ mây tre đan</Link>
-                            <Link to="/products?type=dogo" className="list-group-item"><i className="fa fa-code"></i> Đồ gỗ </Link>
-                            <Link to="/products?type=dotheuvadet" className="list-group-item"><i
-                                className="fa fa-code"></i> Đồ thêu và dệt</Link>
-                            <Link to="/products?type=dotrangsucthucong" className="list-group-item"><i
-                                className="fa fa-code"></i> Đồ trang sức </Link>
-                            <Link to="/products?type=doda" className="list-group-item"><i
-                                className="fa fa-code"></i> Đồ da</Link>
-                            <Link to="/products?type=nenthucong" className="list-group-item"><i
-                                className="fa fa-code"></i> Nến thủ công</Link>
-                            <Link to="/products?type=xaphong" className="list-group-item"><i
-                                className="fa fa-code"></i> Xà phòng</Link>
-                            <Link to="/products?type=dungcu" className="list-group-item"><i
-                                className="fa fa-code"></i> Dụng cụ</Link>
+                            <Link to="/products?type=dogomsu" className="list-group-item"> Đồ gốm sứ</Link>
+                            <Link to="/products?type=domaytredan" className="list-group-item"> Đồ mây tre đan</Link>
+                            <Link to="/products?type=dogo" className="list-group-item"> Đồ gỗ</Link>
+                            <Link to="/products?type=dotheuvadet" className="list-group-item"> Đồ thêu và dệt</Link>
+                            <Link to="/products?type=dotrangsucthucong" className="list-group-item">Đồ trang sức</Link>
+                            <Link to="/products?type=doda" className="list-group-item"> Đồ da</Link>
+                            <Link to="/products?type=nenthucong" className="list-group-item"> Nến thủ công</Link>
+                            <Link to="/products?type=xaphong" className="list-group-item"> Xà phòng</Link>
+                            <Link to="/products?type=dungcu" className="list-group-item"> Dụng cụ</Link>
                         </div>
                     </div>
                     <div className="col-sm-7">

@@ -2,7 +2,7 @@ import {
     checkItemExistCart,
     loadCartFromLocalStorage,
     totalPrice
-} from "../../javascript/utils/Utils_Tuyen"
+} from "../../javascript/utils/Utils_A"
 
 const initCartState = {
     /* đây là trạng thái ban đầu của giỏ hàng */
@@ -110,13 +110,14 @@ export const cartReducer = (state = initCartState, action) => {
     }
 
 }
-export const discountCodeReducer = (state = {product: ''}, action) => {
+
+export const discountCodeReducer = (state = {code: ''}, action) => {
 
     switch (action.type) {
         case 'discountCode/update-code': {
             return {
                 ...state,
-                product: action.payload
+                code: action.payload
             }
         }
         default:

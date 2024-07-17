@@ -3,65 +3,67 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import Swal from 'sweetalert2';
 
-import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_Tuyen";
-import {getListDiscountCode} from "../../javascript/api/Api_Tuyen";
-import '../../css/bootstrap.min.css'
+import {formatCurrency, getPercentDiscount} from "../../javascript/utils/Utils_A";
+import {getListDiscountCode} from "../../javascript/api/Api_A"
 
 import {
     removeItemFromCart,
     showModalPayment,
     updateDiscountCode,
     updateDiscountPercent
-} from "../../redux/redux_tuyen/Action_Tuyen";
+} from "../../redux/redux_A/Action_A";
+
 
 function SectionCart() {
+
     const cart = useSelector(state => state.cartReducer.cart);
+
     /**
      useSelector là một hook của React Redux,
      cho phép bạn lấy ra các giá trị từ Redux store.
      Bằng cách truyền một hàm selector,
      bạn có thể lựa chọn các phần của state mà bạn muốn truy xuất từ store.
      */
+
     let content;
     if (cart.length > 0) {
-        content = (
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="shoping__cart__table">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th></th>
-                                    <th className="shoping__product">Sản phẩm</th>
-                                    <th>Giá</th>
-                                    <th></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {cart.map((value, index) => (
-                                    <ItemCart key={index} product={value}/>
-                                ))}
-                                </tbody>
-                            </table>
+        content = (<div className="container">
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="shoping__cart__table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th className="shoping__product">Mã nguồn</th>
+                                <th>Giá</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {cart.map((value, index) => (
+                                <ItemCart key={index} product={value}/>
+                            ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                </div>
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="shoping__cart__btns">
-                            <Link to="/" className="primary-btn cart-btn">Tiếp tục mua sản phẩm</Link>
-                            <Link to="/" className="primary-btn cart-btn cart-btn-right">Tiếp tục mua sản phẩm </Link>
-                    </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <FormInputDiscount/>
-                    </div>
-                    <div className="col-lg-6">
-                        <TotalCart/>
+            </div>
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="shoping__cart__btns">
+                        <Link to="/" className="primary-btn cart-btn">Tiếp tục mua sản phẩm</Link>
+                        <Link to="/" className="primary-btn cart-btn cart-btn-right">Tiếp tục mua sản phẩm</Link>
                     </div>
                 </div>
-            </div>)
+                <div className="col-lg-6">
+                    <FormInputDiscount/>
+                </div>
+                <div className="col-lg-6">
+                    <TotalCart/>
+                </div>
+            </div>
+        </div>)
     } else {
         content = (<div className="container">
                 <div className="text-center">
@@ -87,7 +89,8 @@ function ItemCart({product}) {
         maxWidth: '150px',
         maxHeight: '150px',
     }
-    const dispatch = useDispatch();// dùng để gửi Action đến Store
+
+    const dispatch = useDispatch(); // dùng để gửi Action đến Store
 
     function clickRemoveItemFromCart() {
 
@@ -140,7 +143,7 @@ function FormInputDiscount() {
             const percent = getPercentDiscount(discountCode, list_discount_code);
             console.log(percent);
 
-            dispatch(updateDiscountPercent(percent));  // => dispatch(action) - Gửi action đến Redux store (nếu bạn sử dụng Redux)
+            dispatch(updateDiscountPercent(percent));  // => dispatch(action) - Gửi action đến Redux store
         } catch (error) {
             console.error('Error fetching discount codes:', error);
         }
@@ -170,6 +173,7 @@ function FormInputDiscount() {
 }
 
 function TotalCart() {
+
     const totalPrice = useSelector(state => state.cartReducer.totalPrice);
     const discount = useSelector(state => state.cartReducer.discount_percent); // phần trăm giảm giá của đơn hàng
 
@@ -185,6 +189,7 @@ function TotalCart() {
             <li>Tổng <span>{formatCurrency(totalPrice)}</span></li>
         </ul>);
     }
+
     const dispatch = useDispatch();
 
     const clickMakePayment = () => {

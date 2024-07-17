@@ -1,9 +1,9 @@
-import '../../App.css'
 import '../../css/footer.css'
 import {Link} from "react-router-dom";
+
 export default function Footer() {
     return (
-        <footer className="footer ">
+        <footer className="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-6 col-sm-6">
@@ -42,8 +42,8 @@ export default function Footer() {
                             <div className="footer-links col-lg-6">
                                 <h6>HƯỚNG DẪN</h6>
                                 <ul>
-                                    <li><Link to="/">Sản phẩm miễn phí</Link></li>
-                                    <li><Link to="/">Sản phẩm có phí</Link></li>
+                                    <li><Link to="/">Mua sản phẩm </Link></li>
+                                    <li><Link to="/">Mua sản phẩm mới</Link></li>
                                     <li><Link to="/">Hướng dẫn thanh toán</Link></li>
                                     <li><Link to="/">Hướng dẫn cài đặt</Link></li>
                                     <li><Link to="/">Hỗ trợ kĩ thuật</Link></li>
@@ -56,17 +56,13 @@ export default function Footer() {
                             <h6>GỬI HỖ TRỢ - GÓP Ý</h6>
                             <form action="/">
                                 <input type="text" placeholder="Nội dung & liên hệ của bạn"/>
-                                <button type="submit" >SEND</button>
+                                <button type="submit">SEND</button>
                             </form>
                             <div className="footer-widget-social">
-                                <a target="_blank" rel="noreferrer" href="https://facebook.com"><i
-                                    className="fa fa-facebook"></i></a>
-                                <a target="_blank" rel="noreferrer" href="https://twitter.com"><i
-                                    className="fa fa-twitter"></i></a>
-                                <a target="_blank" rel="noreferrer" href="https://linkedin.com"><i
-                                    className="fa fa-linkedin"></i></a>
-                                <a target="_blank" rel="noreferrer" href="https://youtube.com"><i
-                                    className="fa fa-youtube-play"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://facebook.com"><i className="fa fa-facebook"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://twitter.com"><i className="fa fa-twitter"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://linkedin.com"><i className="fa fa-linkedin"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://youtube.com"><i className="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -88,4 +84,3 @@ export default function Footer() {
         </footer>
     )
 }
-

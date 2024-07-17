@@ -30,10 +30,10 @@ export const updateDiscountPercent = (discount_percent) => {
     }
 }
 
-export const updateDiscountCode = (product) => {
+export const updateDiscountCode = (code) => {
     return {
         type: 'discountCode/update-code',
-        payload: product
+        payload: code
     }
 }
 
@@ -50,16 +50,19 @@ export const showModalPayment = (checkShow) => {
         type: 'modal/close-modal-payment',
         payload: checkShow
     }
+
 }
 
 export const updateStatePayment = (name_payment) => {
     switch (name_payment) {
+
         case 'paypal': {
             return {
                 type: 'payment/paypal',
                 payload: name_payment
             }
         }
+
         case 'momo': {
             return {
                 type: 'payment/momo',
@@ -79,6 +82,7 @@ export const updateStatePayment = (name_payment) => {
                 payload: name_payment
             }
         }
+
         default:
             return {
                 type: 'payment/reset',
@@ -88,6 +92,7 @@ export const updateStatePayment = (name_payment) => {
 }
 
 export const showModalPayPal = (checkShow) => {
+
     if (checkShow === true) {
         return {
             type: 'modal/show-modal-paypal',
@@ -99,4 +104,6 @@ export const showModalPayPal = (checkShow) => {
         type: 'modal/close-modal-paypal',
         payload: checkShow
     }
+
+
 }

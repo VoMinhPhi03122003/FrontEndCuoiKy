@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import Cart from './Cart'
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import $ from 'jquery'
-
 import {getTypeName, getTypes} from "../../javascript/utils"
 import {useDispatch} from "react-redux";
 import {setLayout, setPage, setSort, setType} from "../../redux/Action";
@@ -59,14 +58,10 @@ function HeaderTop() {
                     <div className="col-lg-6 col-md-6 py-2">
                         <div className="header-top-right d-flex justify-content-end align-items-center">
                             <div className="header-top-right-social d-flex justify-content-start align-items-center">
-                                <a target="_blank" rel="noreferrer" href="https://facebook.com"><i
-                                    className="fa fa-facebook"></i></a>
-                                <a target="_blank" rel="noreferrer" href="https://twitter.com"><i
-                                    className="fa fa-twitter"></i></a>
-                                <a target="_blank" rel="noreferrer" href="https://linkedin.com"><i
-                                    className="fa fa-linkedin"></i></a>
-                                <a target="_blank" rel="noreferrer" href="https://youtube.com"><i
-                                    className="fa fa-youtube-play"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://facebook.com"><i className="fa fa-facebook"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://twitter.com"><i className="fa fa-twitter"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://linkedin.com"><i className="fa fa-linkedin"></i></a>
+                                <a target="_blank" rel="noreferrer" href="https://youtube.com"><i className="fa fa-youtube-play"></i></a>
                             </div>
                             <div className="header-top-right-language">
                                 <img src={require('../../img/language/tieng_viet.png')} alt="" className="mr-2"/>
@@ -118,19 +113,16 @@ function HeaderMenu() {
                 <div className="col-lg-8 d-flex justify-content-center align-items-center">
                     <nav className="header-menu">
                         <ul>
-                            <li><span onClick={() => handledLink('/')}
-                                      className={location.pathname === '/' && 'active'}>Trang chủ</span></li>
-                            <li><span onClick={() => handledLink('/top-products')}
-                                      className={location.pathname.indexOf('top-products') > 0 && 'active'}>Top sản phẩm </span>
-                            </li>
-                            <li><span onClick={() => handledLink('/quality-products')}
-                                      className={location.pathname.indexOf('quality-products') > 0 && 'active'}>Sản phẩm chất
+                            <li><span onClick={() => handledLink('/')} className={location.pathname === '/' && 'active'}>Trang chủ</span></li>
+                            <li><span onClick={() => handledLink('/top-codes')}
+                                      className={location.pathname.indexOf('top-codes') > 0 && 'active'}>Top sản phẩm</span></li>
+                            <li><span onClick={() => handledLink('/quality-codes')}
+                                      className={location.pathname.indexOf('quality-codes') > 0 && 'active'}>Sản phẩm chất
                                 lượng</span>
                                 <img src={require('../../img/ic_hot.gif')} alt=""/>
                             </li>
-                            <li><span onClick={() => handledLink('/free-products')}
-                                      className={location.pathname.indexOf('free-products') > 0 && 'active'}>Sản phẩm miễn phí</span>
-                            </li>
+                            <li><span onClick={() => handledLink('/free-codes')}
+                                      className={location.pathname.indexOf('free-codes') > 0 && 'active'}> Sản phẩm mới</span></li>
                         </ul>
                     </nav>
                 </div>
@@ -172,6 +164,7 @@ function CodeCategories({types}) {
         </div>
     )
 }
+
 function HeaderSearch() {
     const location = useLocation()
     const [search, setSearch] = useState({
@@ -229,11 +222,6 @@ function HeaderSearch() {
                             <input type="text" value={search.query} placeholder="Nhập từ khóa" onChange={handleChange}/>
                             <button type="submit"><i className="fa fa-search"></i></button>
                         </form>
-                    </div>
-                </div>
-                <div className="col-lg-2">
-                    <div className="header-upload d-flex justify-content-end align-items-center h-100">
-                        <div className="header-upload-action"><i className="fa fa-cloud-upload mr-2"></i> TẢI LÊN</div>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,8 @@ import SectionCart from './SectionCart'
 import Footer from '../Commons/Footer'
 import {ModalPayment} from "../Commons/Modal"
 
-function CartDetailPage(){
+function CartDetailPage() {
+
     const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: " Chi tiết giỏ hàng", link: ""}]
 
     return (

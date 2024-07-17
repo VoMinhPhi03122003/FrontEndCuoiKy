@@ -2,10 +2,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import {useSelector} from "react-redux";
 import {buildQuery} from "../../javascript/utils";
-import {React, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {ProductContainer} from "../ListProductsPage/Products";
 import SectionBreadcrumb from "./SectionBreadcrumb";
-import {fetchCodes} from "../../javascript/api/Api_Dat";
+import {fetchCodes} from "../../javascript/api/Api_C";
 
 export function Codes() {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
@@ -19,10 +19,10 @@ export function Codes() {
             setData(likedCodes)
         }
     }, [ids, likedCodes, setData])
-    function breadcrumbs() {
-        return [{name: 'Trang chủ', link: '/'}, {name: 'Codes đã thích', link: '/liked-products'}]
-    }
 
+    function breadcrumbs() {
+        return [{name: 'Trang chủ', link: '/'}, {name: 'Sản phẩm đã thích', link: '/liked-codes'}]
+    }
 
     return (
         <>
