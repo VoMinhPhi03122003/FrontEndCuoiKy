@@ -82,9 +82,6 @@ function DetailCenter({product}) {
                 </div>
                 <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/top-codes'}>Top sản phẩm</Link></div>
                 <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {product.release}</div>
-                <div><i className="fa fa-object-group"></i><span>Màu sắc</span> {product.file.type}</div>
-                <div><i className="fa fa-file-code"></i><span>Chất liệu</span> {product.file.name}
-                  </div>
             </div>
         </div>
     )
@@ -139,7 +136,7 @@ function DetailDescription({product, goTo}) {
             <div className="detail-description">
                 <div>{product.description}</div>
                 {Parser(product.detail)}
-                <div className="di-guide">XEM THÊM <span>== </span><span onClick={goTo}> Hướng dẫn sử dụngchi tiết</span></div>
+                <div className="di-guide">XEM THÊM <span>== </span><span onClick={goTo}> Hướng dẫn sử dụng chi tiết</span></div>
             </div>
         </>
     )

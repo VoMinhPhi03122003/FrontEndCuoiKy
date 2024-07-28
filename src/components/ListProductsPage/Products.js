@@ -88,7 +88,7 @@ export function ProductItemRow({p, navigate, addToLiked, addToCart}) {
                     <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
                     <div className="product-item-stats d-flex justify-content-start">
                         <div><i className="fa fa-eye"></i> {p.viewed}</div>
-                        <div><i className="fa fa-download"></i> {p.downloaded}</div>
+                        <div><i className="fa-solid fa-chart-simple"></i> {p.downloaded}</div>
                     </div>
                 </div>
                 <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
