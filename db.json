@@ -2116,8 +2116,8 @@
       "description": "Bàn Trà Bệt WOODEN HOUSE Bằng Gỗ Thông Nhập Khẩu",
       "release": "28-04-2023",
       "file": {
-        "name": "web_php.rar",
-        "type": "Full code + Báo cáo",
+        "name": "",
+        "type": "",
         "size": 181,
         "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
@@ -11353,8 +11353,8 @@
       "description": "Bàn Trà Bệt WOODEN HOUSE Bằng Gỗ Thông Nhập Khẩu",
       "release": "28-04-2023",
       "file": {
-        "name": "web_php.rar",
-        "type": "Full code + Báo cáo",
+        "name": "",
+        "type": "",
         "size": 181,
         "unit": "MB",
         "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
@@ -13425,6 +13425,1098 @@
         "https://down-vn.img.susercontent.com/file/sg-11134201-7rd6p-luer9os43xnaef"
       ],
       "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Vòng Cổ Vòng Tay Hoa Nhiều Màu Sắc Hạt Cúc Ngọc Trai Dây Chuyền Choker Cho Nữ Trang Sức Phụ Kiện",
+      "description": "Vòng Cổ Vòng Tay Hoa Nhiều Màu Sắc Hạt Cúc Ngọc Trai Dây Chuyền Choker Cho Nữ Trang Sức Phụ Kiện",
+      "release": "13-4-2023",
+      "file": {
+        "name": "BubbleBubble.rar",
+        "type": "Full code",
+        "size": 132.2,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": " Tên: Vòng đeo cổ hạt đầy màu sắc 17KM\n\n Chất liệu: hợp kim + hạt + ngọc trai\n\n Màu sắc: như hình ảnh\n\n Phong cách: đơn giản và thời trang\n\n Nhân dịp: Quà tặng sinh nhật bên \n\n Đóng gói: 1 chiếc vòng cổ / vòng tay",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 82,
+      "img": "https://down-vn.img.susercontent.com/file/38372bcee19da60d53ac9dd31dc7b2f4",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-22090-ove6z83nt2hv16",
+        "https://down-vn.img.susercontent.com/file/65761e5b1d60f22bc3ef53f01ea28ebe",
+        "https://down-vn.img.susercontent.com/file/5add37e210af53e149e49d1bf8137c49"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Vòng Tay Trầm Hương Chuỗi Tràng Hạt 108 6 7 8mm Trầm Tốc Việt - An Yên - Thịnh Vượng - Tài Lộc - May Mắn | MTH JEWELRY",
+      "description": "Vòng Tay Trầm Hương Chuỗi Tràng Hạt 108 6 7 8mm Trầm Tốc Việt - An Yên - Thịnh Vượng - Tài Lộc - May Mắn | MTH JEWELRY",
+      "release": "23-3-2023",
+      "file": {
+        "name": "breakit.unitypackage",
+        "type": "Full code",
+        "size": 355,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "\uD835\uDFD3 \uD835\uDC25ợ\uD835\uDC22 í\uD835\uDC1C\uD835\uDC21 \uD835\uDC2Dừ \uD835\uDC2Fò\uD835\uDC27\uD835\uDC20 \uD835\uDC2D\uD835\uDC1A\uD835\uDC32 \uD835\uDC13\uD835\uDC2Bầ\uD835\uDC26 \uD835\uDC07ươ\uD835\uDC27\uD835\uDC20\n\n➡\uFE0F Tác dụng GIẢM STRESS.\n\n➡\uFE0F Tác dụng xua đuổi điều không tốt.\n\n➡\uFE0F Vòng Tay Trầm Hương là lá bình an.\n\n➡\uFE0F Vạn sự hanh thông.\n\n➡\uFE0F Sang trọng và đẳng cấp.",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 83,
+      "img": "https://down-vn.img.susercontent.com/file/c0426dafa77944dbc189a904eb266f84",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/024896690a86663a7adda79ad515ceef",
+        "https://down-vn.img.susercontent.com/file/65eb2c182e14b182dff73af29f42f3da",
+        "https://down-vn.img.susercontent.com/file/d4f7218145e5b58aaa91428455b57238 "
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Nhẫn bạc nam xoay cá tính Om Mani Padme Hum NNA0289 - Trang sức TNJ",
+      "description": "Nhẫn bạc nam xoay cá tính Om Mani Padme Hum NNA0289 - Trang sức TNJ",
+      "release": "06-1-2023",
+      "file": {
+        "name": "game angrybirds.zip",
+        "type": "Full code",
+        "size": 660,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "NHẪN NAM BẠC 925 XOAY CÁ TÍNH NNA0289 - TRANG SỨC TNJ\n\n- Mẫu nhẫn bạc nam xoay Om Mani Padme Hum được thiết kế thanh lịch, trẻ trung phù hợp với mọi lứa tuổi.\n\n- Đeo nhẫn nam bạc 925 không chỉ mang lại phong cách cá tính thời trang và sức cuốn hút mà nó còn đem lại sức khoẻ và may mắn cho người đeo và là món quà tặng ý nghĩa cho bạn bè, người thân.\n\n- Om Mani Padme Hum là 1 câu thần chú tiếng Phạn được xem là thần chú cầu Quán Thế Âm Bồ Tát là thần chú quan trọng và lâu đời nhất của Phật Giáo Tây Tạng. Những ai mang trong người câu thần chú này có sức mạnh hàng phục yêu ma, hóa giải diệt trừ mọi tai nạn đem lại sự an lành và may mắn cho người đeo. \n\n- Mặt nhẫn xoay thiết kế có thể xoay 360 độ. Đây là một trong những điểm nổi bật khiến chiếc nhẫn xoay bạc nam trở lên độc đáo và khác lạ với người đeo.",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 84,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvmkaw6ohnv541",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvmkaw6ohnvhf7",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvmkaw7igg0hdb",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvmkaw8metjlee"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Phụ Kiện Trang Sức Nữ Bông Tai Dây Chuyền Khuyên Tai Hoa Tai Đan Mây Tre Cói Vintage Swanlake",
+      "description": "Phụ Kiện Trang Sức Nữ Bông Tai Dây Chuyền Khuyên Tai Hoa Tai Đan Mây Tre Cói Vintage Swanlake",
+      "release": "14-11-2022",
+      "file": {
+        "name": "MuseumUnity.rar",
+        "type": "Full code",
+        "size": 440,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Phụ Kiện Trang Sức Nữ Bông Tai Dây Chuyền Khuyên Tai Hoa Tai Thủ Công Đan Mây Tre Cói Tự Nhiên Vintage\n\n\n\n➖ Xuất xứ: Việt Nam\n\n\n\n*Sản phẩm được thiết kế và sản xuất với Swanlake by Minh Minh Co.*\n\n\n\n*Hình ảnh thật, do Swanlake tự chụp*\n\n\n\n*#cam_kết sản phẩm chất lượng, đường may đẹp, chất vải đúng với thông tin sản phẩm*",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 85,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw1eqig3wnh7b5",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw1eqig3v8wrd7",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw1eqig3zgm3c4",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw1eqig3y21na0"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Lắc chân bạc nữ TLEE, vòng chân hat bi mix hạt màu xinh xắn TLEE JEWELRY",
+      "description": "Lắc chân bạc nữ TLEE, vòng chân hat bi mix hạt màu xinh xắn TLEE JEWELRY",
+      "release": "15-7-2022",
+      "file": {
+        "name": "happyglass.zip",
+        "type": "Full code",
+        "size": 1.68,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 63,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "THÔNG TIN SẢN PHẨM LẮC CHÂN BẠC TLEE JEWELRY\n\n- Chất liệu: Bạc S925 (92,5% Bạc và 7,5% kim loại khác sản xuất theo công nghệ Bạc Ý) hàng gia công kĩ bóng đẹp, không han gỉ, không dị ứng, dễ làm sáng và bảo quản\n\n- Kiểu cách: Thiết kế thanh lịch, trẻ trung, tinh tế, sắc sảo\n\n- Sản xuất: được thiết kế bởi TLEE JEWELRY\n\n- Lắc tay bạc TLEE JEWELRY được thiết kế thanh lịch, trẻ trung theo xu hướng mới nhất của ngành phụ kiện trang sức\n\n- Lắc tay được gia công vô cùng kĩ lưỡng, tỉ mỉ tạo nên một sản phẩm trang sức hoàn hảo",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 86,
+      "img": "https://down-vn.img.susercontent.com/file/4f816ec8f1229617cbcd575e2e240c02",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/247cef80d920cc5107b783bc963a9e35",
+        "https://down-vn.img.susercontent.com/file/0724b9c8ce4efd5ca392338d4a70eb16",
+        "https://down-vn.img.susercontent.com/file/a8ae624334996f06b342e8b8bc6846bd"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Dây chuyền bạc TLEE thanh bạc khối khắc chữ theo yêu cầu TLEE JEWELRY D0183",
+      "description": "Dây chuyền bạc TLEE thanh bạc khối khắc chữ theo yêu cầu TLEE JEWELRY D0183",
+      "release": "14-7-2022",
+      "file": {
+        "name": "ArcheryClash.zip",
+        "type": "Full code",
+        "size": 84,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "THÔNG TIN SẢN PHẨM DÂY CHUYỀN BẠC TLEE JEWELRY\n\n- Chất liệu: Bạc S925 (92,5% Bạc và 7,5% kim loại khác sản xuất theo công nghệ Bạc Ý) hàng gia công kĩ bóng đẹp, không han gỉ, không dị ứng, dễ làm sáng và bảo quản\n\n- Kiểu cách: Thiết kế thanh lịch, trẻ trung, tinh tế, sắc sảo\n\n- Sản xuất: được thiết kế bởi TLEE JEWELRY\n\n- Dây chuyền bạc TLEE JEWELRY được thiết kế thanh lịch, trẻ trung theo xu hướng mới nhất của ngành phụ kiện trang sức\n\n- Dây chuyền được gia công vô cùng kĩ lưỡng, tỉ mỉ tạo nên một sản phẩm trang sức hoàn hảo",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 87,
+      "img": "https://down-vn.img.susercontent.com/file/d402562a26d2f7d8d2e66a2cd8e3a312",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/8ad18d2b70e78ea9472166a68967581d",
+        "https://down-vn.img.susercontent.com/file/08bc9842750bf85882a9fd9ed9db5d50",
+        "https://down-vn.img.susercontent.com/file/2643fea78d43c7fa06e389a8c9f8a9b2"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Ghim cài áo QIHE JEWELRY hình tranh sơn dầu Vincent Van Gogh thời trang",
+      "description": "Ghim cài áo QIHE JEWELRY hình tranh sơn dầu Vincent Van Gogh thời trang",
+      "release": "22-6-2022",
+      "file": {
+        "name": "game_airplane.rar",
+        "type": "Full code",
+        "size": 50,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Thời gian giao hàng dự kiến cho sản phẩm này là từ 7-9 ngày\n\n-Loại sản phẩm: Ghim cài áo\n-Phong cách: Nghệ thuật\n-Dành cho: Unisex\n-Loại kim loại: Hợp kim kẽm\n-Số lượng; 1 \n-Phù hợp cho dịp: Kỷ niệm đính hôn, Quà tặng, Tiệc cưới",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 88,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy3wc7nfw0pdf",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy3wc7nhal5c6",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy3wc7nip5l2e",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvl5gy8pgwpdfe"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
+      },
+      "name": "Trâm Cài Tóc Thắt Nút Bằng Sừng HAHANCO Tôn Lên Vẻ Đẹp Thanh Lịch Quý Phái",
+      "description": "Trâm Cài Tóc Thắt Nút Bằng Sừng HAHANCO Tôn Lên Vẻ Đẹp Thanh Lịch Quý Phái",
+      "release": "02-7-2022",
+      "file": {
+        "name": "CarAudi_ver1.rar",
+        "type": "Full code",
+        "size": 34,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "\uD83D\uDC8E MÔ TẢ SẢN PHẨM:\n\n- Mã Số: HH601-37 (Trâm thắt nút)\n\n- Số lượng: 1 chiếc\n\n- Kích thước: Dài từ 15,5 đến 19cm (Mỗi chiếc 1 cỡ, ngẫu nhiên)\n\n- Chất liệu: Được làm từ sừng bò Châu Phi nhập khẩu.\n\n- Đầu trâm được thắt nút mềm mại, hình dáng cong thắng khác nhau (Giao ngẫu nhiên)\n\n- Màu sắc: Trắng vân nưa màu sừng tự nhiên, mỗi chiếc 1 màu (Giao ngẫu nhiên)\n\n  (Sản phẩm này có cả màu đen và màu khác trên thân trâm)\n\n- Trâm sừng này sản xuất thủ công mỗi chiếc 1 kiểu dáng hình thù khác nhau \"cong, thẳng, to, nhỏ\" không có chiếc nào giống nhau (Giao hàng ngẫu nhiên, khách có thể chát để lựa màu)",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 89,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134258-7r98o-lxh8vf5lciqhda",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd6p-lx16mxdefwei42",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qvfy-ljnrrg28tfh3a6",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qvfb-ljnrrh715qd327"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Bộ Khuyên Mũi Thẳng / Cong Bằng Thép Không Gỉ 20G",
+      "description": "Bộ Khuyên Mũi Thẳng / Cong Bằng Thép Không Gỉ 20G",
+      "release": "08-6-2023",
+      "file": {
+        "name": "hoanghaifashion.zip",
+        "type": "Full code",
+        "size": 53.3,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Đặc điểm:\n1.Chất liệu: Thép không gỉ, Chì, Không chứa niken, Tốt cho làn da nhạy cảm.\n2.Phong cách khác nhau cho bạn lựa chọn, phù hợp để mặc nhiều dịp hơn!\n3.Bề mặt được đánh bóng cao, an toàn và thoải mái khi đeo!\nThông tin chi tiết:\nSố lượng: 5/9/21 cái\nMáy đo: 0,8mm (20G)\nGói bao gồm: 5/9/21 cái mỗi bộ",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 90,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy5qdh2eti1ac",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy5qdh2c0d553",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy5qdh2alspb6",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvy5qdh29789a1"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Vòng đeo chân chỉ đỏ đá Ngọc Hồng Lựu An gem Beauty from unique, vòng chỉ đỏ đeo chân mix đá",
+      "description": "Vòng đeo chân chỉ đỏ đá Ngọc Hồng Lựu An gem Beauty from unique, vòng chỉ đỏ đeo chân mix đá",
+      "release": "08-5-2023",
+      "file": {
+        "name": "alice.rar",
+        "type": "Full code",
+        "size": 14.9,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "★THÔNG TIN CHI TIẾT: Vòng đeo chân chỉ đỏ đá Ngọc Hồng Lựu An gem Beauty from unique, vòng chỉ đỏ đeo chân mix đá\n\n-Dây đeo có thể tự tùy chỉnh\n\nMẫu thiết kế basic nhưng không kém phần tinh thế và phong cách. Màu sắc nổi bật, tôn da\n\nBạn hoàn toàn có thể dễ dàng chọn cho mình một chiếc vòng đá phù hợp với bản thân hoặc làm quà tặng người thân, bạn bè, đồng nghiệp...\n\n\n\n\n\n  ★KHI NHẬN SẢN PHẨM GỒM\n\n\n\n- Mẫu trang sức bạn ưng ý bạn đã lựa chọn đến từ An Gem\n\n\n\n- Hộp đựng trang sức vòng tay\n\n\n\n- Hướng dẫn sử dụng và bảo quản sản phẩm",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 91,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsqem3mvkon815",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/bbe97a835dc2c63052ec0d98a50c7ed4",
+        "https://down-vn.img.susercontent.com/file/371f5a9795230e33a21f3953fd9e8ab7",
+        "https://down-vn.img.susercontent.com/file/6328ed42a141edd320f5b0510fd54651"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Dây chuyền nữ ngọc trai nhân tạo Eleanor Accessories choker dạng chuỗi hạt vòng cổ thanh lịch phụ kiện trang sức",
+      "description": "Dây chuyền nữ ngọc trai nhân tạo Eleanor Accessories choker dạng chuỗi hạt vòng cổ thanh lịch phụ kiện trang sức",
+      "release": "05-5-2023",
+      "file": {
+        "name": "Catto_Shop.rar",
+        "type": "Code",
+        "size": 8.78,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "THÔNG TIN SẢN PHẨM\n\n➤ Sản phẩm: Dây chuyền nữ ngọc trai nhân tạo Eleanor Accessories choker dạng chuỗi hạt vòng cổ thanh lịch phụ kiện trang sức 0777\n\n➤ Thương hiệu: Eleanor Accessories\n\n➤ Loại sản phẩm: Dây chuyền – vòng cổ nữ\n\n➤ Chất liệu: Ngọc trai thô nước ngọt\n\n➤ Chiều dài: 36 - 37cm\n\n",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 92,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lva0xi2bbusa6b",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lv02qz4223gy0c",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lqvmu7zryn4pbd",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-ljw60qpkjdaa6f"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Dây chuyền Choker Blacka bar chain JESMEE thanh xoắn vát mặt đá đen",
+      "description": "Dây chuyền Choker Blacka bar chain JESMEE thanh xoắn vát mặt đá đen",
+      "release": "02-4-2023",
+      "file": {
+        "name": "wordpress_theme.zip",
+        "type": "Full code",
+        "size": 44,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "\uD83D\uDC8E THÔNG TIN SẢN PHẨM\n\n- Màu sắc: vàng\n\n- Mô tả chi tiết:  dây chuyền ổ khóa thanh lịch cao cấp được Mee gợi ý cho bạn , giúp bạn tạo điểm nhấn và sự khác biệt\n\n+ Sản phẩm đạt độ hoàn thiện cao, thiết kế hiện đại và dễ dàng phối đồ đi tiệc cũng như đi làm. ",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 93,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lv9wkxifs2rd79",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lnji27xw3xx681",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lqvluabmz3yc34",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ln9ukz2hf8q567"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Khuyên tai bạc 925 Lush JESMEE",
+      "description": "Khuyên tai bạc 925 Lush JESMEE",
+      "release": "29-3-2023",
+      "file": {
+        "name": "camperstore.rar",
+        "type": "Full code",
+        "size": 132,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "\uD83D\uDC8E THÔNG TIN SẢN PHẨM\n\n- Chất liệu: Bạc 925\n\n- Màu sắc: vàng, Bạc\n\n- Mô tả chi tiết: Từ bạc 925 nguyên chất, ứng dụng cao trong mọi phong cách thời trang\n\n+ Sản phẩm đạt độ hoàn thiện cao, thiết kế hiện đại và dễ dàng phối đồ đi tiệc cũng như đi làm. \n\n- nhẫn mạ vàng lấy cảm hứng từ những cành xương rồng luôn hướng lên cao ngay cả trong môi trường khắc nghiệt. Chiếc nhẫn này còn mang ý nghĩa phong thuỷ về khí chất, lòng kiêu hãnh.",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 94,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm4l1pjq2cpr63",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm4l1pjqug2n01",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm4l1pjqq8db56",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm4l1pjqrmxre3"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Nhẫn bạc Mỹ xưa đính đá xanh dương sang trọng, trang sức nhẫn nam cao cấp NNA0134",
+      "description": "Nhẫn bạc Mỹ xưa đính đá xanh dương sang trọng, trang sức nhẫn nam cao cấp NNA0134",
+      "release": "22-12-2022",
+      "file": {
+        "name": "pacific-main.zip",
+        "type": "Full code",
+        "size": 16.9,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Mô tả sản phẩm: Nhẫn bạc Mỹ xưa đính đá xanh dương sang trọng, trang sức nhẫn nam cao cấp NNA0134 - Trang Sức TNJ\n\n- Thương hiệu : TNJ\n\n- Chất liệu bạc cao cấp 925 (92,5% Bạc nguyên chất và 7.5% là hợp chất làm tăng độ cứng và sáng bóng cho sản phẩm)\n\n- Bộ sản phẩm: nhẫn nam bạc + hộp đựng đi kèm\n\n\n\n- Nhẫn bạc Mỹ xưa đính đá xanh dương đang nổi lên như một phụ kiện thời trang xu hướng mới được nhiều bạn trẻ ưa chuộng xem nó như 1 món đồ vật trang trí thể hiện được cá tính sang trọng đẳng cấp cũng như mang lại nhiều điều may mắn trong cuộc sống\n\n\n\n- Nhẫn bạc nam rất phù hợp cho các anh em cá tính, mang đến sự nam tính, sang trọng cho người đeo.\n\n-Ngoài ra, nhẫn nam bạc còn có tác dụng đánh cảm, kị gió và giảm thiểu các độc tố trong cơ thể. Với thiết kế độc đáo lắc tay bạc nam còn là phụ kiện thời trang giúp bạn tự tin, ấn tượng hơn trong các buổi gặp gỡ...",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 95,
+      "img": "https://down-vn.img.susercontent.com/file/d45f39c648a2d232145ed421bc7fd892",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/9c32def1c695744e899d81b04c74a635",
+        "https://down-vn.img.susercontent.com/file/ab58a52c7fae1a5542b120c363e54dd4",
+        "https://down-vn.img.susercontent.com/file/605d3615b805e19753625e95c52f53b9"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Vòng đeo tay XIAOBOACC dây bện màu đỏ thời trang dành cho nam và nữ",
+      "description": "Vòng đeo tay XIAOBOACC dây bện màu đỏ thời trang dành cho nam và nữ",
+      "release": "22-12-2022",
+      "file": {
+        "name": "coffee-master.zip",
+        "type": "Full code",
+        "size": 6.64,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Thời gian giao hàng dự kiến cho sản phẩm này là từ 7-9 ngày\n\n\n\nChúng tôi sẽ sắp xếp giao hàng nhanh chóng sau khi bạn đặt mua .\n\n\n\nKích thước: Chiều dài vòng đeo tay: khoảng 16cm 【có thể điều chỉnh】\n\n\n\nDanh mục sản phẩm: Vòng tay\n\nChất Liệu: Dây\n\nKhông gây dị ứng: Có\n\nXuất xứ: Trung Quốc",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 96,
+      "img": "https://down-vn.img.susercontent.com/file/cn-11134207-7qukw-li5iswbz8cqe6e",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qve7-li5cap1t9x521f",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qvd1-li5caniliq33fd",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qvg8-li5cao4imn7q5c"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Trâm cài tóc bằng gỗ mun phát sáng phong cách trung hoa cổ điển thời trang 2024",
+      "description": "Trâm cài tóc bằng gỗ mun phát sáng phong cách trung hoa cổ điển thời trang 2024",
+      "release": "22-12-2022",
+      "file": {
+        "name": "temp_noi_that.zip",
+        "type": "Full code",
+        "size": 8.24,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Thương hiệu: mochashu\n\n\n\nChất liệu: gỗ đàn hương/ngọc trai/thủy tinh\n\n\n\nChất lượng: 100% hàng mới và chất lượng cao\n\n\n\nphong cách: kẹp tóc\n\n\n\nKích thước: như hình ảnh hiển thị\n\n\n\nMạ điện: mạ điện 3 lần, xử lý bề mặt gương bóng mịn, không dễ phai màu\n\n\n\nKịch bản sử dụng: hàng ngày, tiệc tùng, đám cưới, sinh nhật, đính hôn, v.v.\n\n\n\nBạn có thể vào cửa hàng của chúng tôi và theo dõi chúng tôi! Nhiều sản phẩm hơn, giảm giá nhiều hơn!",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 97,
+      "img": "https://down-vn.img.susercontent.com/file/sg-11134201-7rd4a-lwwcexhbhr3406",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd62-lwwcezbmspu2da",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd6y-lwwcf3xa3pmyf0",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd3t-lwwcf1p3bn9i59"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Vòng cổ đính cườm thủ công phong cách Bohemian Vòng cổ nhiều lớp cổ điển dành cho nữ",
+      "description": "Vòng cổ đính cườm thủ công phong cách Bohemian Vòng cổ nhiều lớp cổ điển dành cho nữ",
+      "release": "22-12-2022",
+      "file": {
+        "name": "temp-anime.zip",
+        "type": "Full code",
+        "size": 29.9,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Mới và chất lượng cao!\nMô tả:\n1. Thiết kế độc đáo: Vòng cổ sao biển mặt dây chuyền rùa Bohemian của chúng tôi có thiết kế độc đáo và các chi tiết tinh tế, thể hiện hoàn hảo sự quyến rũ của sinh vật biển và vẻ đẹp của. Nó là một phụ kiện cần có cho bất kỳ ai yêu thích sinh vật biển và.\n2. Chất liệu cao cấp: Sợi dây chuyền được làm từ chất liệu cao cấp, có khả năng chống xước và chống phai màu. Nó có thể duy trì màu sắc ban đầu trong một thời gian dài mà không lo bị hư hại do mặc hàng ngày.\n3. Những dịp mặc quần áo phong phú: Cho dù bạn đang đi làm, họp mặt, hàng ngày, lễ kỷ niệm hay những dịp đặc biệt, chiếc vòng cổ này là một vật trang trí lý tưởng, phù hợp với nhiều sự kết hợp và dịp khác nhau.\n4. Lựa chọn quà tặng lý tưởng: Là món quà lý tưởng đáp ứng nhu cầu tặng quà của bạn trong những ngày đặc biệt, thể hiện sự quan tâm và yêu thương của bạn.\n5. Nhiều cách để kết hợp: Chiếc vòng cổ này rất thích hợp để đeo một mình hoặc kết hợp với các đồ trang sức khác. Nó có thể được sử dụng như một phụ kiện hàng ngày hoặc thêm một chút thời trang cho những dịp đặc biệt.\nChất liệu: Hợp kim\nCông nghệ chế biến: thủ công",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 98,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lv1byn9rzkwqdd",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luyw4i46hmhx4d",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luys6hku5a1e95",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luyw4i46g7xh53"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Vòng tay đan dây handmade thạch anh tự nhiên, vòng đá tự nhiên mang năng lượng cao phụ kiện thời trang Mi Shungit",
+      "description": "Vòng tay đan dây handmade thạch anh tự nhiên, vòng đá tự nhiên mang năng lượng cao phụ kiện thời trang Mi Shungit",
+      "release": "22-12-2022",
+      "file": {
+        "name": "thoi_trang.rar",
+        "type": "Full code",
+        "size": 6.38,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "THÔNG TIN SẢN PHẨM\n\n- Tên sản phẩm: vòng đan dây đá thạch anh thô\n\n- Chất liệu: dây sáp , đá thiên nhiên 100%: aquamarine, đá đào hoa, thạch anh hồng, thạch anh vàng, lapis lazuli, thạch anh trắng, đá sunstone, thạch anh tím nhạt xinh lắm, đá Fluorite đa tầng mix nhiều màu, đá hắc nguyệt quang,đá mặt trăng, aventurine cam, amazonite, mã não đỏ, thạch anh dâu hồng, thạch anh xanh( rose quartz, clear quartz, smoky quartz, rhodochrosite, aventurine, citrine, amethyst, labradorite, moon stone…)\n\n\n\n- Hình dáng mặt đá: dáng tự do, đa dạng\n\n- Chiều dài dây: 16cm\n\n- Size: freesize( thiết kế dây rút nên dễ đeo dễ chỉnh size)\n\n- Dành cho: mọi giới tính, mọi lứa tuổi\n\n- Phù hợp mang theo bên người, làm trang sức, trợ mệnh chiêu cát tránh hung, gia tăng may mắn, hỗ trợ công việc, học tập, giúp ngủ ngon, thanh tẩy tarot, reiki, thiền định,...\n\n- Luân xa: cung cấp năng lượng cho tất cả các luân xa và mở các kênh cho dòng năng lượng tâm linh.",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 99,
+      "img": "https://down-vn.img.susercontent.com/file/sg-11134201-7qvg6-lhriry7cqtoa59",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qve8-lhrhaadfquqx58",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qvg2-lhrhaazmvs7n5f",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7qvd7-lhrhace4shke47"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Nhẫn bạc 17KM co giãn đính hạt nhiều màu sắc dành cho nữ",
+      "description": "Nhẫn bạc 17KM co giãn đính hạt nhiều màu sắc dành cho nữ",
+      "release": "22-12-2022",
+      "file": {
+        "name": "team-violet.zip",
+        "type": "Full code",
+        "size": 10.4,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Thời gian giao hàng dự kiến cho sản phẩm này là từ 7-9 ngày\n\n\n\n\n\nTên: Nhẫn bạc 17KM co giãn đính hạt nhiều màu sắc dành cho nữ\n\nChất liệu: hợp kim + hạt\n\nMàu sắc như hình ảnh\n\nPhong cách Đơn giản & Thời trang\n\nNhân dịp: Quà tặng sinh nhật tiệc",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 0
+    },
+    {
+      "id": 100,
+      "img": "https://down-vn.img.susercontent.com/file/sg-11134201-7rd5s-luenu5q5u1se88",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd6n-luenu7ugqef799",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd4v-luenu8xb5jnq65",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd6q-luenuauybmoc69"
+      ],
+      "type": {
+        "id": "doda",
+        "name": "Đồ da",
+        "img": "https://www.codester.com/static/uploads/categories/8/icon-alt.png"
+      },
+      "name": "Đồng Nguyên Chất Trung Quốc Siêu Anh Hùng Khỉ Vua Vòng Lắc Tay Đồng Cổ Mặt Trời Wu Kong",
+      "description": "Đồng Nguyên Chất Trung Quốc Siêu Anh Hùng Khỉ Vua Vòng Lắc Tay Đồng Cổ Mặt Trời Wu Kong.",
+      "release": "21-12-2022",
+      "file": {
+        "name": "lo_trinh_iq.rar",
+        "type": "Full code",
+        "size": 3.73,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Khoản mục: vòng tay thời trang\nGiới tính: Unisex\nNhân dịp: Đảng, Đám cưới, Quà tặng, Bình thường\nChất liệu: Đồng nguyên chất\nSố lượng: 1 cái móc khóa\nĐóng gói: Gói OPP cho 1 móc khóa\nXuất xứ: Trung Quốc (Đại lục)\nTình trạng: 100% thương hiệu mới và chất lượng cao\nTay nghề tốt, ngoại hình hấp dẫn.",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 80,
+      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltxeesvjmeqn6f",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-li8ftcrmrxea3a",
+        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-li8ftcrmuqj6b1",
+        "https://down-vn.img.susercontent.com/file/fdaf6183e7822fcf52f6c35e65fff110"
+      ],
+      "type": {
+        "id": "dotheuvadet",
+        "name": "Đồ thêu và dệt",
+        "img": "https://www.codester.com/static/uploads/categories/35/icon-alt.png"
+      },
+      "name": "Khăn Tay Và Khăn Mặt Dệt Kiểu Pile Có Vòng MUJI",
+      "description": "Khăn Tay Và Khăn Mặt Dệt Kiểu Pile Có Vòng MUJI",
+      "release": "27-03-2023",
+      "file": {
+        "name": "Do_An_CNNet.zip",
+        "type": "Full code",
+        "size": 16,
+        "unit": "MB",
+        "link": "https://github.com/TeamAmaze/AmazeFileManager/archive/refs/heads/release/4.0.zip"
+      },
+      "rating": {
+        "5star": 20,
+        "4star": 20,
+        "3star": 20,
+        "2star": 20,
+        "1star": 20
+      },
+      "rating-comment": [
+        {
+          "name": "Chị Hà",
+          "star": 4,
+          "when": 1686637248685,
+          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
+        },
+        {
+          "name": "Khá Bảnh",
+          "star": 5,
+          "when": 1686637249374,
+          "comment": "Rất hài lòng"
+        }
+      ],
+      "comments": [],
+      "viewed": 62,
+      "downloaded": 100,
+      "liked": 13,
+      "detail": "Khăn Tay Và Khăn Mặt Dệt Kiểu Pile Có Vòng MUJI. \n\n\n\nChất liệu: Bông 100%\n\n\n\nKhăn có độ dày và khả năng hút nước phù hợp để sử dụng hàng ngày.. Xuất xứ: Sản Xuất Tại Việt Nam. Bảo hành: Không bảo hành.\n\n\n\nLƯU Ý\t\n\n● Các sản phẩm tối màu có thể bị chuyển màu do ma sát trong quá trình sử dụng hoặc tiếp xúc trong tình trạng ẩm ướt. Khi giặt, vui lòng giặt riêng với các đồ khác. \n\n● Dùng cây kéo để xử lý khi chỉ bị bung ra hay vướng vào các vật khác.\n\n",
+      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
+      "price": 600000
+    },
+    {
+      "id": 81,
+      "img": "https://down-vn.img.susercontent.com/file/sg-11134201-7rd4t-luerxmlwxfrteb",
+      "thumbnails": [
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd61-luer9o2b5pib6e",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd65-luer9odyongj0d",
+        "https://down-vn.img.susercontent.com/file/sg-11134201-7rd6p-luer9os43xnaef"
+      ],
+      "type": {
         "id": "dotrangsucthucong",
         "name": "Đồ trang sức thủ công",
         "img": "https://www.codester.com/static/uploads/categories/51/icon-alt.png"
@@ -14454,990 +15546,6 @@
       "liked": 13,
       "detail": "Khoản mục: vòng tay thời trang\nGiới tính: Unisex\nNhân dịp: Đảng, Đám cưới, Quà tặng, Bình thường\nChất liệu: Đồng nguyên chất\nSố lượng: 1 cái móc khóa\nĐóng gói: Gói OPP cho 1 móc khóa\nXuất xứ: Trung Quốc (Đại lục)\nTình trạng: 100% thương hiệu mới và chất lượng cao\nTay nghề tốt, ngoại hình hấp dẫn.",
       "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
-      "price": 600000
-    },
-    {
-      "id": 101,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwejph23kes970.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwejph24urix1e.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwejph25a7rt83.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwejph2419ll78.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Ví đứng Titan may viền X da bò thật hàng thủ công thương hiệu W",
-      "description": "Bạn đang tìm m kiếm một chiếc ví vừa sang trọng, vừa tiện dụng, lại đảm bảo an toàn cho đồ đạc bên trong? Ví đứng nam da bò thật có nút bấm của chúng tôi chính là sự lựa chọn hoàn hảo dành cho bạn. Được làm từ da bò thật 100%, chiếc ví này không chỉ thể hiện đẳng cấp mà còn mang lại sự tiện lợi tối đa cho người sử dụng.",
-      "release": "21-12-2022",
-      "file": {
-        "name": "template_website.rar",
-        "type": "Full code",
-        "size": 24.7,
-        "unit": "MB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 5427,
-      "downloaded": 236,
-      "liked": 13,
-      "detail": "",
-      "installation": "<div><span>1.</span> Đầu tiên bạn cần phải mua project này trước đã.</div><div><span>2.</span> Tải và mở API bằng <a href='https://www.eclipse.org/downloads/'>Eclipsea</a>, <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA</a> (nhớ cài các công cụ đi kèm như <a href='https://spring.io/projects/spring-boot'>Spring Boot</a>, <a href='https://projectlombok.org/'>Lombok</a>,...).</div><div><span>3.</span> Thiết lập lại kết nối tài khoản và mật khẩu MySQL trong file <code>application.properties</code> của API.</div><div><span>4.</span> Mở Project bằng Android Studio và cài lại IP và đường dẫn Zalo Pay như video hướng dẫn.</div><div><span>5.</span> Mở MySQL và chạy file <code>script.sql</code> đã đính kèm trong link tải.</div><div><span>6.</span> Chạy project và trải nghiệm đi nào :)))</div><div>Video huớng dẫn cài đặt source code App bán hàng Android với API Spring Boot: <a href='https://www.youtube.com/watch?v=f6bxjdaH_f8'>https://www.youtube.com/watch?v=f6bxjdaH_f8</a></div>",
-      "price": 1144000
-    },
-    {
-      "id": 102,
-      "img": "https://down-vn.img.susercontent.com/file/sg-11134201-23010-cz5maqgriwlv92.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltsj2wp4mfpm5e.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltyrmryz2uc195.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltyrmrz92g4fc9.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Ví Thông Minh Taurus & Hộp Đựng Thẻ Tự Động, Ví Da Nam Cao Cấp Gập Ba Mini Nhỏ Gọn Nhiều Ngăn Bóp Tiền Chính Hãng Jenoss",
-      "description": "Ví thông minh Taurus có hộp đựng thẻ tự động, ví da nam cao cấp gập ba mini mỏng gọn nhiều ngăn bóp tiền da chính hãng Jenoss.",
-      "release": "21-12-2022",
-      "file": {
-        "name": "gioi_thieu_bds.rar",
-        "type": "Full code",
-        "size": 7.99,
-        "unit": "MB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>- Là sản phẩm ví da nam top bán chạy của Jenoss, Taurus là chiếc ví nam thông minh gập ba đề cao sự tối giản, nhỏ gọn, với hộp gạt thẻ tự động cùng da bò Nappa sang trọng.<br/>Được yêu thích bởi sự sang trọng, độc đáo và tối giản, Taurus đầy đủ tiện ích như 1 chiếc ví truyền thống nhưng mỏng và tiện dụng hơn, phù hợp trong mọi bối cảnh và tạo sự nổi bật cho chủ nhân của nó trong mắt người đối diện.<br/>Hộp đựng thẻ tự động giảm kích thước ví chỉ còn 1/3 so với ví truyền thống mà không giảm sức chứa.<br/>Da bò thật Nappa Full Grain Nhập khẩu. Được gia công tỉ mỉ, xử lý lớp phủ để giữ màu sắc được ổn định và tăng khả năng trượt nước.</div><div className='d-feature'> Mô tả sản phẩm:</div><ul><li>Thương hiệu: Jenoss</li><li>Màu: đen, nâu, xanh navy, carbon, đen EPI, navy EPI, nâu EPI</li><li>Dáng đứng, mini, ví thông minh</li><li>Phong cách: Sang trọng và tối giản, smart casual</li><li>Da bò Full Grain cao cấp</li><li>Hộp gạt thẻ tự động bằng nhôm đựng 5-6 thẻ ATM, nút gạt phải, chống trộm</li><li>1 ngăn đựng tiền (15 tờ), 1 ngăn ảnh, 4 ngăn phụ đựng thẻ, card visit</li><li>Kích thước: 10.4x7.8x2.5</li><li>Đóng gói: hộp cứng sang trọng, bọc giấy nến và tiền may mắn</li></ul>",
-      "price": 0
-    },
-    {
-      "id": 103,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lx215vg06f2za1.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwtqeze3rcgp1d.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwtqeze3pxw921.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwtqeze3zrobf8.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Ví Jordan mini nhỏ gọn da bò sáp hàng thủ công thương hiệu W",
-      "description": " Bạn đang tìm kiếm một chiếc ví vừa bền bỉ, vừa mang lại phong cách lịch lãm? Ví ngang da bò sáp là sự lựa chọn hoàn hảo dành cho bạn!",
-      "release": "21-12-2022",
-      "file": {
-        "name": "tiktok_download.zip",
-        "type": "Full code",
-        "size": 727,
-        "unit": "MB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>- Là sản phẩm ví da nam top bán chạy của Jenoss, Taurus là chiếc ví nam thông minh gập ba đề cao sự tối giản, nhỏ gọn, với hộp gạt thẻ tự động cùng da bò Nappa sang trọng.<br/>Được yêu thích bởi sự sang trọng, độc đáo và tối giản, Taurus đầy đủ tiện ích như 1 chiếc ví truyền thống nhưng mỏng và tiện dụng hơn, phù hợp trong mọi bối cảnh và tạo sự nổi bật cho chủ nhân của nó trong mắt người đối diện.<br/>Hộp đựng thẻ tự động giảm kích thước ví chỉ còn 1/3 so với ví truyền thống mà không giảm sức chứa.<br/>Da bò thật Nappa Full Grain Nhập khẩu. Được gia công tỉ mỉ, xử lý lớp phủ để giữ màu sắc được ổn định và tăng khả năng trượt nước.</div><div className='d-feature'> Mô tả sản phẩm:</div><ul><li>Thương hiệu: Jenoss</li><li>Màu: đen, nâu, xanh navy, carbon, đen EPI, navy EPI, nâu EPI</li><li>Dáng đứng, mini, ví thông minh</li><li>Phong cách: Sang trọng và tối giản, smart casual</li><li>Da bò Full Grain cao cấp</li><li>Hộp gạt thẻ tự động bằng nhôm đựng 5-6 thẻ ATM, nút gạt phải, chống trộm</li><li>1 ngăn đựng tiền (15 tờ), 1 ngăn ảnh, 4 ngăn phụ đựng thẻ, card visit</li><li>Kích thước: 10.4x7.8x2.5</li><li>Đóng gói: hộp cứng sang trọng, bọc giấy nến và tiền may mắn</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 104,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw6w0hpk3b2xa6.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lx7smr9966e10e.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lx7smr998zix59.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lx7smr994rtlc1.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Ví Ngang Da Bò Sáp Ngựa Khâu Tay Thủ Công Kiểu Dáng Basic Thương Hiệu MEHAI S & C",
-      "description": "Da bò sáp ngựa điên thực chất là da bò nhưng được bôi lên một loại sáp đặc biệt có tên là ngựa điên (Crazy Horse), là dòng da ĐẮT ĐỎ BẬC NHẤT  trong làng thuộc da của thế giới.",
-      "release": "18-11-2022",
-      "file": {
-        "name": "gym_website.rar",
-        "type": "Full code",
-        "size": 77,
-        "unit": "MB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>- Là sản phẩm ví da nam top bán chạy của Jenoss, Taurus là chiếc ví nam thông minh gập ba đề cao sự tối giản, nhỏ gọn, với hộp gạt thẻ tự động cùng da bò Nappa sang trọng.<br/>Được yêu thích bởi sự sang trọng, độc đáo và tối giản, Taurus đầy đủ tiện ích như 1 chiếc ví truyền thống nhưng mỏng và tiện dụng hơn, phù hợp trong mọi bối cảnh và tạo sự nổi bật cho chủ nhân của nó trong mắt người đối diện.<br/>Hộp đựng thẻ tự động giảm kích thước ví chỉ còn 1/3 so với ví truyền thống mà không giảm sức chứa.<br/>Da bò thật Nappa Full Grain Nhập khẩu. Được gia công tỉ mỉ, xử lý lớp phủ để giữ màu sắc được ổn định và tăng khả năng trượt nước.</div><div className='d-feature'> Mô tả sản phẩm:</div><ul><li>Thương hiệu: Jenoss</li><li>Màu: đen, nâu, xanh navy, carbon, đen EPI, navy EPI, nâu EPI</li><li>Dáng đứng, mini, ví thông minh</li><li>Phong cách: Sang trọng và tối giản, smart casual</li><li>Da bò Full Grain cao cấp</li><li>Hộp gạt thẻ tự động bằng nhôm đựng 5-6 thẻ ATM, nút gạt phải, chống trộm</li><li>1 ngăn đựng tiền (15 tờ), 1 ngăn ảnh, 4 ngăn phụ đựng thẻ, card visit</li><li>Kích thước: 10.4x7.8x2.5</li><li>Đóng gói: hộp cứng sang trọng, bọc giấy nến và tiền may mắn</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 105,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxgcdk5bznx531.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf55tedycvo7e9.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf4waqilph8q15.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf4waqilqvt667.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Ví Nam da bò sáp cao cấp, Bóp Nam da sáp dáng đứng, ngang 100% da bò sáp Bảo hành 24 tháng",
-      "description": "Ví Nam da bò sáp cao cấp, Bóp Nam da sáp dáng đứng, ngang 100% da bò sáp Bảo hành 24 tháng,Ví Ngang : Gồm 6 ngăn phụ đựng thẻ, giấy tờ + 2 ngăn chính đựng tiền,Gồm 4 ngăn phụ bên ngoài và 3 ngăn phụ nhỏ + 2 Ngăn chính đựng tiền.",
-      "release": "29-10-2022",
-      "file": {
-        "name": "zalo_server.rar",
-        "type": "Full code",
-        "size": 33.4,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>- Là sản phẩm ví da nam top bán chạy của Jenoss, Taurus là chiếc ví nam thông minh gập ba đề cao sự tối giản, nhỏ gọn, với hộp gạt thẻ tự động cùng da bò Nappa sang trọng.<br/>Được yêu thích bởi sự sang trọng, độc đáo và tối giản, Taurus đầy đủ tiện ích như 1 chiếc ví truyền thống nhưng mỏng và tiện dụng hơn, phù hợp trong mọi bối cảnh và tạo sự nổi bật cho chủ nhân của nó trong mắt người đối diện.<br/>Hộp đựng thẻ tự động giảm kích thước ví chỉ còn 1/3 so với ví truyền thống mà không giảm sức chứa.<br/>Da bò thật Nappa Full Grain Nhập khẩu. Được gia công tỉ mỉ, xử lý lớp phủ để giữ màu sắc được ổn định và tăng khả năng trượt nước.</div><div className='d-feature'> Mô tả sản phẩm:</div><ul><li>Thương hiệu: Jenoss</li><li>Màu: đen, nâu, xanh navy, carbon, đen EPI, navy EPI, nâu EPI</li><li>Dáng đứng, mini, ví thông minh</li><li>Phong cách: Sang trọng và tối giản, smart casual</li><li>Da bò Full Grain cao cấp</li><li>Hộp gạt thẻ tự động bằng nhôm đựng 5-6 thẻ ATM, nút gạt phải, chống trộm</li><li>1 ngăn đựng tiền (15 tờ), 1 ngăn ảnh, 4 ngăn phụ đựng thẻ, card visit</li><li>Kích thước: 10.4x7.8x2.5</li><li>Đóng gói: hộp cứng sang trọng, bọc giấy nến và tiền may mắn</li></ul>",
-      "price": 0
-    },
-    {
-      "id": 106,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luin4id7wisl32.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luin4id7sb395f.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luin4id7tpnpc2.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luin4id7zbxhc7.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Thắt lưng bằng vải canvas kiểu dáng đơn giản phong cách thời trang trẻ trung năng động cho nam - TL07G",
-      "description": "Thắt lưng nam có thể đeo đi chơi, dạo phố, dự tiệc đều tạo một phong cách đầy cá tính sang trọng.",
-      "release": "24-5-2023",
-      "file": {
-        "name": "ducbaopro.rar",
-        "type": "Full code",
-        "size": 91,
-        "unit": "MB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 64,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thắt lưng nam có thể đeo đi chơi, dạo phố, dự tiệc đều tạo một phong cách đầy cá tính sang trọng.<br/>Có thể dùng Thắt lưng nam làm món quà tặng anh, em, bạn bè đồng nghiệp trong các dịp sự kiện, sinh nhật đều rất đẹp và ý nghĩa.<br/>Tinh xảo và sắc nét được tạo khối và mạ đẹp mắt tạo nên nét sang trọng và đẳng cấp cho món phụ kiện luôn dễ dàng hấp dẫn các quý ông và là điểm sáng tinh tế cho mọi trang phục.<br/>Thắt lưng bằng vải canvas kiểu dáng đơn giản phong cách thời trang trẻ trung năng động cho nam - TL07G.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Xuất xứ :Trung Quốc</li><li>Chất liệu : Canvas</li><li>Giới tính : Nam</li><li>Phong cách: hàng ngày</li><li>Loại da : vải</li><li>Gửi từ : Hà Nội</li><li>Màu sắc: Đen</li><li>Chất liệu Vải dù cao cấp</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "price": 0
-    },
-    {
-      "id": 107,
-      "img": "https://down-vn.img.susercontent.com/file/cd39ee875080963a13221506bce4c29b",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/1d6ef4b4a4b1fb7b05337d19380915d0",
-        "https://down-vn.img.susercontent.com/file/4171db838cdd0ae7a938351fe49fe8f0",
-        "https://down-vn.img.susercontent.com/file/fd26f332f2e42ea5a4a3e8f29c61368f"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Thắt lưng nam da bò nguyên tấm L110 màu đen khoá tự động nhiều mặt lựa chọn Bụi leather bảo hành 12 tháng",
-      "description": "Thắt lưng nam da bò nguyên tấm L110 màu đen khoá tự động nhiều mặt lựa chọn Bụi leather ,  Da bò THẬT.",
-      "release": "23-2-2023",
-      "file": {
-        "name": "web-ban-hang.rar",
-        "type": "Full code",
-        "size": 211,
-        "unit": "MB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thắt lưng nam có thể đeo đi chơi, dạo phố, dự tiệc đều tạo một phong cách đầy cá tính sang trọng.<br/>Có thể dùng Thắt lưng nam làm món quà tặng anh, em, bạn bè đồng nghiệp trong các dịp sự kiện, sinh nhật đều rất đẹp và ý nghĩa.<br/>Tinh xảo và sắc nét được tạo khối và mạ đẹp mắt tạo nên nét sang trọng và đẳng cấp cho món phụ kiện luôn dễ dàng hấp dẫn các quý ông và là điểm sáng tinh tế cho mọi trang phục.<br/>Thắt lưng bằng vải canvas kiểu dáng đơn giản phong cách thời trang trẻ trung năng động cho nam - TL07G.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Xuất xứ :Trung Quốc</li><li>Chất liệu : Canvas</li><li>Giới tính : Nam</li><li>Phong cách: hàng ngày</li><li>Loại da : vải</li><li>Gửi từ : Hà Nội</li><li>Màu sắc: Đen</li><li>Chất liệu Vải dù cao cấp</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "price": 0
-    },
-    {
-      "id": 108,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxmxuzivpp0b37.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxmwohx03xztb2.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxmwu4nzq02jeb.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxmv7q2kax95fe.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Thắt Lưng Nam Mặt Đen Nhám, Da Bò Cao Cấp CARTELO, Khoá Tự Động Thiết Kế Sang Trọng Chống Rỉ. Có Hộp Quà Tặng",
-      "description": "Thắt Lưng Nam Mặt Đen Nhám, Da Bò Cao Cấp CARTELO, phong cách trẻ trung , lịch lãm. ",
-      "release": "03-1-2023",
-      "file": {
-        "name": "Sharecode.zip",
-        "type": "Full code",
-        "size": 349,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thắt lưng nam có thể đeo đi chơi, dạo phố, dự tiệc đều tạo một phong cách đầy cá tính sang trọng.<br/>Có thể dùng Thắt lưng nam làm món quà tặng anh, em, bạn bè đồng nghiệp trong các dịp sự kiện, sinh nhật đều rất đẹp và ý nghĩa.<br/>Tinh xảo và sắc nét được tạo khối và mạ đẹp mắt tạo nên nét sang trọng và đẳng cấp cho món phụ kiện luôn dễ dàng hấp dẫn các quý ông và là điểm sáng tinh tế cho mọi trang phục.<br/>Thắt lưng bằng vải canvas kiểu dáng đơn giản phong cách thời trang trẻ trung năng động cho nam - TL07G.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Xuất xứ :Trung Quốc</li><li>Chất liệu : Canvas</li><li>Giới tính : Nam</li><li>Phong cách: hàng ngày</li><li>Loại da : vải</li><li>Gửi từ : Hà Nội</li><li>Màu sắc: Đen</li><li>Chất liệu Vải dù cao cấp</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "price": 0
-    },
-    {
-      "id": 109,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llxriu8kxm1r55.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llirxfnn9aywf1.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llirxfnn7weg13.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llirxfnnapjc83.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Thắt lưng nam cao cấp FaiaoePOLO, sang trọg lịch sự LEANO fullbox 579",
-      "description": "Thắt lưng nam cao cấp FaiaoePOLO, sang trọg lịch sự LEANO fullbox 579, chất liệu da , loại da trâu , thương hiệu LEANO.",
-      "release": "02-1-2023",
-      "file": {
-        "name": "zalo_server.rar",
-        "type": "Full code",
-        "size": 5.22,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thắt lưng nam có thể đeo đi chơi, dạo phố, dự tiệc đều tạo một phong cách đầy cá tính sang trọng.<br/>Có thể dùng Thắt lưng nam làm món quà tặng anh, em, bạn bè đồng nghiệp trong các dịp sự kiện, sinh nhật đều rất đẹp và ý nghĩa.<br/>Tinh xảo và sắc nét được tạo khối và mạ đẹp mắt tạo nên nét sang trọng và đẳng cấp cho món phụ kiện luôn dễ dàng hấp dẫn các quý ông và là điểm sáng tinh tế cho mọi trang phục.<br/>Thắt lưng bằng vải canvas kiểu dáng đơn giản phong cách thời trang trẻ trung năng động cho nam - TL07G.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Xuất xứ :Trung Quốc</li><li>Chất liệu : Canvas</li><li>Giới tính : Nam</li><li>Phong cách: hàng ngày</li><li>Loại da : vải</li><li>Gửi từ : Hà Nội</li><li>Màu sắc: Đen</li><li>Chất liệu Vải dù cao cấp</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-
-      "price": 600000
-    },
-    {
-      "id": 110,
-      "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-li19ze36dlttd1.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-li19ze36t211ea.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-li19ze35y5kxe4.jpg",
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-li19ze36dlttd1.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Thắt lưng nam da bò nguyên tấm khóa cài khuy N&L leather bảo hành 12 tháng full hộp đựng",
-      "description": "Thắt lưng nam da bò nguyên tấm khóa cài khuy N&L leather bảo hành 12 tháng full hộp đựng,  Da bò THẬT.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thắt lưng nam có thể đeo đi chơi, dạo phố, dự tiệc đều tạo một phong cách đầy cá tính sang trọng.<br/>Có thể dùng Thắt lưng nam làm món quà tặng anh, em, bạn bè đồng nghiệp trong các dịp sự kiện, sinh nhật đều rất đẹp và ý nghĩa.<br/>Tinh xảo và sắc nét được tạo khối và mạ đẹp mắt tạo nên nét sang trọng và đẳng cấp cho món phụ kiện luôn dễ dàng hấp dẫn các quý ông và là điểm sáng tinh tế cho mọi trang phục.<br/>Thắt lưng bằng vải canvas kiểu dáng đơn giản phong cách thời trang trẻ trung năng động cho nam - TL07G.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Xuất xứ :Trung Quốc</li><li>Chất liệu : Canvas</li><li>Giới tính : Nam</li><li>Phong cách: hàng ngày</li><li>Loại da : vải</li><li>Gửi từ : Hà Nội</li><li>Màu sắc: Đen</li><li>Chất liệu Vải dù cao cấp</li><li>Xem quảng cáo có tặng thưởng để kiếm thêm chức năng tin nhắn</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 111,
-      "img": "https://product.hstatic.net/1000111569/product/day_nit_that_lung_dai_vay_nu_dep4__3__581ff7a4585d4072a02c882ffe24c890_1024x1024.jpg",
-      "thumbnails": [
-        "https://down-vn.img.susercontent.com/file/sg-11134201-7rcde-lqsyjm5q637b69.jpg",
-        "https://down-vn.img.susercontent.com/file/sg-11134201-7rcet-lqsyjm4m7phzfd.jpg",
-        "https://down-vn.img.susercontent.com/file/sg-11134201-7rcev-lqsyjm3i9c53b5.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Thắt Lưng Đan Rơm Thủ Công Bản Rộng Cài Khóa Có Thể Điều Chỉnh Phong Cách Bohemian Mùa Hè Cho Nữ",
-      "description": "Thắt Lưng Đan Rơm Thủ Công Bản Rộng Cài Khóa Có Thể Điều Chỉnh Phong Cách Bohemian Mùa Hè Cho Nữ,thiết kế ống hút cổ điển,đa năng và thời trang.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thiết kế ống hút cổ điển: Thiết kế ống hút độc đáo của chiếc thắt lưng này tạo thêm nét đẹp và thời trang, cho phép bạn thể hiện phong cách cá nhân của mình.<br/>Đa năng và thời trang: Chiếc thắt lưng này rất phù hợp để kết hợp với váy, quần, áo sơ mi, v.v., tăng thêm nét tinh tế cho bất kỳ trang phục nào.<br/>Có thể điều chỉnh và tiện lợi: Các chốt linh hoạt cho phép bạn dễ dàng điều chỉnh kích thước của thắt lưng theo sở thích của mình, thuận tiện hơn so với các loại thắt lưng khác.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Chất liệu Khác</li><li>Giới tính Unisex</li><li>Tên khoản mục: Thắt lưng</li><li>Chất liệu: Polypropylene</li><li>Phương pháp buộc: Khóa ghim</li><li>Các tính năng: Bohemian, Rộng, Thủ công</li><li>Chiều dài: 80cm-100cm / 31,5 \"-39,37\" (Xấp xỉ)</li><li>Chiều rộng: > 4cm / > 1.57 \"(Xấp xỉ)</li><li>Do sự khác biệt về cài đặt ánh sáng và màn hình, màu sắc của mặt hàng có thể hơi khác so với hình ảnh.</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 112,
-      "img": "https://www.gento.vn/wp-content/uploads/2024/05/day-lung-da-bo-7-600x600.jpg",
-      "thumbnails": [
-        "https://www.gento.vn/wp-content/uploads/2024/05/day-lung-da-bo-5-600x600.jpg",
-        "https://www.gento.vn/wp-content/uploads/2024/05/day-lung-da-bo-1-600x600.jpg",
-        "https://www.gento.vn/wp-content/uploads/2024/05/day-lung-da-bo-2-600x600.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Dây lưng da bò cao cấp D4055",
-      "description": "Thắt lưng nam da bò Gento D4057 được làm từ chất liệu da bò Italy cao cấp, mang đến sự sang trọng và bền bỉ theo thời gian. Da bò được tạo vân chống xước, giúp hạn chế bám bụi và giữ cho thắt lưng luôn mới mẻ và sạch sẽ, đảm bảo độ bền vượt trội.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thiết kế ống hút cổ điển: Thiết kế ống hút độc đáo của chiếc thắt lưng này tạo thêm nét đẹp và thời trang, cho phép bạn thể hiện phong cách cá nhân của mình.<br/>Đa năng và thời trang: Chiếc thắt lưng này rất phù hợp để kết hợp với váy, quần, áo sơ mi, v.v., tăng thêm nét tinh tế cho bất kỳ trang phục nào.<br/>Có thể điều chỉnh và tiện lợi: Các chốt linh hoạt cho phép bạn dễ dàng điều chỉnh kích thước của thắt lưng theo sở thích của mình, thuận tiện hơn so với các loại thắt lưng khác.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Chất liệu Khác</li><li>Giới tính Unisex</li><li>Tên khoản mục: Thắt lưng</li><li>Chất liệu: Polypropylene</li><li>Phương pháp buộc: Khóa ghim</li><li>Các tính năng: Bohemian, Rộng, Thủ công</li><li>Chiều dài: 80cm-100cm / 31,5 \"-39,37\" (Xấp xỉ)</li><li>Chiều rộng: > 4cm / > 1.57 \"(Xấp xỉ)</li><li>Do sự khác biệt về cài đặt ánh sáng và màn hình, màu sắc của mặt hàng có thể hơi khác so với hình ảnh.</li></ul>",
-
-      "price": 600000
-    },
-    {
-      "id": 113,
-      "img": "https://lano.vn/wp-content/uploads/2023/12/day-that-lung-da-bo-handmade-nhieu-mau-sac-tlh01-11-150x150.jpg",
-      "thumbnails": [
-        "https://lano.vn/wp-content/uploads/2023/12/day-that-lung-da-bo-handmade-nhieu-mau-sac-tlh01-12-150x150.jpg",
-        "https://lano.vn/wp-content/uploads/2023/12/day-that-lung-da-bo-handmade-nhieu-mau-sac-tlh01-1-150x150.jpg",
-        "https://lano.vn/wp-content/uploads/2023/12/day-that-lung-da-bo-handmade-nhieu-mau-sac-tlh01-22.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Dây thắt lưng da bò handmade nhiều màu sắc TLH01",
-      "description": "Thắt lưng nam da bò Gento D4057 được làm từ chất liệu da bò Italy cao cấp, mang đến sự sang trọng và bền bỉ theo thời gian. Da bò được tạo vân chống xước, giúp hạn chế bám bụi và giữ cho thắt lưng luôn mới mẻ và sạch sẽ, đảm bảo độ bền vượt trội.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thiết kế ống hút cổ điển: Thiết kế ống hút độc đáo của chiếc thắt lưng này tạo thêm nét đẹp và thời trang, cho phép bạn thể hiện phong cách cá nhân của mình.<br/>Đa năng và thời trang: Chiếc thắt lưng này rất phù hợp để kết hợp với váy, quần, áo sơ mi, v.v., tăng thêm nét tinh tế cho bất kỳ trang phục nào.<br/>Có thể điều chỉnh và tiện lợi: Các chốt linh hoạt cho phép bạn dễ dàng điều chỉnh kích thước của thắt lưng theo sở thích của mình, thuận tiện hơn so với các loại thắt lưng khác.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Chất liệu Khác</li><li>Giới tính Unisex</li><li>Tên khoản mục: Thắt lưng</li><li>Chất liệu: Polypropylene</li><li>Phương pháp buộc: Khóa ghim</li><li>Các tính năng: Bohemian, Rộng, Thủ công</li><li>Chiều dài: 80cm-100cm / 31,5 \"-39,37\" (Xấp xỉ)</li><li>Chiều rộng: > 4cm / > 1.57 \"(Xấp xỉ)</li><li>Do sự khác biệt về cài đặt ánh sáng và màn hình, màu sắc của mặt hàng có thể hơi khác so với hình ảnh.</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 114,
-      "img": "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-epsom-handmade-cao-cap-TLH02-9.jpg",
-      "thumbnails": [
-        "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-epsom-handmade-cao-cap-TLH02-12-150x150.jpg",
-        "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-epsom-handmade-cao-cap-TLH02-19-150x150.jpg",
-        "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-epsom-handmade-cao-cap-TLH02-18-150x150.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Dây thắt lưng da bò epsom handmade cao cấp TLH02",
-      "description": "Thắt lưng nam da bò Gento D4057 được làm từ chất liệu da bò Italy cao cấp, mang đến sự sang trọng và bền bỉ theo thời gian. Da bò được tạo vân chống xước, giúp hạn chế bám bụi và giữ cho thắt lưng luôn mới mẻ và sạch sẽ, đảm bảo độ bền vượt trội.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thiết kế ống hút cổ điển: Thiết kế ống hút độc đáo của chiếc thắt lưng này tạo thêm nét đẹp và thời trang, cho phép bạn thể hiện phong cách cá nhân của mình.<br/>Đa năng và thời trang: Chiếc thắt lưng này rất phù hợp để kết hợp với váy, quần, áo sơ mi, v.v., tăng thêm nét tinh tế cho bất kỳ trang phục nào.<br/>Có thể điều chỉnh và tiện lợi: Các chốt linh hoạt cho phép bạn dễ dàng điều chỉnh kích thước của thắt lưng theo sở thích của mình, thuận tiện hơn so với các loại thắt lưng khác.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Chất liệu Khác</li><li>Giới tính Unisex</li><li>Tên khoản mục: Thắt lưng</li><li>Chất liệu: Polypropylene</li><li>Phương pháp buộc: Khóa ghim</li><li>Các tính năng: Bohemian, Rộng, Thủ công</li><li>Chiều dài: 80cm-100cm / 31,5 \"-39,37\" (Xấp xỉ)</li><li>Chiều rộng: > 4cm / > 1.57 \"(Xấp xỉ)</li><li>Do sự khác biệt về cài đặt ánh sáng và màn hình, màu sắc của mặt hàng có thể hơi khác so với hình ảnh.</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 115,
-      "img": "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-taiga-handmade-cao-cap-TLH03-7.jpg",
-      "thumbnails": [
-        "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-taiga-handmade-cao-cap-TLH03-6-150x150.jpg",
-        "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-taiga-handmade-cao-cap-TLH03-10-150x150.jpg",
-        "https://lano.vn/wp-content/uploads/2023/12/Day-that-lung-da-bo-taiga-handmade-cao-cap-TLH03-11-150x150.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Dây thắt lưng da bò taiga handmade cao cấp TLH03",
-      "description": "Thắt lưng nam da bò Gento D4057 được làm từ chất liệu da bò Italy cao cấp, mang đến sự sang trọng và bền bỉ theo thời gian. Da bò được tạo vân chống xước, giúp hạn chế bám bụi và giữ cho thắt lưng luôn mới mẻ và sạch sẽ, đảm bảo độ bền vượt trội.",
-
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Thiết kế ống hút cổ điển: Thiết kế ống hút độc đáo của chiếc thắt lưng này tạo thêm nét đẹp và thời trang, cho phép bạn thể hiện phong cách cá nhân của mình.<br/>Đa năng và thời trang: Chiếc thắt lưng này rất phù hợp để kết hợp với váy, quần, áo sơ mi, v.v., tăng thêm nét tinh tế cho bất kỳ trang phục nào.<br/>Có thể điều chỉnh và tiện lợi: Các chốt linh hoạt cho phép bạn dễ dàng điều chỉnh kích thước của thắt lưng theo sở thích của mình, thuận tiện hơn so với các loại thắt lưng khác.</div><div className='d-feature'>Chi tiết sản phẩm :</div><ul><li>Chất liệu Khác</li><li>Giới tính Unisex</li><li>Tên khoản mục: Thắt lưng</li><li>Chất liệu: Polypropylene</li><li>Phương pháp buộc: Khóa ghim</li><li>Các tính năng: Bohemian, Rộng, Thủ công</li><li>Chiều dài: 80cm-100cm / 31,5 \"-39,37\" (Xấp xỉ)</li><li>Chiều rộng: > 4cm / > 1.57 \"(Xấp xỉ)</li><li>Do sự khác biệt về cài đặt ánh sáng và màn hình, màu sắc của mặt hàng có thể hơi khác so với hình ảnh.</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 116,
-      "img": "https://jinoleather.com/wp-content/uploads/2018/01/tui-da-bo-deo-cheo-lazio-200-1-1.jpg",
-      "thumbnails": [
-        "https://jinoleather.com/wp-content/uploads/2016/12/tui-da-bo-deo-cheo-lazio-200-3-1.jpg",
-        "https://jinoleather.com/wp-content/uploads/2016/12/tui-da-bo-deo-cheo-lazio-200-4-1.jpg",
-        "https://jinoleather.com/wp-content/uploads/2016/12/tui-da-bo-deo-cheo-lazio-200-8-1.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Túi đeo chéo da bò 200",
-      "description": "Một sản phẩm túi da đeo chéo thời trang được làm hoàn toàn bằng da bò nguyên miếng với công nghệ thuộc da của Mỹ chính là sản phẩm #200 này. Cực kỳ thời trang và phong cách là những mỹ từ được sử dụng cho chiếc túi này.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Một sản phẩm túi da đeo chéo thời trang được làm hoàn toàn bằng da bò nguyên miếng với công nghệ thuộc da của Mỹ chính là sản phẩm #200 này. Cực kỳ thời trang và phong cách là những mỹ từ được sử dụng cho chiếc túi này.<br/>Thiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu.<br/>Nắp gấp rất đơn giản nhưng sành điệu và thời trang.<br/>Dây đeo da 2 lớp được may cố định vào thân túi những có thể thay đổi độ dài tùy ý.</div><div className='d-feature'>Chi tiết sản phẩm:</div><ul><li>Xuất xứ: Hàng Handmade VN</li><li>Mã SP: 200-AD00-VN</li><li>Sử dụng: Túi đeo ngang vai, Đựgn Laptop 15.6″, Đựng được Ipad 9.7″, 7.9″ & Máy tính bảng các loại</li><li>Kích thước: 38cm (dài) x 10cm (rộng) x 28cm (cao)\nChiều dài dây đeo vai cố định có thể điều chỉnh hình thức xách tay.</li><li>Chất liệu: Làm từ lớp đầu tiên của da bò.</li><li>Cam kết: Chúng tôi sẽ hoàn tiền lại nếu túi không phải là da và không giống như hình chụp.</li><li>Màu sắc: Màu nâu đen</li><li>Trọng lượng: 0,72KG</li><li>hiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 117,
-      "img": "https://jinoleather.com/wp-content/uploads/2018/03/tui-xach-cong-so-da-bo-221-600x600.jpg",
-      "thumbnails": [
-        "https://jinoleather.com/wp-content/uploads/2016/11/tui-xach-cong-so-da-bo-221-4-600x600.jpg",
-        "https://jinoleather.com/wp-content/uploads/2016/11/tui-xach-cong-so-da-bo-221-2.jpg",
-        "https://jinoleather.com/wp-content/uploads/2016/11/tui-xach-cong-so-da-bo-221-3-600x600.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Cặp da doanh nhân cao cấp 221",
-      "description": "Cặp da doanh nhân da bò #221 với chất da dày cao cấp, màu nâu đậm, kiểu dáng thời thượng.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Một sản phẩm túi da đeo chéo thời trang được làm hoàn toàn bằng da bò nguyên miếng với công nghệ thuộc da của Mỹ chính là sản phẩm #200 này. Cực kỳ thời trang và phong cách là những mỹ từ được sử dụng cho chiếc túi này.<br/>Thiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu.<br/>Nắp gấp rất đơn giản nhưng sành điệu và thời trang.<br/>Dây đeo da 2 lớp được may cố định vào thân túi những có thể thay đổi độ dài tùy ý.</div><div className='d-feature'>Chi tiết sản phẩm:</div><ul><li>Xuất xứ: Hàng Handmade VN</li><li>Mã SP: 200-AD00-VN</li><li>Sử dụng: Túi đeo ngang vai, Đựgn Laptop 15.6″, Đựng được Ipad 9.7″, 7.9″ & Máy tính bảng các loại</li><li>Kích thước: 38cm (dài) x 10cm (rộng) x 28cm (cao)\nChiều dài dây đeo vai cố định có thể điều chỉnh hình thức xách tay.</li><li>Chất liệu: Làm từ lớp đầu tiên của da bò.</li><li>Cam kết: Chúng tôi sẽ hoàn tiền lại nếu túi không phải là da và không giống như hình chụp.</li><li>Màu sắc: Màu nâu đen</li><li>Trọng lượng: 0,72KG</li><li>hiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 118,
-      "img": "https://jinoleather.com/wp-content/uploads/2016/12/balo-laptop-du-lich-da-bo-lazio-166-1.jpg",
-      "thumbnails": [
-        "https://jinoleather.com/wp-content/uploads/2016/12/balo-laptop-du-lich-da-bo-lazio-166-2.jpg",
-        "https://jinoleather.com/wp-content/uploads/2016/12/balo-laptop-du-lich-da-bo-lazio-166-3.jpg",
-        "https://jinoleather.com/wp-content/uploads/2016/12/balo-laptop-du-lich-da-bo-lazio-166-4.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Balo laptop du lịch da bò 166",
-      "description": "Balo laptop da bò 166 kiểu dáng thời trang  với chất liệu da sơn cao cấp mang đến vẻ thời trang. Kiểu dáng nắp gấp phối khóa kiểu nam châm rất tiện lợi khi sử dụng.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Một sản phẩm túi da đeo chéo thời trang được làm hoàn toàn bằng da bò nguyên miếng với công nghệ thuộc da của Mỹ chính là sản phẩm #200 này. Cực kỳ thời trang và phong cách là những mỹ từ được sử dụng cho chiếc túi này.<br/>Thiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu.<br/>Nắp gấp rất đơn giản nhưng sành điệu và thời trang.<br/>Dây đeo da 2 lớp được may cố định vào thân túi những có thể thay đổi độ dài tùy ý.</div><div className='d-feature'>Chi tiết sản phẩm:</div><ul><li>Xuất xứ: Hàng Handmade VN</li><li>Mã SP: 200-AD00-VN</li><li>Sử dụng: Túi đeo ngang vai, Đựgn Laptop 15.6″, Đựng được Ipad 9.7″, 7.9″ & Máy tính bảng các loại</li><li>Kích thước: 38cm (dài) x 10cm (rộng) x 28cm (cao)\nChiều dài dây đeo vai cố định có thể điều chỉnh hình thức xách tay.</li><li>Chất liệu: Làm từ lớp đầu tiên của da bò.</li><li>Cam kết: Chúng tôi sẽ hoàn tiền lại nếu túi không phải là da và không giống như hình chụp.</li><li>Màu sắc: Màu nâu đen</li><li>Trọng lượng: 0,72KG</li><li>hiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 119,
-      "img": "https://jinoleather.com/wp-content/uploads/2019/06/vi-da-sieu-cap-da-bo-lazio-769-1.jpg",
-      "thumbnails": [
-        "https://jinoleather.com/wp-content/uploads/2019/06/vi-da-sieu-cap-da-bo-lazio-769-2.jpg",
-        "https://jinoleather.com/wp-content/uploads/2019/06/vi-da-sieu-cap-da-bo-lazio-769-3.jpg",
-        "https://jinoleather.com/wp-content/uploads/2019/06/vi-da-sieu-cap-da-bo-lazio-769-4.jpg"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Ví da siêu cấp da bò 769",
-      "description": "Ví nam dài da bò được làm từ da bò 100%,sản phẩm mang lại sự trẻ trung, sang trọng, lịch lãm cho nam giới,với chất liệu da cực chất, nhuộm màu vàng bò cho vẻ thời trang, trẻ trung.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Một sản phẩm túi da đeo chéo thời trang được làm hoàn toàn bằng da bò nguyên miếng với công nghệ thuộc da của Mỹ chính là sản phẩm #200 này. Cực kỳ thời trang và phong cách là những mỹ từ được sử dụng cho chiếc túi này.<br/>Thiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu.<br/>Nắp gấp rất đơn giản nhưng sành điệu và thời trang.<br/>Dây đeo da 2 lớp được may cố định vào thân túi những có thể thay đổi độ dài tùy ý.</div><div className='d-feature'>Chi tiết sản phẩm:</div><ul><li>Xuất xứ: Hàng Handmade VN</li><li>Mã SP: 200-AD00-VN</li><li>Sử dụng: Túi đeo ngang vai, Đựgn Laptop 15.6″, Đựng được Ipad 9.7″, 7.9″ & Máy tính bảng các loại</li><li>Kích thước: 38cm (dài) x 10cm (rộng) x 28cm (cao)\nChiều dài dây đeo vai cố định có thể điều chỉnh hình thức xách tay.</li><li>Chất liệu: Làm từ lớp đầu tiên của da bò.</li><li>Cam kết: Chúng tôi sẽ hoàn tiền lại nếu túi không phải là da và không giống như hình chụp.</li><li>Màu sắc: Màu nâu đen</li><li>Trọng lượng: 0,72KG</li><li>hiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu</li></ul>",
-      "price": 600000
-    },
-    {
-      "id": 120,
-      "img": "https://jinoleather.com/wp-content/uploads/2017/05/cap-doanh-nhan-da-bo-mau-den-lazio-531-1.png",
-      "thumbnails": [
-        "https://jinoleather.com/wp-content/uploads/2017/05/cap-doanh-nhan-da-bo-mau-den-lazio-531-2.png",
-        "https://jinoleather.com/wp-content/uploads/2017/05/cap-doanh-nhan-da-bo-mau-den-lazio-531-3-300x300.png",
-        "https://jinoleather.com/wp-content/uploads/2017/05/cap-doanh-nhan-da-bo-mau-den-lazio-531-4-300x300.png"
-      ],
-      "type": {
-        "id": "doda",
-        "name": "Đồ Da"
-      },
-      "name": "Cặp doanh nhân da bò 531",
-      "description": "Cặp da nam 531 với chất liệu da VEG cao cấp nhập khẩu Italy, được xử lý lên màu Patin, khô chống thấp nước ẩm mốc. Chất da dày nhưng vô cùng nhẹ nhàng cho cảm giác sử dụng cực đã.",
-      "release": "06-4-2021",
-      "file": {
-        "name": "Gomoku.rar",
-        "type": "Full code",
-        "size": 457,
-        "unit": "KB"
-      },
-      "rating": {
-        "5star": 20,
-        "4star": 20,
-        "3star": 20,
-        "2star": 20,
-        "1star": 20
-      },
-      "rating-comment": [
-        {
-          "name": "Chị Hà",
-          "star": 4,
-          "when": 1686637248685,
-          "comment": "Sản phẩm rất tốt tôi rất hài lòng"
-        },
-        {
-          "name": "Khá Bảnh",
-          "star": 5,
-          "when": 1686637249374,
-          "comment": "Rất hài lòng"
-        }
-      ],
-      "comments": [],
-      "viewed": 62,
-      "downloaded": 100,
-      "liked": 13,
-      "detail": "<div>Một sản phẩm túi da đeo chéo thời trang được làm hoàn toàn bằng da bò nguyên miếng với công nghệ thuộc da của Mỹ chính là sản phẩm #200 này. Cực kỳ thời trang và phong cách là những mỹ từ được sử dụng cho chiếc túi này.<br/>Thiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu.<br/>Nắp gấp rất đơn giản nhưng sành điệu và thời trang.<br/>Dây đeo da 2 lớp được may cố định vào thân túi những có thể thay đổi độ dài tùy ý.</div><div className='d-feature'>Chi tiết sản phẩm:</div><ul><li>Xuất xứ: Hàng Handmade VN</li><li>Mã SP: 200-AD00-VN</li><li>Sử dụng: Túi đeo ngang vai, Đựgn Laptop 15.6″, Đựng được Ipad 9.7″, 7.9″ & Máy tính bảng các loại</li><li>Kích thước: 38cm (dài) x 10cm (rộng) x 28cm (cao)\nChiều dài dây đeo vai cố định có thể điều chỉnh hình thức xách tay.</li><li>Chất liệu: Làm từ lớp đầu tiên của da bò.</li><li>Cam kết: Chúng tôi sẽ hoàn tiền lại nếu túi không phải là da và không giống như hình chụp.</li><li>Màu sắc: Màu nâu đen</li><li>Trọng lượng: 0,72KG</li><li>hiết kế tinh tế với đường chỉ được may tay tỉ mỉ công phu</li></ul>",
       "price": 600000
     },
     {

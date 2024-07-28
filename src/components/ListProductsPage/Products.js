@@ -5,14 +5,14 @@ import {addLiked, setLayout, setPage, setSort} from "../../redux/Action";
 import {Link, Outlet, useLocation, useNavigate} from "react-router-dom";
 import {StarRate} from "../ProductDetailPage/ProductDetails";
 import {formatNumber, formatRating, getTypeName, getTypes, makeURL} from "../../javascript/utils";
-import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
+import {addItemToCart} from "../../redux/redux_A/Action_A";
 import {Toast} from "react-bootstrap";
 import Header from "../Commons/Header";
 import Footer from "../Commons/Footer";
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
-import {fetchCodes, fetchPopularCodes, fetchProducts} from "../../javascript/api/Api_Dat";
+import {fetchCodes, fetchPopularCodes, fetchProducts} from "../../javascript/api/Api_C";
 
-export function PopularProducts() {
+export function PopularCode() {
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -24,8 +24,7 @@ export function PopularProducts() {
             <h6 className="list-group-item">Sản phẩm phổ biến</h6>
             <div className="list-group">
                 {data.map((product) => (
-                    <Link to={`/products/product/${product.id}`} state={product} className="list-group-item"
-                          key={product.id}>
+                    <Link to={`/products/product/${product.id}`} state={product} className="list-group-item" key={product.id}>
                         <img className="mr-2" src={product.img} alt=""/>
                         <span className="popular-title">{product.name}</span>
                     </Link>
@@ -40,7 +39,6 @@ export function SideBar({type}) {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-
     useEffect(() => {
         fetchProducts().then(data => setTypes(getTypes(data)))
     }, [])
@@ -54,7 +52,7 @@ export function SideBar({type}) {
     return (
         <div className="sidebar">
             <div className="sidebar-item">
-                <h6 className="list-group-item">Phân loại sản phâm</h6>
+                <h6 className="list-group-item">Phân loại sản phẩm</h6>
                 <div className="list-group">
                     {types.map(value => (
                         <div className={`list-group-item ${value.id === type && 'item-active'}`} key={value.id}
@@ -63,19 +61,19 @@ export function SideBar({type}) {
                                 <span><img src={value.id === type ? value.img.replace('-alt', '') : value.img} alt=""/></span>
                                 <span>{value.name}</span>
                             </div>
-                            <span className="badge badge-light"
-                                  style={{backgroundColor: `${value.id === type && 'white'}`}}>{value.quantity}</span>
+                            <span className="badge badge-light" style={{backgroundColor: `${value.id === type && 'white'}`}}>{value.quantity}</span>
                         </div>
                     ))}
                 </div>
             </div>
-            <PopularProducts/>
+            <PopularCode/>
         </div>
     )
 }
 
 export function ProductItemRow({p, navigate, addToLiked, addToCart}) {
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
+
     return (
         <div className="product-item-row mb-4">
             <div className="row no-gutters">
@@ -87,11 +85,10 @@ export function ProductItemRow({p, navigate, addToLiked, addToCart}) {
                     <div className="product-item-brand" onClick={() => navigate(p.type.id)}>
                         <img src={p.type.img.replace('-alt', '')} alt=""/> {p.type.name}
                     </div>
-                    <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average}
-                                                                  type={"bi bi-star-fill"}/></div>
+                    <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
                     <div className="product-item-stats d-flex justify-content-start">
                         <div><i className="fa fa-eye"></i> {p.viewed}</div>
-                        <div><i className="fa fa-download"></i> {p.downloaded}</div>
+                        <div><i className="fa-solid fa-chart-simple"></i> {p.downloaded}</div>
                     </div>
                 </div>
                 <div className="col-lg-2 d-flex flex-column justify-content-end align-items-end">
@@ -101,11 +98,9 @@ export function ProductItemRow({p, navigate, addToLiked, addToCart}) {
                                   className="d-inline text-center">{p.price === 0 ? 'FREE' : formatNumber(p.price, '.') + 'đ'}</Link>
                         </div>
                         <div className="d-flex justify-content-end">
-                            <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
-                                 onClick={() => addToLiked(p)}><i
+                            <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`} onClick={() => addToLiked(p)}><i
                                 className="fa fa-thumbs-up"></i></div>
-                            <div className="product-item-action" onClick={() => addToCart(p)}><i
-                                className="fa fa-shopping-cart"></i></div>
+                            <div className="product-item-action" onClick={() => addToCart(p)}><i className="fa fa-shopping-cart"></i></div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +123,7 @@ export function ProductItem({p, navigate, addToLiked, addToCart}) {
             <div>
                 <Toast show={showToast} onClose={() => setShowToast(false)} delay={3000} autohide>
                     <Toast.Body className="text-white" style={{backgroundColor: '#7fad39'}}>
-                        Mã nguồn đã được thêm vào giỏ hàng
+                        Sản phẩm đã được thêm vào giỏ hàng
                     </Toast.Body>
                 </Toast>
             </div>
@@ -148,33 +143,30 @@ export function ProductItem({p, navigate, addToLiked, addToCart}) {
                 <div className="product-item-actions d-flex justify-content-between align-items-center">
                     <div className="d-flex justify-content-start">
                         <div className={`mr-1 action-like ${likedCodes.some(c => c.id === p.id) && 'is-active'}`}
-                             onClick={() => addToLiked(p)}><i className="fa fa-thumbs-up"></i>
-                        </div>
-                        <div className="product-item-action" onClick={() => onAddToCartClicked(p)}>
-                            <i className="fa fa-shopping-cart"></i>
-                        </div>
+                             onClick={() => addToLiked(p)}><i
+                            className="fa fa-thumbs-up"></i></div>
+                        <div className="product-item-action" onClick={() => onAddToCartClicked(p)}><i className="fa fa-shopping-cart"></i></div>
                     </div>
-                    <div className="product-item-stars"><StarRate
-                        stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/>
-                    </div>
+                    <div className="product-item-stars"><StarRate stars={formatRating(p.rating).average} type={"bi bi-star-fill"}/></div>
                 </div>
                 <div className="product-item-bottom d-flex justify-content-between align-items-center">
                     <div className="product-item-brand" onClick={() => navigate(p.type.id)}>
                         <img src={p.type.img.replace('-alt', '')} alt=""></img> {p.type.name}
                     </div>
-                    <Link to={`product/${p.id}`} state={p}
+                    <Link to={`/products/product/${p.id}`} state={p}
                           className="product-item-price">{p.price === 0 ? 'FREE' : formatNumber(p.price, '.') + 'đ'}</Link>
                 </div>
             </div>
         </>
+
     )
 }
-
 
 export function Filter({total}) {
     const sort = useSelector(state => state.listProductsReducer.sort)
     const layout = useSelector(state => state.listProductsReducer.layout)
     const dispatch = useDispatch()
+
     return (
         <div className="filters mb-4">
             <div className="row">
@@ -187,22 +179,14 @@ export function Filter({total}) {
                     <div className="filter-sort mr-5">
                         <span>SẮP XẾP</span>
                         <ul className="d-inline-block">
-                            <li className={sort === null && "filter-active"} onClick={() => dispatch(setSort(null))}>Mới
-                                nhất
-                            </li>
-                            <li className={sort === 'viewed' && "filter-active"}
-                                onClick={() => dispatch(setSort('viewed'))}>Xem nhiều
-                            </li>
-                            <li className={sort === 'downloaded' && "filter-active"}
-                                onClick={() => dispatch(setSort('downloaded'))}>Tải nhiều
-                            </li>
+                            <li className={sort === null && "filter-active"} onClick={() => dispatch(setSort(null))}>Mới nhất</li>
+                            <li className={sort === 'viewed' && "filter-active"} onClick={() => dispatch(setSort('viewed'))}>Xem nhiều</li>
+                            <li className={sort === 'downloaded' && "filter-active"} onClick={() => dispatch(setSort('downloaded'))}>Tải nhiều</li>
                         </ul>
                     </div>
                     <div className="filter-layout d-flex align-items-center">
-                        <span className={`bx bx-grid-alt ${layout === 'grid' && "filter-active"}`}
-                              onClick={() => dispatch(setLayout('grid'))}></span>
-                        <span className={`bx bx-list-ul ${layout === 'row' && "filter-active"}`}
-                              onClick={() => dispatch(setLayout('row'))}></span>
+                        <span className={`bx bx-grid-alt ${layout === 'grid' && "filter-active"}`} onClick={() => dispatch(setLayout('grid'))}></span>
+                        <span className={`bx bx-list-ul ${layout === 'row' && "filter-active"}`} onClick={() => dispatch(setLayout('row'))}></span>
                     </div>
                 </div>
             </div>
@@ -211,11 +195,10 @@ export function Filter({total}) {
 }
 
 export function Pagination({total}) {
-
     const currentPage = useSelector(state => state.listProductsReducer.page)
     const dispatch = useDispatch()
-    const numbers = [...Array(Math.ceil(total / 12) + 1).keys()].slice(1)
 
+    const numbers = [...Array(Math.ceil(total / 12) + 1).keys()].slice(1)
 
     function onSwitchPage(page) {
         const pages = numbers.length
@@ -229,8 +212,7 @@ export function Pagination({total}) {
                 <ul className="product-pagination float-right mt-3">
                     <li onClick={() => onSwitchPage(currentPage - 1)}><i className="fa fa-chevron-left"></i></li>
                     {numbers.map((value, index) => (
-                        <li className={value === currentPage && "active"} key={index}
-                            onClick={() => onSwitchPage(value)}>{value}</li>
+                        <li className={value === currentPage && "active"} key={index} onClick={() => onSwitchPage(value)}>{value}</li>
                     ))}
                     <li onClick={() => onSwitchPage(currentPage + 1)}><i className="fa fa-chevron-right"></i></li>
                 </ul>
@@ -265,21 +247,18 @@ export function ProductContainer({query, total, data, forLiked}) {
                     {data.map((value, index) => {
                         return layout === 'grid' ?
                             (<div className={`product-item-container col-lg-${forLiked ? '3' : '4'}`} key={index}>
-                                <ProductItem p={value} navigate={navigate} addToLiked={addToLiked}
-                                             addToCart={addToCart}/>
+                                <ProductItem p={value} navigate={navigate} addToLiked={addToLiked} addToCart={addToCart}/>
                             </div>) :
                             (<div className="product-item-container col-lg-12" key={index}>
-                                <ProductItemRow p={value} navigate={navigate} addToLiked={addToLiked}
-                                                addToCart={addToCart}/>
+                                <ProductItemRow p={value} navigate={navigate} addToLiked={addToLiked} addToCart={addToCart}/>
                             </div>)
                     })}
                 </div>
             ) : (
                 <div className="search-not-found">
-                    {forLiked ? <img src={require('../../img/empty.png')} alt=""/> :
-                        <img src={require('../../img/not_found.jpg')} alt=""/>}
+                    {forLiked ? <img src={require('../../img/empty.png')} alt=""/> : <img src={require('../../img/not_found.jpg')} alt=""/>}
                     {forLiked ? <div>Danh mục yêu thích trống</div> : <div>Không có kết quả</div>}
-                    {!forLiked && <div>Không tìm thấy code cho từ khóa <span>{query}</span></div>}
+                    {!forLiked && <div>Không tìm thấy sản phẩm cho từ khóa <span>{query}</span></div>}
                 </div>
             )}
         </>
@@ -295,6 +274,7 @@ export function ProductsContent({group}) {
     const type = new URLSearchParams(location.search).get('type')
     const query = new URLSearchParams(location.search).get('search')
     const from = new URLSearchParams(location.search).get('from')
+
     useEffect(() => {
         const url = makeURL(query, from, type, page, sort) +
             (group === 'quality' ? '&viewed_gte=5000&downloaded_gte=500&price_gte=500000' : '') +
@@ -309,12 +289,9 @@ export function ProductsContent({group}) {
         const home = {name: 'Trang chủ', link: '/'}
         const ds = location.pathname.includes('products') ? {name: 'Danh sách sản phẩm', link: '/products'} : undefined
         const t = type && {name: getTypeName(type), link: `/products?type=${type}`}
-        const tc = location.pathname.includes('top-products') ? {name: 'Top sản phẩm', link: '/top-products'} : undefined
-        const qc = location.pathname.includes('quality-products') ? {
-            name: 'Sản phẩm chất lượng',
-            link: '/quality-products'
-        } : undefined
-        const fc = location.pathname.includes('free-products') ? {name: 'Sản phẩm miễn phí', link: '/free-peoducts'} : undefined
+        const tc = location.pathname.includes('top-codes') ? {name: 'Top sản phẩm', link: '/top-codes'} : undefined
+        const qc = location.pathname.includes('quality-codes') ? {name: 'Sản phẩm chất lượng', link: '/quality-codes'} : undefined
+        const fc = location.pathname.includes('free-codes') ? {name: 'Sản phẩm miễn phí', link: '/free-codes'} : undefined
         return [home, ds, t, tc, qc, fc].filter(i => i)
     }
 

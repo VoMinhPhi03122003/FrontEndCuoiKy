@@ -1,9 +1,8 @@
 import {combineReducers} from "redux";
-import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "../redux/redux_tuyen/Reducer_Tuyen";
+import {cartReducer, discountCodeReducer, modalReducer, paymentReducer} from "./redux_A/Reducer_A";
+import errorReducer from "./redux_B/ErrorSlice"
 
-import errorReducer from "./redux_tai/ErrorSlice";
-
-export  const initialState = {
+export const initialState = {
     layout: 'grid',
     page: 1,
     sort: null,
@@ -52,10 +51,7 @@ const likedCodesReducer = (state = initialLiked, action) => {
     }
 }
 
-const productReducer = (state = {
-    liked: JSON.parse(localStorage.getItem('liked')) === null
-        ? localStorage.setItem('liked', JSON.stringify(""))
-        : JSON.parse(localStorage.getItem('liked'))}, action) => {
+const productReducer = (state = {product: null}, action) => {
     switch (action.type) {
         case 'product/put': {
             return {
@@ -145,7 +141,7 @@ const productReducer = (state = {
                     action.payload
                 ]
             }
-            fetch(`http://localhost:9810/products/${state.product.id}`, {
+            fetch(`/products/${state.product.id}`, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
@@ -163,7 +159,6 @@ const productReducer = (state = {
             return state
     }
 }
-
 export const reducers = combineReducers({
     cartReducer: cartReducer,
     listProductsReducer: listProductsReducer,

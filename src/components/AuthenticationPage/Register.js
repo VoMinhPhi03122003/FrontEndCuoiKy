@@ -1,19 +1,17 @@
 import authenticationImage from '../../img/authentication/authentication.png';
 import Header from '../Commons/Header';
-import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import Footer from '../Commons/Footer';
 
 import {Toast} from 'react-bootstrap';
-
 import {Link, useNavigate} from "react-router-dom";
 
-import {registerError} from "../../redux/redux_tai/Action";
-import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
-import {errorRegisterSelector} from "../../redux/redux_tai/Selectors";
+import {registerError} from "../../redux/redux_B/Action";
+import {hashText, isEmail, isEmpty} from "../../javascript/utils/Utils_B";
+import {errorRegisterSelector} from "../../redux/redux_B/Selectors";
 import React, {useEffect, useState} from "react";
-
 import {useSelector, useDispatch} from "react-redux";
-import {checkEmailExists, addAccount} from "../../javascript/api/Api_Tai";
+import {checkEmailExists, addAccount} from "../../javascript/api/Api_B";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Đăng ký", link: "/register"}]
 

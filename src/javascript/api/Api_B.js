@@ -1,4 +1,5 @@
-import {hashText} from "../utils/Utils_Tai";
+import {hashText} from "../utils/Utils_B";
+
 
 export async function checkEmailExists(email) {
     try {
@@ -33,7 +34,6 @@ export async function addAccount(account) {
         console.error('Error:', error);
     }
 }
-
 export async function checkLogin(email, passwordEnter) {
     try {
         const url = `http://localhost:9810/api/accounts?email=${encodeURIComponent(email)}`;
@@ -53,7 +53,6 @@ export async function checkLogin(email, passwordEnter) {
         console.error('Error:', error);
     }
 }
-
 export async function changePassword(email, newPassword) {
     try {
         const hashPass = hashText(newPassword);
@@ -83,14 +82,12 @@ export async function changePassword(email, newPassword) {
         console.error('Error:', error);
     }
 }
-
 export async function getProvinces() {
     const url = "http://localhost:9810/api/provinces";
     const response = await fetch(url);
     const data = await response.json();
     return data;
 }
-
 export async function loadInfo(email){
     try {
         const url = `http://localhost:9810/api/accounts/?email=${encodeURIComponent(email)}`;
@@ -115,7 +112,6 @@ export async function loadInfo(email){
         console.error('Error:', error);
     }
 }
-
 export async function changeProfile(email, data) {
     try {
         const url = `http://localhost:9810/api/accounts/?email=${encodeURIComponent(email)}`;
@@ -149,3 +145,6 @@ export async function changeProfile(email, data) {
         console.error('Error:', error);
     }
 }
+
+
+

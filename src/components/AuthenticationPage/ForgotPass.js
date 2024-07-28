@@ -1,14 +1,14 @@
 import authenticationImage from '../../img/authentication/authentication.png';
 import Header from '../Commons/Header';
-import Footer from '../Commons/Footer';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
+import Footer from '../Commons/Footer';
 import {Link, useNavigate} from "react-router-dom";
 import React, {useEffect, useState} from "react";
-import {isEmail, isEmpty} from "../../javascript/utils/Utils_Tai";
+import {isEmail, isEmpty} from "../../javascript/utils/Utils_B";
 import {useDispatch, useSelector} from "react-redux";
-import {forgotPassError} from "../../redux/redux_tai/Action";
-import {errorForgotPassSelector} from "../../redux/redux_tai/Selectors";
-import {checkEmailExists} from "../../javascript/api/Api_Tai";
+import {forgotPassError} from "../../redux/redux_B/Action";
+import {errorForgotPassSelector} from "../../redux/redux_B/Selectors";
+import {checkEmailExists} from "../../javascript/api/Api_B";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Quên mật khẩu", link: "/forgot-password"}]
 function SectionForgotPass(){
@@ -62,7 +62,7 @@ function SectionForgotPass(){
                                 <input onChange={handleInputEmail} id="email" className="w-100 mb-4" type="text" placeholder="Email" name="email"/>
                                 <button type="submit" className="btn next w-100 mb-3">Xác nhận</button>
                                 <span className="shotcut">
-                                 <Link className="mr-3" to="/login">Đăng nhập?</Link>
+                                <Link className="mr-3" to="/login">Đăng nhập?</Link>
                                 <Link to="/register">Đăng ký?</Link></span>
                             </form>
                         </div>

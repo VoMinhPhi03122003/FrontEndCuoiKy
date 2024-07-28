@@ -39,7 +39,7 @@ const listAuthentication = [
     }
 ]
 
- const listProducts = [
+const listProducts = [
     {
         path: '/products',
         element: <Products/>,
@@ -54,20 +54,19 @@ const listAuthentication = [
             }
         ]
     },
-     {
-         path: '/top-products',
-         element: <TopCodes/>
+    {
+        path: '/top-codes',
+        element: <TopCodes/>
     },
     {
-        path: '/quality-products',
+        path: '/quality-codes',
         element: <HighQualityCodes/>
     },
-
-     {
-         path: '/free-products',
-         element: <FreeCodes/>
-     }
- ]
+    {
+        path: '/free-codes',
+        element: <FreeCodes/>
+    }
+]
 
 const likedCodes = [{
     path: '/liked-codes',

@@ -1,14 +1,14 @@
 import '../../css/product-detail.css'
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {Link, useParams} from "react-router-dom";
-import {PopularProducts} from "../ListProductsPage/Products";
 import {formatNumber, formatRating, getFirstLetter, getPassedTimeInText} from "../../javascript/utils";
 import Parser from 'html-react-parser'
 import {useDispatch, useSelector} from "react-redux";
 import {addLiked} from "../../redux/Action";
-import {addItemToCart} from "../../redux/redux_tuyen/Action_Tuyen";
+import {addItemToCart} from "../../redux/redux_A/Action_A";
+import {PopularCode} from "../ListProductsPage/Products";
+import {fetchCodes, putCodes} from "../../javascript/api/Api_C";
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
-import {fetchCodes, putCodes} from "../../javascript/api/Api_Dat";
 
 function DetailLeft({product}) {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -78,16 +78,10 @@ function DetailCenter({product}) {
             <div className="detail-center-des">{product.description}</div>
             <div className="detail-center-info">
                 <div>
-                    <i className="fa fa-list"></i><span>Danh mục</span> <Link
-                    to={`/products?type=${product.type.id}`}>{product.type.name}</Link>
+                    <i className="fa fa-list"></i><span>Danh mục</span> <Link to={`/products?type=${product.type.id}`}>{product.type.name}</Link>
                 </div>
-                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/top-products'}>Top sản
-                    phẩm</Link>
-                </div>
+                <div><i className="fa fa-layer-group"></i><span>Nhóm sản phẩm</span> <Link to={'/top-codes'}>Top sản phẩm</Link></div>
                 <div><i className="fa fa-calendar"></i><span>Ngày đăng</span> {product.release}</div>
-                <div><i className="fa fa-object-group"></i><span>Loại file</span> {product.file.type}</div>
-                <div><i className="fa fa-file-code"></i><span>File download</span> {product.file.name}
-                    <span>[{product.file.size} {product.file.unit}]</span></div>
             </div>
         </div>
     )
@@ -97,6 +91,7 @@ function DetailRight({product}) {
     const cart = useSelector(state => state.cartReducer.cart)
     const likedCodes = useSelector(state => state.likedCodesReducer.liked)
     const dispatch = useDispatch()
+
     const inLiked = likedCodes.some(c => c.id === product.id)
 
     function handledDownload() {
@@ -106,19 +101,17 @@ function DetailRight({product}) {
     return (
         <div className="detail-right">
             <div className="detail-right-offer">
-                <h6>PHÍ DOWNLOAD</h6>
-                <span
-                    className="offer-price">{product.price === 0 ? 'FREE' : <>{formatNumber((product.price), '.')}<sup>đ</sup></>}</span>
+                <h6>PHÍ MUA HÀNG</h6>
+                <span className="offer-price">{product.price === 0 ? 'FREE' : <>{formatNumber((product.price), '.')}<sup>đ</sup></>}</span>
                 <button className="offer-download" onClick={handledDownload}>
                     {cart.some(item => item.id === product.id)
                         ? (<><i className="fa fa-check"></i> ĐÃ THÊM</>)
                         : (<><i className="fa fa-cart-shopping"></i> THÊM VÀO GIỎ HÀNG</>)}
                 </button>
                 <button className={`offer-favorite ${inLiked && 'offer-active'}`}
-                        onClick={() => dispatch(addLiked(product))}><i
-                    className="fa fa-thumbs-up"></i> {inLiked ? 'Xóa khỏi' : 'Lưu vào'} yêu thích
+                        onClick={() => dispatch(addLiked(product))}><i className="fa fa-thumbs-up"></i> {inLiked ? 'Xóa khỏi' : 'Lưu vào'} yêu thích
                 </button>
-                <span><span>CHIA SẺ NHANH</span> (CODE {product.id})</span>
+                <span><span>CHIA SẺ NHANH</span> (SẢN PHẨM {product.id})</span>
                 <div>
                     <img src="https://topcode.vn/assets/images/share-email.png" alt=""/>
                     <div>Gửi sản phẩm tới email bạn bè</div>
@@ -143,8 +136,7 @@ function DetailDescription({product, goTo}) {
             <div className="detail-description">
                 <div>{product.description}</div>
                 {Parser(product.detail)}
-                <div className="di-guide">XEM THÊM <span>==</span><span
-                    onClick={goTo}> Hướng dẫn cài đặt chi tiết</span></div>
+                <div className="di-guide">XEM THÊM <span>== </span><span onClick={goTo}> Hướng dẫn sử dụng chi tiết</span></div>
             </div>
         </>
     )
@@ -210,6 +202,7 @@ function RatingModal({product, setProduct, closeModal}) {
         setStarIndex(index)
         starRef.current = index
     }
+
     function handleFeel(e) {
         const text = e.target.value
         setFeel(text)
@@ -228,6 +221,7 @@ function RatingModal({product, setProduct, closeModal}) {
 
         if (name && limit >= 3 && starRef.current !== -1) {
             const star = `${5 - starRef.current}star`
+
             setProduct({
                 ...product,
                 rating: {...product.rating, [star]: product.rating[star] + 1},
@@ -245,6 +239,7 @@ function RatingModal({product, setProduct, closeModal}) {
             closeModal()
         }
     }
+
     return (
         <div className="rating-modal" onClick={closeModal}>
             <div className="rating-modal-content" onClick={(e) => e.stopPropagation()}>
@@ -254,8 +249,7 @@ function RatingModal({product, setProduct, closeModal}) {
                 </div>
                 <div>
                     <div>
-                        SALE - full source code webiste bán hàng laptop - Sử dụng PHP Framework
-                        CodeIgniter
+                        SALE - xà phòng , giỏ đựng đồ , dây thắt lưng giá rẻ
                     </div>
                     <div className="rating-modal-stars my-4">
                         {ratingCriteria.map((value, index) => (
@@ -270,8 +264,7 @@ function RatingModal({product, setProduct, closeModal}) {
                         <span style={{display: checkFeel ? 'inline-block' : 'none'}}>Nội dung tối thiểu 3 ký tự</span>
                         <span style={{display: limit < 3 ? 'inline-block' : 'none'}}>{limit}/3</span>
                         <textarea style={{borderColor: checkFeel ? '#e70a0a' : 'var(--color-border)'}}
-                                  value={feel} onChange={handleFeel}
-                                  placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..."/>
+                                  value={feel} onChange={handleFeel} placeholder="Mời bạn chia sẻ một số cảm nhận về sản phẩm..."/>
                     </div>
                     <div className="d-flex justify-content-between mt-2">
                         <div className="input-container">
@@ -279,8 +272,7 @@ function RatingModal({product, setProduct, closeModal}) {
                             <input style={{borderColor: checkName ? '#e70a0a' : 'var(--color-border)'}}
                                    value={name} onChange={handleName} type="text" placeholder="Họ và tên (bắt buộc)"/>
                         </div>
-                        <input value={phone} onChange={e => setPhone(e.target.value)} type="text"
-                               placeholder="Số điện thoại"/>
+                        <input value={phone} onChange={e => setPhone(e.target.value)} type="text" placeholder="Số điện thoại"/>
                     </div>
                     <div style={{marginTop: '30px'}} className="mb-3 rating-guarantee"><i className="fa fa-check-square-o"></i> Chúng tôi cam kết bảo
                         mật số điện thoại của bạn
@@ -296,6 +288,7 @@ function RatingModal({product, setProduct, closeModal}) {
 
 function Rating({product, setProduct}) {
     const [showModal, setShowModal] = useState(false)
+
     return (
         <>
             <DetailDivider title={'ĐÁNH GIÁ'}/>
@@ -306,26 +299,22 @@ function Rating({product, setProduct}) {
                         <div className="product-item-stars">
                             <StarRate stars={formatRating(product.rating).average} type={"fa fa-star"}/>
                         </div>
-                        <div className="rating-count">{formatNumber(formatRating(product.rating).total, ',')} đánh giá
-                        </div>
+                        <div className="rating-count">{formatNumber(formatRating(product.rating).total, ',')} đánh giá</div>
                         <div className="rating-action mt-3 text-center">
-                            <button onClick={() => setShowModal(true)}><i className="bi bi-star-fill mr-1"></i> Viết
-                                đánh giá
-                            </button>
+                            <button onClick={() => setShowModal(true)}><i className="bi bi-star-fill mr-1"></i> Viết đánh giá</button>
                         </div>
                     </div>
                     <div className="col-lg-8">
                         <div className="rating-chart">
-                        {Array(5).fill(1).map((value, index) => (
-                            <div key={index}>
-                                <div>{5 - index} <i className="bi bi-star-fill"></i></div>
-                                <div>
-                                    <div
-                                        style={{width: `${formatRating(product.rating)['avg' + (5 - index)]}%`}}></div>
+                            {Array(5).fill(1).map((value, index) => (
+                                <div key={index}>
+                                    <div>{5 - index} <i className="bi bi-star-fill"></i></div>
+                                    <div>
+                                        <div style={{width: `${formatRating(product.rating)['avg' + (5 - index)]}%`}}></div>
+                                    </div>
+                                    <div>{product.rating[(5 - index) + 'star']}</div>
                                 </div>
-                                <div>{product.rating[(5 - index) + 'star']}</div>
-                            </div>
-                        ))}
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -356,7 +345,6 @@ function Comment({product, setProduct}) {
     const [checkContent, setCheckContent] = useState(false)
     const chars = 3
 
-
     function sendComment() {
         if (!name) setCheckName(true)
         if (limit < chars) setCheckContent(true)
@@ -376,6 +364,7 @@ function Comment({product, setProduct}) {
             setLimit(0)
         }
     }
+
     function handleCommentChange(e) {
         const text = e.target.value
         setContent(text)
@@ -389,18 +378,15 @@ function Comment({product, setProduct}) {
         setCheckName(false)
     }
 
-
     return (
         <>
             <DetailDivider title={'BÌNH LUẬN'}/>
             <div className="detail-comment clearfix">
                 <div>
-                    <span
-                        style={{display: checkContent ? 'inline-block' : 'none'}}>Nội dung tối thiểu {chars} ký tự</span>
+                    <span style={{display: checkContent ? 'inline-block' : 'none'}}>Nội dung tối thiểu {chars} ký tự</span>
                     <span style={{display: limit < chars ? 'inline-block' : 'none'}}>{limit}/{chars}</span>
                     <textarea style={{borderColor: checkContent ? '#e70a0a' : 'var(--color-border)'}}
-                              value={content} onChange={handleCommentChange}
-                              placeholder="Vui lòng để lại bình luận..."/>
+                              value={content} onChange={handleCommentChange} placeholder="Vui lòng để lại bình luận..."/>
                 </div>
                 <div className="d-flex justify-content-between">
                     <div>
@@ -408,14 +394,11 @@ function Comment({product, setProduct}) {
                             <label htmlFor="input-name">Họ và tên <span>*</span></label>
                             <input style={{borderColor: checkName ? '#e70a0a' : 'var(--color-border)'}}
                                    value={name} onChange={handleNameChange} name="input-name" type="text"/>
-                            <div style={{display: checkName ? 'block' : 'none'}}><i className="fa fa-warning"></i> Vui
-                                lòng nhập Họ và tên
-                            </div>
+                            <div style={{display: checkName ? 'block' : 'none'}}><i className="fa fa-warning"></i> Vui lòng nhập Họ và tên</div>
                         </div>
                         <div className="input-box">
                             <label htmlFor="input-name">Email</label>
-                            <input value={email} onChange={e => setEmail(e.target.value)} name="input-name"
-                                   type="text"/>
+                            <input value={email} onChange={e => setEmail(e.target.value)} name="input-name" type="text"/>
                         </div>
                     </div>
                     <button onClick={sendComment}>GỬI</button>
@@ -458,7 +441,6 @@ function DetailContent({product, setProduct}) {
     )
 }
 
-
 export default function ProductDetails() {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
@@ -471,6 +453,7 @@ export default function ProductDetails() {
             setLoading(false)
         })
     }, [id])
+
     useEffect(() => {
         putCodes(`http://localhost:9810/products/${product.id}`, {
             method: "PATCH",
@@ -482,39 +465,36 @@ export default function ProductDetails() {
     if (loading) return <div>Loading...</div>
 
     function breadcrumbs() {
-        return [{name: 'Trang chủ', link: '/'}, {name: 'Danh sách codes', link: `/products`}, {
+        return [{name: 'Trang chủ', link: '/'}, {name: 'Danh sách sản phẩm', link: `/products`}, {
             name: 'Chi tiết sản phẩm',
             link: `/products/product/${product.id}`
         }, {name: `Mã code ${product.id}`, link: `/products/product/${product.id}`}]
     }
 
-
-
     return (
         <>
-        <SectionBreadcrumb breadcrumbs={breadcrumbs()}/>
-        <section className="product-details ">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-9">
-                        <div className="row">
-                            <div className="col-lg-5">
-                                <DetailLeft product={product}/>
+            <SectionBreadcrumb breadcrumbs={breadcrumbs()}/>
+            <section className="product-details">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-9">
+                            <div className="row">
+                                <div className="col-lg-5">
+                                    <DetailLeft product={product}/>
+                                </div>
+                                <div className="col-lg-7">
+                                    <DetailCenter product={product}/>
+                                </div>
                             </div>
-                            <div className="col-lg-7">
-                                <DetailCenter product={product}/>
-                            </div>
-                            </div>
-                        <DetailContent product={product} setProduct={setProduct}/>
-                    </div>
-                    <div className="col-lg-3">
-                        <DetailRight product={product}/>
-                        <PopularProducts/>
+                            <DetailContent product={product} setProduct={setProduct}/>
+                        </div>
+                        <div className="col-lg-3">
+                            <DetailRight product={product}/>
+                            <PopularCode/>
                         </div>
                     </div>
                 </div>
-        </section>
+            </section>
         </>
     )
-
 }

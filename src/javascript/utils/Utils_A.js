@@ -58,6 +58,7 @@ export function payWithPaypal() {
 
 export function payWithMomo(cart) {
     alert('Thanh toán với Momo');
+
 }
 
 export function payWithViettelPay() {

@@ -2,14 +2,14 @@ import authenticationImage from '../../img/authentication/authentication.png';
 import Header from '../Commons/Header';
 import SectionBreadcrumb from "../Commons/SectionBreadcrumb";
 import Footer from '../Commons/Footer';
-import React, {useEffect, useState} from "react";
 import {Toast} from 'react-bootstrap';
 import {useNavigate} from "react-router-dom";
-import {isEmpty} from "../../javascript/utils/Utils_Tai";
+import React, {useEffect, useState} from "react";
+import {isEmpty} from "../../javascript/utils/Utils_B";
 import {useDispatch, useSelector} from "react-redux";
-import {verifyPassError} from "../../redux/redux_tai/Action";
-import {changePassword} from "../../javascript/api/Api_Tai";
-import {errorVerifyPassSelector} from "../../redux/redux_tai/Selectors";
+import {verifyPassError} from "../../redux/redux_B/Action";
+import {changePassword} from "../../javascript/api/Api_B";
+import {errorVerifyPassSelector} from "../../redux/redux_B/Selectors";
 
 const breadcrumbs = [{name: "Trang chủ", link: "/"}, {name: "Quên mật khẩu", link: "/forgot-password"},
     {name: "Xác thực mật khẩu", link: "/verify-password"}]
